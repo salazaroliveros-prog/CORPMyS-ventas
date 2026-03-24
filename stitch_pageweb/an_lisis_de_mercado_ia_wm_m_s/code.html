@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Market Analysis | Constructora WM/M&amp;S</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f7f9ff",
+              "inverse-primary": "#bfc2ff",
+              "tertiary": "#000c18",
+              "on-tertiary-container": "#7b8b9b",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-error-container": "#93000a",
+              "tertiary-container": "#132330",
+              "on-surface-variant": "#464653",
+              "on-secondary-fixed": "#271900",
+              "surface-tint": "#4b53bc",
+              "outline-variant": "#c6c5d5",
+              "on-tertiary-fixed-variant": "#394857",
+              "on-primary-fixed-variant": "#3239a3",
+              "surface-container-highest": "#d4e4f6",
+              "error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#b8c8da",
+              "surface-container-high": "#d9eafc",
+              "surface-container": "#e2efff",
+              "error": "#ba1a1a",
+              "on-secondary-container": "#715000",
+              "inverse-surface": "#223240",
+              "secondary-container": "#fdc34d",
+              "on-tertiary": "#ffffff",
+              "secondary": "#7b5800",
+              "primary-fixed": "#e0e0ff",
+              "on-surface": "#0d1d2a",
+              "surface-container-low": "#ecf4ff",
+              "surface-bright": "#f7f9ff",
+              "primary-fixed-dim": "#bfc2ff",
+              "surface-variant": "#d4e4f6",
+              "on-primary": "#ffffff",
+              "on-background": "#0d1d2a",
+              "outline": "#767684",
+              "on-primary-fixed": "#00006e",
+              "on-primary-container": "#777eea",
+              "surface-dim": "#cbdcee",
+              "surface-container-lowest": "#ffffff",
+              "inverse-on-surface": "#e7f2ff",
+              "background": "#f7f9ff",
+              "primary-container": "#000080",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed": "#d4e4f6",
+              "primary": "#00003c",
+              "on-secondary-fixed-variant": "#5d4200",
+              "secondary-fixed-dim": "#f7bd48",
+              "secondary-fixed": "#ffdea6"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        .blueprint-gradient {
+            background: linear-gradient(135deg, #00003c 0%, #000080 100%);
+        }
+        .glass-panel {
+            background: rgba(212, 228, 246, 0.7);
+            backdrop-filter: blur(24px);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- SideNavBar Anchor -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-white dark:bg-[#000c18] border-r border-outline-variant/15 z-40 hidden md:flex flex-col shadow-[20px_0_40px_rgba(13,29,42,0.06)]">
+<div class="font-headline font-bold text-primary dark:text-white px-6 py-8 text-xl tracking-tighter">
+            WM/M&amp;S
+        </div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 bg-surface-container dark:bg-[#000080] text-primary dark:text-white border-l-4 border-secondary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-outline dark:text-outline-variant hover:bg-surface-container-low dark:hover:bg-[#001d3d] hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+<span class="text-sm font-medium">Active Sites</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-outline dark:text-outline-variant hover:bg-surface-container-low dark:hover:bg-[#001d3d] hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="text-sm font-medium">Blueprints</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-outline dark:text-outline-variant hover:bg-surface-container-low dark:hover:bg-[#001d3d] hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="text-sm font-medium">Resources</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-outline dark:text-outline-variant hover:bg-surface-container-low dark:hover:bg-[#001d3d] hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="p-6 border-t border-outline-variant/10">
+<div class="flex items-center space-x-3 mb-6">
+<div class="w-10 h-10 bg-primary-container flex items-center justify-center text-white font-bold">AL</div>
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-wider">Project Lead</p>
+<p class="text-[10px] text-outline uppercase tracking-widest">WM/M&amp;S Enterprise</p>
+</div>
+</div>
+<button class="w-full py-3 bg-primary text-white text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-opacity">
+                New Project
+            </button>
+</div>
+</aside>
+<main class="md:ml-64 min-h-screen flex flex-col">
+<!-- TopNavBar Anchor -->
+<header class="sticky top-0 z-30 bg-surface/80 backdrop-blur-md">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-[1440px] mx-auto">
+<h1 class="font-headline font-black text-xl tracking-tighter text-primary uppercase">Market Intelligence</h1>
+<div class="flex items-center space-x-8">
+<nav class="hidden lg:flex space-x-6 text-sm font-headline font-semibold uppercase tracking-tighter">
+<a class="text-secondary border-b-2 border-secondary pb-1" href="#">Análisis</a>
+<a class="text-primary hover:text-secondary transition-colors duration-300 pb-1" href="#">Proyectos</a>
+<a class="text-primary hover:text-secondary transition-colors duration-300 pb-1" href="#">Servicios</a>
+</nav>
+<button class="bg-primary text-white px-6 py-2 text-sm font-headline font-semibold uppercase tracking-tight hover:opacity-80 transition-all">
+                        Request Quote
+                    </button>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="p-8 max-w-[1440px] mx-auto w-full flex-1 space-y-12">
+<!-- Hero Stats: Data Pylons -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-0 border-b border-outline-variant/20 pb-12">
+<div class="space-y-1 p-6 border-r border-outline-variant/10">
+<p class="text-[10px] font-bold text-outline uppercase tracking-[0.15em]">Volumen de Ventas Q4</p>
+<h2 class="text-4xl font-headline font-bold text-secondary">Q8.4M</h2>
+<p class="text-xs text-primary font-medium flex items-center">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="trending_up">trending_up</span>
+                        +12.4% vs Mes Anterior
+                    </p>
+</div>
+<div class="space-y-1 p-6 border-r border-outline-variant/10">
+<p class="text-[10px] font-bold text-outline uppercase tracking-[0.15em]">Proyectos Activos (GT)</p>
+<h2 class="text-4xl font-headline font-bold text-secondary">42</h2>
+<p class="text-xs text-primary font-medium">Guatemala, Sacatepéquez, Escuintla</p>
+</div>
+<div class="space-y-1 p-6 border-r border-outline-variant/10">
+<p class="text-[10px] font-bold text-outline uppercase tracking-[0.15em]">Demanda Estilo Moderno</p>
+<h2 class="text-4xl font-headline font-bold text-secondary">68%</h2>
+<p class="text-xs text-primary font-medium">Incremento en interés orgánico</p>
+</div>
+<div class="space-y-1 p-6">
+<p class="text-[10px] font-bold text-outline uppercase tracking-[0.15em]">Predicción de Cierre AI</p>
+<h2 class="text-4xl font-headline font-bold text-secondary">Q12.1M</h2>
+<p class="text-xs text-primary font-medium">Proyección Gemini para Q1 2025</p>
+</div>
+</section>
+<!-- Main Layout: Asymmetric Bento Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- AI Recommendations (Gemini Powered) -->
+<div class="lg:col-span-8 space-y-8">
+<div class="blueprint-gradient p-10 text-white relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center space-x-2 mb-6">
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary-fixed-dim">Estrategia Impulsada por AI</p>
+</div>
+<h3 class="text-3xl font-headline font-bold mb-4 leading-tight max-w-xl">
+                                Recomendación: Lanzar "Serie Brutalista" en Carretera a El Salvador.
+                            </h3>
+<p class="text-white/70 text-sm font-body leading-relaxed max-w-2xl mb-8">
+                                Gemini ha identificado un vacío en el mercado de Q2.5M - Q4.0M para diseños minimalistas con acabados de concreto visto. El 74% de los leads en Guatemala buscan actualmente eficiencia térmica y espacios abiertos.
+                            </p>
+<div class="flex space-x-4">
+<button class="bg-secondary-fixed-dim text-primary px-8 py-3 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">
+                                    Ver Blueprint IA
+                                </button>
+<button class="border border-white/30 text-white px-8 py-3 text-xs font-bold uppercase tracking-widest hover:bg-white/10 transition-colors">
+                                    Simular ROI
+                                </button>
+</div>
+</div>
+<div class="absolute -right-20 -bottom-20 opacity-10">
+<span class="material-symbols-outlined text-[240px]" data-icon="architecture">architecture</span>
+</div>
+</div>
+<!-- Market Trends Table (No borders, only tonal shifts) -->
+<div class="bg-surface-container-low p-8">
+<h4 class="font-headline font-bold text-primary uppercase tracking-tighter mb-8">Tendencias de Estilo en Guatemala</h4>
+<div class="space-y-1">
+<div class="grid grid-cols-4 px-4 py-3 text-[10px] font-bold text-outline uppercase tracking-widest">
+<span>Estilo Arquitectónico</span>
+<span>Demanda Actual</span>
+<span>Precio Promedio / m²</span>
+<span class="text-right">Variación</span>
+</div>
+<div class="grid grid-cols-4 items-center bg-surface-container-lowest px-4 py-5 hover:bg-white transition-colors">
+<span class="text-sm font-bold text-primary">Minimalista Funcional</span>
+<div class="w-full bg-surface-container-high h-1 max-w-[100px]">
+<div class="bg-secondary h-full" style="width: 85%;"></div>
+</div>
+<span class="text-sm font-medium text-on-surface">Q8,200</span>
+<span class="text-sm font-bold text-green-600 text-right">+14%</span>
+</div>
+<div class="grid grid-cols-4 items-center bg-surface-container-low px-4 py-5 hover:bg-white transition-colors">
+<span class="text-sm font-bold text-primary">Moderno Colonial</span>
+<div class="w-full bg-surface-container-high h-1 max-w-[100px]">
+<div class="bg-secondary h-full" style="width: 42%;"></div>
+</div>
+<span class="text-sm font-medium text-on-surface">Q9,500</span>
+<span class="text-sm font-bold text-red-500 text-right">-3%</span>
+</div>
+<div class="grid grid-cols-4 items-center bg-surface-container-lowest px-4 py-5 hover:bg-white transition-colors">
+<span class="text-sm font-bold text-primary">Contenedor-Híbrido</span>
+<div class="w-full bg-surface-container-high h-1 max-w-[100px]">
+<div class="bg-secondary h-full" style="width: 61%;"></div>
+</div>
+<span class="text-sm font-medium text-on-surface">Q5,800</span>
+<span class="text-sm font-bold text-green-600 text-right">+22%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Insights -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Map Card -->
+<div class="bg-white p-1 space-y-4">
+<div class="h-64 bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-50 contrast-125" data-alt="Abstract architectural rendering of Guatemala City map grid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCuWrzIoDvmKoLoGUnXCgZFwCpzdXM2hTUIu_jSPO_KtxIeuSbyDalTkVJHJrC2uceoGY7TDksSjjfIKVsfMr_hp0P73wcMESbsf1sAMB5h_5pjk1Jn2kn_2WcTw3OWmbF1KVvQ0cXnsqr87AYb9CBUT15iT-Y8n61M8FMpQHR2JMip6caksH4V1Q63IzCXTmE5XK0iLzqpEIsqbTRRNwuHHQPwUpY_7PpInwUgMM1YNYnNOYwkBClZ5Rq2M9RCKgBHMx5sN6Xuh6q"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="location_on">location_on</span>
+</div>
+<div class="absolute bottom-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1">
+                                Heatmap: Zona 15 &amp; 16
+                            </div>
+</div>
+<div class="p-5 space-y-2">
+<h4 class="text-sm font-bold uppercase tracking-widest text-primary">Ubicaciones Top</h4>
+<p class="text-xs text-outline leading-relaxed">
+                                El corredor central presenta el mayor crecimiento de plusvalía. Recomendación IA: Asegurar terrenos en Fraijanes antes del Q2.
+                            </p>
+</div>
+</div>
+<!-- Construction Style Spotlight -->
+<div class="bg-surface-dim p-8 space-y-6">
+<h4 class="text-xs font-bold uppercase tracking-[0.2em] text-primary">Diseño Sugerido p/ Publicación</h4>
+<div class="relative group">
+<img class="w-full aspect-[4/5] object-cover grayscale" data-alt="Modern architectural house with clean lines and large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQA9PvDmfE8YeCL708GrQ-MZtGlfOz11KdLJv6oQU1ilRq-QwK5FuIsKbeWz1s0xcpa5_Xe005aUsZeir-0OERkc_1qTVr9KtC16eWusReUBAO8tbmNlTLroMoAl07gvPIXrwOjoYcuoOJqIyLKVkf1GoGdXY1R4tMAf5WahjB3yUm78M6OHafQIvLGl6wK4cHDzQQYjwzkFyJe1Gb8muGH3bh67txFIoRBmyW5EjDQmcXBjfmxPaZsueYeZ71mS3CBYOKSiHtfHqY"/>
+<div class="absolute top-0 right-0 bg-secondary text-white p-4">
+<span class="text-lg font-headline font-bold">#1</span>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-bold text-primary uppercase">Proyecto "Nébula"</p>
+<p class="text-[10px] text-outline uppercase tracking-widest">Minimalista Premium | Guatemala</p>
+</div>
+<button class="w-full border-b border-primary text-primary text-xs font-bold uppercase py-2 flex justify-between items-center group">
+                            Generar Campaña con AI
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer Anchor -->
+<footer class="bg-tertiary w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center border-t border-white/5">
+<div class="mb-8 md:mb-0">
+<p class="font-headline font-bold text-white text-lg tracking-tighter">Constructora WM/M&amp;S</p>
+<p class="font-label text-[10px] tracking-widest uppercase text-outline mt-1 opacity-70">
+                    © 2024 Constructora WM/M&amp;S. Architectural Precision Guaranteed.
+                </p>
+</div>
+<div class="flex space-x-8">
+<a class="font-label text-xs tracking-widest uppercase text-outline hover:text-secondary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="font-label text-xs tracking-widest uppercase text-outline hover:text-secondary-fixed-dim transition-colors" href="#">Safety Protocols</a>
+<a class="font-label text-xs tracking-widest uppercase text-outline hover:text-secondary-fixed-dim transition-colors" href="#">Certifications</a>
+</div>
+</footer>
+</main>
+<!-- Contextual FAB for Action (Suppressed on Detail, visible on Dash) -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-secondary flex items-center justify-center text-white shadow-[0_20px_40px_rgba(123,88,0,0.3)] hover:scale-105 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined" data-icon="add" style="font-variation-settings: 'wght' 600;">add</span>
+</button>
+</body></html>

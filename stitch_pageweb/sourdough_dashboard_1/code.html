@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#343026",
+              "background": "#fff8ef",
+              "primary-container": "#a0522d",
+              "surface-bright": "#fff8ef",
+              "on-background": "#1e1b13",
+              "inverse-on-surface": "#f8f0e1",
+              "surface-container-highest": "#e9e2d3",
+              "surface": "#fff8ef",
+              "inverse-primary": "#ffb596",
+              "outline-variant": "#dac1b8",
+              "on-surface": "#1e1b13",
+              "error": "#ba1a1a",
+              "outline": "#87736b",
+              "on-primary-fixed-variant": "#76320f",
+              "surface-dim": "#e1d9cb",
+              "on-primary-fixed": "#360f00",
+              "secondary": "#546344",
+              "surface-variant": "#e9e2d3",
+              "surface-tint": "#944925",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "on-secondary-container": "#5a6949",
+              "tertiary-container": "#596979",
+              "surface-container-high": "#efe7d9",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "primary-fixed": "#ffdbcd",
+              "secondary-fixed-dim": "#bbcca6",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#d8e9fb",
+              "primary-fixed-dim": "#ffb596",
+              "on-primary-container": "#ffe1d6",
+              "secondary-fixed": "#d7e9c1",
+              "primary": "#823b18",
+              "surface-container": "#f5edde",
+              "tertiary-fixed": "#d4e4f6",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-tertiary-fixed-variant": "#394857",
+              "surface-container-low": "#fbf3e4",
+              "secondary-container": "#d7e9c1",
+              "on-surface-variant": "#54433c",
+              "on-error": "#ffffff",
+              "on-secondary-fixed": "#121f06",
+              "tertiary-fixed-dim": "#b8c8da",
+              "error-container": "#ffdad6",
+              "tertiary": "#415160",
+              "on-primary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "serif"],
+              "body": ["Work Sans", "sans-serif"],
+              "label": ["Work Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Work Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Noto Serif', serif; }
+    </style>
+  <title>sourdough dashboard 1</title>
+</head>
+<body class="bg-background text-on-background">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-8 px-4 w-64 bg-[#fbf3e4] dark:bg-stone-900 border-r-0 z-40">
+<div class="mb-10 px-4">
+<h1 class="text-2xl font-serif font-bold text-[#823b18] dark:text-[#a0522d]">The Artisanal Hearth</h1>
+<p class="font-sans text-sm text-stone-500 mt-1">Maestro Panadero</p>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Sourdough Management (Active State) -->
+<a class="flex items-center gap-3 px-4 py-3 text-[#823b18] dark:text-[#a0522d] font-bold border-r-4 border-[#823b18] translate-x-1 transition-transform duration-200 bg-[#f5ead7] dark:bg-stone-800" href="#">
+<span class="material-symbols-outlined">bakery_dining</span>
+<span class="font-sans text-sm">Gestión de Masa Madre</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 dark:text-stone-400 font-medium hover:bg-[#f5ead7] dark:hover:bg-stone-800 transition-colors" href="#">
+<span class="material-symbols-outlined">architecture</span>
+<span class="font-sans text-sm">Mercado Arquitectónico</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 dark:text-stone-400 font-medium hover:bg-[#f5ead7] dark:hover:bg-stone-800 transition-colors" href="#">
+<span class="material-symbols-outlined">vital_signs</span>
+<span class="font-sans text-sm">Salud del Iniciador</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 dark:text-stone-400 font-medium hover:bg-[#f5ead7] dark:hover:bg-stone-800 transition-colors" href="#">
+<span class="material-symbols-outlined">distance</span>
+<span class="font-sans text-sm">Rutas de Entrega</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 dark:text-stone-400 font-medium hover:bg-[#f5ead7] dark:hover:bg-stone-800 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-sans text-sm">Ajustes</span>
+</a>
+</nav>
+<div class="mt-auto px-4">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-2.5 px-5 rounded-md font-medium text-sm shadow-sm transition-transform active:scale-95">
+                Nuevo Lote
+            </button>
+</div>
+</aside>
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 right-0 left-64 z-30 flex justify-between items-center px-8 h-20 bg-[#fff8ef]/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex items-center">
+<h2 class="text-xl font-serif font-black text-[#823b18] tracking-tight">Panel Principal</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<input class="bg-surface-container-lowest border-b border-outline-variant focus:border-primary focus:ring-0 text-sm py-2 px-4 w-64 font-sans outline-none" placeholder="Buscar lotes..." type="text"/>
+<span class="material-symbols-outlined absolute right-2 top-2 text-stone-400 text-lg">search</span>
+</div>
+<div class="flex items-center gap-4 text-[#823b18]">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">payments</span>
+<img alt="Avatar del usuario" class="w-10 h-10 rounded-full bg-surface-container-highest" data-alt="Retrato de un panadero con delantal de lino" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR_6XqPeQCrfu-RVJ7eDCjGtIREjlaf3Z1Wu_uytUN_AYePJWcF-aSahLFV-h2z0dJWpaizcljO8NCxVBM8gDZhm1LvMijI3SLTyz3q1gsLA9beY8ox-s6UUS7NVZV_WcGdC_PFQHPu1L7720mWy49d2pT8bg35wDFkSjNlGKgI4P3VtPKiUtFJtR6rCjqyox-Sty3lhFra8rzJg1tB3CwHs7XZ38TaIyNVcmFoAPlItEtfcH8ezW5t1sB9uP-YMz8YY5wZBf5gytS"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 p-8 min-h-screen">
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Hero Stats / Headline Area -->
+<div class="col-span-12 lg:col-span-8 space-y-8">
+<section class="bg-surface-container-low rounded-xl p-8 flex flex-col justify-between min-h-[240px]">
+<div>
+<span class="text-secondary font-label font-semibold tracking-wider text-xs uppercase">Resumen Diario</span>
+<h2 class="text-4xl font-headline font-bold text-on-surface mt-2 max-w-xl leading-tight">Tu fermento está en su punto máximo. 12 lotes listos para la fermentación final.</h2>
+</div>
+<div class="flex gap-12 mt-8">
+<div>
+<p class="text-tertiary font-label text-xs">Hidratación Total Prom.</p>
+<p class="text-2xl font-headline font-bold text-primary">78.4%</p>
+</div>
+<div>
+<p class="text-tertiary font-label text-xs">Temperatura del Horno</p>
+<p class="text-2xl font-headline font-bold text-primary">245°C</p>
+</div>
+<div>
+<p class="text-tertiary font-label text-xs">Entregas Hoy</p>
+<p class="text-2xl font-headline font-bold text-primary">42</p>
+</div>
+</div>
+</section>
+<!-- Fermentation Timelines -->
+<section class="space-y-6">
+<div class="flex items-baseline justify-between">
+<h3 class="text-2xl font-headline">Líneas de Tiempo de Fermentación</h3>
+<button class="text-primary font-label text-sm border-b-2 border-primary-fixed-dim hover:border-primary transition-all">Ver Horario</button>
+</div>
+<div class="space-y-4">
+<!-- Batch Card 1 -->
+<div class="bg-surface-container-highest rounded-lg p-6 shadow-sm">
+<div class="flex justify-between items-center mb-4">
+<div>
+<h4 class="font-headline font-bold text-lg">Centeno de Campo #402</h4>
+<p class="text-stone-500 text-xs font-sans">Tamaño del lote: 24 hogazas</p>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Fermentación en Bloque</span>
+</div>
+<!-- Fermentation Tracker (Signature Component) -->
+<div class="relative h-4 w-full bg-secondary-fixed rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-secondary" style="width: 65%;"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-xs text-stone-400 font-sans">Autólisis</span>
+<span class="text-xs text-on-surface font-bold font-sans">65% Procesado (4h 20m)</span>
+<span class="text-xs text-stone-400 font-sans">Fermentación en Frío</span>
+</div>
+</div>
+<!-- Batch Card 2 -->
+<div class="bg-surface-container-highest rounded-lg p-6 shadow-sm">
+<div class="flex justify-between items-center mb-4">
+<div>
+<h4 class="font-headline font-bold text-lg">Masa Madre Clásica #398</h4>
+<p class="text-stone-500 text-xs font-sans">Tamaño del lote: 12 hogazas</p>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-xs font-bold">Fermentación en Frío</span>
+</div>
+<!-- Fermentation Tracker (Signature Component) -->
+<div class="relative h-4 w-full bg-secondary-fixed rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-secondary" style="width: 92%;"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-xs text-stone-400 font-sans">Autólisis</span>
+<span class="text-xs text-on-surface font-bold font-sans">92% Procesado (14h 10m)</span>
+<span class="text-xs text-stone-400 font-sans">Horneado</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Side Bento Area -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<!-- Starter Health Meter -->
+<section class="bg-surface p-8 rounded-xl shadow-sm ring-1 ring-outline-variant/20 flex flex-col items-center text-center">
+<h3 class="font-headline text-xl mb-6">Vitalidad de la Masa Madre</h3>
+<div class="relative w-48 h-48 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-highest" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-secondary" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-dasharray="553" stroke-dashoffset="55" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-5xl font-headline font-black text-on-surface">92</span>
+<span class="text-xs text-secondary font-bold tracking-widest uppercase">Excelente</span>
+</div>
+</div>
+<div class="mt-8 text-left w-full space-y-3">
+<div class="flex justify-between text-sm">
+<span class="text-stone-500">Carga Ácida</span>
+<span class="font-bold">Baja</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-stone-500">Actividad Máxima</span>
+<span class="font-bold">Hace 2.4h</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-stone-500">Horario de Alimentación</span>
+<span class="text-primary font-bold">En 4h</span>
+</div>
+</div>
+<button class="mt-8 w-full py-2 border border-outline-variant rounded-md font-sans text-sm hover:bg-surface-container-low transition-colors">Registrar Alimentación</button>
+</section>
+<!-- Map View Placeholder -->
+<section class="bg-surface-container-highest rounded-xl overflow-hidden flex flex-col min-h-[350px]">
+<div class="p-6">
+<h3 class="font-headline text-xl">Rutas de Entrega</h3>
+<p class="text-xs text-stone-500 font-sans mt-1">Distrito Norte • 12 Paradas Restantes</p>
+</div>
+<div class="flex-1 relative bg-stone-200">
+<img class="w-full h-full object-cover grayscale opacity-50" data-alt="Mapa estilizado de calles de la ciudad con marcadores de entrega" data-location="Paris" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0oD6tH6Cz82Ba2hdIArjDWAqZGecscP_K_DSvH1sC2C7u8Ikv6GPzApu0-OLy7P8BWptFR6TyayqOySKpysEpSlHqPRfmpGrV5kNpa1X-Bw6qCltK73qR9nndNvYRw4lqQvLCT5leHCnlpRXR63IkxDKSFgkBPCmkLCY2lNd3NQXAzBsJl0OtvNkwiIhxR2sDdhEZq_RhZy8W5niXIBbjF-0rVUvJfcQBtS_bmwZrHYEnn4HQ8JICG2IqcSpXFSwGw0RRZwgWpEbZ"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+<!-- Marker Overlay (Simulated) -->
+<div class="absolute top-1/4 left-1/3 bg-primary text-on-primary p-1 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+</div>
+<div class="absolute bottom-1/3 right-1/4 bg-on-surface text-surface p-1 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container-highest">
+<div class="flex items-center gap-3">
+<img alt="Repartidor" class="w-8 h-8 rounded-full" data-alt="Retrato de un repartidor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt1ncVdCLkpu2urzY0mJZq8vDg_OqHqyRImNb0otZBysnhDVqCvoqWR9nzpehD1onXg3kJgLgAv0bcqckK-LF1RJTQsmFntlNmU5MCIX5Ig4BC0NADpI8TFoJI8fC8rUjoSeQGdfehLfFVXuaiVt7cmKmSDW2PnYs5Rh7CcpoWBFecoJI73MobsiS_0QtvL_6foQM0QyEr0RaH_OmThVEmXkFttgLvGNzjEl8UyTb-RONn4SM-_Q_kybuhrmArK4WeM9XGPEpZvsbp"/>
+<div class="flex-1">
+<p class="text-xs font-bold font-sans">Julian Ross</p>
+<p class="text-[10px] text-stone-500 font-sans italic">Regreso estimado: 2:45 PM</p>
+</div>
+<span class="material-symbols-outlined text-primary">navigation</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Secondary Information Row (Asymmetric) -->
+<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2 bg-[#fff8ef] p-10 rounded-xl border-l-4 border-primary">
+<h3 class="font-headline text-2xl mb-4 italic">Nota del Panadero</h3>
+<p class="text-on-surface-variant font-body leading-relaxed max-w-2xl">
+                    La humedad ambiental es ligeramente superior hoy (64%). Considera reducir la hidratación inicial en un 2% para los lotes de Masa Madre Clásica para mantener la estructura de la miga. El iniciador fue alimentado con una mayor proporción de centeno oscuro anoche, espera un perfil terroso más pronunciado en el horneado de esta mañana.
+                </p>
+<div class="mt-6 flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary">thermostat</span>
+<span class="text-sm font-label text-stone-500">22°C Ambiente</span>
+<span class="material-symbols-outlined text-tertiary">humidity_percentage</span>
+<span class="text-sm font-label text-stone-500">64% Humedad</span>
+</div>
+</div>
+<div class="bg-tertiary text-on-tertiary-container p-8 rounded-xl flex flex-col justify-center">
+<span class="material-symbols-outlined text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<h4 class="font-headline text-xl mb-2">Alerta de Inventario</h4>
+<p class="text-sm opacity-80 mb-6 font-sans">Harina Tipo 00 agotándose. Quedan 5kg. Agotamiento estimado: mañana.</p>
+<button class="bg-surface/20 hover:bg-surface/30 text-white text-sm py-2 px-4 rounded-md transition-colors w-fit">Pedir Harina</button>
+</div>
+</div>
+</main>
+</body></html>

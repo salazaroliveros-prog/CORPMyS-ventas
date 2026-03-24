@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pending Payroll Approval - Constructora WM/M&amp;S</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#fdc34d",
+              "on-secondary-container": "#715000",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#d4e4f6",
+              "outline-variant": "#c6c5d5",
+              "on-error": "#ffffff",
+              "on-primary-container": "#777eea",
+              "surface-container-highest": "#d4e4f6",
+              "on-secondary": "#ffffff",
+              "secondary": "#7b5800",
+              "surface": "#f7f9ff",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#5d4200",
+              "secondary-fixed": "#ffdea6",
+              "inverse-surface": "#223240",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-primary": "#ffffff",
+              "on-primary-fixed-variant": "#3239a3",
+              "tertiary-fixed": "#d4e4f6",
+              "on-primary-fixed": "#00006e",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed-variant": "#394857",
+              "surface-dim": "#cbdcee",
+              "primary-fixed-dim": "#bfc2ff",
+              "primary-container": "#000080",
+              "tertiary-fixed-dim": "#b8c8da",
+              "inverse-on-surface": "#e7f2ff",
+              "primary": "#00003c",
+              "surface-tint": "#4b53bc",
+              "on-background": "#0d1d2a",
+              "inverse-primary": "#bfc2ff",
+              "surface-container": "#e2efff",
+              "outline": "#767684",
+              "tertiary-container": "#132330",
+              "tertiary": "#000c18",
+              "surface-container-high": "#d9eafc",
+              "on-surface-variant": "#464653",
+              "on-error-container": "#93000a",
+              "background": "#f7f9ff",
+              "on-surface": "#0d1d2a",
+              "secondary-fixed-dim": "#f7bd48",
+              "primary-fixed": "#e0e0ff",
+              "error-container": "#ffdad6",
+              "surface-bright": "#f7f9ff",
+              "on-tertiary-container": "#7b8b9b",
+              "surface-container-low": "#ecf4ff",
+              "on-secondary-fixed": "#271900"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f7f9ff;
+      }
+      h1, h2, h3 {
+        font-family: 'Manrope', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Sidebar Navigation (SideNavBar Anchor) -->
+<aside class="flex flex-col h-full py-6 bg-[#00003c] dark:bg-[#000c18] h-screen w-64 fixed left-0 top-0 rounded-none shadow-[20px_0_40px_rgba(13,29,42,0.06)] z-50">
+<div class="px-6 mb-10">
+<h1 class="text-[#ffffff] font-black uppercase tracking-widest text-lg">WM/M&amp;S Admin</h1>
+<p class="font-['Inter'] text-[10px] tracking-wide uppercase text-slate-400 mt-1">Construction Management</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-6 py-4 text-slate-400 hover:text-white hover:bg-[#000080]/50 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] text-sm tracking-wide uppercase">Dashboard</span>
+</a>
+<a class="flex items-center px-6 py-4 bg-[#000080] text-[#f7bd48] border-r-4 border-[#7b5800] font-bold transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="fact_check">fact_check</span>
+<span class="font-['Inter'] text-sm tracking-wide uppercase">Payroll Approval</span>
+</a>
+<a class="flex items-center px-6 py-4 text-slate-400 hover:text-white hover:bg-[#000080]/50 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="architecture">architecture</span>
+<span class="font-['Inter'] text-sm tracking-wide uppercase">Project Sites</span>
+</a>
+<a class="flex items-center px-6 py-4 text-slate-400 hover:text-white hover:bg-[#000080]/50 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="group">group</span>
+<span class="font-['Inter'] text-sm tracking-wide uppercase">Workforce</span>
+</a>
+<a class="flex items-center px-6 py-4 text-slate-400 hover:text-white hover:bg-[#000080]/50 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="analytics">analytics</span>
+<span class="font-['Inter'] text-sm tracking-wide uppercase">Reports</span>
+</a>
+</nav>
+<div class="px-6 mt-auto pt-6 border-t border-white/5 space-y-4">
+<button class="w-full bg-secondary text-on-secondary font-bold py-3 text-xs tracking-widest uppercase hover:opacity-90 transition-opacity">
+                New Payroll Run
+            </button>
+<div class="space-y-1 pb-4">
+<a class="flex items-center text-slate-400 hover:text-white text-xs py-2 uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined mr-2 text-sm" data-icon="help">help</span> Support
+                </a>
+<a class="flex items-center text-slate-400 hover:text-white text-xs py-2 uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined mr-2 text-sm" data-icon="logout">logout</span> Logout
+                </a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopNavBar Anchor -->
+<header class="flex justify-between items-center px-12 h-16 w-full sticky top-0 z-40 bg-slate-50 border-b-0">
+<div class="flex items-center gap-8">
+<h2 class="text-xl font-bold tracking-tighter text-[#00003c] font-headline">Constructora WM/M&amp;S</h2>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-sm" data-icon="search">search</span>
+<input class="bg-surface-container-low border-none text-sm pl-10 pr-4 py-1.5 w-64 focus:ring-1 focus:ring-secondary" placeholder="Buscar registros..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-slate-500 hover:text-[#00003c] transition-colors"><span class="material-symbols-outlined" data-icon="notifications">notifications</span></button>
+<button class="text-slate-500 hover:text-[#00003c] transition-colors"><span class="material-symbols-outlined" data-icon="settings">settings</span></button>
+<div class="h-8 w-8 bg-surface-container-highest border border-outline-variant flex items-center justify-center">
+<img alt="Administrator profile" class="h-full w-full object-cover" data-alt="User avatar for site administrator profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZTlkrAHveUuZGl-R-KGMgUnrPTP9OMTIl7s7Ta3hh4ckgP-88dr52ANAimoIIb13pcUAbvCJ3mPlFqxxSU8e4LJqbAtIOq4b2V9pR30wZkPi_VV_l38AOPw87qvnI4SYREdTwN3Te7Ixm_TmoDBoz97fW0ToBqVKNHb_tMFiP_mawTqJNG1EFeEuPweMCT5zxThvQXxA8DP_qBddHFQEvOAmkhqGhDbtW0BG24ldUk9FQH2VtJatiPKCvcRJ9tsDis9c5LgeXaEjG"/>
+</div>
+</div>
+</header>
+<div class="p-12 max-w-7xl mx-auto space-y-12">
+<!-- Summary Header Section -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-0 bg-surface-container-lowest shadow-[0_20px_40px_rgba(13,29,42,0.06)]">
+<div class="p-8 border-r border-outline-variant/10">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2">Total a Aprobar</p>
+<h3 class="font-headline text-3xl font-extrabold text-secondary tracking-tighter">Q142,580.00</h3>
+</div>
+<div class="p-8 border-r border-outline-variant/10">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2">Periodo de Pago</p>
+<p class="font-headline text-xl font-semibold text-primary">15/10/2024 - 31/10/2024</p>
+</div>
+<div class="p-8">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2">Fase de Proyecto</p>
+<p class="font-headline text-xl font-semibold text-primary">Residencial Los Olivos</p>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Details & Checklist -->
+<div class="lg:col-span-8 space-y-12">
+<!-- Approval Checklist (Asymmetric Layout) -->
+<div>
+<h4 class="font-label text-xs font-bold uppercase tracking-[0.3em] text-primary mb-6 border-l-4 border-secondary pl-4">Protocolo de Verificación</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-6 bg-surface-container-low flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-headline font-bold text-primary text-sm">Fondos Verificados</p>
+<p class="text-xs text-outline mt-1 italic">Bank of America - Account 4492</p>
+</div>
+</div>
+<div class="p-6 bg-surface-container-low flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-headline font-bold text-primary text-sm">Recibos FEL Listos</p>
+<p class="text-xs text-outline mt-1 italic">Facturación Electrónica SAT validada</p>
+</div>
+</div>
+<div class="p-6 bg-surface-container-low flex items-start gap-4 md:col-span-2">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-headline font-bold text-primary text-sm">Impuestos IGSS calculados</p>
+<p class="text-xs text-outline mt-1 italic">Retenciones de ley procesadas según planilla mensual</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Collaboration Summary (Architectural Table) -->
+<div>
+<h4 class="font-label text-xs font-bold uppercase tracking-[0.3em] text-primary mb-6 border-l-4 border-secondary pl-4">Desglose de Mano de Obra</h4>
+<div class="bg-surface-container-lowest overflow-hidden">
+<table class="w-full text-left">
+<thead class="bg-primary text-on-primary">
+<tr>
+<th class="px-8 py-4 font-label text-[10px] uppercase tracking-widest">Categoría Profesional</th>
+<th class="px-8 py-4 font-label text-[10px] uppercase tracking-widest text-right">Monto Total</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-6 font-headline font-bold text-primary">Maestros de Obra</td>
+<td class="px-8 py-6 text-right font-headline font-extrabold text-primary">Q45,000.00</td>
+</tr>
+<tr class="bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-6 font-headline font-bold text-primary">Albañiles</td>
+<td class="px-8 py-6 text-right font-headline font-extrabold text-primary">Q65,000.00</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-6 font-headline font-bold text-primary">Técnicos Especializados</td>
+<td class="px-8 py-6 text-right font-headline font-extrabold text-primary">Q32,580.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Right Column: Action Sidebar (Bento Style) -->
+<div class="lg:col-span-4 space-y-8">
+<div class="bg-primary p-8 text-on-primary shadow-xl relative overflow-hidden">
+<!-- Abstract Design Element -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary/10 rotate-45"></div>
+<h4 class="font-headline text-2xl font-bold mb-8 relative z-10 leading-tight">Acciones de Aprobación</h4>
+<div class="space-y-4 relative z-10">
+<button class="w-full bg-secondary-fixed-dim text-on-secondary-fixed font-headline font-extrabold py-5 px-6 tracking-widest hover:bg-secondary-container transition-all flex items-center justify-between group">
+<span>AUTORIZAR PAGO MASIVO</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="send">send</span>
+</button>
+<button class="w-full bg-transparent border border-white/20 text-white font-headline font-semibold py-4 px-6 hover:bg-white/5 transition-all text-sm tracking-wide">
+                                Revisar Detalle Individual
+                            </button>
+</div>
+<div class="mt-12 pt-8 border-t border-white/10 space-y-6">
+<div class="flex items-center gap-4">
+<div class="p-3 bg-white/5">
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="history">history</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-white/50">Último Cambio</p>
+<p class="text-sm font-semibold">Hace 14 min por Admin_WM</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="p-3 bg-white/5">
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-white/50">Seguridad Biométrica</p>
+<p class="text-sm font-semibold">Token Activo</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Security Badge (Pylon Style) -->
+<div class="p-6 bg-surface-container flex items-center justify-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="security">security</span>
+<p class="font-label text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant">Protegido por IA Gemini ArchOS</p>
+</div>
+<!-- Auxiliary Data Pylon -->
+<div class="bg-surface-container-low p-8 border-l-2 border-secondary">
+<p class="font-headline text-4xl font-extrabold text-secondary mb-1">94%</p>
+<p class="font-label text-[10px] uppercase tracking-[0.15em] text-primary font-bold">Eficiencia de Flujo de Caja</p>
+<p class="text-[10px] text-outline mt-3 leading-relaxed">Proyección optimizada para el cierre de trimestre Residencial Los Olivos.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

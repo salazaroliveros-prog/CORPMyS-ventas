@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#343026",
+              "surface-bright": "#fff8ef",
+              "surface": "#fff8ef",
+              "outline-variant": "#dac1b8",
+              "on-primary-fixed-variant": "#76320f",
+              "tertiary-fixed": "#d4e4f6",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#f8f0e1",
+              "surface-container-highest": "#e9e2d3",
+              "secondary": "#546344",
+              "on-surface": "#1e1b13",
+              "inverse-primary": "#ffb596",
+              "primary-fixed": "#ffdbcd",
+              "on-secondary-container": "#5a6949",
+              "secondary-fixed": "#d7e9c1",
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "background": "#fff8ef",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed": "#0d1d2a",
+              "tertiary-container": "#596979",
+              "surface-tint": "#944925",
+              "error-container": "#ffdad6",
+              "surface-dim": "#e1d9cb",
+              "on-error": "#ffffff",
+              "primary-container": "#a0522d",
+              "tertiary": "#415160",
+              "on-primary-fixed": "#360f00",
+              "on-error-container": "#93000a",
+              "on-tertiary": "#ffffff",
+              "outline": "#87736b",
+              "on-background": "#1e1b13",
+              "error": "#ba1a1a",
+              "tertiary-fixed-dim": "#b8c8da",
+              "on-tertiary-fixed-variant": "#394857",
+              "surface-container-low": "#fbf3e4",
+              "secondary-fixed-dim": "#bbcca6",
+              "on-secondary-fixed": "#121f06",
+              "surface-container": "#f5edde",
+              "on-primary": "#ffffff",
+              "on-primary-container": "#ffe1d6",
+              "surface-variant": "#e9e2d3",
+              "surface-container-high": "#efe7d9",
+              "primary": "#823b18",
+              "on-surface-variant": "#54433c",
+              "secondary-container": "#d7e9c1",
+              "primary-fixed-dim": "#ffb596",
+              "on-tertiary-container": "#d8e9fb"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.paper-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAJssy8gYES0ihEJq9nWX1tZhD_JuRykHMv3XBiNlMapvKo22KT6vy_qdg2dwALm3YzZFMzUGyMEkwHxGoHSbrvyAx9dLJmQjWmwAg2gvShtSVJkE-k-Lyvid9BTJitlrpbXDOYU7prLD6jme94_FvYw_Ost409lemmK0EDEQyyxYo9pfcNcVCM4sluD67S2jwxG5OOD_2SIrWV-N8ESZdvFt6YNd2oFW79xJd25ff9oij4BBwyxx2Kc8SRnGjgR2njdVLZzGAehYoE)
+    }
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px
+    }
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #fbf3e4
+    }
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #823b18;
+    border-radius: 10px
+    }</style>
+  <title>configuraci n de repositorio github</title>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-[#fff8ef] dark:bg-stone-950/80 backdrop-blur-md shadow-[0_20px_40px_rgba(30,27,19,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold text-[#1e1b13] dark:text-[#fff8ef] tracking-tighter font-headline">Heirloom Crust</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-[#1e1b13] dark:text-[#dac1b8] opacity-80 hover:opacity-100 transition-opacity font-['Work_Sans'] text-sm uppercase tracking-widest" href="#">Docs</a>
+<a class="text-[#1e1b13] dark:text-[#dac1b8] opacity-80 hover:opacity-100 transition-opacity font-['Work_Sans'] text-sm uppercase tracking-widest" href="#">Architecture</a>
+<a class="text-[#1e1b13] dark:text-[#dac1b8] opacity-80 hover:opacity-100 transition-opacity font-['Work_Sans'] text-sm uppercase tracking-widest" href="#">Sourdough JS</a>
+<a class="text-[#1e1b13] dark:text-[#dac1b8] opacity-80 hover:opacity-100 transition-opacity font-['Work_Sans'] text-sm uppercase tracking-widest" href="#">Community</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary-container text-on-primary-container px-5 py-2.5 rounded-md font-medium text-sm transition-transform scale-95 active:scale-90 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">terminal</span>
+                    Repository
+                </button>
+</div>
+</div>
+</header>
+<main class="mt-24 px-8 max-w-screen-2xl mx-auto w-full pb-20">
+<!-- Header Section -->
+<section class="mb-12">
+<h1 class="font-headline text-5xl font-bold text-on-surface mb-4 tracking-tighter">Configuración del Repositorio</h1>
+<p class="text-on-surface-variant max-w-2xl font-body leading-relaxed opacity-80">
+                Establece la base técnica de tu proyecto. Sigue estos pasos para vincular tu arquitectura Heirloom Crust con el mundo exterior.
+            </p>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Technical Steps (Left Side) -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Step 1: GitHub Creation -->
+<article class="bg-surface-container-lowest paper-texture rounded-xl p-8 shadow-[0_20px_40px_rgba(30,27,19,0.06)] relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl">cloud_upload</span>
+</div>
+<div class="flex items-center gap-4 mb-6">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">1</span>
+<h2 class="font-headline text-2xl font-bold">Crear Repositorio en GitHub</h2>
+</div>
+<p class="text-on-surface-variant mb-6 font-body">Inicia sesión en tu cuenta de GitHub y crea un nuevo contenedor para el código.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="group cursor-pointer">
+<input checked="" class="hidden peer" name="repo_type" type="radio"/>
+<div class="p-6 rounded-lg border-2 border-transparent bg-surface-container-low peer-checked:border-primary peer-checked:bg-surface-container transition-all">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary">public</span>
+<span class="font-semibold">Público</span>
+</div>
+<p class="text-sm opacity-60">Cualquiera en internet puede ver este repositorio. Ideal para código abierto.</p>
+</div>
+</label>
+<label class="group cursor-pointer">
+<input class="hidden peer" name="repo_type" type="radio"/>
+<div class="p-6 rounded-lg border-2 border-transparent bg-surface-container-low peer-checked:border-primary peer-checked:bg-surface-container transition-all">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary">lock</span>
+<span class="font-semibold">Privado</span>
+</div>
+<p class="text-sm opacity-60">Tú eliges quién puede ver y realizar cambios en este repositorio.</p>
+</div>
+</label>
+</div>
+</article>
+<!-- Step 2: Initialize Local -->
+<article class="bg-surface-container-lowest paper-texture rounded-xl p-8 shadow-[0_20px_40px_rgba(30,27,19,0.06)]">
+<div class="flex items-center gap-4 mb-6">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">2</span>
+<h2 class="font-headline text-2xl font-bold">Inicializar Código Localmente</h2>
+</div>
+<p class="text-on-surface-variant mb-4">Ejecuta estos comandos en la terminal de tu proyecto para preparar el seguimiento de cambios.</p>
+<div class="bg-inverse-surface rounded-lg p-5 font-mono text-sm text-surface overflow-x-auto">
+<div class="flex items-center gap-4 mb-2 opacity-50">
+<span class="w-3 h-3 rounded-full bg-red-500"></span>
+<span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+<span class="w-3 h-3 rounded-full bg-green-500"></span>
+<span class="ml-auto text-xs">bash</span>
+</div>
+<code class="block leading-relaxed">
+<span class="text-secondary-fixed">git init</span><br/>
+<span class="text-secondary-fixed">git add .</span><br/>
+<span class="text-secondary-fixed">git commit -m "initial: primer amasado del código"</span>
+</code>
+</div>
+</article>
+<!-- Step 3 & 4: Remote & Push -->
+<article class="bg-surface-container-lowest paper-texture rounded-xl p-8 shadow-[0_20px_40px_rgba(30,27,19,0.06)]">
+<div class="flex items-center gap-4 mb-6">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">3</span>
+<h2 class="font-headline text-2xl font-bold">Conectar Remoto y Subir</h2>
+</div>
+<div class="space-y-6">
+<div>
+<p class="text-on-surface-variant mb-3 text-sm font-semibold uppercase tracking-wider">Paso A: Vincular origen</p>
+<div class="bg-inverse-surface rounded-lg p-5 font-mono text-sm text-surface">
+<code class="text-secondary-fixed">git remote add origin https://github.com/usuario/heirloom-crust.git</code>
+</div>
+</div>
+<div>
+<p class="text-on-surface-variant mb-3 text-sm font-semibold uppercase tracking-wider">Paso B: Realizar Push</p>
+<div class="bg-inverse-surface rounded-lg p-5 font-mono text-sm text-surface">
+<code class="text-secondary-fixed">git push -u origin main</code>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Widgets (Right Side) -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Connection Status Widget -->
+<div class="bg-surface-container-highest rounded-xl p-8 shadow-sm">
+<h3 class="font-headline text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">hub</span>
+                        Estado de Conexión
+                    </h3>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-on-surface">account_tree</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-semibold opacity-50 uppercase tracking-widest">GitHub</p>
+<p class="font-bold text-secondary flex items-center gap-2">
+                                    Conectado
+                                    <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+</p>
+</div>
+</div>
+<div class="relative py-2">
+<div class="absolute left-6 top-0 bottom-0 w-px bg-outline-variant/30 border-dashed border-l"></div>
+<div class="flex justify-center">
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-bold text-primary border border-primary/20 rounded-full z-10">SYNC</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center shadow-sm">
+<img alt="Logotipo de Vercel para vinculación de hosting" class="w-6 h-6" data-alt="Logotipo de Vercel en blanco y negro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASnRelq_xSKrwJqFkblXDiw--itYH5OnT9-6sINb0BTgH2S1l4fW45125yPKFa1pg3l46jEvOqTQbH0dED3GI6_8C3erkQ2XJZjoC4ESsboVs_QNQsTMKES1QTyMMC_ggRU9-xap3FOAhm8dp88CxXtXTwz3DzobrnOMJbnoILF3geN3r4MFPDEsfgqdHstnxj8PgQgt0lJVkUr8rql1lpqAzc78Yoc0yIqrAA6Hwr5sx3-avsx5HH11ZCSaMIxjfu6MW46x10VSZW"/>
+</div>
+<div class="flex-1">
+<p class="text-xs font-semibold opacity-50 uppercase tracking-widest">Vercel</p>
+<p class="font-bold text-on-surface-variant flex items-center gap-2 italic">
+                                    Esperando despliegue...
+                                </p>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/20">
+<p class="text-xs text-on-surface-variant leading-relaxed italic">
+                            "Como el fermento en el agua, tu código está listo para expandirse en la red."
+                        </p>
+</div>
+</div>
+<!-- Fermentation Tracker (Signature Component) -->
+<div class="bg-surface-container-low rounded-xl p-8">
+<h3 class="text-sm font-semibold uppercase tracking-widest mb-4">Progreso de Configuración</h3>
+<div class="h-3 w-full bg-secondary-fixed rounded-full overflow-hidden mb-2">
+<div class="h-full bg-secondary w-3/4 rounded-full"></div>
+</div>
+<div class="flex justify-between text-xs font-bold text-secondary">
+<span>FERMENTANDO</span>
+<span>75%</span>
+</div>
+<p class="mt-4 text-xs text-on-surface-variant opacity-70">El código está casi listo para el despliegue final en producción.</p>
+</div>
+<!-- Quick Tips -->
+<div class="p-6 border border-outline-variant/20 rounded-xl bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary mb-3">lightbulb</span>
+<h4 class="font-bold mb-2">Consejo de Taller</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        Asegúrate de tener un archivo <code class="bg-surface-container px-1 rounded">.gitignore</code> configurado para no subir la masa madre (node_modules) al servidor.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#fbf3e4] dark:bg-stone-900 w-full py-12 px-8 mt-auto border-t border-[#dac1b8]/20">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-screen-2xl mx-auto">
+<div class="font-['Noto_Serif'] font-bold text-[#1e1b13] dark:text-[#fff8ef] text-xl">Heirloom Crust Architecture</div>
+<div class="flex gap-8 font-['Work_Sans'] text-sm uppercase tracking-widest">
+<a class="text-[#415160] dark:text-[#dac1b8] hover:text-[#823b18] dark:hover:text-[#a0522d] underline transition-all" href="#">GitHub</a>
+<a class="text-[#415160] dark:text-[#dac1b8] hover:text-[#823b18] dark:hover:text-[#a0522d] underline transition-all" href="#">Documentation</a>
+<a class="text-[#415160] dark:text-[#dac1b8] hover:text-[#823b18] dark:hover:text-[#a0522d] underline transition-all" href="#">Style Guide</a>
+<a class="text-[#415160] dark:text-[#dac1b8] hover:text-[#823b18] dark:hover:text-[#a0522d] underline transition-all" href="#">Changelog</a>
+</div>
+<p class="text-[#415160] dark:text-[#dac1b8] font-['Work_Sans'] text-xs uppercase tracking-widest opacity-60">
+                © 2024 Heirloom Crust Architecture. Crafted with patience.
+            </p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Configuración de Dominio | ARCHI_TECH para Constructora WM/M&amp;S</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#bfc2ff",
+              "on-primary-container": "#777eea",
+              "inverse-primary": "#bfc2ff",
+              "surface-variant": "#d4e4f6",
+              "tertiary-fixed-dim": "#b8c8da",
+              "on-tertiary": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#d9eafc",
+              "on-primary-fixed-variant": "#3239a3",
+              "outline-variant": "#c6c5d5",
+              "surface-container-low": "#ecf4ff",
+              "on-primary-fixed": "#00006e",
+              "surface-dim": "#cbdcee",
+              "on-tertiary-container": "#7b8b9b",
+              "surface-container-lowest": "#ffffff",
+              "on-surface": "#0d1d2a",
+              "secondary": "#7b5800",
+              "on-surface-variant": "#464653",
+              "surface-container": "#e2efff",
+              "primary-container": "#000080",
+              "on-background": "#0d1d2a",
+              "secondary-container": "#fdc34d",
+              "on-tertiary-fixed-variant": "#394857",
+              "surface-container-highest": "#d4e4f6",
+              "inverse-on-surface": "#e7f2ff",
+              "surface-bright": "#f7f9ff",
+              "on-primary": "#ffffff",
+              "on-secondary-container": "#715000",
+              "outline": "#767684",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#d4e4f6",
+              "tertiary-container": "#132330",
+              "on-secondary-fixed-variant": "#5d4200",
+              "secondary-fixed-dim": "#f7bd48",
+              "surface": "#f7f9ff",
+              "primary": "#00003c",
+              "error": "#ba1a1a",
+              "on-secondary": "#ffffff",
+              "on-tertiary-fixed": "#0d1d2a",
+              "tertiary": "#000c18",
+              "on-secondary-fixed": "#271900",
+              "surface-tint": "#4b53bc",
+              "inverse-surface": "#223240",
+              "secondary-fixed": "#ffdea6",
+              "primary-fixed": "#e0e0ff",
+              "background": "#f7f9ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "0px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .blueprint-pattern {
+            background-image: radial-gradient(circle, #c6c5d5 1px, transparent 1px);
+            background-size: 32px 32px;
+            opacity: 0.15;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="bg-slate-50 dark:bg-[#000c18] w-full border-b-0">
+<div class="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#00003c] dark:text-white font-headline">
+                ARCHI_TECH <span class="text-secondary font-light">| WM/M&amp;S</span>
+</div>
+<div class="hidden md:flex gap-8">
+<a class="text-[#7b5800] border-b-2 border-[#7b5800] pb-1 font-headline font-semibold tracking-tighter uppercase text-sm" href="#">Dominios</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#00003c] transition-colors duration-200 font-headline font-semibold tracking-tighter uppercase text-sm" href="#">DNS</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#00003c] transition-colors duration-200 font-headline font-semibold tracking-tighter uppercase text-sm" href="#">SSL</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#00003c] transition-colors duration-200 font-headline font-semibold tracking-tighter uppercase text-sm" href="#">Vercel</a>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</nav>
+<div class="flex max-w-[1440px] mx-auto min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col py-10 bg-[#f7f9ff] dark:bg-[#000c18] h-screen w-64 border-r-0 shrink-0">
+<div class="px-8 mb-10">
+<h3 class="font-['Inter'] text-xs font-medium tracking-widest uppercase text-primary">CONFIGURACIÓN</h3>
+<p class="text-[10px] text-slate-400 uppercase tracking-tighter mt-1">Guía Técnica v1.0</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 text-[#7b5800] font-bold border-l-4 border-[#7b5800] pl-4 py-3 bg-[#e2efff] transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-['Inter'] text-xs font-medium tracking-widest uppercase">Compra de Dominio</span>
+</a>
+<a class="flex items-center gap-4 text-slate-400 dark:text-slate-500 pl-5 py-3 hover:bg-[#e2efff] transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="dns">dns</span>
+<span class="font-['Inter'] text-xs font-medium tracking-widest uppercase">Registros DNS</span>
+</a>
+<a class="flex items-center gap-4 text-slate-400 dark:text-slate-500 pl-5 py-3 hover:bg-[#e2efff] transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+<span class="font-['Inter'] text-xs font-medium tracking-widest uppercase">Verificación Vercel</span>
+</a>
+<a class="flex items-center gap-4 text-slate-400 dark:text-slate-500 pl-5 py-3 hover:bg-[#e2efff] transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="enhanced_encryption">enhanced_encryption</span>
+<span class="font-['Inter'] text-xs font-medium tracking-widest uppercase">Seguridad SSL</span>
+</a>
+</nav>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-grow bg-surface-bright relative">
+<div class="absolute inset-0 blueprint-pattern pointer-events-none"></div>
+<div class="px-8 md:px-16 py-12 relative z-10">
+<!-- Header Section -->
+<header class="mb-20">
+<div class="inline-block bg-secondary text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase mb-4">
+                        Documentación Técnica
+                    </div>
+<h1 class="text-primary font-headline text-5xl md:text-6xl font-extrabold tracking-tighter leading-none mb-6 max-w-2xl">
+                        Despliegue de Identidad Digital: Constructora WM/M&amp;S
+                    </h1>
+<p class="text-on-surface-variant font-body text-lg max-w-xl leading-relaxed">
+                        Protocolo estructural para la vinculación de dominios personalizados y configuración de infraestructura en la nube.
+                    </p>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+<!-- Step 1: Acquisition (Wide Column) -->
+<section class="md:col-span-8 bg-surface-container-lowest p-10 border-l-8 border-secondary relative">
+<span class="absolute top-4 right-6 text-6xl font-headline font-black text-outline-variant opacity-20">01</span>
+<div class="flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-secondary" data-icon="shopping_cart">shopping_cart</span>
+<h2 class="font-headline text-xl font-bold tracking-tight text-primary uppercase">Adquisición del Dominio</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+                                    Para Constructora WM/M&amp;S, recomendamos proveedores con gestión DNS de baja latencia. El costo promedio anual para un dominio .com es de <strong>Q80 a Q120</strong>.
+                                </p>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 bg-surface-container-low">
+<span class="font-headline font-bold text-primary text-sm">Namecheap</span>
+<span class="text-secondary text-xs font-bold">RECOMENDADO</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low">
+<span class="font-headline font-bold text-primary text-sm">Cloudflare</span>
+<span class="text-secondary text-xs font-bold">SEGURIDAD+</span>
+</div>
+</div>
+</div>
+<div class="bg-primary p-8 flex flex-col justify-between">
+<p class="text-white font-label text-[10px] tracking-[0.2em] uppercase opacity-70">Costo Estimado</p>
+<div class="text-secondary-fixed text-4xl font-headline font-bold mt-2">Q120.00 <span class="text-lg opacity-50">/año</span></div>
+<button class="mt-8 bg-secondary text-white py-4 px-6 text-xs font-bold uppercase tracking-widest hover:bg-on-secondary-container transition-all">
+                                    Comprar Ahora
+                                </button>
+</div>
+</div>
+</section>
+<!-- Data Pylon Component (Sidebar) -->
+<aside class="md:col-span-4 space-y-6">
+<div class="bg-surface-container p-8">
+<h3 class="font-label text-[10px] font-bold tracking-widest text-primary uppercase mb-8">Estado del Proyecto</h3>
+<div class="space-y-10">
+<div class="flex flex-col">
+<span class="text-4xl font-headline font-bold text-secondary">99.9%</span>
+<span class="text-[10px] font-bold text-on-surface-variant tracking-widest uppercase mt-1">Uptime Garantizado</span>
+</div>
+<div class="flex flex-col">
+<span class="text-4xl font-headline font-bold text-secondary">0.0ms</span>
+<span class="text-[10px] font-bold text-on-surface-variant tracking-widest uppercase mt-1">Latencia Propagación</span>
+</div>
+<div class="flex flex-col">
+<span class="text-4xl font-headline font-bold text-secondary">256-bit</span>
+<span class="text-[10px] font-bold text-on-surface-variant tracking-widest uppercase mt-1">Cifrado SSL/TLS</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Step 2: DNS Table (Full Width) -->
+<section class="md:col-span-12 bg-surface-container-lowest p-10 mt-10">
+<div class="flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-secondary" data-icon="dns">dns</span>
+<h2 class="font-headline text-xl font-bold tracking-tight text-primary uppercase">Configuración de Registros DNS</h2>
+</div>
+<p class="text-sm text-on-surface-variant mb-10 max-w-2xl">
+                            Ingrese a la zona DNS de su proveedor y establezca los siguientes parámetros estructurales para apuntar a los servidores de Vercel.
+                        </p>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b-2 border-primary">
+<th class="p-4 font-label text-[10px] tracking-widest uppercase text-primary font-bold">Tipo</th>
+<th class="p-4 font-label text-[10px] tracking-widest uppercase text-primary font-bold">Nombre/Host</th>
+<th class="p-4 font-label text-[10px] tracking-widest uppercase text-primary font-bold">Valor/Destino</th>
+<th class="p-4 font-label text-[10px] tracking-widest uppercase text-primary font-bold">TTL</th>
+</tr>
+</thead>
+<tbody class="font-body text-sm">
+<tr class="border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors">
+<td class="p-4 font-bold text-primary">A</td>
+<td class="p-4 text-secondary">@</td>
+<td class="p-4 font-mono text-on-surface-variant">76.76.21.21</td>
+<td class="p-4 text-xs text-slate-400">Automatic</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-4 font-bold text-primary">CNAME</td>
+<td class="p-4 text-secondary">www</td>
+<td class="p-4 font-mono text-on-surface-variant">cname.vercel-dns.com</td>
+<td class="p-4 text-xs text-slate-400">Automatic</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Step 3: Vercel Verification (Card Style) -->
+<section class="md:col-span-6 bg-primary text-white p-10 relative overflow-hidden h-full">
+<div class="absolute -right-20 -bottom-20 opacity-10">
+<span class="material-symbols-outlined text-[300px]" data-icon="check_circle">check_circle</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="verified">verified</span>
+<h2 class="font-headline text-xl font-bold tracking-tight uppercase">Estado de Despliegue</h2>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4 bg-white/5 p-4">
+<div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest">Dominio Conectado</p>
+<p class="text-[10px] opacity-60">constructora-wm.com</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white/5 p-4">
+<div class="w-3 h-3 bg-green-500 rounded-full"></div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest">Certificado SSL Activo</p>
+<p class="text-[10px] opacity-60">Seguridad Total (Gratis)</p>
+</div>
+</div>
+</div>
+<p class="mt-12 text-sm text-white/60 leading-relaxed italic">
+                                "La infraestructura está lista para recibir tráfico. Constructora WM/M&amp;S ahora es accesible globalmente."
+                            </p>
+</div>
+</section>
+<!-- Summary / Benefits -->
+<section class="md:col-span-6 bg-surface-container-high p-10 h-full">
+<div class="flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="architecture">architecture</span>
+<h2 class="font-headline text-xl font-bold tracking-tight text-primary uppercase">Análisis de Beneficios</h2>
+</div>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="workspace_premium">workspace_premium</span>
+<div>
+<h4 class="font-bold text-sm text-primary uppercase tracking-tight">Branding Profesional</h4>
+<p class="text-xs text-on-surface-variant mt-1">Consolidación de marca frente a clientes y proveedores con una URL técnica propia.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
+<div>
+<h4 class="font-bold text-sm text-primary uppercase tracking-tight">Correos Corporativos</h4>
+<p class="text-xs text-on-surface-variant mt-1">Habilitación de cuentas como info@constructora-wm.com para gestión oficial.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="shield_check">shield</span>
+<div>
+<h4 class="font-bold text-sm text-primary uppercase tracking-tight">Seguridad Estructural</h4>
+<p class="text-xs text-on-surface-variant mt-1">Protección contra ataques DDOS y cifrado de datos extremo a extremo.</p>
+</div>
+</li>
+</ul>
+</section>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-[#e2efff] dark:bg-[#000c18]">
+<div class="flex flex-col items-center py-12 px-8 border-t border-[#c6c5d5]/15">
+<p class="font-['Inter'] text-[10px] tracking-[0.1em] uppercase text-[#00003c] dark:text-[#f7f9ff] mb-6">
+                        © 2024 ARCHI_TECH. SISTEMAS DE PRECISI\u00d3N ESTRUCTURAL.
+                    </p>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-[10px] tracking-[0.1em] uppercase text-slate-500 hover:text-[#00003c] dark:hover:text-white transition-colors" href="#">Soporte T\u00e9cnico</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.1em] uppercase text-slate-500 hover:text-[#00003c] dark:hover:text-white transition-colors" href="#">Documentaci\u00f3n API</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.1em] uppercase text-slate-500 hover:text-[#00003c] dark:hover:text-white transition-colors" href="#">Privacidad</a>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Indice de Publicacion - Pagina Web</title>
+  <style>
+    :root {
+      --bg: #f3f6f9;
+      --paper: #ffffff;
+      --ink: #1f2933;
+      --muted: #52606d;
+      --accent: #0f7a8a;
+      --accent-strong: #0b5f6b;
+      --border: #d9e2ec;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at top right, #d7eef2 0%, var(--bg) 45%);
+      color: var(--ink);
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px 40px;
+    }
+    .hero {
+      background: linear-gradient(120deg, #0f7a8a, #0b5f6b);
+      color: #fff;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.12);
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1.1;
+    }
+    .meta {
+      margin: 0;
+      opacity: .95;
+    }
+    .tools {
+      display: flex;
+      gap: 12px;
+      margin: 18px 0 20px;
+      flex-wrap: wrap;
+    }
+    .input {
+      flex: 1 1 300px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 15px;
+      background: var(--paper);
+    }
+    .btn {
+      border: none;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 14px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn:hover { background: var(--accent-strong); }
+    .top-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 2px 0 16px;
+    }
+    .chip {
+      text-decoration: none;
+      background: #e9f5f7;
+      color: #0b5f6b;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid #b9e2e8;
+      font-size: 13px;
+    }
+    .summary {
+      margin: 8px 0 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      display: block;
+      text-decoration: none;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(15, 122, 138, .06);
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(15, 122, 138, .14);
+    }
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      color: var(--ink);
+      line-height: 1.3;
+      text-transform: capitalize;
+    }
+    .card p {
+      margin: 0;
+      font-size: 12px;
+      color: var(--muted);
+      word-break: break-all;
+    }
+    footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    @media (max-width: 700px) {
+      h1 { font-size: 24px; }
+      .hero { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Indice de Publicacion</h1>
+      <p class="meta">Entrada principal. Selecciona tu rol para comenzar.</p>
+      <div style="display: flex; gap: 16px; margin-top: 20px; flex-wrap: wrap;">
+        <a href="./stitch_pageweb/acceso_administrador_wm_m_s/code.html" style="flex: 1; min-width: 200px; background: #1e40af; color: white; padding: 16px 20px; border-radius: 10px; text-decoration: none; font-weight: 600; text-align: center;">Panel Administrativo</a>
+        <a href="./stitch_pageweb/cat_logo_residencial_wm_m_s/code.html" style="flex: 1; min-width: 200px; background: #dc2626; color: white; padding: 16px 20px; border-radius: 10px; text-decoration: none; font-weight: 600; text-align: center;">Comprar Productos</a>
+      </div>
+    </section>
+
+    <div class="tools">
+      <input id="search" class="input" type="search" placeholder="Buscar por nombre de pantalla..." />
+      <button id="clear" class="btn" type="button">Limpiar</button>
+    </div>
+
+    <div class="top-links">
+      <a class="chip" href="gu_a_paso_a_paso_publicaci_n_econ_mica.html" target="_blank" rel="noopener">Guia de Publicacion</a>
+      <a class="chip" href="stitch_pageweb/explicaci_n_vercel_y_github/code.html" target="_blank" rel="noopener">Explicacion Vercel y GitHub</a>
+      <a class="chip" href="stitch_pageweb/gu_a_de_publicaci_n_econ_mica_archicraft/code.html" target="_blank" rel="noopener">Guia Economica Archicraft</a>
+    </div>
+
+    <p id="summary" class="summary"></p>
+    <section id="grid" class="grid">
+      <a class="card" href="stitch_pageweb/acceso_administrador_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>acceso administrador wm m s</h3>
+        <p>stitch_pageweb/acceso_administrador_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/an_lisis_de_mercado_ia_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>an lisis de mercado ia wm m s</h3>
+        <p>stitch_pageweb/an_lisis_de_mercado_ia_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/aprobaci_n_de_n_mina_pendiente_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>aprobaci n de n mina pendiente wm m s</h3>
+        <p>stitch_pageweb/aprobaci_n_de_n_mina_pendiente_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/b_veda_de_documentos_legales/code.html" target="_blank" rel="noopener">
+        <h3>b veda de documentos legales</h3>
+        <p>stitch_pageweb/b_veda_de_documentos_legales/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/bienvenida_personalizada_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>bienvenida personalizada wm m s</h3>
+        <p>stitch_pageweb/bienvenida_personalizada_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/bienvenida_post_validaci_n_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>bienvenida post validaci n wm m s</h3>
+        <p>stitch_pageweb/bienvenida_post_validaci_n_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/bread_recipe_builder_1/code.html" target="_blank" rel="noopener">
+        <h3>bread recipe builder 1</h3>
+        <p>stitch_pageweb/bread_recipe_builder_1/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/bread_recipe_builder_2/code.html" target="_blank" rel="noopener">
+        <h3>bread recipe builder 2</h3>
+        <p>stitch_pageweb/bread_recipe_builder_2/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/calculadora_de_presupuestos_y_aval_os/code.html" target="_blank" rel="noopener">
+        <h3>calculadora de presupuestos y aval os</h3>
+        <p>stitch_pageweb/calculadora_de_presupuestos_y_aval_os/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/carrito_de_compras_m_vil_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>carrito de compras m vil wm m s</h3>
+        <p>stitch_pageweb/carrito_de_compras_m_vil_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/cat_logo_con_footer_social/code.html" target="_blank" rel="noopener">
+        <h3>cat logo con footer social</h3>
+        <p>stitch_pageweb/cat_logo_con_footer_social/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/cat_logo_con_precios_escalonados/code.html" target="_blank" rel="noopener">
+        <h3>cat logo con precios escalonados</h3>
+        <p>stitch_pageweb/cat_logo_con_precios_escalonados/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/cat_logo_de_arquitectura_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>cat logo de arquitectura wm m s</h3>
+        <p>stitch_pageweb/cat_logo_de_arquitectura_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/cat_logo_de_servicios_arquitect_nicos/code.html" target="_blank" rel="noopener">
+        <h3>cat logo de servicios arquitect nicos</h3>
+        <p>stitch_pageweb/cat_logo_de_servicios_arquitect_nicos/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/cat_logo_residencial_m_vil_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>cat logo residencial m vil wm m s</h3>
+        <p>stitch_pageweb/cat_logo_residencial_m_vil_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/cat_logo_residencial_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>cat logo residencial wm m s</h3>
+        <p>stitch_pageweb/cat_logo_residencial_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/centro_de_descargas_premium/code.html" target="_blank" rel="noopener">
+        <h3>centro de descargas premium</h3>
+        <p>stitch_pageweb/centro_de_descargas_premium/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/centro_de_mando_ia_gemini_1/code.html" target="_blank" rel="noopener">
+        <h3>centro de mando ia gemini 1</h3>
+        <p>stitch_pageweb/centro_de_mando_ia_gemini_1/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/centro_de_mando_ia_gemini_2/code.html" target="_blank" rel="noopener">
+        <h3>centro de mando ia gemini 2</h3>
+        <p>stitch_pageweb/centro_de_mando_ia_gemini_2/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/centro_de_mando_ia_gemini_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>centro de mando ia gemini wm m s</h3>
+        <p>stitch_pageweb/centro_de_mando_ia_gemini_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/chat_de_soporte_t_cnico_planos/code.html" target="_blank" rel="noopener">
+        <h3>chat de soporte t cnico planos</h3>
+        <p>stitch_pageweb/chat_de_soporte_t_cnico_planos/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/checkout_con_facturaci_n_electr_nica/code.html" target="_blank" rel="noopener">
+        <h3>checkout con facturaci n electr nica</h3>
+        <p>stitch_pageweb/checkout_con_facturaci_n_electr_nica/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/checkout_con_opci_n_paypal/code.html" target="_blank" rel="noopener">
+        <h3>checkout con opci n paypal</h3>
+        <p>stitch_pageweb/checkout_con_opci_n_paypal/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/checkout_de_planos_arquitect_nicos/code.html" target="_blank" rel="noopener">
+        <h3>checkout de planos arquitect nicos</h3>
+        <p>stitch_pageweb/checkout_de_planos_arquitect_nicos/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/configuraci_n_de_alertas_por_email/code.html" target="_blank" rel="noopener">
+        <h3>configuraci n de alertas por email</h3>
+        <p>stitch_pageweb/configuraci_n_de_alertas_por_email/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/configuraci_n_de_dominio_personalizado/code.html" target="_blank" rel="noopener">
+        <h3>configuraci n de dominio personalizado</h3>
+        <p>stitch_pageweb/configuraci_n_de_dominio_personalizado/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/configuraci_n_de_precios_escalonados/code.html" target="_blank" rel="noopener">
+        <h3>configuraci n de precios escalonados</h3>
+        <p>stitch_pageweb/configuraci_n_de_precios_escalonados/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/configuraci_n_de_repositorio_github/code.html" target="_blank" rel="noopener">
+        <h3>configuraci n de repositorio github</h3>
+        <p>stitch_pageweb/configuraci_n_de_repositorio_github/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/configuraci_n_de_seguridad_2fa/code.html" target="_blank" rel="noopener">
+        <h3>configuraci n de seguridad 2fa</h3>
+        <p>stitch_pageweb/configuraci_n_de_seguridad_2fa/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/confirmaci_n_de_compra_exitosa/code.html" target="_blank" rel="noopener">
+        <h3>confirmaci n de compra exitosa</h3>
+        <p>stitch_pageweb/confirmaci_n_de_compra_exitosa/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/confirmaci_n_de_pago_enviado_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>confirmaci n de pago enviado wm m s</h3>
+        <p>stitch_pageweb/confirmaci_n_de_pago_enviado_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/confirmaci_n_de_pago_m_vil_1/code.html" target="_blank" rel="noopener">
+        <h3>confirmaci n de pago m vil 1</h3>
+        <p>stitch_pageweb/confirmaci_n_de_pago_m_vil_1/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/confirmaci_n_de_pago_m_vil_2/code.html" target="_blank" rel="noopener">
+        <h3>confirmaci n de pago m vil 2</h3>
+        <p>stitch_pageweb/confirmaci_n_de_pago_m_vil_2/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/confirmaci_n_de_solicitud_de_ajuste_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>confirmaci n de solicitud de ajuste wm m s</h3>
+        <p>stitch_pageweb/confirmaci_n_de_solicitud_de_ajuste_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/confirmaci_n_de_ticket_enviado/code.html" target="_blank" rel="noopener">
+        <h3>confirmaci n de ticket enviado</h3>
+        <p>stitch_pageweb/confirmaci_n_de_ticket_enviado/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/confirmaci_n_m_vil_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>confirmaci n m vil wm m s</h3>
+        <p>stitch_pageweb/confirmaci_n_m_vil_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/confirmaci_n_pago_paypal_m_vil_1/code.html" target="_blank" rel="noopener">
+        <h3>confirmaci n pago paypal m vil 1</h3>
+        <p>stitch_pageweb/confirmaci_n_pago_paypal_m_vil_1/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/confirmaci_n_pago_paypal_m_vil_2/code.html" target="_blank" rel="noopener">
+        <h3>confirmaci n pago paypal m vil 2</h3>
+        <p>stitch_pageweb/confirmaci_n_pago_paypal_m_vil_2/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/crear_nuevo_ticket_de_soporte/code.html" target="_blank" rel="noopener">
+        <h3>crear nuevo ticket de soporte</h3>
+        <p>stitch_pageweb/crear_nuevo_ticket_de_soporte/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/cronograma_de_proyectos_wm_m_s_1/code.html" target="_blank" rel="noopener">
+        <h3>cronograma de proyectos wm m s 1</h3>
+        <p>stitch_pageweb/cronograma_de_proyectos_wm_m_s_1/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/cronograma_de_proyectos_wm_m_s_2/code.html" target="_blank" rel="noopener">
+        <h3>cronograma de proyectos wm m s 2</h3>
+        <p>stitch_pageweb/cronograma_de_proyectos_wm_m_s_2/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/cronograma_de_proyectos_wm_m_s_3/code.html" target="_blank" rel="noopener">
+        <h3>cronograma de proyectos wm m s 3</h3>
+        <p>stitch_pageweb/cronograma_de_proyectos_wm_m_s_3/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/cronograma_de_proyectos_wm_m_s_4/code.html" target="_blank" rel="noopener">
+        <h3>cronograma de proyectos wm m s 4</h3>
+        <p>stitch_pageweb/cronograma_de_proyectos_wm_m_s_4/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/cronograma_de_proyectos_wm_m_s_5/code.html" target="_blank" rel="noopener">
+        <h3>cronograma de proyectos wm m s 5</h3>
+        <p>stitch_pageweb/cronograma_de_proyectos_wm_m_s_5/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/cronograma_de_proyectos_wm_m_s_acabados_actualizados/code.html" target="_blank" rel="noopener">
+        <h3>cronograma de proyectos wm m s acabados actualizados</h3>
+        <p>stitch_pageweb/cronograma_de_proyectos_wm_m_s_acabados_actualizados/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/design_marketplace_1/code.html" target="_blank" rel="noopener">
+        <h3>design marketplace 1</h3>
+        <p>stitch_pageweb/design_marketplace_1/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/design_marketplace_2/code.html" target="_blank" rel="noopener">
+        <h3>design marketplace 2</h3>
+        <p>stitch_pageweb/design_marketplace_2/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/detalle_casa_amatitl_n_m_vil/code.html" target="_blank" rel="noopener">
+        <h3>detalle casa amatitl n m vil</h3>
+        <p>stitch_pageweb/detalle_casa_amatitl_n_m_vil/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/detalle_de_casa_amatitl_n_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>detalle de casa amatitl n wm m s</h3>
+        <p>stitch_pageweb/detalle_de_casa_amatitl_n_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/detalle_de_n_mina_espec_fica_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>detalle de n mina espec fica wm m s</h3>
+        <p>stitch_pageweb/detalle_de_n_mina_espec_fica_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/detalle_de_plano_m_vil_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>detalle de plano m vil wm m s</h3>
+        <p>stitch_pageweb/detalle_de_plano_m_vil_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/detalle_de_producto_con_footer_social/code.html" target="_blank" rel="noopener">
+        <h3>detalle de producto con footer social</h3>
+        <p>stitch_pageweb/detalle_de_producto_con_footer_social/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/detalle_de_producto_con_redes_sociales_actualizadas/code.html" target="_blank" rel="noopener">
+        <h3>detalle de producto con redes sociales actualizadas</h3>
+        <p>stitch_pageweb/detalle_de_producto_con_redes_sociales_actualizadas/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/detalle_de_producto_hogaza_corteza_de_sol_1/code.html" target="_blank" rel="noopener">
+        <h3>detalle de producto hogaza corteza de sol 1</h3>
+        <p>stitch_pageweb/detalle_de_producto_hogaza_corteza_de_sol_1/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/detalle_de_producto_hogaza_corteza_de_sol_2/code.html" target="_blank" rel="noopener">
+        <h3>detalle de producto hogaza corteza de sol 2</h3>
+        <p>stitch_pageweb/detalle_de_producto_hogaza_corteza_de_sol_2/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/explicaci_n_vercel_y_github/code.html" target="_blank" rel="noopener">
+        <h3>explicaci n vercel y github</h3>
+        <p>stitch_pageweb/explicaci_n_vercel_y_github/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/factura_electr_nica_fel_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>factura electr nica fel wm m s</h3>
+        <p>stitch_pageweb/factura_electr_nica_fel_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/finalizar_compra_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>finalizar compra wm m s</h3>
+        <p>stitch_pageweb/finalizar_compra_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/generador_de_firma_con_proyectos_wm_m_s_1/code.html" target="_blank" rel="noopener">
+        <h3>generador de firma con proyectos wm m s 1</h3>
+        <p>stitch_pageweb/generador_de_firma_con_proyectos_wm_m_s_1/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/generador_de_firma_con_proyectos_wm_m_s_2/code.html" target="_blank" rel="noopener">
+        <h3>generador de firma con proyectos wm m s 2</h3>
+        <p>stitch_pageweb/generador_de_firma_con_proyectos_wm_m_s_2/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/generador_de_firma_con_proyectos_wm_m_s_3/code.html" target="_blank" rel="noopener">
+        <h3>generador de firma con proyectos wm m s 3</h3>
+        <p>stitch_pageweb/generador_de_firma_con_proyectos_wm_m_s_3/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/generador_de_firma_profesional_wm_m_s_1/code.html" target="_blank" rel="noopener">
+        <h3>generador de firma profesional wm m s 1</h3>
+        <p>stitch_pageweb/generador_de_firma_profesional_wm_m_s_1/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/generador_de_firma_profesional_wm_m_s_2/code.html" target="_blank" rel="noopener">
+        <h3>generador de firma profesional wm m s 2</h3>
+        <p>stitch_pageweb/generador_de_firma_profesional_wm_m_s_2/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/gesti_n_de_proyectos_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>gesti n de proyectos wm m s</h3>
+        <p>stitch_pageweb/gesti_n_de_proyectos_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/gesti_n_de_tickets_de_soporte_t_cnico/code.html" target="_blank" rel="noopener">
+        <h3>gesti n de tickets de soporte t cnico</h3>
+        <p>stitch_pageweb/gesti_n_de_tickets_de_soporte_t_cnico/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/gesti_n_de_tickets_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>gesti n de tickets wm m s</h3>
+        <p>stitch_pageweb/gesti_n_de_tickets_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/gesti_n_de_ventas_y_publicaciones/code.html" target="_blank" rel="noopener">
+        <h3>gesti n de ventas y publicaciones</h3>
+        <p>stitch_pageweb/gesti_n_de_ventas_y_publicaciones/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/gu_a_conectar_a_github_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>gu a conectar a github wm m s</h3>
+        <p>stitch_pageweb/gu_a_conectar_a_github_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/gu_a_conectar_github_a_vercel_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>gu a conectar github a vercel wm m s</h3>
+        <p>stitch_pageweb/gu_a_conectar_github_a_vercel_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/gu_a_configurar_correos_corporativos_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>gu a configurar correos corporativos wm m s</h3>
+        <p>stitch_pageweb/gu_a_configurar_correos_corporativos_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/gu_a_configurar_dominio.com_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>gu a configurar dominio.com wm m s</h3>
+        <p>stitch_pageweb/gu_a_configurar_dominio.com_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/gu_a_de_publicaci_n_econ_mica_archicraft/code.html" target="_blank" rel="noopener">
+        <h3>gu a de publicaci n econ mica archicraft</h3>
+        <p>stitch_pageweb/gu_a_de_publicaci_n_econ_mica_archicraft/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/historial_de_accesos_sospechosos/code.html" target="_blank" rel="noopener">
+        <h3>historial de accesos sospechosos</h3>
+        <p>stitch_pageweb/historial_de_accesos_sospechosos/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/historial_de_activos_digitales/code.html" target="_blank" rel="noopener">
+        <h3>historial de activos digitales</h3>
+        <p>stitch_pageweb/historial_de_activos_digitales/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/historial_de_descargas_m_vil/code.html" target="_blank" rel="noopener">
+        <h3>historial de descargas m vil</h3>
+        <p>stitch_pageweb/historial_de_descargas_m_vil/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/historial_de_n_minas_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>historial de n minas wm m s</h3>
+        <p>stitch_pageweb/historial_de_n_minas_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/m_todo_de_pago_m_vil_1/code.html" target="_blank" rel="noopener">
+        <h3>m todo de pago m vil 1</h3>
+        <p>stitch_pageweb/m_todo_de_pago_m_vil_1/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/m_todo_de_pago_m_vil_2/code.html" target="_blank" rel="noopener">
+        <h3>m todo de pago m vil 2</h3>
+        <p>stitch_pageweb/m_todo_de_pago_m_vil_2/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/marketplace_de_software_para_construcci_n/code.html" target="_blank" rel="noopener">
+        <h3>marketplace de software para construcci n</h3>
+        <p>stitch_pageweb/marketplace_de_software_para_construcci_n/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/p_gina_de_inicio_clientes_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>p gina de inicio clientes wm m s</h3>
+        <p>stitch_pageweb/p_gina_de_inicio_clientes_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/pago_con_paypal_m_vil_wm_m_s_1/code.html" target="_blank" rel="noopener">
+        <h3>pago con paypal m vil wm m s 1</h3>
+        <p>stitch_pageweb/pago_con_paypal_m_vil_wm_m_s_1/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/pago_con_paypal_m_vil_wm_m_s_2/code.html" target="_blank" rel="noopener">
+        <h3>pago con paypal m vil wm m s 2</h3>
+        <p>stitch_pageweb/pago_con_paypal_m_vil_wm_m_s_2/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/pago_con_paypal_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>pago con paypal wm m s</h3>
+        <p>stitch_pageweb/pago_con_paypal_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/pago_confirmado_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>pago confirmado wm m s</h3>
+        <p>stitch_pageweb/pago_confirmado_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/panel_administrativo_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>panel administrativo wm m s</h3>
+        <p>stitch_pageweb/panel_administrativo_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/panel_de_administraci_n_y_control_de_fondos/code.html" target="_blank" rel="noopener">
+        <h3>panel de administraci n y control de fondos</h3>
+        <p>stitch_pageweb/panel_de_administraci_n_y_control_de_fondos/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/panel_de_ventas_con_footer_social/code.html" target="_blank" rel="noopener">
+        <h3>panel de ventas con footer social</h3>
+        <p>stitch_pageweb/panel_de_ventas_con_footer_social/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/payments_bank_1/code.html" target="_blank" rel="noopener">
+        <h3>payments bank 1</h3>
+        <p>stitch_pageweb/payments_bank_1/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/payments_bank_2/code.html" target="_blank" rel="noopener">
+        <h3>payments bank 2</h3>
+        <p>stitch_pageweb/payments_bank_2/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/portal_de_gesti_n_de_proyectos/code.html" target="_blank" rel="noopener">
+        <h3>portal de gesti n de proyectos</h3>
+        <p>stitch_pageweb/portal_de_gesti_n_de_proyectos/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/registro_de_nuevos_clientes_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>registro de nuevos clientes wm m s</h3>
+        <p>stitch_pageweb/registro_de_nuevos_clientes_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/reporte_de_costos_de_acabados_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>reporte de costos de acabados wm m s</h3>
+        <p>stitch_pageweb/reporte_de_costos_de_acabados_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/reporte_de_n_mina_de_construcci_n_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>reporte de n mina de construcci n wm m s</h3>
+        <p>stitch_pageweb/reporte_de_n_mina_de_construcci_n_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/reporte_de_seguridad_pdf_wm_m_s_1/code.html" target="_blank" rel="noopener">
+        <h3>reporte de seguridad pdf wm m s 1</h3>
+        <p>stitch_pageweb/reporte_de_seguridad_pdf_wm_m_s_1/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/reporte_de_seguridad_pdf_wm_m_s_2/code.html" target="_blank" rel="noopener">
+        <h3>reporte de seguridad pdf wm m s 2</h3>
+        <p>stitch_pageweb/reporte_de_seguridad_pdf_wm_m_s_2/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/resumen_de_compra_m_vil_1/code.html" target="_blank" rel="noopener">
+        <h3>resumen de compra m vil 1</h3>
+        <p>stitch_pageweb/resumen_de_compra_m_vil_1/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/resumen_de_compra_m_vil_2/code.html" target="_blank" rel="noopener">
+        <h3>resumen de compra m vil 2</h3>
+        <p>stitch_pageweb/resumen_de_compra_m_vil_2/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/solicitud_de_ajuste_estructural_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>solicitud de ajuste estructural wm m s</h3>
+        <p>stitch_pageweb/solicitud_de_ajuste_estructural_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/sourdough_dashboard_1/code.html" target="_blank" rel="noopener">
+        <h3>sourdough dashboard 1</h3>
+        <p>stitch_pageweb/sourdough_dashboard_1/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/sourdough_dashboard_2/code.html" target="_blank" rel="noopener">
+        <h3>sourdough dashboard 2</h3>
+        <p>stitch_pageweb/sourdough_dashboard_2/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/validaci_n_de_correo_wm_m_s/code.html" target="_blank" rel="noopener">
+        <h3>validaci n de correo wm m s</h3>
+        <p>stitch_pageweb/validaci_n_de_correo_wm_m_s/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/vista_previa_de_factura_electr_nica_fel/code.html" target="_blank" rel="noopener">
+        <h3>vista previa de factura electr nica fel</h3>
+        <p>stitch_pageweb/vista_previa_de_factura_electr_nica_fel/code.html</p>
+      </a>
+      <a class="card" href="stitch_pageweb/visualizador_de_planos_preview/code.html" target="_blank" rel="noopener">
+        <h3>visualizador de planos preview</h3>
+        <p>stitch_pageweb/visualizador_de_planos_preview/code.html</p>
+      </a>
+    </section>
+
+    <footer>
+      Generado automaticamente para navegacion y despliegue de sitio estatico.
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const search = document.getElementById('search');
+      const clear = document.getElementById('clear');
+      const grid = document.getElementById('grid');
+      const summary = document.getElementById('summary');
+      const cards = Array.from(grid.querySelectorAll('.card'));
+
+      function refresh() {
+        const q = search.value.trim().toLowerCase();
+        let visible = 0;
+        cards.forEach((card) => {
+          const txt = card.textContent.toLowerCase();
+          const show = !q || txt.includes(q);
+          card.style.display = show ? '' : 'none';
+          if (show) visible += 1;
+        });
+        summary.textContent = 'Pantallas visibles: ' + visible + ' de ' + cards.length;
+      }
+
+      search.addEventListener('input', refresh);
+      clear.addEventListener('click', () => {
+        search.value = '';
+        search.focus();
+        refresh();
+      });
+      refresh();
+    })();
+  </script>
+</body>
+</html>

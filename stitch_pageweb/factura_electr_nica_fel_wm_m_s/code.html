@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#000c18",
+              "tertiary-container": "#132330",
+              "secondary-container": "#fdc34d",
+              "background": "#f7f9ff",
+              "on-tertiary-fixed-variant": "#394857",
+              "on-primary-fixed": "#00006e",
+              "error": "#ba1a1a",
+              "on-tertiary": "#ffffff",
+              "on-background": "#0d1d2a",
+              "surface-container-high": "#d9eafc",
+              "on-primary-container": "#777eea",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6",
+              "on-primary": "#ffffff",
+              "inverse-surface": "#223240",
+              "on-error": "#ffffff",
+              "surface": "#f7f9ff",
+              "on-tertiary-container": "#7b8b9b",
+              "surface-container-low": "#ecf4ff",
+              "tertiary-fixed-dim": "#b8c8da",
+              "surface-container": "#e2efff",
+              "on-secondary-container": "#715000",
+              "surface-container-highest": "#d4e4f6",
+              "primary-container": "#000080",
+              "tertiary-fixed": "#d4e4f6",
+              "on-secondary-fixed": "#271900",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#e0e0ff",
+              "surface-variant": "#d4e4f6",
+              "surface-dim": "#cbdcee",
+              "primary-fixed-dim": "#bfc2ff",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#464653",
+              "on-surface": "#0d1d2a",
+              "on-primary-fixed-variant": "#3239a3",
+              "secondary-fixed": "#ffdea6",
+              "surface-bright": "#f7f9ff",
+              "on-tertiary-fixed": "#0d1d2a",
+              "outline-variant": "#c6c5d5",
+              "on-secondary-fixed-variant": "#5d4200",
+              "inverse-on-surface": "#e7f2ff",
+              "secondary": "#7b5800",
+              "primary": "#00003c",
+              "surface-tint": "#4b53bc",
+              "secondary-fixed-dim": "#f7bd48",
+              "inverse-primary": "#bfc2ff",
+              "outline": "#767684"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9ff;
+        }
+        h1, h2, h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+        .blueprint-gradient {
+            background: linear-gradient(135deg, #00003c 0%, #000080 100%);
+        }
+        .data-pylon-value {
+            line-height: 1;
+        }
+    </style>
+  <title>factura electr nica fel wm m s</title>
+</head>
+<body class="text-on-background">
+<!-- Top Navigation -->
+<header class="bg-[#f7f9ff] text-[#00003c] font-['Manrope'] font-semibold tracking-[-0.02em] w-full border-b-0 flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#00003c]">
+            Portal de Facturación FEL
+        </div>
+<nav class="hidden md:flex gap-8">
+<a class="text-[#00003c] border-b-2 border-[#7b5800] hover:text-[#00003c] transition-colors scale-95 duration-75" href="#">Emisión</a>
+<a class="text-[#767684] hover:text-[#00003c] transition-colors scale-95 duration-75" href="#">Consultas</a>
+<a class="text-[#767684] hover:text-[#00003c] transition-colors scale-95 duration-75" href="#">Anulaciones</a>
+<a class="text-[#767684] hover:text-[#00003c] transition-colors scale-95 duration-75" href="#">Reportes</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-outline cursor-pointer" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-outline cursor-pointer" data-icon="settings">settings</span>
+<div class="w-8 h-8 bg-surface-container-high overflow-hidden">
+<img alt="Avatar del Usuario" data-alt="User profile portrait in professional setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK5_37w0YmT4DAm2v6d3MTTmoZJ5GG8RUa_4rVnSkPtT2vxCGg6u9YBCuZ89Wl4jpHxnJUtrYYxmA4NBqp1jIpcv2uC6aiBpuT-GJgvDzzywW3mO9TcNjeX18SoEx3LxH2ZbDs4figlgovR57s5GDhR0reVmQ2FFyOzxPf2Yg9CTvIiayjuvr-_LskON-X1Pybf1ORmdD2mXLwHypne4XRDNTU3WAuicLWaQB2RrHrUAcWuWppTsf3_fO_MoT3iDqnCz63DvfCGo0s"/>
+</div>
+</div>
+</header>
+<div class="flex">
+<!-- Sidebar -->
+<aside class="hidden lg:flex flex-col h-screen w-64 bg-[#ffffff] shadow-[0_20px_40px_rgba(13,29,42,0.06)] sticky top-0">
+<div class="p-8">
+<div class="text-lg font-black text-[#00003c] uppercase mb-1">Constructora Elite</div>
+<div class="text-[10px] font-bold text-outline tracking-widest uppercase">ID Fiscal: 829304-K</div>
+</div>
+<nav class="flex-1 px-4 space-y-2 mt-4">
+<div class="flex items-center px-4 py-3 gap-3 text-[#767684] font-bold text-xs tracking-wide uppercase hover:bg-[#f7f9ff] transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Tablero
+                </div>
+<div class="flex items-center px-4 py-3 gap-3 text-[#767684] font-bold text-xs tracking-wide uppercase hover:bg-[#f7f9ff] transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+                    Proyectos
+                </div>
+<div class="flex items-center px-4 py-3 gap-3 bg-[#e2efff] text-[#00003c] border-l-4 border-[#7b5800] font-bold text-xs tracking-wide uppercase">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+                    Documentos
+                </div>
+<div class="flex items-center px-4 py-3 gap-3 text-[#767684] font-bold text-xs tracking-wide uppercase hover:bg-[#f7f9ff] transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+                    Certificaciones
+                </div>
+</nav>
+<div class="p-8 mt-auto">
+<button class="w-full bg-primary text-white py-4 font-bold text-xs tracking-widest uppercase">
+                    Nueva Factura
+                </button>
+<div class="mt-8 flex items-center gap-3 text-outline text-xs font-bold uppercase cursor-pointer hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    Cerrar Sesión
+                </div>
+</div>
+</aside>
+<!-- Main Content Area (Invoice Canvas) -->
+<main class="flex-1 bg-surface p-6 md:p-12 lg:p-20 overflow-y-auto">
+<div class="max-w-4xl mx-auto bg-surface-container-lowest shadow-[0_20px_40px_rgba(13,29,42,0.06)] overflow-hidden">
+<!-- Invoice Header -->
+<div class="blueprint-gradient p-12 flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="space-y-4">
+<div class="inline-block bg-secondary px-3 py-1">
+<span class="text-[10px] font-black text-white uppercase tracking-[0.2em]">Factura Electrónica (FEL)</span>
+</div>
+<h1 class="text-white text-3xl font-extrabold tracking-tighter leading-none">
+                            CONSTRUCTORA WM/M&amp;S<br/>
+<span class="text-secondary-fixed-dim">MULTISERVICIOS de Guatemala S.A.</span>
+</h1>
+<div class="text-surface-variant font-body text-sm space-y-1">
+<p>Calzada Aguilar Batres, Ciudad de Guatemala</p>
+<p class="font-bold tracking-wider text-white">NIT: 1029384-5</p>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-6 border-l-2 border-secondary self-stretch md:w-64">
+<span class="block text-[10px] font-bold text-secondary-fixed-dim uppercase tracking-widest mb-2">Certificación DTE</span>
+<p class="text-xs text-white leading-relaxed break-all font-mono">
+                            NUM: 4892-BA21-9042-C1D2<br/>
+                            SERIE: FEL-2024-WM<br/>
+                            FECHA: 24/MAY/2024
+                        </p>
+</div>
+</div>
+<!-- Entity Details Grid -->
+<div class="grid md:grid-cols-2 gap-0 border-b border-outline-variant/10">
+<div class="p-10 border-r border-outline-variant/10">
+<h3 class="text-[10px] font-black text-outline uppercase tracking-widest mb-6">Datos del Receptor</h3>
+<div class="space-y-4">
+<div>
+<label class="block text-[10px] font-bold text-secondary uppercase mb-1">Nombre / Razón Social</label>
+<p class="text-primary font-bold text-lg">Inmobiliaria Los Altos, S.A.</p>
+</div>
+<div>
+<label class="block text-[10px] font-bold text-secondary uppercase mb-1">NIT Receptor</label>
+<p class="text-primary font-medium">928374-1</p>
+</div>
+<div>
+<label class="block text-[10px] font-bold text-secondary uppercase mb-1">Dirección Comercial</label>
+<p class="text-outline text-sm">Avenida Las Américas 15-02, Zona 13, Guatemala.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-10 flex flex-col justify-between">
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-secondary font-headline text-4xl font-extrabold tracking-tighter data-pylon-value">Q. 42,560.00</span>
+<span class="text-[10px] font-black text-outline uppercase tracking-widest">Total de Transacción</span>
+</div>
+</div>
+<div class="mt-8 flex items-center gap-4 text-xs font-bold text-primary">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span>MÉTODO: TRANSFERENCIA BANCARIA</span>
+</div>
+</div>
+</div>
+<!-- Technical Services Table -->
+<div class="p-10">
+<h3 class="text-[10px] font-black text-outline uppercase tracking-widest mb-6">Detalle de Servicios Técnicos</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container border-b-0">
+<th class="py-4 px-6 text-[10px] font-black text-primary uppercase tracking-widest">Descripción del Servicio</th>
+<th class="py-4 px-6 text-[10px] font-black text-primary uppercase tracking-widest text-right">Cantidad</th>
+<th class="py-4 px-6 text-[10px] font-black text-primary uppercase tracking-widest text-right">P. Unitario</th>
+<th class="py-4 px-6 text-[10px] font-black text-primary uppercase tracking-widest text-right">Subtotal</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr>
+<td class="py-6 px-6">
+<p class="font-bold text-primary">Diseño de Planos Residenciales</p>
+<p class="text-[10px] text-outline uppercase">Proyecto: Condominio Las Luces - Fase II</p>
+</td>
+<td class="py-6 px-6 text-right font-medium">1.00</td>
+<td class="py-6 px-6 text-right font-medium">Q 25,000.00</td>
+<td class="py-6 px-6 text-right font-bold text-primary">Q 25,000.00</td>
+</tr>
+<tr class="bg-surface-container-lowest">
+<td class="py-6 px-6">
+<p class="font-bold text-primary">Avalúo Hipotecario</p>
+<p class="text-[10px] text-outline uppercase">Certificación Técnica de Valuación</p>
+</td>
+<td class="py-6 px-6 text-right font-medium">2.00</td>
+<td class="py-6 px-6 text-right font-medium">Q 4,500.00</td>
+<td class="py-6 px-6 text-right font-bold text-primary">Q 9,000.00</td>
+</tr>
+<tr>
+<td class="py-6 px-6">
+<p class="font-bold text-primary">Topografía de Terreno</p>
+<p class="text-[10px] text-outline uppercase">Levantamiento Digital 3D Estación Total</p>
+</td>
+<td class="py-6 px-6 text-right font-medium">1.00</td>
+<td class="py-6 px-6 text-right font-medium">Q 4,000.00</td>
+<td class="py-6 px-6 text-right font-bold text-primary">Q 4,000.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Financial Breakdown & Certification -->
+<div class="grid md:grid-cols-3 bg-surface-container">
+<div class="p-10 md:col-span-2 border-r border-outline-variant/20 flex flex-col justify-center">
+<div class="flex items-start gap-8">
+<div class="bg-white p-2">
+<img alt="QR SAT Verification" class="w-24 h-24 grayscale contrast-125" data-alt="Technical QR code for government tax verification" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Om79JZa2d3HqkV-Bg1UFbLIIhdVyj7fEmix5y0vBmeYDbYU1bnv_lvp5hJCTpX9iNUmmst_jsToZc8MIOOkgp3A4n7A6Y0vd7kNWKwpZfkogciFIurZOpwRo0KcjdR8_evBVQ_L0XFc_7VokGbImLj-KNVB-wpOIvA7PA2n07604mZ3YqtCMuncVEhsJpqkEhcDR7A7Ypr8bqOZ9wgGU_W6QtOjCKooQK6QQz9INOHZypLptmy4xfO7gKEk_DhyydZgcI9q3luyi"/>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] font-black text-primary uppercase tracking-[0.1em]">Certificado por SAT</span>
+</div>
+<p class="text-[10px] text-outline font-medium leading-relaxed max-w-xs">
+                                    Este documento es una representación gráfica de un Documento Tributario Electrónico otorgado bajo la legislación de Guatemala. Verifique su autenticidad en el portal de la SAT.
+                                </p>
+</div>
+</div>
+</div>
+<div class="p-10 bg-primary space-y-4">
+<div class="flex justify-between items-center text-surface-variant">
+<span class="text-[10px] font-bold uppercase tracking-widest">Subtotal Bruto</span>
+<span class="font-mono text-sm">Q 38,000.00</span>
+</div>
+<div class="flex justify-between items-center text-surface-variant">
+<span class="text-[10px] font-bold uppercase tracking-widest">IVA (12%)</span>
+<span class="font-mono text-sm">Q 4,560.00</span>
+</div>
+<div class="pt-4 border-t border-white/10 flex justify-between items-end">
+<span class="text-[10px] font-black text-secondary-fixed-dim uppercase tracking-widest pb-1">Total Neto</span>
+<span class="font-headline text-2xl font-extrabold text-white">Q 42,560.00</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-[#e2efff] text-[#767684] font-['Inter'] text-xs font-medium w-full mt-auto flex flex-col md:flex-row justify-between items-center px-8 py-6 border-t-0">
+<div class="mb-4 md:mb-0">
+            © 2024 Sistema de Facturación Electrónica Gt. Certificado por SAT.
+        </div>
+<div class="flex gap-8">
+<a class="hover:text-[#7b5800] opacity-80 hover:opacity-100 transition-all duration-300" href="#">Términos de Servicio</a>
+<a class="hover:text-[#7b5800] opacity-80 hover:opacity-100 transition-all duration-300" href="#">Privacidad</a>
+<a class="hover:text-[#7b5800] opacity-80 hover:opacity-100 transition-all duration-300 font-bold text-[#00003c]" href="#">Ayuda Fiscal</a>
+</div>
+</footer>
+</body></html>

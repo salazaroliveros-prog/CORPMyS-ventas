@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "on-primary": "#ffffff",
+              "on-tertiary-container": "#d8e9fb",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#ffb596",
+              "inverse-surface": "#343026",
+              "secondary": "#546344",
+              "on-tertiary-fixed": "#0d1d2a",
+              "surface-container-low": "#fbf3e4",
+              "on-tertiary": "#ffffff",
+              "outline-variant": "#dac1b8",
+              "surface-container-high": "#efe7d9",
+              "outline": "#87736b",
+              "error-container": "#ffdad6",
+              "surface-bright": "#fff8ef",
+              "on-error-container": "#93000a",
+              "tertiary": "#415160",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#bbcca6",
+              "primary-fixed": "#ffdbcd",
+              "primary": "#823b18",
+              "on-primary-fixed": "#360f00",
+              "on-secondary-container": "#5a6949",
+              "inverse-primary": "#ffb596",
+              "on-primary-fixed-variant": "#76320f",
+              "secondary-fixed": "#d7e9c1",
+              "primary-container": "#a0522d",
+              "inverse-on-surface": "#f8f0e1",
+              "error": "#ba1a1a",
+              "surface-dim": "#e1d9cb",
+              "on-background": "#1e1b13",
+              "background": "#fff8ef",
+              "surface-container-highest": "#e9e2d3",
+              "on-surface-variant": "#54433c",
+              "on-tertiary-fixed-variant": "#394857",
+              "surface-variant": "#e9e2d3",
+              "surface-tint": "#944925",
+              "surface": "#fff8ef",
+              "on-secondary-fixed": "#121f06",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed-dim": "#b8c8da",
+              "tertiary-fixed": "#d4e4f6",
+              "secondary-container": "#d7e9c1",
+              "on-surface": "#1e1b13",
+              "surface-container": "#f5edde",
+              "tertiary-container": "#596979",
+              "on-primary-container": "#ffe1d6"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #fff8ef;
+            color: #1e1b13;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+  <title>centro de descargas premium</title>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Sidebar Navigation Shell -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-outline-variant/20 bg-[#fbf3e4] flex flex-col p-6 space-y-4 font-body text-sm font-medium z-50">
+<div class="mb-8">
+<h1 class="font-headline text-xl font-bold text-on-surface tracking-tighter">Estudio Central</h1>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant/70">Plan Premium - Q</p>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Explorar (Inactive) -->
+<a class="flex items-center gap-3 px-4 py-3 text-tertiary hover:translate-x-1 transition-transform duration-200 hover:bg-[#fff8ef]/50 rounded-md" href="#">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+<span>Explorar</span>
+</a>
+<!-- Mis Planos (Active - Mapping based on page intent) -->
+<a class="flex items-center gap-3 px-4 py-3 bg-[#fff8ef] text-primary rounded-md shadow-sm border-l-4 border-primary font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+<span>Mis Planos</span>
+</a>
+<!-- Favoritos -->
+<a class="flex items-center gap-3 px-4 py-3 text-tertiary hover:translate-x-1 transition-transform duration-200 hover:bg-[#fff8ef]/50 rounded-md" href="#">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span>Favoritos</span>
+</a>
+<!-- Facturación -->
+<a class="flex items-center gap-3 px-4 py-3 text-tertiary hover:translate-x-1 transition-transform duration-200 hover:bg-[#fff8ef]/50 rounded-md" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span>Facturación</span>
+</a>
+<!-- Configuración -->
+<a class="flex items-center gap-3 px-4 py-3 text-tertiary hover:translate-x-1 transition-transform duration-200 hover:bg-[#fff8ef]/50 rounded-md" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Configuración</span>
+</a>
+</nav>
+<div class="pt-6 mt-6 border-t border-outline-variant/10">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-2.5 px-5 rounded-md font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                Nuevo Proyecto
+            </button>
+<a class="flex items-center gap-3 px-4 py-3 mt-4 text-tertiary hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Ayuda</span>
+</a>
+</div>
+</aside>
+<!-- Top Navigation Bar -->
+<header class="ml-64 w-[calc(100%-16rem)] top-0 sticky z-40 bg-surface/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-10 py-4 max-w-full mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-on-surface font-headline tracking-tighter">ArqHearth</span>
+<nav class="hidden md:flex gap-6 font-headline text-lg tracking-tight font-bold">
+<a class="text-on-surface/80 hover:text-primary transition-colors duration-300" href="#">Planos</a>
+<a class="text-on-surface/80 hover:text-primary transition-colors duration-300" href="#">Proyectos</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold" href="#">Activos</a>
+<a class="text-on-surface/80 hover:text-primary transition-colors duration-300" href="#">Soporte</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<div class="h-8 w-px bg-outline-variant/30 mx-2"></div>
+<img class="w-10 h-10 rounded-full border border-primary/20 object-cover" data-alt="Avatar de arquitecto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMr6QYuAivhVTWOUubKB_yjAulR5JZ_iJiFCFJSKx4oq7jVIb2qnjiCK2qqZcbJDIEhh1ttTJAIClUTxNNi9Vp96EebJvs845O72UOj6l6CAlzBgONtWKMm_DUQ_J_wKIEVRTsoR-sfsY94HkmMRatCxq0Kkbjh7JWhss-r6FjftpKyP0qXD9Hst4moSeohbWyKw7UDa0kJMqkVoIhmlaUTn0EZCpSVBOHaFX4LRjomelCWYHugM9J9isbBbtjBlRZLAd4I1XHlwJJ"/>
+</div>
+</div>
+<div class="bg-outline-variant/10 h-px w-full"></div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 p-10 max-w-7xl">
+<!-- Header Section -->
+<header class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="text-5xl font-black font-headline tracking-tight text-on-surface mb-2">Centro de Descargas</h2>
+<p class="text-lg text-on-surface-variant font-body font-light max-w-xl">Acceda a la documentación técnica y visual de alta fidelidad para sus proyectos activos. Exclusivo para cuentas Premium.</p>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container-low px-6 py-4 rounded-xl border border-outline-variant/20 flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-widest text-tertiary">Almacenamiento Usado</span>
+<span class="font-headline text-2xl font-bold text-primary">12.4 <span class="text-sm font-light">GB</span></span>
+</div>
+</div>
+</div>
+</header>
+<!-- Search & Filter (Editorial Style) -->
+<section class="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+<div class="relative w-full md:w-96">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-lowest border-b-2 border-outline-variant/40 focus:border-primary focus:ring-0 outline-none transition-all font-body" placeholder="Buscar planos o expedientes..." type="text"/>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-surface-container-high rounded text-sm font-medium hover:bg-surface-container-highest transition-colors">Todos</button>
+<button class="px-4 py-2 hover:bg-surface-container-high rounded text-sm font-medium transition-colors">Planos</button>
+<button class="px-4 py-2 hover:bg-surface-container-high rounded text-sm font-medium transition-colors">Renders</button>
+<button class="px-4 py-2 hover:bg-surface-container-high rounded text-sm font-medium transition-colors">Estructurales</button>
+</div>
+</section>
+<!-- Downloads Grid / List Asymmetric -->
+<div class="grid grid-cols-1 gap-6">
+<!-- Item 1: Featured Project -->
+<article class="group bg-surface-container-highest rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center transition-all hover:translate-y-[-2px]">
+<div class="w-full md:w-48 h-48 bg-surface-container-lowest rounded-lg overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="Vista arquitectónica Residencia Alborada fachada" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCILba2AxlpMk_cFuhYI9ETwkHQ4p3yFm0XBKZCgjlUQi8X1raCHsI0ZBiDYrUhJk2PdEwPCeTyCuMPuD7GITsW6NMzB_0ak-ZTPl5Y5vJStAeNA7XXwwouOieVPC1RHMVGIMdgI0GLX_0iIrN1KlcEkGy4Zc8-CPNDNO2ela6pf2kSR6rxf6PXYZO5HukPuDkGa5hbA1-Pg02ML7ZEqTeG1bj5HDwRtxkfVcbH4JS-3H6vs4GGQDongUA1cOiJK6CdY1s2nbTR-niy"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-wider rounded">Completo</span>
+<span class="text-tertiary text-xs font-medium uppercase tracking-tighter">Ref: ARQ-2024-001</span>
+</div>
+<h3 class="text-3xl font-black font-headline text-on-surface">Residencia Alborada - Set Maestro</h3>
+<p class="text-on-surface-variant font-body text-sm line-clamp-2 leading-relaxed">Paquete completo que incluye planos de arquitectura, detalles constructivos y memoria descriptiva del proyecto habitacional de lujo.</p>
+<div class="flex flex-wrap gap-6 pt-2">
+<div class="flex flex-col">
+<span class="text-[10px] text-outline font-bold uppercase">Formato</span>
+<span class="text-on-surface font-semibold">ZIP (DWG/PDF)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-outline font-bold uppercase">Tamaño</span>
+<span class="text-on-surface font-semibold">450.2 MB</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-outline font-bold uppercase">Fecha</span>
+<span class="text-on-surface font-semibold">12 May 2024</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-auto flex flex-col gap-3">
+<button class="w-full md:w-48 bg-gradient-to-br from-primary to-primary-container text-on-primary py-4 px-8 rounded-md font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 active:scale-95">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                        Descargar
+                    </button>
+<button class="w-full md:w-48 py-3 px-8 text-on-surface font-semibold border border-outline-variant/40 rounded-md hover:bg-surface-container-low transition-colors">
+                        Ver Detalles
+                    </button>
+</div>
+</article>
+<!-- Regular Items Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Item 2 -->
+<article class="bg-surface-container-low rounded-xl p-6 flex gap-6 items-start hover:bg-surface-container-high transition-colors">
+<div class="bg-surface-container-highest p-4 rounded-lg text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="foundation" style="font-variation-settings: 'FILL' 1;">foundation</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline font-bold text-xl text-on-surface leading-none mb-2">Planos Estructurales</h4>
+<div class="flex items-center gap-3 text-xs text-on-surface-variant mb-4 font-body">
+<span>PDF • 12.8 MB</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span>Exp: 08 May 2024</span>
+</div>
+<button class="group flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-widest">
+<span class="border-b-2 border-primary-fixed-dim pb-0.5 group-hover:border-primary transition-all">Descargar Archivo</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Item 3 -->
+<article class="bg-surface-container-low rounded-xl p-6 flex gap-6 items-start hover:bg-surface-container-high transition-colors">
+<div class="bg-surface-container-highest p-4 rounded-lg text-secondary">
+<span class="material-symbols-outlined text-4xl" data-icon="photo_camera" style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline font-bold text-xl text-on-surface leading-none mb-2">Renders 4K - Exteriores</h4>
+<div class="flex items-center gap-3 text-xs text-on-surface-variant mb-4 font-body">
+<span>JPG • 84.5 MB</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span>Exp: 10 May 2024</span>
+</div>
+<button class="group flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-widest">
+<span class="border-b-2 border-primary-fixed-dim pb-0.5 group-hover:border-primary transition-all">Descargar Archivo</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Item 4 -->
+<article class="bg-surface-container-low rounded-xl p-6 flex gap-6 items-start hover:bg-surface-container-high transition-colors">
+<div class="bg-surface-container-highest p-4 rounded-lg text-tertiary">
+<span class="material-symbols-outlined text-4xl" data-icon="electrical_services" style="font-variation-settings: 'FILL' 1;">electrical_services</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline font-bold text-xl text-on-surface leading-none mb-2">Instalaciones Eléctricas</h4>
+<div class="flex items-center gap-3 text-xs text-on-surface-variant mb-4 font-body">
+<span>DWG • 4.2 MB</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span>Exp: 05 May 2024</span>
+</div>
+<button class="group flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-widest">
+<span class="border-b-2 border-primary-fixed-dim pb-0.5 group-hover:border-primary transition-all">Descargar Archivo</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Item 5 -->
+<article class="bg-surface-container-low rounded-xl p-6 flex gap-6 items-start hover:bg-surface-container-high transition-colors">
+<div class="bg-surface-container-highest p-4 rounded-lg text-on-surface-variant">
+<span class="material-symbols-outlined text-4xl" data-icon="description" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline font-bold text-xl text-on-surface leading-none mb-2">Presupuesto Estimado Q.</h4>
+<div class="flex items-center gap-3 text-xs text-on-surface-variant mb-4 font-body">
+<span>XLSX • 1.1 MB</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span>Exp: 01 May 2024</span>
+</div>
+<button class="group flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-widest">
+<span class="border-b-2 border-primary-fixed-dim pb-0.5 group-hover:border-primary transition-all">Descargar Archivo</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+</div>
+<!-- Pagination / Load More (Editorial Style) -->
+<div class="mt-16 flex flex-col items-center">
+<div class="h-px w-24 bg-primary/30 mb-8"></div>
+<p class="text-on-surface-variant font-headline italic text-lg mb-6 text-center">Mostrando 5 de 24 archivos disponibles</p>
+<button class="group bg-surface-container-highest hover:bg-primary transition-all text-on-surface hover:text-on-primary py-4 px-12 rounded-full font-bold uppercase tracking-widest text-xs border border-outline-variant/30 flex items-center gap-2">
+                Cargar Más Documentos
+                <span class="material-symbols-outlined group-hover:translate-y-1 transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="ml-64 bg-[#1e1b13] text-[#fff8ef] py-12 px-10 border-t border-stone-800 font-label text-xs uppercase tracking-widest">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<span class="font-headline text-white text-xl opacity-90 normal-case">ArqHearth</span>
+<p class="opacity-50">© 2024 ArqHearth. Todos los derechos reservados. Precios en Quetzales (GTQ).</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-8">
+<a class="text-stone-500 hover:text-[#d7e9c1] transition-colors" href="#">Términos de Servicio</a>
+<a class="text-stone-500 hover:text-[#d7e9c1] transition-colors" href="#">Privacidad</a>
+<a class="text-stone-500 hover:text-[#d7e9c1] transition-colors" href="#">Licencias de Planos</a>
+<a class="text-stone-500 hover:text-[#d7e9c1] transition-colors" href="#">Contacto</a>
+</nav>
+</div>
+</footer>
+</body></html>

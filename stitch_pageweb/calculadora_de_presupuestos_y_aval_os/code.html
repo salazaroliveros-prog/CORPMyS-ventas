@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Calculadora de Presupuestos | Heirloom Crust Architectural Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#ffb596",
+              "surface-dim": "#e1d9cb",
+              "secondary-fixed": "#d7e9c1",
+              "on-surface": "#1e1b13",
+              "primary": "#823b18",
+              "surface-bright": "#fff8ef",
+              "on-primary-container": "#ffe1d6",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#efe7d9",
+              "tertiary-container": "#596979",
+              "inverse-surface": "#343026",
+              "tertiary-fixed": "#d4e4f6",
+              "on-tertiary-container": "#d8e9fb",
+              "surface-tint": "#944925",
+              "tertiary": "#415160",
+              "surface-variant": "#e9e2d3",
+              "surface-container": "#f5edde",
+              "primary-fixed": "#ffdbcd",
+              "on-error-container": "#93000a",
+              "on-primary-fixed": "#360f00",
+              "inverse-on-surface": "#f8f0e1",
+              "on-surface-variant": "#54433c",
+              "on-background": "#1e1b13",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#394857",
+              "background": "#fff8ef",
+              "outline": "#87736b",
+              "on-secondary-fixed": "#121f06",
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "outline-variant": "#dac1b8",
+              "primary-container": "#a0522d",
+              "on-primary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-tertiary": "#ffffff",
+              "surface-container-low": "#fbf3e4",
+              "secondary": "#546344",
+              "on-secondary-container": "#5a6949",
+              "tertiary-fixed-dim": "#b8c8da",
+              "surface": "#fff8ef",
+              "inverse-primary": "#ffb596",
+              "secondary-fixed-dim": "#bbcca6",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-primary-fixed-variant": "#76320f",
+              "surface-container-highest": "#e9e2d3",
+              "on-error": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "serif"],
+              "body": ["Work Sans", "sans-serif"],
+              "label": ["Work Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        font-family: 'Work Sans', sans-serif;
+        background-color: #fff8ef;
+        color: #1e1b13;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .editorial-shadow {
+        box-shadow: 0 20px 40px rgba(30, 27, 19, 0.06);
+      }
+      .linen-input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #dac1b8;
+        border-radius: 0;
+        transition: border-color 0.3s ease;
+      }
+      .linen-input:focus {
+        outline: none;
+        border-bottom: 2px solid #823b18;
+        box-shadow: none;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 bg-[#fff8ef]/80 backdrop-blur-md shadow-[0_20px_40px_rgba(30,27,19,0.06)]">
+<div class="flex justify-between items-center px-8 py-6 max-w-full">
+<div class="text-2xl font-headline font-bold text-primary">Heirloom Crust</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-label text-on-surface opacity-80 hover:opacity-100 hover:text-[#a0522d] transition-colors duration-300" href="#">Diseños</a>
+<a class="font-label text-primary border-b-2 border-primary font-bold pb-1" href="#">Servicios Técnicos</a>
+<a class="font-label text-on-surface opacity-80 hover:opacity-100 hover:text-[#a0522d] transition-colors duration-300" href="#">Software</a>
+<a class="font-label text-on-surface opacity-80 hover:opacity-100 hover:text-[#a0522d] transition-colors duration-300" href="#">Mi Cuenta</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer">account_circle</span>
+<span class="material-symbols-outlined md:hidden text-primary">menu</span>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-20">
+<!-- Hero Section / Editorial Header -->
+<div class="mb-20 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-7">
+<span class="font-label uppercase tracking-[0.2em] text-tertiary text-xs mb-4 block">Herramientas Profesionales</span>
+<h1 class="font-headline text-5xl lg:text-7xl font-bold text-on-surface leading-[1.1] mb-6 tracking-tight">
+                    Calculadora de <br/><span class="italic font-normal text-primary">Avalúos &amp; Planos</span>
+</h1>
+<p class="font-body text-lg text-on-surface-variant max-w-xl leading-relaxed">
+                    Precisión fiduciaria para constructoras guatemaltecas. Genere estimaciones inmediatas para trámites de registro y valoraciones comerciales basadas en métricas de mercado actualizadas.
+                </p>
+</div>
+<div class="md:col-span-5 hidden md:block border-l border-outline-variant/30 pl-8 pb-4">
+<p class="font-label text-sm text-tertiary italic mb-2 italic">Factores de mercado activos:</p>
+<div class="flex flex-wrap gap-4">
+<span class="flex items-center gap-2 text-xs font-medium text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Zona Gt Central</span>
+<span class="flex items-center gap-2 text-xs font-medium text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Indice FHA 2024</span>
+</div>
+</div>
+</div>
+<!-- Calculator Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Form Section -->
+<div class="lg:col-span-7 bg-surface-container-low p-8 lg:p-12 rounded-xl border border-outline-variant/10 shadow-sm">
+<h3 class="font-headline text-2xl font-bold mb-8 text-on-surface">Parámetros del Proyecto</h3>
+<form class="space-y-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="flex flex-col gap-2">
+<label class="font-label text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Metros Cuadrados (m²)</label>
+<input class="linen-input py-3 font-body text-lg" placeholder="Ej. 150" type="number"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Tipo de Construcción</label>
+<select class="linen-input py-3 font-body text-lg bg-transparent">
+<option>Residencial Unifamiliar</option>
+<option>Apartamento / Condominio</option>
+<option>Comercial / Local</option>
+<option>Industrial / Bodega</option>
+<option>Terreno Urbano</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="flex flex-col gap-2">
+<label class="font-label text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Ubicación (Zona/Municipio)</label>
+<select class="linen-input py-3 font-body text-lg bg-transparent">
+<option>Guatemala - Zona 10/14/15</option>
+<option>Guatemala - Zonas Periféricas</option>
+<option>Santa Catarina Pinula</option>
+<option>Fraijanes / Carretera</option>
+<option>Mixco / San Lucas</option>
+<option>Interior del País</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Nivel de Acabados</label>
+<div class="flex gap-4 mt-2">
+<button class="flex-1 py-2 px-4 text-xs font-medium border border-outline-variant rounded-md hover:bg-primary/5 transition-colors" type="button">Estándar</button>
+<button class="flex-1 py-2 px-4 text-xs font-medium border-2 border-primary text-primary bg-primary/5 rounded-md" type="button">Premium</button>
+<button class="flex-1 py-2 px-4 text-xs font-medium border border-outline-variant rounded-md hover:bg-primary/5 transition-colors" type="button">Lujo</button>
+</div>
+</div>
+</div>
+<div class="pt-6">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-4 px-8 rounded-md font-label font-bold text-lg flex justify-center items-center gap-3 shadow-lg hover:brightness-110 transition-all" type="button">
+                            Calcular Cotización Estimada
+                            <span class="material-symbols-outlined">calculate</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Result Card Section -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Result Summary -->
+<div class="bg-surface-container-highest p-10 rounded-xl border border-outline-variant/20 editorial-shadow relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                        Resumen de Cotización
+                    </h4>
+<div class="space-y-6">
+<div class="flex justify-between items-baseline border-b border-outline-variant/30 pb-4">
+<span class="font-body text-on-surface-variant">Avalúo Comercial</span>
+<span class="font-headline text-2xl font-bold text-primary">Q 4,850.00</span>
+</div>
+<div class="flex justify-between items-baseline border-b border-outline-variant/30 pb-4">
+<span class="font-body text-on-surface-variant">Planos de Registro</span>
+<span class="font-headline text-2xl font-bold text-primary">Q 3,200.00</span>
+</div>
+<div class="flex justify-between items-baseline pt-2">
+<div>
+<span class="font-label text-xs uppercase font-bold text-tertiary tracking-widest block">Inversión Total Estimada</span>
+<span class="font-body text-xs text-on-surface-variant italic">Válido por 15 días hábiles</span>
+</div>
+<span class="font-headline text-4xl font-extrabold text-on-surface">Q 8,050.00</span>
+</div>
+</div>
+<div class="mt-10">
+<p class="font-body text-sm text-on-surface-variant italic mb-6 leading-relaxed">
+                            *Esta es una estimación basada en metros cuadrados y ubicación. El costo final puede variar tras la inspección técnica de campo.
+                        </p>
+<button class="w-full bg-tertiary-container text-on-tertiary-container py-3 rounded-md font-label font-semibold text-sm hover:brightness-105 transition-all">
+                            Descargar PDF de Presupuesto
+                        </button>
+</div>
+</div>
+<!-- Secondary Info Card -->
+<div class="bg-secondary-container p-8 rounded-xl flex items-center gap-6">
+<div class="w-16 h-16 bg-on-secondary-container/10 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl">verified</span>
+</div>
+<div>
+<h5 class="font-headline font-bold text-on-secondary-container leading-tight">Certificación Profesional</h5>
+<p class="font-body text-sm text-on-secondary-container/80 mt-1">Nuestros avalúos están respaldados por ingenieros colegiados activos y registrados ante la DICABI.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Fermentation Tracker (Progress Timeline) -->
+<section class="mt-24">
+<h2 class="font-headline text-3xl font-bold mb-10 text-center">Nuestro Proceso de Certificación</h2>
+<div class="relative py-12">
+<div class="absolute top-1/2 left-0 w-full h-2 bg-secondary-fixed -translate-y-1/2 rounded-full overflow-hidden">
+<div class="w-[65%] h-full bg-secondary"></div>
+</div>
+<div class="relative flex justify-between">
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-10 h-10 bg-on-secondary text-secondary border-2 border-secondary rounded-full flex items-center justify-center font-bold z-10 transition-transform group-hover:scale-110">1</div>
+<span class="font-label text-xs font-bold uppercase tracking-tighter text-on-surface">Solicitud</span>
+</div>
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-10 h-10 bg-on-secondary text-secondary border-2 border-secondary rounded-full flex items-center justify-center font-bold z-10 transition-transform group-hover:scale-110">2</div>
+<span class="font-label text-xs font-bold uppercase tracking-tighter text-on-surface">Visita Campo</span>
+</div>
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-10 h-10 bg-secondary text-on-secondary rounded-full flex items-center justify-center font-bold z-10 shadow-lg transition-transform group-hover:scale-110">3</div>
+<span class="font-label text-xs font-bold uppercase tracking-tighter text-primary">Análisis Técnico</span>
+</div>
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-10 h-10 bg-on-secondary text-secondary border-2 border-outline-variant rounded-full flex items-center justify-center font-bold z-10 transition-transform group-hover:scale-110">4</div>
+<span class="font-label text-xs font-bold uppercase tracking-tighter text-on-surface-variant opacity-50">Entrega Final</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Features Grid -->
+<section class="mt-32 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-4xl">gavel</span>
+<h4 class="font-headline text-xl font-bold text-on-surface">Respaldo Legal</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">Documentación lista para ser presentada ante el Registro de la Propiedad y Municipalidades.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-4xl">timer</span>
+<h4 class="font-headline text-xl font-bold text-on-surface">Entrega Ágil</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">Informes técnicos preliminares en 48 horas tras la visita técnica al sitio del proyecto.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-4xl">location_city</span>
+<h4 class="font-headline text-xl font-bold text-on-surface">Cobertura Nacional</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">Contamos con una red de peritos valuadores en los 22 departamentos de Guatemala.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-outline-variant/20 bg-surface-container-low mt-20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16">
+<div class="space-y-6">
+<div class="font-headline italic text-xl text-primary font-bold">Heirloom Crust Architectural Services</div>
+<p class="font-body text-sm text-on-surface-variant max-w-sm">Elevando los estándares de la arquitectura y valuación técnica en Centroamérica mediante procesos artesanales y precisión fiduciaria.</p>
+<div class="text-xs text-on-surface opacity-60 font-label tracking-wide uppercase">
+                    ID Credencial Profesional: 823B-S sourdough
+                </div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h5 class="font-label font-bold text-xs uppercase tracking-widest text-primary">Navegación</h5>
+<ul class="space-y-2">
+<li><a class="font-label text-sm text-on-surface opacity-60 hover:underline hover:text-primary transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="font-label text-sm text-on-surface opacity-60 hover:underline hover:text-primary transition-opacity" href="#">Terms of Service</a></li>
+<li><a class="font-label text-sm text-on-surface opacity-60 hover:underline hover:text-primary transition-opacity" href="#">Contact</a></li>
+<li><a class="font-label text-sm text-on-surface opacity-60 hover:underline hover:text-primary transition-opacity" href="#">Portfolio</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-label font-bold text-xs uppercase tracking-widest text-primary">Contacto</h5>
+<p class="font-label text-sm text-on-surface opacity-60">6ta Avenida 12-34, Zona 10<br/>Guatemala City, GT</p>
+<p class="font-label text-sm text-on-surface opacity-60 font-bold">PBX: +(502) 2345-6789</p>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label text-xs text-on-surface opacity-60">© 2024 Heirloom Crust Architectural Services. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary opacity-60 hover:opacity-100 cursor-pointer">public</span>
+<span class="material-symbols-outlined text-primary opacity-60 hover:opacity-100 cursor-pointer">mail</span>
+<span class="material-symbols-outlined text-primary opacity-60 hover:opacity-100 cursor-pointer">domain</span>
+</div>
+</div>
+</footer>
+</body></html>

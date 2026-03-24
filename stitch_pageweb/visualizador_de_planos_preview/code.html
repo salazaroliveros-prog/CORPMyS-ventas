@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "on-primary": "#ffffff",
+              "on-tertiary-container": "#d8e9fb",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#ffb596",
+              "inverse-surface": "#343026",
+              "secondary": "#546344",
+              "on-tertiary-fixed": "#0d1d2a",
+              "surface-container-low": "#fbf3e4",
+              "on-tertiary": "#ffffff",
+              "outline-variant": "#dac1b8",
+              "surface-container-high": "#efe7d9",
+              "outline": "#87736b",
+              "error-container": "#ffdad6",
+              "surface-bright": "#fff8ef",
+              "on-error-container": "#93000a",
+              "tertiary": "#415160",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#bbcca6",
+              "primary-fixed": "#ffdbcd",
+              "primary": "#823b18",
+              "on-primary-fixed": "#360f00",
+              "on-secondary-container": "#5a6949",
+              "inverse-primary": "#ffb596",
+              "on-primary-fixed-variant": "#76320f",
+              "secondary-fixed": "#d7e9c1",
+              "primary-container": "#a0522d",
+              "inverse-on-surface": "#f8f0e1",
+              "error": "#ba1a1a",
+              "surface-dim": "#e1d9cb",
+              "on-background": "#1e1b13",
+              "background": "#fff8ef",
+              "surface-container-highest": "#e9e2d3",
+              "on-surface-variant": "#54433c",
+              "on-tertiary-fixed-variant": "#394857",
+              "surface-variant": "#e9e2d3",
+              "surface-tint": "#944925",
+              "surface": "#fff8ef",
+              "on-secondary-fixed": "#121f06",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed-dim": "#b8c8da",
+              "tertiary-fixed": "#d4e4f6",
+              "secondary-container": "#d7e9c1",
+              "on-surface": "#1e1b13",
+              "surface-container": "#f5edde",
+              "tertiary-container": "#596979",
+              "on-primary-container": "#ffe1d6"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    vertical-align: middle
+    }
+.canvas-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAWueysRQcSDADj7gc2LOQ9Q8_Fc2ELGI4Thm57UxHRHFxSFHbGJcLr9fIM7OwqdR5BUQRtYKiPV4BRcdJFyaRvz-1bd1V47oLP9dafSFVFxX9DBGKTBDrlG6SUAI9GQTTJas0YQcq_RJLgjndMH4nvz-4ig135QRBnW3LNV8fHETOocF-zcNRPUZgxWzae5ShwUxfTWtASGjZHdQmwrWrC4kTYQb4uXo5OHiu6OCixnqus4yBpiUgXbtFVfNB7oV9ZTxGQrpvdHqoI)
+    }</style>
+  <title>visualizador de planos preview</title>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-[#fff8ef] dark:bg-stone-950 flex justify-between items-center px-10 py-4 max-w-full mx-auto shadow-none">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-[#1e1b13] dark:text-[#fff8ef] font-noto-serif tracking-tighter">ArqHearth</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-[#823b18] border-b-2 border-[#823b18] pb-1 font-bold font-noto-serif text-lg tracking-tight transition-colors duration-300" href="#">Planos</a>
+<a class="text-[#1e1b13] dark:text-stone-400 opacity-80 hover:text-[#a0522d] font-noto-serif text-lg tracking-tight transition-colors duration-300" href="#">Proyectos</a>
+<a class="text-[#1e1b13] dark:text-stone-400 opacity-80 hover:text-[#a0522d] font-noto-serif text-lg tracking-tight transition-colors duration-300" href="#">Activos</a>
+<a class="text-[#1e1b13] dark:text-stone-400 opacity-80 hover:text-[#a0522d] font-noto-serif text-lg tracking-tight transition-colors duration-300" href="#">Soporte</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<button class="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-md font-label text-sm font-semibold transition-transform active:scale-95 duration-150">
+                Subir Archivo
+            </button>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">shopping_cart</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/30">
+<img alt="Avatar de arquitecto" class="w-full h-full object-cover" data-alt="Portrait of a professional architect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzcpVMVdUe3Nqjg-WgKLTL7sY7Og70ylDh5wImHZ0F3lrjpvhmakTkaEwco7jeduSBR3EvrzW0A8LHgqKyQ3pGBcrtXeJt2dY_N-azWzZDndATLhaDHZJMFTJnaee-mTQD-vDaLL2YOINcv4HxLOsl1io3wiykjUm99eivv3anvGprd8ApObDhT5tXA3R4DtIBc4Pc1Kw3dGPoVK2LQ8dq3v4CzJ3Ooc5wrkdBO0HlKIbvW35qwmVh4p7LY6Hi_4sIBcltQOnbxgfN"/>
+</div>
+</div>
+</div>
+</header>
+<div class="bg-[#fbf3e4] dark:bg-stone-900 h-px w-full"></div>
+<main class="flex min-h-[calc(100vh-80px)]">
+<!-- Blueprint Canvas Area -->
+<section class="flex-1 bg-surface p-8 lg:p-12 overflow-hidden flex flex-col items-center justify-center relative">
+<!-- Background Decoration - Architectural Grid -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(circle, #823b18 1px, transparent 1px); background-size: 40px 40px;"></div>
+<div class="w-full max-w-5xl aspect-[4/3] bg-surface-container-lowest canvas-texture shadow-[0_20px_40px_rgba(30,27,19,0.06)] rounded-sm p-4 lg:p-10 border border-outline-variant/10 relative group">
+<!-- Image Container with Frame effect -->
+<div class="w-full h-full border border-outline-variant/40 flex items-center justify-center relative overflow-hidden bg-[#fafafa]">
+<img alt="Plano técnico" class="w-full h-full object-contain mix-blend-multiply opacity-90" data-alt="High quality architectural floor plan blueprint drawing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMPdHnIjPLwiYowcmM8v8w1sWIW38YlaygNw6iwXnWWk7yNHghUr7qeyR_9ohzj4HN3U3WexdQvMvaTIkQchGDbIGtCwYFaPuW-UjldEJLaQS8cPfx5luhrHB2m5nEXBsFsLa6IvAJclyJlZfPp-44RE38GHh23UE4eUXwbWNKDI5JlOqKsDe4stawtQft0rxPJY7N-eXzlsuyAvXx-wg7TcXosFENhH8D5O-7c69ZVwKM8pTdnK2mUVxrCkSGyPfCSzdA9VQOFRHN"/>
+<!-- Overlay Scale Reference -->
+<div class="absolute bottom-6 left-6 font-label text-[10px] uppercase tracking-widest text-on-surface-variant/60 flex items-center gap-2">
+<div class="h-px w-12 bg-on-surface-variant/40"></div>
+<span>Escala Gráfica 1:50</span>
+</div>
+</div>
+<!-- Floating Zoom Controls -->
+<div class="absolute bottom-12 right-12 flex flex-col gap-2">
+<button class="w-10 h-10 bg-surface-container-lowest border border-outline-variant/20 shadow-sm flex items-center justify-center text-primary hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">zoom_in</span>
+</button>
+<button class="w-10 h-10 bg-surface-container-lowest border border-outline-variant/20 shadow-sm flex items-center justify-center text-primary hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">zoom_out</span>
+</button>
+<button class="w-10 h-10 bg-surface-container-lowest border border-outline-variant/20 shadow-sm flex items-center justify-center text-primary hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Page Meta Info -->
+<div class="mt-8 flex justify-between w-full max-w-5xl items-end">
+<div>
+<h1 class="font-headline text-3xl font-black text-on-surface tracking-tight mb-1">Casa de Montaña - Planta Baja</h1>
+<p class="font-label text-sm text-on-surface-variant flex items-center gap-2 uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">inventory_2</span>
+                        Proyecto ID: ARQ-2024-089-GT
+                    </p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 border border-outline-variant/40 text-on-surface font-label text-sm font-semibold rounded-md hover:bg-surface-container-low transition-all">
+                        Ver Fachada Norte
+                    </button>
+<button class="px-6 py-3 border border-outline-variant/40 text-on-surface font-label text-sm font-semibold rounded-md hover:bg-surface-container-low transition-all">
+                        Ver Instalaciones
+                    </button>
+</div>
+</div>
+</section>
+<!-- Technical Sidebar -->
+<aside class="w-96 bg-surface-container-low border-l border-outline-variant/20 p-10 flex flex-col gap-10">
+<div class="space-y-6">
+<h2 class="font-headline text-xl font-bold border-b border-outline-variant/20 pb-4">Detalles Técnicos</h2>
+<div class="grid grid-cols-1 gap-6">
+<!-- Tech Item -->
+<div class="space-y-1">
+<p class="font-label text-[10px] uppercase tracking-widest text-tertiary">Escala</p>
+<p class="font-headline text-lg text-on-surface">1:50 (Impresión A1)</p>
+</div>
+<!-- Tech Item -->
+<div class="space-y-1">
+<p class="font-label text-[10px] uppercase tracking-widest text-tertiary">Superficie Total</p>
+<p class="font-headline text-lg text-on-surface">340 m<sup class="text-xs">2</sup></p>
+</div>
+<!-- Tech Item -->
+<div class="space-y-1">
+<p class="font-label text-[10px] uppercase tracking-widest text-tertiary">Versión del Archivo</p>
+<div class="flex items-center gap-2">
+<p class="font-headline text-lg text-on-surface">v2.4 - Final Review</p>
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded uppercase">Actualizado</span>
+</div>
+</div>
+<!-- Tech Item -->
+<div class="space-y-1">
+<p class="font-label text-[10px] uppercase tracking-widest text-tertiary">Autoría</p>
+<div class="flex items-center gap-3 pt-1">
+<div class="w-8 h-8 rounded-full bg-primary-fixed overflow-hidden">
+<img alt="Estudio Logo" class="w-full h-full object-cover" data-alt="Architect profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlpOoBhariltrF8kXosxlsvoR56eO_S9rNusqEYPWKiTiz2T449X9ZcR5nn8dKShcNl-vMFESxWt1V9hWevcM_YIGJohwnZu_S-_IohB0SWnZ6eHq-CWXs1dZx3LAKvWdfAEAvPN-6t-OOBftswAvo9Lir3ex6Xyr9rPIq0DU80txgiuDiYie_WPJi0i1eIh94adbreXKCer1sGH0H0wCWdoYeySr7g_VsFb4vz2FaMF7B_cG-cy0KVgWQI_iwVNV_x42YDRAZkjzK"/>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface leading-tight">Arq. David Castillo</p>
+<p class="text-[11px] text-on-surface-variant">Estudio Central - Premium</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Validation Steps -->
+<div class="space-y-4">
+<h3 class="font-label text-xs font-bold uppercase tracking-widest text-tertiary mb-4">Checklist de Calidad</h3>
+<div class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Dimensiones verificadas</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Cotas y ejes alineados</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-outline">radio_button_unchecked</span>
+<span>Simbología técnica final</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="mt-auto space-y-4 pt-10">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-4 px-6 rounded-md font-label font-bold text-sm tracking-wide shadow-sm flex items-center justify-center gap-3 transition-transform active:scale-95 duration-150">
+<span class="material-symbols-outlined text-lg">verified</span>
+                    Confirmar y Descargar Archivo Final
+                </button>
+<button class="w-full bg-transparent border border-outline/40 text-on-surface py-4 px-6 rounded-md font-label font-bold text-sm tracking-wide hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-3">
+<span class="material-symbols-outlined text-lg">edit_note</span>
+                    Solicitar Modificación
+                </button>
+<p class="text-center text-[10px] text-on-surface-variant uppercase tracking-widest px-4 leading-relaxed">
+                    Al confirmar, el archivo será sellado y acreditado a tu cuenta de ArqHearth.
+                </p>
+</div>
+</aside>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-10 border-t border-stone-800 bg-[#1e1b13] dark:bg-black text-[#fff8ef] font-work-sans text-xs uppercase tracking-widest flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col md:flex-row items-center gap-8">
+<span class="font-noto-serif text-white opacity-90 text-lg normal-case font-bold tracking-tighter">ArqHearth</span>
+<div class="flex gap-6">
+<a class="text-stone-500 hover:text-[#d7e9c1] transition-colors" href="#">Términos de Servicio</a>
+<a class="text-stone-500 hover:text-[#d7e9c1] transition-colors" href="#">Privacidad</a>
+<a class="text-stone-500 hover:text-[#d7e9c1] transition-colors" href="#">Licencias de Planos</a>
+<a class="text-stone-500 hover:text-[#d7e9c1] transition-colors" href="#">Contacto</a>
+</div>
+</div>
+<div class="text-stone-500">
+            © 2024 ArqHearth. Todos los derechos reservados. Precios en Quetzales (GTQ).
+        </div>
+</footer>
+</body></html>

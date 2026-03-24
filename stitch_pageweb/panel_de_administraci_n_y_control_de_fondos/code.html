@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Panel Administrativo - El Hogar del Pan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#efe7d9",
+              "surface": "#fff8ef",
+              "error": "#ba1a1a",
+              "secondary": "#546344",
+              "secondary-fixed-dim": "#bbcca6",
+              "on-secondary-container": "#5a6949",
+              "primary-container": "#a0522d",
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "on-tertiary": "#ffffff",
+              "background": "#fff8ef",
+              "surface-container-highest": "#e9e2d3",
+              "outline": "#87736b",
+              "error-container": "#ffdad6",
+              "secondary-container": "#d7e9c1",
+              "on-error-container": "#93000a",
+              "on-secondary-fixed": "#121f06",
+              "tertiary-fixed-dim": "#b8c8da",
+              "tertiary": "#415160",
+              "secondary-fixed": "#d7e9c1",
+              "on-tertiary-fixed-variant": "#394857",
+              "on-background": "#1e1b13",
+              "inverse-primary": "#ffb596",
+              "on-tertiary-fixed": "#0d1d2a",
+              "surface-container": "#f5edde",
+              "inverse-surface": "#343026",
+              "primary": "#823b18",
+              "on-surface-variant": "#54433c",
+              "surface-tint": "#944925",
+              "surface-container-low": "#fbf3e4",
+              "surface-variant": "#e9e2d3",
+              "on-surface": "#1e1b13",
+              "primary-fixed-dim": "#ffb596",
+              "on-primary-fixed": "#360f00",
+              "surface-bright": "#fff8ef",
+              "primary-fixed": "#ffdbcd",
+              "surface-dim": "#e1d9cb",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed": "#d4e4f6",
+              "on-primary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#ffe1d6",
+              "inverse-on-surface": "#f8f0e1",
+              "on-error": "#ffffff",
+              "outline-variant": "#dac1b8",
+              "tertiary-container": "#596979",
+              "on-tertiary-container": "#d8e9fb",
+              "on-primary-fixed-variant": "#76320f"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Work Sans', sans-serif;
+        background-color: #fff8ef;
+      }
+      h1, h2, h3, .serif-font {
+        font-family: 'Noto Serif', serif;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-[#dac1b8]/20 bg-[#fff8ef] flex flex-col py-8 px-6 z-50">
+<div class="mb-12">
+<h1 class="text-2xl font-serif font-bold text-[#823b18]">El Hogar del Pan</h1>
+<p class="text-xs font-sans text-stone-500 uppercase tracking-widest mt-1">Panel de Administración</p>
+</div>
+<nav class="flex-grow space-y-4">
+<!-- Active: Resumen -->
+<a class="flex items-center gap-3 py-2 px-3 text-[#823b18] font-bold border-r-4 border-[#823b18] hover:bg-[#fbf3e4] transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-sans">Resumen</span>
+</a>
+<a class="flex items-center gap-3 py-2 px-3 text-stone-500 font-medium hover:bg-[#fbf3e4] transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-sans">Usuarios</span>
+</a>
+<a class="flex items-center gap-3 py-2 px-3 text-stone-500 font-medium hover:bg-[#fbf3e4] transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-sans">Ventas</span>
+</a>
+<a class="flex items-center gap-3 py-2 px-3 text-stone-500 font-medium hover:bg-[#fbf3e4] transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-sans">Finanzas</span>
+</a>
+<a class="flex items-center gap-3 py-2 px-3 text-stone-500 font-medium hover:bg-[#fbf3e4] transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span class="font-sans">Seguridad</span>
+</a>
+</nav>
+<div class="mt-auto pt-8 border-t border-outline-variant/20">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3 rounded-md font-sans font-semibold text-sm shadow-sm hover:opacity-90 transition-all">
+                Retirar Fondos
+            </button>
+</div>
+</aside>
+<!-- TopAppBar (Authority: JSON) -->
+<header class="flex justify-between items-center w-full pl-72 pr-8 py-4 bg-[#fff8ef]/80 backdrop-blur-md sticky top-0 z-40 border-b border-[#dac1b8]/20">
+<div>
+<h2 class="text-xl font-serif font-bold text-[#1e1b13]">Panel Administrativo</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<input class="bg-surface-container-lowest border-none border-b border-outline-variant focus:ring-0 focus:border-primary py-1 px-4 text-sm w-64 italic font-serif" placeholder="Buscar transacción..." type="text"/>
+</div>
+<div class="flex items-center gap-4 text-primary">
+<button class="material-symbols-outlined hover:text-[#a0522d] transition-all">notifications</button>
+<button class="material-symbols-outlined hover:text-[#a0522d] transition-all">settings</button>
+<div class="h-10 w-10 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/30">
+<img alt="Owner Avatar" class="w-full h-full object-cover" data-alt="Close up portrait of a bakery owner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjj0EcrxEx-yomFTS8ADuk4_nxiZBpXJyWlmgjrchMwNAPDq4Y8562F3SWZJz7vmUJdAcjrXCLv4gfH-1FjKiaWjThGMIaVnd9PILVecfyz_NKjl02IeoT-Ef8lMo8z5kXmyP-HOXUf2tOJjOh657Ig0b22VUq-twCDZ-MnZcRuIKNLMduM2_IZF9OsChKMZoJ5J8siIabfr3hNXVYZt9jUmofAD4SnEmuxkGGZYT5Smgl7h0gnBg6_KoKOmLfNixy9qx9SNhXIiWi"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="ml-64 p-8 min-h-screen">
+<!-- Bento Grid Layout for Dashboard Overview -->
+<div class="grid grid-cols-12 gap-8 mb-8">
+<!-- Earnings Summary Card (Primary Focus) -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-highest p-8 rounded-xl flex flex-col justify-between">
+<div>
+<h3 class="text-stone-500 font-sans text-sm tracking-widest uppercase mb-2">Ganancias Totales</h3>
+<div class="flex items-baseline gap-4">
+<span class="text-6xl font-serif italic font-bold text-on-surface">Q 48,250.00</span>
+<span class="text-secondary font-sans font-bold flex items-center">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12%
+                        </span>
+</div>
+<p class="text-stone-500 font-serif italic mt-4 max-w-md">Refleja el acumulado de ventas de planos de panadería artesanal y consultorías del último trimestre.</p>
+</div>
+<div class="flex gap-4 mt-8">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-md font-sans font-semibold flex items-center gap-2 hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-lg">account_balance</span>
+                        Retirar a Cuenta Bancaria
+                    </button>
+<button class="border border-outline/40 text-on-surface px-6 py-3 rounded-md font-sans font-semibold flex items-center gap-2 hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined text-lg">payments</span>
+                        Transferir a PayPal
+                    </button>
+</div>
+</div>
+<!-- Mini Tracker / Fermentation Tracker (Tactile Aesthetic) -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container-low p-6 rounded-xl flex flex-col justify-between border border-outline-variant/10">
+<div>
+<h3 class="text-stone-500 font-sans text-sm tracking-widest uppercase mb-4">Meta Mensual de Ventas</h3>
+<div class="flex justify-between items-end mb-2">
+<span class="text-2xl font-serif font-bold text-secondary">85%</span>
+<span class="text-xs font-sans text-stone-400">Q 50,000.00 Meta</span>
+</div>
+<div class="w-full h-4 bg-secondary-fixed rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[85%]"></div>
+</div>
+<p class="text-xs text-stone-500 mt-4 font-serif italic">"Como la masa madre, el crecimiento es orgánico y constante."</p>
+</div>
+<div class="pt-6 border-t border-outline-variant/20 mt-4">
+<div class="flex justify-between items-center">
+<span class="text-sm font-sans font-medium">Siguiente Corte:</span>
+<span class="text-sm font-sans text-primary font-bold">30 de Sep, 2023</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Middle Row: Sales Chart & Security -->
+<div class="grid grid-cols-12 gap-8 mb-8">
+<!-- Cumulative Sales Chart Mockup -->
+<div class="col-span-12 lg:col-span-7 bg-white p-8 rounded-xl shadow-[0_20px_40px_rgba(30,27,19,0.03)] border-b-2 border-primary/10">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-xl font-serif font-bold">Gráfico de Ventas Acumuladas</h3>
+<select class="text-xs font-sans border-none bg-surface-container-low rounded-md py-1 px-3 focus:ring-1 focus:ring-primary">
+<option>Últimos 6 meses</option>
+<option>Último año</option>
+</select>
+</div>
+<div class="h-64 flex items-end justify-between gap-2 px-4">
+<!-- Custom Bar Chart Design -->
+<div class="w-12 bg-surface-container-highest rounded-t-sm h-[30%] flex flex-col justify-end items-center pb-2">
+<span class="text-[10px] text-stone-400 font-sans">ABR</span>
+</div>
+<div class="w-12 bg-surface-container-highest rounded-t-sm h-[45%] flex flex-col justify-end items-center pb-2">
+<span class="text-[10px] text-stone-400 font-sans">MAY</span>
+</div>
+<div class="w-12 bg-secondary/20 rounded-t-sm h-[60%] flex flex-col justify-end items-center pb-2">
+<span class="text-[10px] text-stone-400 font-sans">JUN</span>
+</div>
+<div class="w-12 bg-primary/40 rounded-t-sm h-[80%] flex flex-col justify-end items-center pb-2">
+<span class="text-[10px] text-stone-400 font-sans">JUL</span>
+</div>
+<div class="w-12 bg-primary/60 rounded-t-sm h-[75%] flex flex-col justify-end items-center pb-2">
+<span class="text-[10px] text-stone-400 font-sans">AGO</span>
+</div>
+<div class="w-12 bg-primary rounded-t-sm h-[100%] flex flex-col justify-end items-center pb-2">
+<span class="text-[10px] text-white font-sans font-bold">SEP</span>
+</div>
+</div>
+<div class="mt-6 pt-6 border-t border-outline-variant/10 flex justify-around text-center">
+<div>
+<p class="text-[10px] text-stone-400 uppercase font-sans">Venta Promedio</p>
+<p class="font-serif font-bold text-on-surface">Q 1,240.00</p>
+</div>
+<div class="border-x border-outline-variant/20 px-12">
+<p class="text-[10px] text-stone-400 uppercase font-sans">Conversión</p>
+<p class="font-serif font-bold text-on-surface">4.8%</p>
+</div>
+<div>
+<p class="text-[10px] text-stone-400 uppercase font-sans">Nuevos Clientes</p>
+<p class="font-serif font-bold text-on-surface">128</p>
+</div>
+</div>
+</div>
+<!-- Security Access Management -->
+<div class="col-span-12 lg:col-span-5 bg-surface-container-low p-8 rounded-xl">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="shield">shield</span>
+<h3 class="text-xl font-serif font-bold">Seguridad de Acceso</h3>
+</div>
+<p class="text-sm text-stone-600 font-sans mb-6">Gestiona los permisos administrativos y monitorea los accesos recientes a la plataforma.</p>
+<div class="space-y-4">
+<!-- Admin User 1 -->
+<div class="flex items-center justify-between p-3 bg-white rounded shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-tertiary-fixed rounded flex items-center justify-center text-on-tertiary-fixed font-bold text-xs">MA</div>
+<div>
+<p class="text-sm font-sans font-bold">Mario Asturias</p>
+<p class="text-[10px] text-stone-400 uppercase">Administrador Total</p>
+</div>
+</div>
+<button class="text-primary-container material-symbols-outlined text-lg">edit_square</button>
+</div>
+<!-- Admin User 2 -->
+<div class="flex items-center justify-between p-3 bg-white rounded shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-secondary-container rounded flex items-center justify-center text-on-secondary-fixed font-bold text-xs">LC</div>
+<div>
+<p class="text-sm font-sans font-bold">Lucía Castillo</p>
+<p class="text-[10px] text-stone-400 uppercase">Gestora de Contenido</p>
+</div>
+</div>
+<button class="text-stone-400 material-symbols-outlined text-lg">lock</button>
+</div>
+<!-- Admin User 3 -->
+<div class="flex items-center justify-between p-3 bg-white rounded shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-surface-variant rounded flex items-center justify-center text-on-surface font-bold text-xs">RG</div>
+<div>
+<p class="text-sm font-sans font-bold">Roberto Gómez</p>
+<p class="text-[10px] text-stone-400 uppercase">Auditor Financiero</p>
+</div>
+</div>
+<button class="text-stone-400 material-symbols-outlined text-lg">lock</button>
+</div>
+</div>
+<button class="w-full mt-6 py-2 border-b-2 border-primary-fixed-dim text-primary text-sm font-sans font-bold hover:bg-primary-fixed transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">person_add</span>
+                    Añadir Nuevo Administrador
+                </button>
+</div>
+</div>
+<!-- Bottom Row: Recent Transactions -->
+<div class="bg-surface-container-highest rounded-xl p-8">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h3 class="text-2xl font-serif font-bold text-on-surface">Transacciones Recientes</h3>
+<p class="text-stone-500 font-serif italic">Ventas de planos técnicos y servicios de asesoría</p>
+</div>
+<button class="text-primary font-sans font-bold text-sm underline decoration-primary-fixed-dim underline-offset-4">Ver Historial Completo</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full font-sans">
+<thead>
+<tr class="text-left border-b border-outline-variant/30">
+<th class="pb-4 font-bold text-xs uppercase tracking-widest text-stone-400">Cliente</th>
+<th class="pb-4 font-bold text-xs uppercase tracking-widest text-stone-400">Servicio / Producto</th>
+<th class="pb-4 font-bold text-xs uppercase tracking-widest text-stone-400">Fecha</th>
+<th class="pb-4 font-bold text-xs uppercase tracking-widest text-stone-400">Estado</th>
+<th class="pb-4 font-bold text-xs uppercase tracking-widest text-stone-400 text-right">Monto</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-white/40 transition-colors">
+<td class="py-4">
+<p class="font-bold text-on-surface">Carlos Mendoza</p>
+<p class="text-xs text-stone-500">carlos.m@email.gt</p>
+</td>
+<td class="py-4 font-serif italic">Plano: Horno de Bóveda Sourdough</td>
+<td class="py-4 text-sm text-stone-600">Sep 18, 2023</td>
+<td class="py-4">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-sm text-[10px] font-bold uppercase">Completado</span>
+</td>
+<td class="py-4 text-right font-serif font-bold">Q 1,450.00</td>
+</tr>
+<tr class="hover:bg-white/40 transition-colors">
+<td class="py-4">
+<p class="font-bold text-on-surface">Ana Sofía Rivas</p>
+<p class="text-xs text-stone-500">asrivas@bakery.com</p>
+</td>
+<td class="py-4 font-serif italic">Asesoría: Optimización de Levadura</td>
+<td class="py-4 text-sm text-stone-600">Sep 17, 2023</td>
+<td class="py-4">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-sm text-[10px] font-bold uppercase">Completado</span>
+</td>
+<td class="py-4 text-right font-serif font-bold">Q 3,200.00</td>
+</tr>
+<tr class="hover:bg-white/40 transition-colors">
+<td class="py-4">
+<p class="font-bold text-on-surface">Juan Pablo Duarte</p>
+<p class="text-xs text-stone-500">jpduarte_gt@outlook.com</p>
+</td>
+<td class="py-4 font-serif italic">Plano: Amasadora Mecánica Ancestral</td>
+<td class="py-4 text-sm text-stone-600">Sep 15, 2023</td>
+<td class="py-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-2 py-1 rounded-sm text-[10px] font-bold uppercase">Procesando</span>
+</td>
+<td class="py-4 text-right font-serif font-bold">Q 2,100.00</td>
+</tr>
+<tr class="hover:bg-white/40 transition-colors">
+<td class="py-4">
+<p class="font-bold text-on-surface">Marta Velásquez</p>
+<p class="text-xs text-stone-500">marta.v@gastronomia.gt</p>
+</td>
+<td class="py-4 font-serif italic">Paquete: Guía Completa de Trigos Antiguos</td>
+<td class="py-4 text-sm text-stone-600">Sep 14, 2023</td>
+<td class="py-4">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-sm text-[10px] font-bold uppercase">Completado</span>
+</td>
+<td class="py-4 text-right font-serif font-bold">Q 850.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+<!-- Contextual Floating Indicator (Artisanal Style) -->
+<div class="fixed bottom-8 right-8 bg-surface border border-primary/20 p-4 rounded-xl shadow-2xl flex items-center gap-4 animate-pulse">
+<div class="h-3 w-3 bg-secondary rounded-full"></div>
+<p class="text-xs font-serif italic text-on-surface">Sistema sincronizado con la red bancaria central.</p>
+</div>
+</body></html>

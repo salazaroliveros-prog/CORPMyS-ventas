@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#343026",
+              "background": "#fff8ef",
+              "primary-container": "#a0522d",
+              "surface-bright": "#fff8ef",
+              "on-background": "#1e1b13",
+              "inverse-on-surface": "#f8f0e1",
+              "surface-container-highest": "#e9e2d3",
+              "surface": "#fff8ef",
+              "inverse-primary": "#ffb596",
+              "outline-variant": "#dac1b8",
+              "on-surface": "#1e1b13",
+              "error": "#ba1a1a",
+              "outline": "#87736b",
+              "on-primary-fixed-variant": "#76320f",
+              "surface-dim": "#e1d9cb",
+              "on-primary-fixed": "#360f00",
+              "secondary": "#546344",
+              "surface-variant": "#e9e2d3",
+              "surface-tint": "#944925",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "on-secondary-container": "#5a6949",
+              "tertiary-container": "#596979",
+              "surface-container-high": "#efe7d9",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "primary-fixed": "#ffdbcd",
+              "secondary-fixed-dim": "#bbcca6",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#d8e9fb",
+              "primary-fixed-dim": "#ffb596",
+              "on-primary-container": "#ffe1d6",
+              "secondary-fixed": "#d7e9c1",
+              "primary": "#823b18",
+              "surface-container": "#f5edde",
+              "tertiary-fixed": "#d4e4f6",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-tertiary-fixed-variant": "#394857",
+              "surface-container-low": "#fbf3e4",
+              "secondary-container": "#d7e9c1",
+              "on-surface-variant": "#54433c",
+              "on-error": "#ffffff",
+              "on-secondary-fixed": "#121f06",
+              "tertiary-fixed-dim": "#b8c8da",
+              "error-container": "#ffdad6",
+              "tertiary": "#415160",
+              "on-primary": "#ffffff"
+            },
+            fontFamily: {
+              "serif": ["Noto Serif"],
+              "sans": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(30, 27, 19, 0.06);
+        }
+        .glass-header {
+            background-color: rgba(255, 248, 239, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+  <title>payments bank 2</title>
+</head>
+<body class="bg-background text-on-background font-sans">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-8 px-4 w-64 bg-[#fbf3e4] dark:bg-stone-900 z-50">
+<div class="mb-10 px-4">
+<h1 class="text-2xl font-serif font-bold text-[#823b18] dark:text-[#a0522d]">The Artisanal Hearth</h1>
+<p class="font-sans text-xs tracking-widest uppercase opacity-60 mt-1">Master Baker</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 dark:text-stone-400 font-medium hover:bg-[#f5ead7] dark:hover:bg-stone-800 transition-colors" href="#">
+<span class="material-symbols-outlined">bakery_dining</span>
+<span class="font-sans text-sm">Sourdough Management</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 dark:text-stone-400 font-medium hover:bg-[#f5ead7] dark:hover:bg-stone-800 transition-colors" href="#">
+<span class="material-symbols-outlined">architecture</span>
+<span class="font-sans text-sm">Architectural Marketplace</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 dark:text-stone-400 font-medium hover:bg-[#f5ead7] dark:hover:bg-stone-800 transition-colors" href="#">
+<span class="material-symbols-outlined">vital_signs</span>
+<span class="font-sans text-sm">Starter Health</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 dark:text-stone-400 font-medium hover:bg-[#f5ead7] dark:hover:bg-stone-800 transition-colors" href="#">
+<span class="material-symbols-outlined">distance</span>
+<span class="font-sans text-sm">Delivery Routes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#823b18] dark:text-[#a0522d] font-bold border-r-4 border-[#823b18] translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-sans text-sm">Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-4">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-2.5 px-5 rounded-md font-sans font-medium">
+                New Batch
+            </button>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 left-64 z-40 flex justify-between items-center px-8 h-20 glass-header">
+<div class="flex items-center gap-4">
+<h2 class="text-xl font-serif font-black text-[#823b18] dark:text-[#a0522d]">Payment &amp; Payouts</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<input class="bg-surface-container-lowest border-0 border-b border-outline-variant focus:border-primary focus:ring-0 w-64 font-sans text-sm transition-all pb-1" placeholder="Search transactions..." type="text"/>
+<span class="material-symbols-outlined absolute right-0 bottom-1 text-stone-400 text-sm">search</span>
+</div>
+<div class="flex items-center gap-4 text-stone-500">
+<span class="material-symbols-outlined hover:text-[#a0522d] transition-opacity cursor-pointer">notifications</span>
+<span class="material-symbols-outlined hover:text-[#a0522d] transition-opacity cursor-pointer" style="font-variation-settings: 'FILL' 1;">payments</span>
+<div class="h-8 w-8 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Baker profile portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9mcVqXHdF0Dz4ExCPHLxO9y-5IbRGr380l1C8EGxTb0ZrN4w2aH0oXw_X1siDiY36rnCq5aSXEz9w0oJccFauyFPnOtGHkcXPVc44jOOo777lXjdYewOVwtQZ4gMuVx7UuRn_zR5dFo-2DiYTUZ0WvTjMtnGY2xSgvjJUVNLhTctIK9at7Yq2Rt-iLKpVVhoPGncy3gnJlBxiV-Lt-NPs1SHE8MF5aRRJNKq5C9rQq-5GP7a1C50LZRfAfeAQASSqnYA1pdnLcJT1"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="pl-64 pt-20 min-h-screen bg-background">
+<div class="p-8 max-w-6xl mx-auto">
+<!-- Hero Header Section -->
+<section class="mb-12">
+<h3 class="font-serif text-4xl font-bold tracking-tighter text-on-surface mb-2">Financial Overview</h3>
+<p class="font-sans text-stone-500 max-w-xl">Manage your bread subscription revenue and marketplace payouts. All transfers are processed with artisanal care and security.</p>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Payout Status Card (Large) -->
+<div class="md:col-span-8 bg-surface-container-low rounded-xl p-8 editorial-shadow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-8">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-md font-sans text-xs font-semibold tracking-wide uppercase">Next Payout: Oct 24</span>
+<span class="material-symbols-outlined text-tertiary">account_balance_wallet</span>
+</div>
+<h4 class="font-serif text-5xl font-black text-primary mb-2">$3,420.50</h4>
+<p class="font-sans text-sm text-stone-600">Pending balance from sourdough subscriptions and blueprints.</p>
+</div>
+<div class="mt-12">
+<div class="flex justify-between items-end mb-2">
+<span class="font-sans text-xs font-bold text-secondary uppercase tracking-tighter">Monthly Goal Progress</span>
+<span class="font-serif text-lg text-secondary">$5,000.00</span>
+</div>
+<div class="h-2 w-full bg-secondary-fixed rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[68%]"></div>
+</div>
+</div>
+</div>
+<!-- Connected Accounts (Vertical Stack) -->
+<div class="md:col-span-4 space-y-8">
+<!-- PayPal -->
+<div class="bg-surface-container-highest rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl">account_balance</span>
+</div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 bg-white rounded-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[#003087]">payments</span>
+</div>
+<div>
+<h5 class="font-serif text-lg font-bold">PayPal</h5>
+<p class="font-sans text-xs text-stone-500">Connected: hearth@bakery.com</p>
+</div>
+</div>
+<button class="w-full text-left font-sans text-sm text-primary font-semibold flex items-center gap-1 group">
+                            Manage account
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Bank Account -->
+<div class="bg-surface-container-highest rounded-xl p-6 relative overflow-hidden group">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 bg-white rounded-md flex items-center justify-center">
+<span class="material-symbols-outlined text-stone-700">house</span>
+</div>
+<div>
+<h5 class="font-serif text-lg font-bold">Checking •••• 4291</h5>
+<p class="font-sans text-xs text-stone-500">Verified • Instant Payouts</p>
+</div>
+</div>
+<button class="w-full text-left font-sans text-sm text-primary font-semibold flex items-center gap-1 group">
+                            Change bank details
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Transaction History (Full Width Editorial List) -->
+<div class="md:col-span-12 mt-4">
+<div class="flex justify-between items-baseline mb-8">
+<h4 class="font-serif text-2xl font-bold">Recent Transactions</h4>
+<a class="font-sans text-sm text-primary border-b-2 border-primary-fixed-dim pb-0.5" href="#">View Archive</a>
+</div>
+<div class="space-y-0">
+<!-- Transaction Row 1 -->
+<div class="grid grid-cols-12 items-center py-6 px-4 bg-surface-container-low transition-colors hover:bg-surface-container-high cursor-default">
+<div class="col-span-1">
+<span class="material-symbols-outlined text-secondary">eco</span>
+</div>
+<div class="col-span-5">
+<p class="font-serif font-bold text-on-surface">Weekly Boule Subscription</p>
+<p class="font-sans text-xs text-stone-500">Batch #402 - 12 subscribers</p>
+</div>
+<div class="col-span-2">
+<span class="font-sans text-sm text-tertiary">Oct 18, 2023</span>
+</div>
+<div class="col-span-2">
+<span class="font-sans text-xs font-medium px-2 py-1 bg-surface-container-highest text-stone-700 rounded uppercase">Bread Sales</span>
+</div>
+<div class="col-span-2 text-right">
+<p class="font-serif font-bold text-on-surface">+$480.00</p>
+</div>
+</div>
+<!-- Transaction Row 2 -->
+<div class="grid grid-cols-12 items-center py-6 px-4 bg-white transition-colors hover:bg-surface-container-high cursor-default">
+<div class="col-span-1">
+<span class="material-symbols-outlined text-tertiary">architecture</span>
+</div>
+<div class="col-span-5">
+<p class="font-serif font-bold text-on-surface">Micro-Bakery Blueprint v2.0</p>
+<p class="font-sans text-xs text-stone-500">Digital Download - Marketplace</p>
+</div>
+<div class="col-span-2">
+<span class="font-sans text-sm text-tertiary">Oct 16, 2023</span>
+</div>
+<div class="col-span-2">
+<span class="font-sans text-xs font-medium px-2 py-1 bg-surface-container-highest text-stone-700 rounded uppercase">Marketplace</span>
+</div>
+<div class="col-span-2 text-right">
+<p class="font-serif font-bold text-on-surface">+$125.00</p>
+</div>
+</div>
+<!-- Transaction Row 3 -->
+<div class="grid grid-cols-12 items-center py-6 px-4 bg-surface-container-low transition-colors hover:bg-surface-container-high cursor-default">
+<div class="col-span-1">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+</div>
+<div class="col-span-5">
+<p class="font-serif font-bold text-on-surface">Starter Kit - Deluxe Bundle</p>
+<p class="font-sans text-xs text-stone-500">Tangible Product - Marketplace</p>
+</div>
+<div class="col-span-2">
+<span class="font-sans text-sm text-tertiary">Oct 14, 2023</span>
+</div>
+<div class="col-span-2">
+<span class="font-sans text-xs font-medium px-2 py-1 bg-surface-container-highest text-stone-700 rounded uppercase">Marketplace</span>
+</div>
+<div class="col-span-2 text-right">
+<p class="font-serif font-bold text-on-surface">+$65.00</p>
+</div>
+</div>
+<!-- Transaction Row 4 (Payout) -->
+<div class="grid grid-cols-12 items-center py-6 px-4 bg-white transition-colors hover:bg-surface-container-high cursor-default">
+<div class="col-span-1">
+<span class="material-symbols-outlined text-stone-400">south_east</span>
+</div>
+<div class="col-span-5">
+<p class="font-serif font-bold text-on-surface">Withdrawal to Bank Account</p>
+<p class="font-sans text-xs text-stone-500">Transfer ID: TXN_88219</p>
+</div>
+<div class="col-span-2">
+<span class="font-sans text-sm text-tertiary">Oct 12, 2023</span>
+</div>
+<div class="col-span-2">
+<span class="font-sans text-xs font-medium px-2 py-1 bg-surface-container-highest text-stone-700 rounded uppercase">Payout</span>
+</div>
+<div class="col-span-2 text-right">
+<p class="font-serif font-bold text-error">-$2,100.00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Settings Footer / Security Notice -->
+<footer class="mt-16 pt-12 border-t-0 bg-surface-container-low/50 rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-4xl text-secondary">verified_user</span>
+<div>
+<p class="font-serif font-bold text-lg">Secure Ledger Encryption</p>
+<p class="font-sans text-sm text-stone-500">Your financial data is protected by industry-standard AES-256 parchment encryption.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="bg-transparent border border-outline px-6 py-2.5 rounded-md font-sans text-sm font-medium hover:bg-surface-container-highest transition-colors">
+                        Download Tax Forms
+                    </button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-sans text-sm font-medium hover:opacity-90 transition-opacity">
+                        Instant Payout
+                    </button>
+</div>
+</footer>
+</div>
+</main>
+</body></html>

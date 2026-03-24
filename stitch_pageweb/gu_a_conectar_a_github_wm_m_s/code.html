@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guía Técnica: Conexión GitHub | Constructora WM/M&amp;S</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container": "#e2efff",
+                        "surface": "#f7f9ff",
+                        "secondary-fixed": "#ffdea6",
+                        "secondary-container": "#fdc34d",
+                        "on-secondary-fixed-variant": "#5d4200",
+                        "tertiary-fixed-dim": "#b8c8da",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#271900",
+                        "surface-container-highest": "#d4e4f6",
+                        "on-surface": "#0d1d2a",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#d4e4f6",
+                        "on-tertiary-fixed": "#0d1d2a",
+                        "secondary-fixed-dim": "#f7bd48",
+                        "on-surface-variant": "#464653",
+                        "outline": "#767684",
+                        "primary-fixed-dim": "#bfc2ff",
+                        "surface-container-high": "#d9eafc",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#3239a3",
+                        "on-primary-container": "#777eea",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#132330",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#d4e4f6",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#e7f2ff",
+                        "background": "#f7f9ff",
+                        "outline-variant": "#c6c5d5",
+                        "surface-bright": "#f7f9ff",
+                        "surface-tint": "#4b53bc",
+                        "tertiary": "#000c18",
+                        "surface-dim": "#cbdcee",
+                        "on-secondary-container": "#715000",
+                        "primary": "#00003c",
+                        "on-tertiary-container": "#7b8b9b",
+                        "error-container": "#ffdad6",
+                        "secondary": "#7b5800",
+                        "on-background": "#0d1d2a",
+                        "inverse-primary": "#bfc2ff",
+                        "surface-container-low": "#ecf4ff",
+                        "on-primary-fixed": "#00006e",
+                        "inverse-surface": "#223240",
+                        "primary-container": "#000080",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#e0e0ff",
+                        "on-tertiary-fixed-variant": "#394857"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .code-block {
+            font-family: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', monospace;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body">
+<!-- Top Navigation Bar -->
+<nav class="bg-[#f7f9ff] dark:bg-[#000c18] w-full top-0 left-0 z-50 flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#00003c] dark:text-white font-headline">Constructora WM/M&amp;S</div>
+<div class="hidden md:flex gap-8">
+<a class="font-headline font-semibold tracking-[-0.02em] uppercase text-xs text-[#767684] dark:text-[#c6c5d5] hover:text-[#000080] dark:hover:text-[#f7bd48] transition-colors duration-200" href="#">Services</a>
+<a class="font-headline font-semibold tracking-[-0.02em] uppercase text-xs text-[#767684] dark:text-[#c6c5d5] hover:text-[#000080] dark:hover:text-[#f7bd48] transition-colors duration-200" href="#">Products</a>
+<a class="font-headline font-semibold tracking-[-0.02em] uppercase text-xs text-[#7b5800] border-b-2 border-[#7b5800] pb-1" href="#">Technical Tools</a>
+<a class="font-headline font-semibold tracking-[-0.02em] uppercase text-xs text-[#767684] dark:text-[#c6c5d5] hover:text-[#000080] dark:hover:text-[#f7bd48] transition-colors duration-200" href="#">Dashboard</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer">notifications</span>
+<span class="material-symbols-outlined text-primary cursor-pointer">account_circle</span>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-8 py-20">
+<!-- Hero Section -->
+<header class="mb-24 flex flex-col md:flex-row gap-12 items-end">
+<div class="flex-1">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary font-bold mb-4 block">Manual de Estructura Digital</span>
+<h1 class="font-headline text-6xl font-extrabold tracking-[-0.03em] text-primary leading-tight">
+                    Despliegue de Proyecto en <span class="text-secondary">GitHub</span>
+</h1>
+<p class="mt-8 text-outline text-lg max-w-2xl leading-relaxed">
+                    Protocolo técnico para la vinculación de activos digitales. Siga los planos secuenciales para establecer una conexión sólida entre su entorno local y la infraestructura de nube.
+                </p>
+</div>
+<div class="w-full md:w-1/3 bg-surface-container-high p-8 flex flex-col gap-4">
+<div class="text-secondary font-headline text-4xl font-black">05</div>
+<div class="font-label text-xs uppercase tracking-widest text-primary">Pasos Estructurales</div>
+<div class="h-[2px] bg-secondary w-12"></div>
+</div>
+</header>
+<!-- Bento Grid Guide -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Step 1: Create Repo -->
+<section class="md:col-span-7 bg-surface-container-lowest p-10 flex flex-col justify-between group">
+<div>
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="architecture">architecture</span>
+<h2 class="font-headline text-2xl font-bold text-primary uppercase">01. Cimentación del Repositorio</h2>
+</div>
+<p class="text-outline mb-8 leading-relaxed">
+                        Inicie sesión en su consola de GitHub y cree un nuevo espacio de almacenamiento. Defina el nombre del proyecto con precisión técnica, evitando espacios y caracteres especiales.
+                    </p>
+</div>
+<div class="bg-surface-container p-6 border-l-4 border-secondary">
+<div class="font-label text-[10px] uppercase tracking-widest mb-2 text-primary">Acción Requerida</div>
+<p class="text-sm font-semibold italic text-primary">Botón "New" &gt; Ingrese "Repository name" &gt; "Create repository"</p>
+</div>
+</section>
+<!-- Step 2: Init -->
+<section class="md:col-span-5 bg-primary p-10 text-white flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-4xl" data-icon="construction">construction</span>
+<h2 class="font-headline text-2xl font-bold uppercase">02. Inicialización Local</h2>
+</div>
+<p class="text-tertiary-fixed-dim mb-8 leading-relaxed">
+                        Prepare su carpeta local para el control de versiones. Este comando establece el "blueprint" invisible de Git.
+                    </p>
+</div>
+<div class="code-block bg-tertiary p-6 text-secondary-fixed-dim text-sm tracking-tighter">
+                    git init
+                </div>
+</section>
+<!-- Step 3: Add & Commit -->
+<section class="md:col-span-12 bg-surface-container-low p-12 flex flex-col md:flex-row gap-12">
+<div class="md:w-1/2">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="inventory_2">inventory_2</span>
+<h2 class="font-headline text-2xl font-bold text-primary uppercase">03. Registro de Materiales</h2>
+</div>
+<p class="text-outline mb-6 leading-relaxed">
+                        Añada todos los archivos al área de preparación (staging) y consolide los cambios con un mensaje descriptivo que identifique esta versión inicial.
+                    </p>
+<div class="flex gap-4 mt-8">
+<div class="flex-1 text-center">
+<div class="font-headline text-4xl font-bold text-secondary">A.</div>
+<div class="font-label text-[10px] uppercase mt-2">Stage</div>
+</div>
+<div class="flex-1 text-center">
+<div class="font-headline text-4xl font-bold text-secondary">B.</div>
+<div class="font-label text-[10px] uppercase mt-2">Commit</div>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 flex flex-col gap-4">
+<div class="code-block bg-white p-6 text-primary text-sm shadow-sm">
+                        git add .
+                    </div>
+<div class="code-block bg-white p-6 text-primary text-sm shadow-sm">
+                        git commit -m "Estructura inicial del proyecto"
+                    </div>
+</div>
+</section>
+<!-- Step 4: Remote Add -->
+<section class="md:col-span-6 bg-surface-container-highest p-10 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="payments">payments</span>
+<h2 class="font-headline text-2xl font-bold text-primary uppercase">04. Enlace Estructural</h2>
+</div>
+<p class="text-outline mb-8 leading-relaxed">
+                        Vincule su infraestructura local con el nodo remoto en la nube de GitHub utilizando la URL proporcionada durante la creación del repositorio.
+                    </p>
+</div>
+<div class="code-block bg-primary p-6 text-white text-xs overflow-x-auto">
+                    git remote add origin https://github.com/usuario/proyecto.git
+                </div>
+</section>
+<!-- Step 5: Push -->
+<section class="md:col-span-6 bg-secondary p-10 text-white flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="dashboard">dashboard</span>
+<h2 class="font-headline text-2xl font-bold uppercase">05. Carga Final</h2>
+</div>
+<p class="text-secondary-fixed mb-8 leading-relaxed font-medium">
+                        Transfiera sus archivos a la rama principal. Una vez completado, el proyecto estará disponible en el entorno global de GitHub.
+                    </p>
+</div>
+<div class="code-block bg-tertiary p-6 text-secondary-fixed-dim text-sm">
+                    git push -u origin main
+                </div>
+</section>
+</div>
+<!-- Data Pylon Component -->
+<section class="mt-32 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col">
+<span class="font-headline text-5xl font-bold text-secondary">100%</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mt-1">Sincronización</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline text-5xl font-bold text-secondary">0.5s</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mt-1">Latencia Media</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline text-5xl font-bold text-secondary">SSH</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mt-1">Protocolo Seguro</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline text-5xl font-bold text-secondary">∞</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mt-1">Escalabilidad</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 mt-20 bg-[#f7f9ff] dark:bg-[#000c18] flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="flex flex-col gap-4">
+<div class="text-[#767684] font-['Inter'] text-[10px] uppercase tracking-[0.1em]">© 2024 Constructora WM/M&amp;S. Architectural Precision.</div>
+</div>
+<div class="flex flex-wrap gap-8">
+<a class="font-['Inter'] text-[10px] uppercase tracking-[0.1em] text-[#767684] hover:text-[#00003c] transition-opacity opacity-100 hover:opacity-80" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-[10px] uppercase tracking-[0.1em] text-[#767684] hover:text-[#00003c] transition-opacity opacity-100 hover:opacity-80" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-[10px] uppercase tracking-[0.1em] text-[#767684] hover:text-[#00003c] transition-opacity opacity-100 hover:opacity-80" href="#">Contact</a>
+<a class="font-['Inter'] text-[10px] uppercase tracking-[0.1em] text-[#767684] hover:text-[#00003c] transition-opacity opacity-100 hover:opacity-80" href="#">Internal Portal</a>
+</div>
+</footer>
+</body></html>

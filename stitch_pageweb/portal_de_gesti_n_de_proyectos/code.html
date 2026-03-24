@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#ffb596",
+              "surface-dim": "#e1d9cb",
+              "secondary-fixed": "#d7e9c1",
+              "on-surface": "#1e1b13",
+              "primary": "#823b18",
+              "surface-bright": "#fff8ef",
+              "on-primary-container": "#ffe1d6",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#efe7d9",
+              "tertiary-container": "#596979",
+              "inverse-surface": "#343026",
+              "tertiary-fixed": "#d4e4f6",
+              "on-tertiary-container": "#d8e9fb",
+              "surface-tint": "#944925",
+              "tertiary": "#415160",
+              "surface-variant": "#e9e2d3",
+              "surface-container": "#f5edde",
+              "primary-fixed": "#ffdbcd",
+              "on-error-container": "#93000a",
+              "on-primary-fixed": "#360f00",
+              "inverse-on-surface": "#f8f0e1",
+              "on-surface-variant": "#54433c",
+              "on-background": "#1e1b13",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#394857",
+              "background": "#fff8ef",
+              "outline": "#87736b",
+              "on-secondary-fixed": "#121f06",
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "outline-variant": "#dac1b8",
+              "primary-container": "#a0522d",
+              "on-primary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-tertiary": "#ffffff",
+              "surface-container-low": "#fbf3e4",
+              "secondary": "#546344",
+              "on-secondary-container": "#5a6949",
+              "tertiary-fixed-dim": "#b8c8da",
+              "surface": "#fff8ef",
+              "inverse-primary": "#ffb596",
+              "secondary-fixed-dim": "#bbcca6",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-primary-fixed-variant": "#76320f",
+              "surface-container-highest": "#e9e2d3",
+              "secondary-container": "#d7e9c1",
+              "on-error": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(30, 27, 19, 0.06);
+        }
+        .linen-input {
+            border: none;
+            border-bottom: 1px solid #dac1b8;
+            background-color: transparent;
+            transition: border-color 0.3s ease;
+        }
+        .linen-input:focus {
+            outline: none;
+            border-bottom: 2px solid #823b18;
+        }
+        body {
+            background-color: #fff8ef;
+            color: #1e1b13;
+        }
+    </style>
+  <title>portal de gesti n de proyectos</title>
+</head>
+<body class="font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="w-full sticky top-0 z-50 bg-[#fff8ef] dark:bg-stone-900/90 shadow-[0_20px_40px_rgba(30,27,19,0.06)] backdrop-blur-md flex justify-between items-center px-8 py-6 max-w-full">
+<div class="text-2xl font-serif font-bold text-[#823b18] dark:text-orange-200">
+            Heirloom Crust
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#1e1b13] dark:text-stone-300 opacity-80 hover:opacity-100 hover:text-[#a0522d] transition-colors duration-300 font-sans text-sm tracking-wide" href="#">Diseños</a>
+<a class="text-[#1e1b13] dark:text-stone-300 opacity-80 hover:opacity-100 hover:text-[#a0522d] transition-colors duration-300 font-sans text-sm tracking-wide" href="#">Servicios Técnicos</a>
+<a class="text-[#1e1b13] dark:text-stone-300 opacity-80 hover:opacity-100 hover:text-[#a0522d] transition-colors duration-300 font-sans text-sm tracking-wide" href="#">Software</a>
+<a class="text-[#823b18] border-b-2 border-[#823b18] font-bold pb-1 font-sans text-sm tracking-wide" href="#">Mi Cuenta</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#823b18] dark:text-orange-200 scale-95 transition-transform" data-icon="search">search</button>
+<button class="material-symbols-outlined text-[#823b18] dark:text-orange-200 scale-95 transition-transform" data-icon="account_circle">account_circle</button>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<!-- Dashboard Header -->
+<header class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-2">
+<span class="text-primary font-label uppercase tracking-widest text-xs font-bold">Portal de Cliente</span>
+<h1 class="text-5xl font-headline font-bold text-on-surface tracking-tight leading-tight">Estado de sus Trámites</h1>
+<p class="text-on-surface-variant max-w-xl font-body mt-4">Bienvenido, Sr. Sourdough. Aquí puede supervisar la evolución técnica de su propiedad y descargar la documentación certificada.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2.5 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-md font-medium text-sm flex items-center gap-2 editorial-shadow">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                    Nuevo Trámite
+                </button>
+</div>
+</header>
+<!-- Project Status Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
+<!-- Project Card 1: Primary Focus -->
+<div class="md:col-span-8 bg-surface-container-highest rounded-xl p-8 editorial-shadow relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-12">
+<div>
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest rounded-full mb-3 inline-block">Prioritario</span>
+<h3 class="text-3xl font-headline font-bold text-on-surface">Planos de Registro</h3>
+<p class="text-on-surface-variant text-sm mt-1 italic">Expediente #823B-2024</p>
+</div>
+<div class="text-right">
+<span class="text-sm font-label text-on-surface-variant">Progreso</span>
+<div class="text-2xl font-headline font-bold text-primary">65%</div>
+</div>
+</div>
+<!-- Fermentation Tracker (Timeline) -->
+<div class="space-y-6">
+<div class="relative pt-1">
+<div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-secondary-fixed">
+<div class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-secondary" style="width:65%"></div>
+</div>
+<div class="flex justify-between text-xs font-label text-on-surface-variant opacity-70">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Ingreso</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Revisión Técnica</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary" data-icon="pending">pending</span>
+<span class="text-on-surface font-bold">En Trámite Municipal</span>
+</div>
+<div class="flex flex-col items-center opacity-40">
+<span class="material-symbols-outlined" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<span>Aprobación Final</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 flex gap-4">
+<button class="text-primary font-label text-sm font-medium underline underline-offset-8 decoration-primary-fixed-dim hover:text-primary-container transition-all">Ver bitácora de cambios</button>
+</div>
+</div>
+<!-- Abstract visual element -->
+<div class="absolute -right-16 -bottom-16 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+<!-- Project Card 2: Status Secondary -->
+<div class="md:col-span-4 bg-surface-container-low rounded-xl p-8 border border-outline-variant/20 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-secondary mb-4">
+<span class="material-symbols-outlined" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label text-xs font-bold uppercase tracking-wider">Completado</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface">Topografía</h3>
+<p class="text-on-surface-variant text-sm mt-4 leading-relaxed">
+                        Levantamiento planialtimétrico del lote 14-A finalizado y visado por el colegio profesional.
+                    </p>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/20">
+<button class="flex items-center justify-between w-full group">
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Descargar Informe Final</span>
+<span class="material-symbols-outlined text-primary" data-icon="download">download</span>
+</button>
+</div>
+</div>
+<!-- Project Card 3: Status Tertiary -->
+<div class="md:col-span-4 bg-surface-container-low rounded-xl p-8 border border-outline-variant/20 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-primary mb-4">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="font-label text-xs font-bold uppercase tracking-wider">En Firma</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface">Avalúo Hipotecario</h3>
+<p class="text-on-surface-variant text-sm mt-4 leading-relaxed">
+                        El documento técnico ha sido aprobado. Pendiente de firma digital por el perito asignado.
+                    </p>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/20">
+<button class="flex items-center justify-between w-full group">
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Ver Borrador</span>
+<span class="material-symbols-outlined text-primary" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<!-- Documents Repository List -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/20">
+<div class="flex items-center justify-between mb-8">
+<h4 class="text-xl font-headline font-bold">Documentación del Proyecto</h4>
+<span class="text-xs font-label text-on-surface-variant">4 archivos disponibles</span>
+</div>
+<div class="space-y-1">
+<!-- Custom List Item - No Border Policy -->
+<div class="flex items-center justify-between py-4 px-4 hover:bg-surface-container-low rounded transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-tertiary-fixed rounded">
+<span class="material-symbols-outlined text-tertiary" data-icon="description">description</span>
+</div>
+<div>
+<p class="text-sm font-medium text-on-surface">Certificado_Uso_Suelo.pdf</p>
+<p class="text-[11px] text-on-surface-variant">Añadido hace 2 días • 1.2 MB</p>
+</div>
+</div>
+<button class="opacity-0 group-hover:opacity-100 transition-opacity p-2 text-primary">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+<div class="flex items-center justify-between py-4 px-4 hover:bg-surface-container-low rounded transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-tertiary-fixed rounded">
+<span class="material-symbols-outlined text-tertiary" data-icon="image">image</span>
+</div>
+<div>
+<p class="text-sm font-medium text-on-surface">Render_Fachada_Principal.jpg</p>
+<p class="text-[11px] text-on-surface-variant">Añadido hace 5 días • 4.8 MB</p>
+</div>
+</div>
+<button class="opacity-0 group-hover:opacity-100 transition-opacity p-2 text-primary">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+<div class="flex items-center justify-between py-4 px-4 hover:bg-surface-container-low rounded transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-tertiary-fixed rounded">
+<span class="material-symbols-outlined text-tertiary" data-icon="map">map</span>
+</div>
+<div>
+<p class="text-sm font-medium text-on-surface">Plano_Topografico_v2.dwg</p>
+<p class="text-[11px] text-on-surface-variant">Añadido hace 1 semana • 12.4 MB</p>
+</div>
+</div>
+<button class="opacity-0 group-hover:opacity-100 transition-opacity p-2 text-primary">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full py-3 border border-dashed border-outline-variant text-on-surface-variant text-sm font-label rounded-lg hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="upload_file">upload_file</span>
+                        Subir documento adicional solicitado
+                    </button>
+</div>
+</div>
+</div>
+<!-- Support Section -->
+<section class="bg-surface-container p-12 rounded-xl text-center editorial-shadow">
+<h4 class="text-2xl font-headline font-bold mb-4">¿Tiene dudas técnicas sobre el proceso?</h4>
+<p class="text-on-surface-variant mb-8 max-w-lg mx-auto">Nuestro equipo de arquitectos e ingenieros está disponible para sesiones de consulta sobre su expediente.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="px-8 py-3 bg-primary text-on-primary rounded-md font-medium">Programar Llamada</button>
+<button class="px-8 py-3 border border-outline/40 text-on-surface rounded-md font-medium hover:bg-surface-container-high transition-colors">Contactar Soporte</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#dac1b8]/20 bg-[#fbf3e4] dark:bg-stone-950 grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16">
+<div class="space-y-6">
+<div class="font-serif italic text-lg text-[#823b18]">Heirloom Crust</div>
+<p class="font-sans text-sm tracking-wide text-[#1e1b13] dark:text-stone-400 max-w-sm">
+                Arquitectura artesanal y servicios técnicos especializados. Transformamos visiones en estructuras sólidas con la paciencia del buen pan.
+            </p>
+<div class="font-sans text-xs tracking-wide text-[#1e1b13] dark:text-stone-400 opacity-60">
+                © 2024 Heirloom Crust Architectural Services. All rights reserved. Professional Credentials ID: 823B-S sourdough.
+            </div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-4">
+<a class="font-sans text-sm tracking-wide text-[#1e1b13] dark:text-stone-400 opacity-60 hover:underline hover:text-[#823b18] transition-opacity" href="#">Privacy Policy</a>
+<a class="font-sans text-sm tracking-wide text-[#1e1b13] dark:text-stone-400 opacity-60 hover:underline hover:text-[#823b18] transition-opacity" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-sans text-sm tracking-wide text-[#1e1b13] dark:text-stone-400 opacity-60 hover:underline hover:text-[#823b18] transition-opacity" href="#">Contact</a>
+<a class="font-sans text-sm tracking-wide text-[#1e1b13] dark:text-stone-400 opacity-60 hover:underline hover:text-[#823b18] transition-opacity" href="#">Portfolio</a>
+</div>
+</div>
+</footer>
+</body></html>

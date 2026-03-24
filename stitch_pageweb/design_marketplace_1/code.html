@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Artisanal Hearth | Architectural Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#343026",
+              "background": "#fff8ef",
+              "primary-container": "#a0522d",
+              "surface-bright": "#fff8ef",
+              "on-background": "#1e1b13",
+              "inverse-on-surface": "#f8f0e1",
+              "surface-container-highest": "#e9e2d3",
+              "surface": "#fff8ef",
+              "inverse-primary": "#ffb596",
+              "outline-variant": "#dac1b8",
+              "on-surface": "#1e1b13",
+              "error": "#ba1a1a",
+              "outline": "#87736b",
+              "on-primary-fixed-variant": "#76320f",
+              "surface-dim": "#e1d9cb",
+              "on-primary-fixed": "#360f00",
+              "secondary": "#546344",
+              "surface-variant": "#e9e2d3",
+              "surface-tint": "#944925",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "on-secondary-container": "#5a6949",
+              "tertiary-container": "#596979",
+              "surface-container-high": "#efe7d9",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "primary-fixed": "#ffdbcd",
+              "secondary-fixed-dim": "#bbcca6",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#d8e9fb",
+              "primary-fixed-dim": "#ffb596",
+              "on-primary-container": "#ffe1d6",
+              "secondary-fixed": "#d7e9c1",
+              "primary": "#823b18",
+              "surface-container": "#f5edde",
+              "tertiary-fixed": "#d4e4f6",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-tertiary-fixed-variant": "#394857",
+              "surface-container-low": "#fbf3e4",
+              "secondary-container": "#d7e9c1",
+              "on-surface-variant": "#54433c",
+              "on-error": "#ffffff",
+              "on-secondary-fixed": "#121f06",
+              "tertiary-fixed-dim": "#b8c8da",
+              "error-container": "#ffdad6",
+              "tertiary": "#415160",
+              "on-primary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Work Sans', sans-serif;
+        background-color: #fff8ef;
+      }
+      h1, h2, h3, .font-serif {
+        font-family: 'Noto Serif', serif;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-8 px-4 bg-[#fbf3e4] dark:bg-stone-900 h-screen w-64 border-r-0 z-50">
+<div class="mb-10 px-4">
+<h1 class="text-2xl font-serif font-bold text-[#823b18] dark:text-[#a0522d]">The Artisanal Hearth</h1>
+<p class="font-sans text-sm Work Sans text-stone-600 dark:text-stone-400">Master Baker</p>
+</div>
+<nav class="flex-1 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-md hover:bg-[#f5ead7] dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 font-medium" href="#">
+<span class="material-symbols-outlined">bakery_dining</span>
+<span class="text-sm font-sans">Sourdough Management</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-md text-[#823b18] dark:text-[#a0522d] font-bold border-r-4 border-[#823b18] translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">architecture</span>
+<span class="text-sm font-sans">Architectural Marketplace</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-md hover:bg-[#f5ead7] dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 font-medium" href="#">
+<span class="material-symbols-outlined">vital_signs</span>
+<span class="text-sm font-sans">Starter Health</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-md hover:bg-[#f5ead7] dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 font-medium" href="#">
+<span class="material-symbols-outlined">distance</span>
+<span class="text-sm font-sans">Delivery Routes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-md hover:bg-[#f5ead7] dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 font-medium mt-auto" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-sans">Settings</span>
+</a>
+</nav>
+<div class="mt-8 px-4">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-2.5 px-5 rounded-md font-sans text-sm font-semibold">
+                New Batch
+            </button>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 left-64 z-40 flex justify-between items-center px-8 h-20 bg-[#fff8ef]/80 dark:bg-stone-950/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex items-center gap-4">
+<h2 class="text-xl font-serif font-black text-[#823b18] dark:text-[#a0522d]">Architectural Marketplace</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<input class="bg-surface-container-lowest border-0 border-b border-outline-variant focus:border-primary focus:ring-0 w-64 text-sm py-2" placeholder="Search blueprints..." type="text"/>
+<span class="material-symbols-outlined absolute right-2 top-2 text-stone-400">search</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-stone-500 hover:text-[#a0522d] cursor-pointer transition-opacity">notifications</span>
+<span class="material-symbols-outlined text-stone-500 hover:text-[#a0522d] cursor-pointer transition-opacity">payments</span>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Baker Profile Avatar Image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7i9deJEWiGYbdl3KRD7NyI6aie36gUsSrytqo3etc3lI2ijkAAgx5MifHn1KM86HzHZo5ohq0Wc3wSdRYWr64tQ6SLoCbvY9Jz4LvlVpMus3AzNkXE8MXEUeiF8ci3LXFnOp_Qk6Os2RZAbW5-KR69pWwjLlq8lFCQDJkIDxFnB2mP92amJAmN3oINk-SBYqWnxikMgCKpGNvRUW8ErziN21grxhBjyHtP0IxlX83VXOroaZ3sFp3r2fHQjf3lmLJsAHq2RpxmPqs"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 mt-20 p-8 min-h-screen">
+<!-- Hero Section -->
+<section class="mb-16 mt-8">
+<div class="max-w-4xl">
+<h3 class="text-5xl font-serif font-black text-on-surface tracking-tighter mb-4 leading-tight">
+                    Blueprints for the <span class="text-primary italic">Modern Craft.</span>
+</h3>
+<p class="text-lg text-tertiary font-body max-w-2xl">
+                    Discover a curated collection of digital assets and structural designs curated for the artisanal spirit. From fermentation chamber schematics to baker-focused mobile applications.
+                </p>
+</div>
+</section>
+<!-- Bento Marketplace Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Featured Card (Large) -->
+<div class="md:col-span-8 bg-surface-container-highest rounded-xl overflow-hidden flex flex-col md:flex-row group">
+<div class="md:w-1/2 overflow-hidden h-64 md:h-auto">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Architectural Blueprint of Modern Baker Kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSqSOIOHn4U_S_NVfep_0AQtF1e7zkedbUIelAbceWwqzHYLlJtOc0LdTrogKZO_yK5F5TcYM4mpRkwqpFh-RQRcYdidrnDzLpzjC-1cBvUL-4uiWUThzPN25qxbMoFNaDbf6zFAkeXh27S2VL4-nlJe4sKYUliQfyQH90Uig_P-6D71g-fVyymDfnIBjyy9GaB8cM1H6tqUp-U9yy4BgPnQQF00x2xB8gc7aFfPpyc2767tjlRnQ4X7LsAQkbat8UXJ4UQFYZ7FUs"/>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col justify-between">
+<div>
+<span class="text-xs font-semibold tracking-widest text-secondary bg-secondary-fixed px-2 py-1 rounded mb-4 inline-block font-sans">ARCHITECTURE</span>
+<h4 class="text-2xl font-serif font-bold mb-4">The Neolithic Hearth - Oven Design v2.0</h4>
+<p class="text-sm text-on-surface-variant font-body mb-6">A wood-fired oven schematic optimized for heat retention and steam injection. Includes 3D models and materials list.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex flex-col">
+<span class="text-xs text-stone-500 font-sans">Investment</span>
+<span class="text-xl font-serif font-bold text-primary">$249.00</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-stone-400 text-lg">payments</span>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary py-2.5 px-6 rounded-md font-sans text-sm font-semibold shadow-sm hover:opacity-90 transition-opacity">
+                                Buy Blueprint
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="md:col-span-4 bg-surface-container-low p-6 rounded-xl flex flex-col justify-between">
+<div>
+<div class="aspect-square rounded-lg overflow-hidden mb-6 bg-surface-container-highest relative">
+<img class="w-full h-full object-cover" data-alt="Mobile app interface for dough tracking" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_4SdsoxyDe5AOiaU9NFtB8nH6EZOazigV57EUEXRFM5mEZKcN01fZqUdSZu2Rt7yUymSK4otdUO8aTGZAvG5rWqHjC6tWSP3LPczEjuD6ofaV30eJxAIXNbDh4Zf0CxgZqHftZcLdDeXLRET9WJUbLDQkBq8tGz6Zj0yZyD4y_sH0vEG1Te9M1azXKpLiwTZmggXXjHh7EjqcgDfWoa0l1qvq8PfCBzFex58AO9ON6rzudtxQNo90dRLimKOA2Zg7LgezmYIppQ8F"/>
+<div class="absolute top-2 right-2 bg-white/80 backdrop-blur-sm p-1 rounded">
+<span class="material-symbols-outlined text-sm text-primary">smartphone</span>
+</div>
+</div>
+<span class="text-[10px] font-bold tracking-tighter text-tertiary-container font-sans mb-1 block">APP TEMPLATE</span>
+<h4 class="text-lg font-serif font-bold mb-2">CrumbMaster Pro Dashboard</h4>
+<p class="text-xs text-on-surface-variant font-body">React-based dashboard for tracking multiple sourdough starters and hydration schedules.</p>
+</div>
+<div class="flex items-center justify-between pt-6">
+<span class="text-lg font-serif font-bold">$45.00</span>
+<button class="text-primary text-xs font-semibold underline underline-offset-4 decoration-primary-fixed-dim hover:text-primary-container transition-colors font-sans">
+                        Quick Purchase
+                    </button>
+</div>
+</div>
+<!-- Small Card 2 -->
+<div class="md:col-span-4 bg-surface-container-low p-6 rounded-xl flex flex-col justify-between">
+<div>
+<div class="aspect-square rounded-lg overflow-hidden mb-6 bg-surface-container-highest relative">
+<img class="w-full h-full object-cover" data-alt="Minimalist architectural drawing of a shed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx_QnaOjQWtdoaXgDj4THfFmYHvu7zfwVHgnz51U-0HD38GZ4-C6IEMus-UnuRQHzFyrrwHLG-1WbP1p4JojCd3WRmm5L3VJdMB7ZZ8dTCZ5BFmfGvLibYV1hJP9nlM9qQ_tTZ6DVXqZRu2erwvWcPIOjxZiwLa8y1VgtDNOjO-lLRSj3pQK9pNp_As8nA_Q6fmpUA5CjLM-NBef9RFsLFQxTqvoAYz91YpNtJkcnlo7PoANR1qmirDU2qftTLdc_K4f3EMEl-Ftc4"/>
+</div>
+<span class="text-[10px] font-bold tracking-tighter text-tertiary-container font-sans mb-1 block">ARCHITECTURE</span>
+<h4 class="text-lg font-serif font-bold mb-2">Micro-Bakery Studio Layout</h4>
+<p class="text-xs text-on-surface-variant font-body">Optimized floor plans for residential-to-commercial bakery conversions (400sqft).</p>
+</div>
+<div class="flex items-center justify-between pt-6">
+<span class="text-lg font-serif font-bold">$89.00</span>
+<div class="flex gap-2 opacity-40">
+<span class="material-symbols-outlined text-sm">account_balance</span>
+<span class="material-symbols-outlined text-sm">payments</span>
+</div>
+</div>
+</div>
+<!-- Featured Card (Wide) -->
+<div class="md:col-span-8 bg-surface-container p-8 rounded-xl flex flex-col md:flex-row items-center gap-8">
+<div class="md:w-2/5 order-2 md:order-1">
+<span class="text-xs font-semibold text-primary font-sans">NEW RELEASE</span>
+<h4 class="text-3xl font-serif font-black mb-4 leading-tight">Artisan Inventory &amp; POS System</h4>
+<p class="text-sm text-on-surface-variant mb-6 font-body">Full-stack application for managing daily bakes, walk-in sales, and wholesale delivery invoicing.</p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary py-2.5 px-5 rounded-md text-xs font-bold font-sans">
+                            Buy Now
+                        </button>
+<button class="border border-outline-variant text-on-surface py-2.5 px-5 rounded-md text-xs font-bold font-sans">
+                            View Demo
+                        </button>
+</div>
+</div>
+<div class="md:w-3/5 order-1 md:order-2 h-64 w-full bg-white rounded-lg shadow-inner flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover grayscale contrast-125 opacity-80" data-alt="SaaS Application Interface Showcase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPM2wOKIHw0-pntOokRiThaZ5Bym4HfqffJbsJyKM7sq-TiYuwROEUnfMni3oJvLC7UBeq7LNe47e_QUV4o6G9o3jt_A_eaWyGaeFn0iP8pDt2UuBf1X8BCBnmaXmorxzVGoAL4WJ_8KK6mA6mOCnPldkEcSaUlU1n7fS9wuwsWbd9IPKIF9inSXEft77t9t1T2q7UvwNNeDE9kV5UCrOiLdI0VZTqhu3Ors6WI3mH0HwzHzOGE2OPCNPqzzO-sCOWbr2AH4R8Qfse"/>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="md:col-span-4 bg-surface-container-low p-6 rounded-xl flex flex-col justify-between">
+<div>
+<div class="aspect-video rounded-lg overflow-hidden mb-6 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Technical drawing of grain mill" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnreNBi1ggdO1bVRHpJMWoF1uVF9XHq8B-1PEDG1nd56oIdaptxGNkxuQIr0TMLBWm8vUA_fRcRuDC7p_NJz6hIbL2eFKpNMcolzCgbtlsVaZno_bQ_wv06MJ5G5b516NfmsMBZIXGzEwqj0pYVRn8HpJ2HvZ-7gQBaegTZRuS6lyC4LToc_xyvjyzuDCv8DehpPyZ-7gI11zKbvEzK9uLHKG-xdgqpsFXSd7BwhLqtQ4e5cIgpR3M0DvEzZ3VkcnLXZt-bpEiqQmq"/>
+</div>
+<span class="text-[10px] font-bold tracking-tighter text-tertiary-container font-sans mb-1 block">ENGINEERING</span>
+<h4 class="text-lg font-serif font-bold mb-2">Automated Grain Mill 2.0</h4>
+<p class="text-xs text-on-surface-variant font-body">CAD files for a custom tabletop stone mill with temperature sensors.</p>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/20 mt-4">
+<span class="text-lg font-serif font-bold">$120.00</span>
+<button class="material-symbols-outlined p-2 bg-surface-container-highest rounded-full text-primary">shopping_cart</button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="md:col-span-4 bg-surface-container-low p-6 rounded-xl flex flex-col justify-between">
+<div>
+<div class="aspect-video rounded-lg overflow-hidden mb-6 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Abstract app interface design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnJ4bNmMyYAKxH0dfvBwQuDSNDpA5XJwPpsmRvpkgWAJrI75lBbFg1Ec0cefUdZunXvmfAGYTEdF_nPLZZyzjiePMRsg_Mojh98qrpb94EwLvj66hcTD8OFl_khmKBz-cZbYeV6XpmH54paTe0Kbp69Wm8J2u-weLp2jn7Sntualr8stgWLiCCPatm9UEDNHgI0vgs-sFQT-qQ7_z-79XPba2X__E86FTKrCeemrAjjOBi7SkZUzw_zgrjD3-wa1gvbr1aWOx-8tQI"/>
+</div>
+<span class="text-[10px] font-bold tracking-tighter text-tertiary-container font-sans mb-1 block">UI KIT</span>
+<h4 class="text-lg font-serif font-bold mb-2">Bread &amp; Butter Design System</h4>
+<p class="text-xs text-on-surface-variant font-body">Tailwind components and Figma assets for food and kitchen apps.</p>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/20 mt-4">
+<span class="text-lg font-serif font-bold">$29.00</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-stone-300 text-xs">verified</span>
+<span class="text-[10px] text-stone-400 font-sans">Top Rated</span>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="md:col-span-4 bg-surface-container-low p-6 rounded-xl flex flex-col justify-between">
+<div>
+<div class="aspect-video rounded-lg overflow-hidden mb-6 bg-surface-container-highest">
+<img class="w-full h-full object-crop" data-alt="Modern building facade photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC81pazh1Rr1NAtdPjVgLuEfVvBoBCvLbz56Nti-iu-Iu9GYKS05_0qhPjOPxXyFA63GedDxizkyWhc0UXorp-NipnuVshXF-1QC3jXAwKecM3wzOSXRYyJpQQYcipLcpfi-c5Bwnd4qkyP5Y3PvreSlpLcj85U2pPtV8d1-HPVdk43wuHCn3u6qOyJpwwzNGS6S0xOuFB267jnCxbZOw5_EkqOP7OExNdnmJ-7lsWjR18hWnu9v_beKu0A-LYLfabHUDw6QlMmiOvQ"/>
+</div>
+<span class="text-[10px] font-bold tracking-tighter text-tertiary-container font-sans mb-1 block">ARCHITECTURE</span>
+<h4 class="text-lg font-serif font-bold mb-2">Solar-Passive Flour Silo</h4>
+<p class="text-xs text-on-surface-variant font-body">Construction plans for long-term grain storage with natural climate control.</p>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/20 mt-4">
+<span class="text-lg font-serif font-bold">$175.00</span>
+<button class="bg-secondary text-on-secondary text-[10px] font-bold font-sans px-3 py-1.5 rounded">
+                        Add to Cart
+                    </button>
+</div>
+</div>
+</div>
+<!-- Footer Info -->
+<footer class="mt-20 pt-10 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-start gap-8 opacity-70">
+<div class="max-w-xs">
+<h5 class="font-serif font-bold text-[#823b18] mb-2">The Artisanal Hearth</h5>
+<p class="text-xs font-body">The digital storefront for professional bakers and architectural craftspeople. All designs licensed for individual or commercial use.</p>
+</div>
+<div class="flex gap-12">
+<div>
+<h6 class="text-[10px] font-bold tracking-widest text-stone-500 uppercase mb-4">Marketplace</h6>
+<ul class="text-xs flex flex-col gap-2 font-body">
+<li>Blueprints</li>
+<li>App Templates</li>
+<li>UI Kits</li>
+<li>Consulting</li>
+</ul>
+</div>
+<div>
+<h6 class="text-[10px] font-bold tracking-widest text-stone-500 uppercase mb-4">Support</h6>
+<ul class="text-xs flex flex-col gap-2 font-body">
+<li>License Agreement</li>
+<li>Custom Orders</li>
+<li>Contact Support</li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<div class="flex gap-4 mb-4">
+<span class="material-symbols-outlined text-stone-400">payments</span>
+<span class="material-symbols-outlined text-stone-400">account_balance_wallet</span>
+<span class="material-symbols-outlined text-stone-400">shield</span>
+</div>
+<p class="text-[10px] font-sans">Secure Checkout via PayPal &amp; Stripe</p>
+</div>
+</footer>
+</main>
+</body></html>

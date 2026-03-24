@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Configuración de Alertas - Heirloom Crust</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#d7e9c1",
+              "primary-fixed": "#ffdbcd",
+              "on-error": "#ffffff",
+              "surface-container-low": "#fbf3e4",
+              "on-tertiary-fixed-variant": "#394857",
+              "tertiary-fixed-dim": "#b8c8da",
+              "secondary-fixed-dim": "#bbcca6",
+              "outline-variant": "#dac1b8",
+              "on-secondary-container": "#5a6949",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#360f00",
+              "primary": "#823b18",
+              "secondary": "#546344",
+              "primary-container": "#a0522d",
+              "on-primary-fixed-variant": "#76320f",
+              "error": "#ba1a1a",
+              "outline": "#87736b",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed": "#d4e4f6",
+              "error-container": "#ffdad6",
+              "surface-tint": "#944925",
+              "surface-dim": "#e1d9cb",
+              "on-surface-variant": "#54433c",
+              "on-primary-container": "#ffe1d6",
+              "on-background": "#1e1b13",
+              "inverse-surface": "#343026",
+              "on-tertiary-container": "#d8e9fb",
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "inverse-on-surface": "#f8f0e1",
+              "surface-variant": "#e9e2d3",
+              "surface-bright": "#fff8ef",
+              "background": "#fff8ef",
+              "tertiary": "#415160",
+              "surface-container-high": "#efe7d9",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-container-highest": "#e9e2d3",
+              "surface-container": "#f5edde",
+              "surface": "#fff8ef",
+              "on-surface": "#1e1b13",
+              "inverse-primary": "#ffb596",
+              "tertiary-container": "#596979",
+              "primary-fixed-dim": "#ffb596",
+              "secondary-container": "#d7e9c1",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-secondary-fixed": "#121f06"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        /* Custom Switch Styling */
+        .artisan-switch:checked {
+            background-color: #823b18;
+            border-color: #823b18;
+        }
+        .artisan-switch:focus {
+            ring-color: #823b18;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Navigation Shell: SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-outline-variant/20 bg-surface-container-low flex flex-col py-8 px-4 gap-y-2 z-40 hidden md:flex">
+<div class="mb-8 px-2">
+<h1 class="font-headline text-lg text-on-surface font-black tracking-tight">Panel de Obra</h1>
+<p class="text-xs text-on-surface/60 font-medium tracking-wide uppercase">Gestión Artesanal</p>
+</div>
+<nav class="flex-1 flex flex-col gap-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface/70 font-medium text-sm transition-all duration-300 ease-in-out hover:text-primary hover:bg-surface transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface/70 font-medium text-sm transition-all duration-300 ease-in-out hover:text-primary hover:bg-surface transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+<span>Proyectos</span>
+</a>
+<!-- Active State: Alerts -->
+<a class="flex items-center gap-3 px-3 py-2 text-primary font-bold text-sm border-r-4 border-primary bg-surface transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="notifications_active" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+<span>Alertas</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface/70 font-medium text-sm transition-all duration-300 ease-in-out hover:text-primary hover:bg-surface transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+<span>Planos</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface/70 font-medium text-sm transition-all duration-300 ease-in-out hover:text-primary hover:bg-surface transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Equipo</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-outline-variant/20 pt-4 flex flex-col gap-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface/70 font-medium text-sm hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Ayuda</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface/70 font-medium text-sm hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Cerrar Sesión</span>
+</a>
+</div>
+</aside>
+<!-- Top AppBar (Mobile/Compact) -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/20 md:hidden">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<div class="text-2xl font-headline font-black text-primary">The Artisanal Hearth</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-primary" data-icon="settings">settings</span>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 pt-20 md:pt-0 min-h-screen bg-background pb-12">
+<div class="max-w-5xl mx-auto px-6 md:px-12 py-12">
+<!-- Header Section -->
+<header class="mb-12 border-l-4 border-primary pl-6">
+<h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-on-surface">Heirloom Crust</h2>
+<p class="text-on-surface-variant font-medium mt-2 max-w-2xl">Configuración de notificaciones y alertas de correo para la administración de la plataforma.</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Primary Config -->
+<div class="lg:col-span-8 space-y-12">
+<!-- Section: Correo Principal -->
+<section>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Correo de Notificaciones</h3>
+</div>
+<div class="bg-surface-container-highest p-8 rounded-lg shadow-sm">
+<label class="block text-sm font-label font-bold text-on-surface-variant mb-2 uppercase tracking-widest">Dirección de Destino</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 text-lg font-medium transition-colors" type="email" value="admin@heirloomcrust.com.gt"/>
+<p class="mt-3 text-sm text-on-surface/60 italic">Se enviarán todas las alertas críticas a esta dirección.</p>
+</div>
+</section>
+<!-- Bento Grid for Notification Toggles -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 1: Alertas de Seguridad -->
+<div class="bg-surface-container p-6 rounded-lg border-b-4 border-error/20">
+<div class="flex items-center justify-between mb-4">
+<h4 class="font-headline text-xl font-bold">Seguridad</h4>
+<span class="material-symbols-outlined text-error" data-icon="shield">shield</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Inicios sospechosos</span>
+<input checked="" class="artisan-switch h-5 w-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Cambios de contraseña</span>
+<input checked="" class="artisan-switch h-5 w-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Activación de 2FA</span>
+<input class="artisan-switch h-5 w-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</div>
+</div>
+</div>
+<!-- Card 2: Transacciones -->
+<div class="bg-surface-container p-6 rounded-lg border-b-4 border-secondary/20">
+<div class="flex items-center justify-between mb-4">
+<h4 class="font-headline text-xl font-bold">Transacciones</h4>
+<span class="material-symbols-outlined text-secondary" data-icon="payments">payments</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Venta de planos (Q)</span>
+<input checked="" class="artisan-switch h-5 w-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Retiros exitosos</span>
+<input checked="" class="artisan-switch h-5 w-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Pagos PayPal pendientes</span>
+<input checked="" class="artisan-switch h-5 w-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</div>
+</div>
+</div>
+<!-- Card 3: Soporte Técnico -->
+<div class="bg-surface-container p-6 rounded-lg border-b-4 border-tertiary/20">
+<div class="flex items-center justify-between mb-4">
+<h4 class="font-headline text-xl font-bold">Soporte Técnico</h4>
+<span class="material-symbols-outlined text-tertiary" data-icon="support_agent">support_agent</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Nuevos tickets</span>
+<input checked="" class="artisan-switch h-5 w-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Respuestas de arquitectos</span>
+<input checked="" class="artisan-switch h-5 w-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium text-error font-bold">Tickets urgentes</span>
+<input checked="" class="artisan-switch h-5 w-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</div>
+</div>
+</div>
+<!-- Card 4: Automatización -->
+<div class="bg-surface-container p-6 rounded-lg border-b-4 border-primary/20">
+<div class="flex items-center justify-between mb-4">
+<h4 class="font-headline text-xl font-bold">Automatización</h4>
+<span class="material-symbols-outlined text-primary" data-icon="auto_mode">auto_mode</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Artículos re-publicados</span>
+<input checked="" class="artisan-switch h-5 w-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<p class="text-xs text-on-surface/60 leading-relaxed">Notificar tras 15 días de inactividad de un plano listado para su renovación automática.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Summary & Save -->
+<aside class="lg:col-span-4 space-y-6">
+<div class="bg-surface-container-low p-8 rounded-lg border border-outline-variant/30 sticky top-8">
+<div class="flex flex-col items-center text-center mb-8">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-on-primary-fixed text-3xl" data-icon="summarize">summarize</span>
+</div>
+<h4 class="font-headline text-xl font-bold">Resumen de Actividad</h4>
+<p class="text-sm text-on-surface-variant mt-2">Recibe una compilación semanal del rendimiento y estado de la plataforma.</p>
+</div>
+<div class="bg-surface p-4 rounded-md mb-8">
+<div class="flex items-center justify-between">
+<span class="font-label text-sm font-bold uppercase tracking-tight">Activar Resumen</span>
+<input checked="" class="artisan-switch h-6 w-6 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/20">
+<label class="block text-xs font-bold text-on-surface/50 uppercase mb-2">Frecuencia</label>
+<select class="w-full bg-transparent border-none p-0 text-primary font-bold focus:ring-0 cursor-pointer">
+<option>Cada Lunes, 8:00 AM</option>
+<option>Cada Viernes, 5:00 PM</option>
+<option>Fin de Mes</option>
+</select>
+</div>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-label font-bold py-4 px-6 rounded-md shadow-lg flex items-center justify-center gap-2 hover:opacity-90 transition-all">
+<span class="material-symbols-outlined" data-icon="save" style="font-variation-settings: 'FILL' 1;">save</span>
+                            GUARDAR CAMBIOS
+                        </button>
+<button class="w-full mt-3 border border-outline/40 text-on-surface font-label font-medium py-3 px-6 rounded-md hover:bg-surface-container-high transition-colors">
+                            Descartar cambios
+                        </button>
+<div class="mt-8 text-center">
+<p class="text-[10px] text-on-surface/40 uppercase tracking-[0.2em]">Heirloom Crust © 2024</p>
+</div>
+</div>
+<!-- Decorative Texture / Image -->
+<div class="rounded-lg overflow-hidden h-48 relative shadow-inner">
+<img alt="Harina y masa artesanal" class="w-full h-full object-cover opacity-30 grayscale" data-alt="Close up of artisan bread dough and flour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQIrPE_KeOO3xQoONITlB6GritvpyPOkk0JYYIw1adk6rcZU-RvwbT0VCvDp2IdeRohTvwKdCjjZIxsNgauot6nCCzZzyd7PuFArpiezXx98Jq1-pC_iLMvsY4xSFvY6n2gVh8vKRUjwomYR71HU6PI6djptDP5IURGHv4l_RncetxCHBGFpCDAyytqGbru6enpDUPZnwR4lhPmeZnx4WkYf2IgsboeM03I5R27q9oQf5dqhGBQG1InnYUg6sYAWQ8OcF_YfxSwBWt"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+<div class="absolute inset-0 flex items-center justify-center p-6">
+<p class="text-primary font-headline italic text-center text-sm leading-relaxed">"La paciencia es el ingrediente secreto de cada buena alerta."</p>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Only for key actions) -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-on-primary rounded-xl shadow-xl flex items-center justify-center md:hidden z-50">
+<span class="material-symbols-outlined" data-icon="save">save</span>
+</button>
+</body></html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detalle de Nómina - Constructora WM/M&amp;S</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#ffffff",
+              "tertiary-container": "#132330",
+              "surface-container-low": "#ecf4ff",
+              "on-secondary-fixed": "#271900",
+              "error": "#ba1a1a",
+              "background": "#f7f9ff",
+              "primary": "#00003c",
+              "tertiary-fixed": "#d4e4f6",
+              "surface-container-highest": "#d4e4f6",
+              "on-primary-fixed-variant": "#3239a3",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#d9eafc",
+              "inverse-primary": "#bfc2ff",
+              "surface-bright": "#f7f9ff",
+              "on-primary-container": "#777eea",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "surface": "#f7f9ff",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#e2efff",
+              "secondary": "#7b5800",
+              "surface-tint": "#4b53bc",
+              "tertiary": "#000c18",
+              "surface-container-lowest": "#ffffff",
+              "outline": "#767684",
+              "on-tertiary-fixed": "#0d1d2a",
+              "surface-dim": "#cbdcee",
+              "secondary-fixed-dim": "#f7bd48",
+              "primary-fixed": "#e0e0ff",
+              "tertiary-fixed-dim": "#b8c8da",
+              "on-tertiary-container": "#7b8b8b",
+              "on-surface": "#0d1d2a",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed-variant": "#5d4200",
+              "surface-variant": "#d4e4f6",
+              "on-tertiary-fixed-variant": "#394857",
+              "secondary-container": "#fdc34d",
+              "inverse-on-surface": "#e7f2ff",
+              "primary-container": "#000080",
+              "secondary-fixed": "#ffdea6",
+              "on-primary-fixed": "#00006e",
+              "primary-fixed-dim": "#bfc2ff",
+              "outline-variant": "#c6c5d5",
+              "inverse-surface": "#223240",
+              "on-secondary-container": "#715000",
+              "on-background": "#0d1d2a",
+              "on-surface-variant": "#464653"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9ff; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="text-on-surface overflow-x-hidden">
+<!-- Sidebar (SideNavBar Implementation) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#e2efff] dark:bg-[#00003c] flex flex-col py-8 z-50">
+<div class="px-6 mb-10">
+<h1 class="font-headline font-black text-2xl text-[#00003c] tracking-tighter">Constructora WM/M&amp;S</h1>
+<div class="mt-6 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="account_circle">account_circle</span>
+</div>
+<div>
+<p class="font-headline font-bold text-sm text-[#00003c] dark:text-white leading-tight">Payroll Admin</p>
+<p class="text-[10px] text-outline uppercase tracking-widest">WM/M&amp;S Operations</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-[#767684] hover:bg-[#f7f9ff]/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-sm font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#767684] hover:bg-[#f7f9ff]/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+<span class="text-sm font-medium">Time Tracking</span>
+</a>
+<!-- Active State: Payroll Batches -->
+<a class="flex items-center gap-3 px-4 py-3 bg-[#ffffff] dark:bg-[#000080] text-[#00003c] dark:text-white font-bold transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="text-sm">Payroll Batches</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#767684] hover:bg-[#f7f9ff]/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+<span class="text-sm font-medium">Tax Compliance</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#767684] hover:bg-[#f7f9ff]/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="text-sm font-medium">Archived</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full bg-primary text-white py-4 font-headline font-bold text-xs uppercase tracking-widest hover:bg-primary-container transition-colors">
+                New Payroll Run
+            </button>
+<div class="mt-8 pt-8 border-t border-outline/10 space-y-4">
+<a class="flex items-center gap-3 text-sm text-[#767684] hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 text-sm text-[#767684] hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-8 h-20 w-full bg-[#f7f9ff] border-b border-[#c6c5d5]/15">
+<div class="flex items-center gap-8">
+<span class="font-headline font-semibold tracking-[-0.02em] uppercase text-xs text-[#767684]">
+                    Projects / Residencial Los Olivos / Payroll
+                </span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-sm" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none focus:ring-1 focus:ring-secondary text-xs w-64" placeholder="Search workers..." type="text"/>
+</div>
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-outline hover:text-primary transition-colors" data-icon="print">print</button>
+<button class="material-symbols-outlined text-outline hover:text-primary transition-colors" data-icon="download">download</button>
+<button class="material-symbols-outlined text-outline hover:text-primary transition-colors" data-icon="settings">settings</button>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<section class="p-12 space-y-12">
+<!-- Hero Header Section -->
+<div class="flex justify-between items-end">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="bg-[#00003c] text-white px-3 py-1 text-[10px] font-bold uppercase tracking-tighter">FASE I</span>
+<span class="text-secondary font-headline font-bold text-sm">Residencial Los Olivos</span>
+</div>
+<h2 class="font-headline font-extrabold text-5xl tracking-tighter text-primary">Detalle de Nómina: 15/10/2024</h2>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-1 bg-[#d1e7dd] text-[#0f5132]">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-[11px] font-bold uppercase tracking-widest">Pagado</span>
+</div>
+<span class="text-outline text-xs">Última actualización: Hoy, 10:45 AM</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="px-6 py-4 bg-outline/5 border border-outline/20 font-headline font-bold text-xs uppercase tracking-widest hover:bg-outline/10 transition-colors">Exportar a Excel</button>
+<button class="px-6 py-4 bg-primary text-white font-headline font-bold text-xs uppercase tracking-widest hover:bg-primary-container transition-colors">Imprimir Reporte</button>
+</div>
+</div>
+<!-- Summary Bar (Bento Grid Style) -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-[2px] bg-outline-variant/20">
+<div class="bg-surface-container-lowest p-8">
+<p class="text-outline text-[10px] uppercase tracking-widest font-bold mb-2">Total Bruto</p>
+<p class="font-headline text-3xl font-extrabold text-primary">Q142,580.00</p>
+<div class="mt-4 h-[2px] w-12 bg-primary"></div>
+</div>
+<div class="bg-surface-container-lowest p-8">
+<p class="text-outline text-[10px] uppercase tracking-widest font-bold mb-2">Deducciones Totales</p>
+<p class="font-headline text-3xl font-extrabold text-error">Q18,450.50</p>
+<div class="mt-4 h-[2px] w-12 bg-error"></div>
+</div>
+<div class="bg-surface-container-lowest p-8 md:col-span-2 relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-secondary text-[10px] uppercase tracking-widest font-bold mb-2">Total Neto Pagado</p>
+<p class="font-headline text-4xl font-extrabold text-primary tracking-tighter">Q124,129.50</p>
+<p class="text-[11px] text-outline mt-2 italic">Fondos transferidos desde Cuenta WM Principal</p>
+</div>
+<!-- Blueprint graphic element -->
+<div class="absolute -right-10 -bottom-10 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[180px]" data-icon="architecture">architecture</span>
+</div>
+</div>
+</div>
+<!-- Detailed Table Section -->
+<div class="space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="font-headline font-bold text-lg text-primary">Desglose por Trabajador (48 colaboradores)</h3>
+<button class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest hover:underline">
+<span class="material-symbols-outlined text-sm" data-icon="receipt_long">receipt_long</span>
+                        Descargar Recibos FEL (Zip)
+                    </button>
+</div>
+<div class="overflow-hidden bg-surface-container-lowest shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-bold text-outline">Trabajador / Rol</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-bold text-outline text-center">Días</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-bold text-outline text-right">Base (Q)</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-bold text-outline text-right">Bonos/Extras (Q)</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-bold text-outline text-right text-error">Deducciones (Q)</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-bold text-outline text-right text-primary">Neto (Q)</th>
+<th class="px-6 py-4"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-6 py-5">
+<p class="font-bold text-primary text-sm">Carlos Roberto Méndez</p>
+<p class="text-[11px] text-outline uppercase tracking-wider">Maestro de Obra</p>
+</td>
+<td class="px-6 py-5 text-center text-sm font-medium">15</td>
+<td class="px-6 py-5 text-right text-sm">Q5,500.00</td>
+<td class="px-6 py-5 text-right text-sm">Q850.00</td>
+<td class="px-6 py-5 text-right text-sm text-error">Q310.40</td>
+<td class="px-6 py-5 text-right text-sm font-bold text-primary">Q6,039.60</td>
+<td class="px-6 py-5 text-right">
+<button class="material-symbols-outlined text-outline hover:text-secondary text-lg" data-icon="visibility">visibility</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-6 py-5">
+<p class="font-bold text-primary text-sm">Josué Israel Tepaz</p>
+<p class="text-[11px] text-outline uppercase tracking-wider">Albañil Especializado</p>
+</td>
+<td class="px-6 py-5 text-center text-sm font-medium">15</td>
+<td class="px-6 py-5 text-right text-sm">Q3,800.00</td>
+<td class="px-6 py-5 text-right text-sm">Q420.00</td>
+<td class="px-6 py-5 text-right text-sm text-error">Q214.50</td>
+<td class="px-6 py-5 text-right text-sm font-bold text-primary">Q4,005.50</td>
+<td class="px-6 py-5 text-right">
+<button class="material-symbols-outlined text-outline hover:text-secondary text-lg" data-icon="visibility">visibility</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-6 py-5">
+<p class="font-bold text-primary text-sm">Mario David Castillo</p>
+<p class="text-[11px] text-outline uppercase tracking-wider">Auxiliar de Construcción</p>
+</td>
+<td class="px-6 py-5 text-center text-sm font-medium">14</td>
+<td class="px-6 py-5 text-right text-sm">Q2,950.00</td>
+<td class="px-6 py-5 text-right text-sm">Q150.00</td>
+<td class="px-6 py-5 text-right text-sm text-error">Q166.45</td>
+<td class="px-6 py-5 text-right text-sm font-bold text-primary">Q2,933.55</td>
+<td class="px-6 py-5 text-right">
+<button class="material-symbols-outlined text-outline hover:text-secondary text-lg" data-icon="visibility">visibility</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-6 py-5">
+<p class="font-bold text-primary text-sm">Elena Sofía Juárez</p>
+<p class="text-[11px] text-outline uppercase tracking-wider">Operador de Maquinaria</p>
+</td>
+<td class="px-6 py-5 text-center text-sm font-medium">15</td>
+<td class="px-6 py-5 text-right text-sm">Q4,500.00</td>
+<td class="px-6 py-5 text-right text-sm">Q1,200.00</td>
+<td class="px-6 py-5 text-right text-sm text-error">Q253.80</td>
+<td class="px-6 py-5 text-right text-sm font-bold text-primary">Q5,446.20</td>
+<td class="px-6 py-5 text-right">
+<button class="material-symbols-outlined text-outline hover:text-secondary text-lg" data-icon="visibility">visibility</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Load more -->
+<div class="flex justify-between items-center pt-4">
+<p class="text-xs text-outline">Mostrando 4 de 48 colaboradores</p>
+<div class="flex gap-1">
+<button class="w-8 h-8 flex items-center justify-center bg-surface-container border border-outline-variant text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center bg-primary text-white font-bold text-xs">1</button>
+<button class="w-8 h-8 flex items-center justify-center bg-white border border-outline-variant text-outline hover:bg-surface-container transition-colors font-bold text-xs">2</button>
+<button class="w-8 h-8 flex items-center justify-center bg-white border border-outline-variant text-outline hover:bg-surface-container transition-colors font-bold text-xs">3</button>
+<button class="w-8 h-8 flex items-center justify-center bg-surface-container border border-outline-variant text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Footer Details (Data Pylons) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 pt-12 border-t border-outline-variant/20">
+<div class="space-y-4">
+<h4 class="font-headline font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="description">description</span>
+                        Certificaciones Fiscales
+                    </h4>
+<p class="text-xs text-outline leading-relaxed">
+                        Toda la información contenida en este reporte ha sido validada contra los registros de la SAT y el IGSS bajo los códigos de proyecto WM-RES-011.
+                    </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="shield">shield</span>
+                        Seguridad de Fondos
+                    </h4>
+<p class="text-xs text-outline leading-relaxed">
+                        Pagos dispersados mediante ACH Directo. Token de seguridad: <span class="font-mono bg-surface-container px-1">#882-9910-WM</span>. 
+                    </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="contact_support">contact_support</span>
+                        ¿Necesitas ayuda?
+                    </h4>
+<p class="text-xs text-outline leading-relaxed">
+                        Si detectas una discrepancia en las horas extra, contacta a Gerencia de Operaciones antes del cierre de mes.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Contextual FAB - Only for main payroll management screens -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-secondary text-on-secondary shadow-2xl flex items-center justify-center hover:bg-secondary-container transition-all duration-300 z-50">
+<span class="material-symbols-outlined text-2xl" data-icon="add" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</body></html>

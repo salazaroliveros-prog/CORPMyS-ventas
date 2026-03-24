@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Constructora WM/M&amp;S - Panel de Control</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "navy": "#000080",
+              "gold": "#B8860B",
+              "slate": {
+                50: "#f8fafc",
+                100: "#f1f5f9",
+                200: "#e2e8f0",
+                400: "#94a3b8",
+                500: "#64748b",
+                600: "#475569",
+                800: "#1e293b",
+                900: "#0f172a",
+                950: "#020617"
+              },
+              "primary": "#000080",
+              "secondary": "#B8860B",
+              "tertiary": "#708090",
+              "background": "#ffffff",
+              "surface": "#f8fafc",
+              "on-surface": "#0f172a",
+              "outline": "#e2e8f0"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "2px", "xl": "4px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scrolling-content::-webkit-scrollbar {
+            width: 4px;
+        }
+        .scrolling-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .scrolling-content::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 font-body selection:bg-navy selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-xl border-b border-navy/10 flex justify-between items-center px-12 py-6 max-w-full mx-auto h-20">
+<div class="flex items-center gap-4">
+<span class="text-xl font-black text-navy dark:text-blue-100 tracking-tighter uppercase font-headline">Constructora WM/M&amp;S</span>
+</div>
+<div class="hidden md:flex items-center gap-10 font-headline font-semibold tracking-tight">
+<a class="text-navy dark:text-blue-400 border-b-2 border-gold transition-colors duration-300" href="#">Dashboard</a>
+<a class="text-slate-500 hover:text-gold transition-colors duration-300" href="#">Proyectos</a>
+<a class="text-slate-500 hover:text-gold transition-colors duration-300" href="#">Servicios</a>
+<a class="text-slate-500 hover:text-gold transition-colors duration-300" href="#">Ventas</a>
+<a class="text-slate-500 hover:text-gold transition-colors duration-300" href="#">Nosotros</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-200 transition-colors duration-300 rounded-full active:opacity-80 active:scale-95">
+<span class="material-symbols-outlined text-navy">notifications</span>
+</button>
+<button class="p-2 hover:bg-slate-200 transition-colors duration-300 rounded-full active:opacity-80 active:scale-95">
+<span class="material-symbols-outlined text-navy">account_circle</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col h-full w-64 fixed left-0 top-0 pt-24 bg-slate-100 dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800 z-40">
+<div class="mb-10 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-navy flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">architecture</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-navy text-sm uppercase">Gestión</h3>
+<p class="text-[10px] text-slate-500 font-medium uppercase tracking-widest">Constructora WM</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-0">
+<a class="flex items-center gap-4 px-6 py-4 bg-navy text-white font-bold text-sm tracking-wide uppercase transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all text-sm tracking-wide uppercase active:translate-x-1" href="#">
+<span class="material-symbols-outlined">architecture</span>
+<span>Proyectos</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all text-sm tracking-wide uppercase active:translate-x-1" href="#">
+<span class="material-symbols-outlined">layers</span>
+<span>Planos</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all text-sm tracking-wide uppercase active:translate-x-1" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span>Inventario</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all text-sm tracking-wide uppercase active:translate-x-1" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Configuración</span>
+</a>
+</nav>
+<div class="mt-auto p-6 border-t border-slate-200">
+<button class="w-full bg-navy text-white py-4 font-bold text-xs uppercase tracking-widest hover:bg-slate-800 transition-colors shadow-none">
+            Nuevo Proyecto
+        </button>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="lg:pl-64 pt-28 pb-12 px-12">
+<div class="max-w-7xl mx-auto">
+<!-- Header Editorial -->
+<section class="mb-16 border-l-4 border-gold pl-8">
+<h1 class="font-headline text-4xl font-extrabold text-navy tracking-tight uppercase mb-4">Resumen de <span class="text-gold">Operaciones</span></h1>
+<p class="font-body text-slate-500 max-w-3xl leading-relaxed text-sm uppercase tracking-wider">Gestión técnica de alta precisión. Monitoreo centralizado de seguridad perimetral, proyecciones comerciales e integridad del sistema.</p>
+</section>
+<!-- Bento Grid Content -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-1 px-1 bg-slate-200 border border-slate-200">
+<!-- Section 1: IA Gemini Console (Tech Forward) -->
+<div class="md:col-span-7 bg-white p-10 flex flex-col relative overflow-hidden">
+<div class="flex items-center justify-between mb-10 border-b border-slate-100 pb-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-navy flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+</div>
+<div>
+<h2 class="font-headline text-xl font-bold text-navy uppercase tracking-tight">Centro de Inteligencia</h2>
+<span class="flex items-center gap-2 text-[10px] uppercase font-bold text-slate-400 tracking-widest mt-1">
+<span class="w-2 h-2 bg-green-500"></span> Núcleo Operativo Activo
+                            </span>
+</div>
+</div>
+<span class="text-[10px] font-mono text-slate-400">WM_LOG_042</span>
+</div>
+<div class="flex-1 space-y-4 scrolling-content overflow-y-auto pr-2 max-h-[400px]">
+<div class="bg-slate-50 p-6 border-l-2 border-gold">
+<p class="font-body font-semibold text-sm text-navy mb-2 uppercase tracking-tight">Seguridad Perimetral</p>
+<p class="text-xs text-slate-600 leading-relaxed italic">"Protocolo de bloqueo ejecutado: 3 intentos de acceso no autorizados neutralizados."</p>
+<p class="text-[9px] text-slate-400 mt-3 font-mono">TIMESTAMP: 14:02:11 // STATUS: SECURE</p>
+</div>
+<div class="bg-slate-50 p-6 border-l-2 border-navy">
+<p class="font-body font-semibold text-sm text-navy mb-2 uppercase tracking-tight">Análisis Comercial</p>
+<p class="text-xs text-slate-600 leading-relaxed italic">"Incremento del 15% en la demanda de planos residenciales registrado esta semana."</p>
+<p class="text-[9px] text-slate-400 mt-3 font-mono">TIMESTAMP: 12:45:00 // STATUS: GROWTH</p>
+</div>
+<div class="bg-slate-50 p-6 border-l-2 border-slate-400 opacity-70">
+<p class="font-body font-semibold text-sm text-slate-500 mb-2 uppercase tracking-tight">Mantenimiento de Datos</p>
+<p class="text-xs text-slate-500 leading-relaxed italic">"Verificación de integridad estructural de archivos completada exitosamente."</p>
+<p class="text-[9px] text-slate-400 mt-3 font-mono">TIMESTAMP: 09:00:00 // STATUS: VALIDATED</p>
+</div>
+</div>
+<div class="mt-10 flex items-center gap-1">
+<div class="flex-1 bg-slate-50 px-6 py-4 border border-slate-200 flex items-center gap-4">
+<span class="material-symbols-outlined text-navy text-xl">terminal</span>
+<input class="bg-transparent border-none focus:ring-0 text-xs w-full font-mono uppercase placeholder:text-slate-300" placeholder="Ejecutar comando operativo..." type="text"/>
+</div>
+<button class="bg-navy px-6 py-4 text-white hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Section 2: Seguridad (High Precision) -->
+<div class="md:col-span-5 bg-slate-50 p-10 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-10">
+<div>
+<h3 class="font-headline text-lg font-bold text-navy uppercase tracking-tight">Ciberseguridad</h3>
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Escaneo de Red en Vivo</p>
+</div>
+<div class="p-3 bg-navy text-white">
+<span class="material-symbols-outlined text-xl">encrypted</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center py-6 border-y border-slate-200/50 mb-8">
+<div class="relative w-48 h-48 border border-slate-200 flex items-center justify-center bg-white shadow-sm">
+<span class="material-symbols-outlined text-6xl text-navy">verified_user</span>
+<!-- Scanning Line Horizontal -->
+<div class="absolute inset-x-0 top-0 h-[1px] bg-gold shadow-[0_0_10px_#B8860B] animate-[bounce_4s_infinite]"></div>
+</div>
+<div class="mt-6 text-center">
+<p class="font-bold text-xs text-navy uppercase tracking-widest">Firewall Industrial Activo</p>
+<p class="text-[10px] font-mono text-slate-400 mt-1">12,402 PAQUETES ANALIZADOS / 24H</p>
+</div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between p-3 bg-white border border-slate-200">
+<div class="flex items-center gap-3">
+<span class="w-1.5 h-1.5 bg-red-600"></span>
+<span class="text-[10px] font-bold text-navy uppercase">IP 185.234.xx.xx Bloqueada</span>
+</div>
+<span class="text-[9px] font-mono text-slate-400">RUS</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-white border border-slate-200">
+<div class="flex items-center gap-3">
+<span class="w-1.5 h-1.5 bg-green-500"></span>
+<span class="text-[10px] font-bold text-navy uppercase">Escaneo de Malware</span>
+</div>
+<span class="text-[9px] font-mono text-green-600 font-bold uppercase">Limpio</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Control de Ventas (Full Width Bottom) -->
+<div class="md:col-span-12 bg-white p-10 flex flex-col md:flex-row gap-12 border-t border-slate-200">
+<div class="md:w-1/3 flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-2xl font-black text-navy uppercase tracking-tighter mb-4 leading-none">Proyección <br/>Comercial</h3>
+<p class="text-slate-500 text-xs leading-relaxed mb-8 uppercase tracking-wide">Modelos predictivos sugieren alta demanda de infraestructura comercial para el tercer trimestre.</p>
+<div class="space-y-6">
+<div class="p-6 bg-slate-50 border-r-4 border-gold">
+<p class="text-[9px] font-bold text-gold uppercase tracking-widest mb-2">Recomendación Técnica</p>
+<p class="text-xs font-medium text-navy uppercase tracking-tight">Ajustar inventario de "Planos Tipo A" con variación del 5% para optimizar conversión.</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Ingresos Proyectados</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-extrabold text-navy">Q 48,250.00</span>
+<span class="text-green-600 font-bold text-[10px] uppercase tracking-tighter">+15% VS MES ANT.</span>
+</div>
+</div>
+</div>
+</div>
+<button class="mt-10 flex items-center justify-center gap-2 py-4 bg-navy text-white font-bold text-xs uppercase tracking-widest hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-sm">analytics</span>
+                        Ejecutar Estrategia de Precios
+                    </button>
+</div>
+<div class="md:w-2/3 bg-slate-50 p-8 border border-slate-200 relative">
+<div class="flex justify-between items-center mb-12">
+<span class="font-headline text-xs font-bold text-navy uppercase tracking-widest">Tendencias de Mercado (2024)</span>
+<div class="flex gap-6">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 bg-navy"></div>
+<span class="text-[9px] font-bold uppercase text-slate-400">Datos Reales</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 bg-gold"></div>
+<span class="text-[9px] font-bold uppercase text-slate-400">Predicción</span>
+</div>
+</div>
+</div>
+<!-- Graph Visual -->
+<div class="h-56 w-full flex items-end justify-between gap-2 border-b border-slate-300 relative">
+<!-- Bars -->
+<div class="w-full h-1/4 bg-navy/20"></div>
+<div class="w-full h-2/5 bg-navy/20"></div>
+<div class="w-full h-1/3 bg-navy/20"></div>
+<div class="w-full h-3/5 bg-navy/20"></div>
+<div class="w-full h-1/2 bg-navy/20"></div>
+<div class="w-full h-3/4 bg-navy relative">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-navy text-white text-[9px] px-3 py-1 font-mono">HOY: Q48k</div>
+</div>
+<!-- Prediction (Solid Gold) -->
+<div class="w-full h-[85%] bg-gold/40 border-t-2 border-gold"></div>
+<div class="w-full h-[90%] bg-gold/40 border-t-2 border-gold"></div>
+<div class="w-full h-full bg-gold/50 border-t-2 border-gold"></div>
+</div>
+<div class="flex justify-between mt-4 text-[9px] font-mono text-slate-400 uppercase tracking-widest px-2">
+<span>ENE</span><span>FEB</span><span>MAR</span><span>ABR</span><span>MAY</span><span>JUN</span>
+<span class="text-navy font-bold">JUL</span><span>AGO</span><span>SEP</span><span>OCT</span>
+</div>
+</div>
+</div>
+</div>
+<!-- System Integrity Section -->
+<section class="mt-1 bg-navy p-12 flex flex-col md:flex-row md:items-center justify-between gap-12">
+<div class="max-w-md">
+<h3 class="font-headline text-xl font-extrabold text-white uppercase tracking-tight mb-2">Integridad del Ecosistema</h3>
+<p class="text-slate-400 text-[10px] uppercase tracking-widest leading-relaxed">Monitoreo de latencia y procesamiento de modelos en el nodo local (Guatemala City).</p>
+</div>
+<div class="flex-1 w-full max-w-2xl">
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-widest text-gold mb-3">
+<span>Procesamiento</span>
+<span>98.4% Salud de Sistema</span>
+</div>
+<div class="h-1 w-full bg-slate-800">
+<div class="h-full w-[98.4%] bg-gold"></div>
+</div>
+<div class="flex justify-between mt-3 text-[9px] font-mono text-slate-500 uppercase tracking-widest">
+<span>Latencia: 14ms</span>
+<span>Uptime: 99.998%</span>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="lg:pl-64 relative w-full bottom-0 bg-slate-900 dark:bg-black border-t border-white/10 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-12 py-16 w-full max-w-7xl mx-auto">
+<div>
+<span class="text-lg font-bold text-white uppercase font-headline tracking-tighter">Constructora WM/M&amp;S</span>
+<p class="text-slate-400 font-['Inter'] text-xs leading-relaxed tracking-widest uppercase mt-4">Multiservicios de Guatemala S.A.</p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-amber-500 font-['Inter'] text-xs tracking-widest uppercase font-bold">Enlaces Directos</span>
+<a class="text-slate-400 hover:text-white transition-colors text-xs uppercase tracking-widest" href="#">Dirección: Ciudad de Guatemala</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs uppercase tracking-widest" href="#">Security &amp; Trust Badge</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-amber-500 font-['Inter'] text-xs tracking-widest uppercase font-bold">Redes Sociales</span>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-white transition-colors text-xs uppercase tracking-widest" href="#">FB</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs uppercase tracking-widest" href="#">IG</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs uppercase tracking-widest" href="#">TK</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs uppercase tracking-widest" href="#">LI</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs uppercase tracking-widest" href="#">WA</a>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-white/5 text-center">
+<p class="text-slate-500 font-['Inter'] text-[10px] tracking-widest uppercase">© 2024 Constructora WM/M&amp;S - MULTISERVICIOS de Guatemala S.A. Todos los derechos reservados.</p>
+</div>
+</footer>
+</body></html>

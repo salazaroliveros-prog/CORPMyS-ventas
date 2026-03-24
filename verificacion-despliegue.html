@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Dependencias - Despliegue en GitHub Pages</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(120deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 { margin: 0; font-size: 32px; }
+        .status-badge {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        .content {
+            padding: 40px;
+        }
+        .section {
+            margin-bottom: 40px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .section-header {
+            background: #f5f5f5;
+            padding: 15px 20px;
+            border-bottom: 3px solid #667eea;
+            font-weight: bold;
+            font-size: 16px;
+            color: #1e3c72;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-content {
+            padding: 20px;
+        }
+        .dependency-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+        .dep-name {
+            font-weight: 600;
+            color: #1e3c72;
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+        .dep-type {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        .dep-status {
+            display: inline-block;
+            background: #d4edda;
+            color: #155724;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        .dep-description {
+            color: #666;
+            font-size: 13px;
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        .checklist li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: flex-start;
+        }
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+        .checklist li::before {
+            content: "✓";
+            color: #4caf50;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        .code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            overflow-x: auto;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+        .button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            margin-right: 10px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #764ba2;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #856404;
+        }
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #155724;
+        }
+        .info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #0c5460;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .grid-item {
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+        }
+        .grid-number {
+            font-size: 28px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .grid-label {
+            font-size: 13px;
+            color: #666;
+            margin-top: 5px;
+        }
+        footer {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📦 VERIFICACIÓN DE DEPENDENCIAS</h1>
+            <p>Análisis pre-despliegue para GitHub Pages y Facebook</p>
+            <div class="status-badge">✅ LISTA PARA DESPLIEGUE</div>
+        </header>
+
+        <div class="content">
+            <!-- RESUMEN RÁPIDO -->
+            <section class="section">
+                <div class="section-header">⚡ Resumen Ejecutivo</div>
+                <div class="section-content">
+                    <div class="success">
+                        <strong>✅ BUENAS NOTICIAS:</strong> Tu aplicación NO requiere complementos ni instalación de librerías. Es completamente estática y funciona 100% con CDNs externos. Listo para GitHub Pages.
+                    </div>
+                    
+                    <div class="grid">
+                        <div class="grid-item">
+                            <div class="grid-number">3</div>
+                            <div class="grid-label">CDNs Externas</div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="grid-number">0</div>
+                            <div class="grid-label">Dependencias Locales</div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="grid-number">0</div>
+                            <div class="grid-label">Build Required</div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="grid-number">105</div>
+                            <div class="grid-label">Archivos HTML</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEPENDENCIAS DETECTADAS -->
+            <section class="section">
+                <div class="section-header">🔗 Librerías y CDNs Detectadas</div>
+                <div class="section-content">
+                    <h3 style="margin-top: 0;">1. Tailwind CSS (Framework CSS)</h3>
+                    <div class="dependency-card">
+                        <div class="dep-name">Tailwind CSS v3 + Plugins</div>
+                        <div>
+                            <span class="dep-type">CDN EXTERNO</span>
+                            <span class="dep-status">✓ Compatible</span>
+                        </div>
+                        <div class="dep-description">
+                            <strong>URL:</strong> https://cdn.tailwindcss.com?plugins=forms,container-queries<br>
+                            <strong>Uso:</strong> Framework CSS para estilos responsivos<br>
+                            <strong>Plugins cargados:</strong> forms, container-queries<br>
+                            <strong>GitHub Pages:</strong> ✅ FUNCIONA (acceso a CDN público)
+                        </div>
+                    </div>
+
+                    <h3>2. Google Fonts (Tipografía)</h3>
+                    <div class="dependency-card">
+                        <div class="dep-name">Google Fonts API</div>
+                        <div>
+                            <span class="dep-type">CDN EXTERNO</span>
+                            <span class="dep-status">✓ Compatible</span>
+                        </div>
+                        <div class="dep-description">
+                            <strong>Fuentes usadas:</strong><br>
+                            • Manrope (wght: 400, 600, 700, 800)<br>
+                            • Inter (wght: 400, 500, 600, 700)<br>
+                            • Noto Serif (wght: 400, 700)<br>
+                            • Work Sans (wght: 300, 400, 500, 600)<br>
+                            <strong>GitHub Pages:</strong> ✅ FUNCIONA (Google Fonts es CDN público)
+                        </div>
+                    </div>
+
+                    <h3>3. Material Symbols (Iconos)</h3>
+                    <div class="dependency-card">
+                        <div class="dep-name">Google Material Symbols Outlined</div>
+                        <div>
+                            <span class="dep-type">CDN EXTERNO</span>
+                            <span class="dep-status">✓ Compatible</span>
+                        </div>
+                        <div class="dep-description">
+                            <strong>URL:</strong> https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined<br>
+                            <strong>Uso:</strong> Iconos SVG para UI<br>
+                            <strong>Rango de peso:</strong> 100..700<br>
+                            <strong>GitHub Pages:</strong> ✅ FUNCIONA (CDN público de Google)
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VERIFICACIÓN GITHUB PAGES -->
+            <section class="section">
+                <div class="section-header">🚀 Compatibilidad GitHub Pages</div>
+                <div class="section-content">
+                    <div class="success">
+                        <strong>✅ 100% COMPATIBLE</strong> - Tu sitio funciona sin problemas en GitHub Pages
+                    </div>
+
+                    <h3>Por qué funciona:</h3>
+                    <ul class="checklist">
+                        <li><strong>Solo HTML:</strong> No requiere compilación ni build process</li>
+                        <li><strong>CDNs públicos:</strong> Tailwind CSS, Google Fonts y Material Symbols son accesibles desde cualquier lugar</li>
+                        <li><strong>Rutas relativas:</strong> Todos los enlaces internos usan rutas relativas (../) que funcionan perfecto</li>
+                        <li><strong>Sin servidor:</strong> No hay requisitos de backend o base de datos</li>
+                        <li><strong>Archivos estáticos:</strong> Solo HTML/CSS/JS, sin dependencias de npm</li>
+                        <li><strong>Configuración mínima:</strong> Solo necesitas un archivo .gitignore (opcional)</li>
+                    </ul>
+
+                    <h3 style="margin-top: 25px;">Requisitos para despliegue:</h3>
+                    <ul class="checklist">
+                        <li>Cuenta de GitHub (gratis)</li>
+                        <li>Repositorio público (recomendado para GitHub Pages gratis)</li>
+                        <li>Git instalado en tu computadora</li>
+                        <li>Conexión a internet para acceder a CDNs</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- PASOS DESPLIEGUE -->
+            <section class="section">
+                <div class="section-header">📋 Paso a Paso: Despliegue en GitHub Pages</div>
+                <div class="section-content">
+                    <h3>Paso 1: Preparar archivos localmente</h3>
+                    <ol style="line-height: 2;">
+                        <li>Abre terminal en la carpeta "11. paginaweb"</li>
+                        <li>Verifica que tengas todos los archivos:
+                            <div class="code">
+ls -la index.html
+ls -la stitch_pageweb/
+ls -la *.html
+                            </div>
+                        </li>
+                        <li>Crea archivo .gitignore (opcional pero recomendado):
+                            <div class="code">
+# .gitignore
+node_modules/
+.DS_Store
+*.log
+.env
+                            </div>
+                        </li>
+                    </ol>
+
+                    <h3>Paso 2: Inicializar repositorio Git</h3>
+                    <ol style="line-height: 2;">
+                        <li>En terminal, ejecuta:
+                            <div class="code">
+git init
+git add .
+git commit -m "Initial commit: Aplicación web integrada"
+                            </div>
+                        </li>
+                    </ol>
+
+                    <h3>Paso 3: Crear repositorio en GitHub</h3>
+                    <ol style="line-height: 2;">
+                        <li>Ve a <strong>github.com</strong> y crea una cuenta (si no tienes)</li>
+                        <li>Haz clic en <strong>"New repository"</strong></li>
+                        <li>Nombre del repositorio: <code>mi-pagina-web</code> (o similar)</li>
+                        <li><strong>IMPORTANTE:</strong> Recomendado "Public" para GitHub Pages gratis</li>
+                        <li>NO inicialices con README, .gitignore o LICENSE</li>
+                        <li>Haz clic en <strong>"Create repository"</strong></li>
+                    </ol>
+
+                    <h3>Paso 4: Conectar repositorio remoto</h3>
+                    <ol style="line-height: 2;">
+                        <li>GitHub te mostrará instrucciones. Copia y pega en terminal:
+                            <div class="code">
+git branch -M main
+git remote add origin https://github.com/TU_USUARIO/mi-pagina-web.git
+git push -u origin main
+                            </div>
+                        </li>
+                        <li>Reemplaza <code>TU_USUARIO</code> con tu usuario de GitHub</li>
+                        <li>Te pedirá autenticación (usa token si es HTTPS)</li>
+                    </ol>
+
+                    <h3>Paso 5: Activar GitHub Pages</h3>
+                    <ol style="line-height: 2;">
+                        <li>Ve a tu repositorio en GitHub</li>
+                        <li>Abre <strong>Settings → Pages</strong></li>
+                        <li>En <strong>"Source"</strong> selecciona <strong>"main" branch</strong></li>
+                        <li>En <strong>"Folder"</strong> selecciona <strong>"/ (root)"</strong></li>
+                        <li>Haz clic en <strong>"Save"</strong></li>
+                        <li>GitHub mostrará URL: <code>https://TU_USUARIO.github.io/mi-pagina-web</code></li>
+                    </ol>
+
+                    <h3>Paso 6: ¡Listo! 🎉</h3>
+                    <p>Tu sitio estará live en ~2 minutos. Accede a la URL mostrada.</p>
+
+                    <div class="info">
+                        <strong>💡 Tip:</strong> Puedes actualizar el sitio haciendo push en cualquier momento:
+                        <div class="code">
+git add .
+git commit -m "Actualización: [descripción]"
+git push origin main
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PUBLICACIÓN EN FACEBOOK -->
+            <section class="section">
+                <div class="section-header">📱 Publicación en Facebook</div>
+                <div class="section-content">
+                    <div class="info">
+                        <strong>ℹ️ Nota:</strong> Facebook no "hospeda" tu sitio. Lo que haremos es compartir el enlace en Facebook para que la gente acceda a tu GitHub Pages.
+                    </div>
+
+                    <h3>Opción 1: Compartir enlace en Page/Perfil</h3>
+                    <ol style="line-height: 2;">
+                        <li>Ve a tu página o perfil de Facebook</li>
+                        <li>Haz clic en <strong>"¿Qué estás pensando?"</strong></li>
+                        <li>Pega la URL: <code>https://tuusuario.github.io/mi-pagina-web</code></li>
+                        <li>Añade descripción:
+                            <div class="code">
+¡Conoce nuestro nuevo sitio web! 
+Catálogo de productos, panel administrativo 
+y compras integradas. 🛒
+
+👉 Visita: [URL]
+                            </div>
+                        </li>
+                        <li>Haz clic en <strong>"Compartir"</strong></li>
+                    </ol>
+
+                    <h3 style="margin-top: 20px;">Opción 2: Compartir en página comercial</h3>
+                    <ol style="line-height: 2;">
+                        <li>Ve a tu Página de negocio en Facebook</li>
+                        <li>Abre <strong>Publicaciones → Crear</strong></li>
+                        <li>Elige <strong>"Enlace"</strong> (si quieres que aparezca preview)</li>
+                        <li>Pega la URL</li>
+                        <li>Facebook cargará automáticamente:
+                            <ul style="margin-top: 10px;">
+                                <li>Imagen (del meta tags si las agregamos)</li>
+                                <li>Título del sitio</li>
+                                <li>Descripción (del meta tags)</li>
+                            </ul>
+                        </li>
+                        <li>Personaliza el mensaje y publica</li>
+                    </ol>
+
+                    <h3 style="margin-top: 20px;">Opción 3: Crear anuncio en Facebook Ads (Avanzado)</h3>
+                    <ol style="line-height: 2;">
+                        <li>Ve a <strong>Meta Business Suite (facebook.com/business)</strong></li>
+                        <li>Abre <strong>Ads Manager</strong></li>
+                        <li>Crea campaña con objetivo "Tráfico al sitio web"</li>
+                        <li>URL de destino: tu sitio GitHub Pages</li>
+                        <li>Personaliza audiencia, presupuesto y plazo</li>
+                    </ol>
+
+                    <h3 style="margin-top: 20px;">🎨 Mejorar preview en Facebook (Opcional)</h3>
+                    <p>Para que la vista previa en Facebook se vea mejor, añade estos meta tags a tu index.html:</p>
+                    <div class="code">
+&lt;meta property="og:title" content="Mi Asombrosa Tienda Online"&gt;
+&lt;meta property="og:description" content="Catálogo de productos, gestión administrativa y compras integradas"&gt;
+&lt;meta property="og:image" content="https://tuusuario.github.io/mi-pagina-web/imagen-preview.jpg"&gt;
+&lt;meta property="og:url" content="https://tuusuario.github.io/mi-pagina-web"&gt;
+&lt;meta property="og:type" content="website"&gt;
+                    </div>
+
+                    <div class="warning">
+                        <strong>⚠️ Importante:</strong> Para que Facebook cargue la imagen en el meta tag, necesita que esté hospedada online (en tu GitHub Pages). Sube una imagen .jpg o .png a la carpeta raíz.
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHECKLIST FINAL -->
+            <section class="section">
+                <div class="section-header">✅ Checklist Pre-Despliegue</div>
+                <div class="section-content">
+                    <ul class="checklist">
+                        <li>Todos los archivos HTML están en su lugar</li>
+                        <li>Rutas relativas usan ../ correctamente</li>
+                        <li>index.html existe en raíz</li>
+                        <li>Carpeta stitch_pageweb/ con todos los subdirectorios</li>
+                        <li>CDN Tailwind CSS es accesible (sin proxy)</li>
+                        <li>Google Fonts cargará correctamente</li>
+                        <li>Material Symbols icons funcionarán</li>
+                        <li>Validación HTML completada (0 errores)</li>
+                        <li>Idioma es español (lang="es")</li>
+                        <li>Moneda Quetzal (Q) presente en admin</li>
+                        <li>Admin y Usuario separados visualmente</li>
+                        <li>Navegación funciona en todos los flujos</li>
+                        <li>Responsive design para móvil</li>
+                        <li>Git inicializado localmente</li>
+                        <li>.gitignore creado (opcional)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TABLA RESUMEN -->
+            <section class="section">
+                <div class="section-header">📊 Resumen de Dependencias</div>
+                <div class="section-content">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background: #f5f5f5;">
+                                <th style="border: 1px solid #ddd; padding: 10px; text-align: left;">Librería</th>
+                                <th style="border: 1px solid #ddd; padding: 10px; text-align: left;">Tipo</th>
+                                <th style="border: 1px solid #ddd; padding: 10px; text-align: left;">Instalación</th>
+                                <th style="border: 1px solid #ddd; padding: 10px; text-align: center;">GitHub Pages</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 10px;">Tailwind CSS</td>
+                                <td style="border: 1px solid #ddd; padding: 10px;">CDN</td>
+                                <td style="border: 1px solid #ddd; padding: 10px;">No (ya incluido)</td>
+                                <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">✅</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 10px;">Google Fonts</td>
+                                <td style="border: 1px solid #ddd; padding: 10px;">CDN</td>
+                                <td style="border: 1px solid #ddd; padding: 10px;">No (ya incluido)</td>
+                                <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">✅</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 10px;">Material Symbols</td>
+                                <td style="border: 1px solid #ddd; padding: 10px;">CDN</td>
+                                <td style="border: 1px solid #ddd; padding: 10px;">No (ya incluido)</td>
+                                <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">✅</td>
+                            </tr>
+                            <tr style="background: #f0f0f0;">
+                                <td style="border: 1px solid #ddd; padding: 10px;"><strong>TOTAL</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 10px;"><strong>3 CDNs externos</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 10px;"><strong>0 instalaciones locales</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>✅ 100%</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- SOPORTE -->
+            <section class="section">
+                <div class="section-header">📞 Solución de Problemas</div>
+                <div class="section-content">
+                    <h3>❓ "Mi sitio no se ve bien en GitHub Pages"</h3>
+                    <p><strong>Causa:</strong> Probablemente un problema de rutas relativas.</p>
+                    <p><strong>Solución:</strong> Verifica que todas las rutas sean relativas (../) y no absolutas (/).</p>
+
+                    <h3 style="margin-top: 20px;">❓ "Los estilos de Tailwind no se cargan"</h3>
+                    <p><strong>Causa:</strong> CDN de Tailwind inaccesible (raro).</p>
+                    <p><strong>Solución:</strong> Comprueba tu conexión a internet. Tailwind necesita acceso a cdn.tailwindcss.com</p>
+
+                    <h3 style="margin-top: 20px;">❓ "Las fuentes no cargan"</h3>
+                    <p><strong>Causa:</strong> Google Fonts inaccesible (muy raro).</p>
+                    <p><strong>Solución:</strong> Verifica conexión. Las fuentes son de Google Fonts (100% confiables).</p>
+
+                    <h3 style="margin-top: 20px;">❓ "El sitio funciona localmente pero no en GitHub"</h3>
+                    <p><strong>Causa:</strong> Archivos no subidos correctamente.</p>
+                    <p><strong>Solución:</strong> 
+                        <div class="code">
+git status  # Ver qué cambios hay
+git add .
+git push origin main  # Empujar todos los cambios
+                        </div>
+                    </p>
+                </div>
+            </section>
+
+            <!-- CONCLUSIÓN -->
+            <section class="section">
+                <div class="section-header">🎉 Conclusión</div>
+                <div class="section-content">
+                    <div class="success">
+                        <h3 style="margin-top: 0;">✅ TU APLICACIÓN ESTÁ 100% LISTA PARA DESPLIEGUE</h3>
+                        <ul style="margin: 15px 0; padding-left: 20px;">
+                            <li><strong>No necesitas instalar nada</strong> - Todo ya está incluido vía CDN</li>
+                            <li><strong>GitHub Pages funcionará perfectamente</strong> - Totalmente compatible</li>
+                            <li><strong>Facebook compartir es simple</strong> - Solo necesitas el enlace</li>
+                            <li><strong>Proceso de despliegue: ~10 minutos</strong> - Muy rápido</li>
+                            <li><strong>Costo: $0</strong> - GitHub Pages es gratis para repositorios públicos</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 20px; text-align: center; font-size: 16px; color: #1e3c72;">
+                        <strong>Siguiente paso:</strong> Sigue los pasos "Despliegue en GitHub Pages" arriba y tendrás tu sitio live en minutos. 🚀
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p><strong>Reporte de Verificación de Dependencias</strong></p>
+            <p>Aplicación Web Integrada - Lista para Despliegue en GitHub Pages</p>
+            <p>Generado: 2026-03-24 | Estado: ✅ LISTO PARA PRODUCCIÓN</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#0d1d2a",
+              "surface-container-high": "#efe7d9",
+              "on-primary-fixed-variant": "#76320f",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "inverse-primary": "#ffb596",
+              "error": "#ba1a1a",
+              "on-secondary-container": "#5a6949",
+              "tertiary": "#415160",
+              "on-secondary-fixed": "#121f06",
+              "tertiary-container": "#596979",
+              "surface": "#fff8ef",
+              "surface-container-low": "#fbf3e4",
+              "secondary-fixed": "#d7e9c1",
+              "surface-tint": "#944925",
+              "outline-variant": "#dac1b8",
+              "surface-dim": "#e1d9cb",
+              "secondary": "#546344",
+              "on-primary-container": "#ffe1d6",
+              "inverse-surface": "#343026",
+              "surface-bright": "#fff8ef",
+              "primary-container": "#a0522d",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#ffb596",
+              "primary-fixed": "#ffdbcd",
+              "on-tertiary-container": "#d8e9fb",
+              "surface-variant": "#e9e2d3",
+              "on-tertiary-fixed-variant": "#394857",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed": "#d4e4f6",
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "background": "#fff8ef",
+              "secondary-container": "#d7e9c1",
+              "secondary-fixed-dim": "#bbcca6",
+              "on-error-container": "#93000a",
+              "on-background": "#1e1b13",
+              "inverse-on-surface": "#f8f0e1",
+              "surface-container-highest": "#e9e2d3",
+              "primary": "#823b18",
+              "on-primary-fixed": "#360f00",
+              "surface-container": "#f5edde",
+              "tertiary-fixed-dim": "#b8c8da",
+              "on-surface": "#1e1b13",
+              "on-surface-variant": "#54433c",
+              "outline": "#87736b",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift { transition: background-color 0.3s ease; }
+        .glass-nav { backdrop-filter: blur(12px); }
+    </style>
+  <title>detalle de producto con footer social</title>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-orange-50/80 backdrop-blur-md border-b border-stone-200/20 shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif font-bold text-amber-900">El Hogar Artesanal</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-serif italic tracking-tight text-amber-800 border-b-2 border-amber-800 pb-1" href="#">Productos</a>
+<a class="font-serif italic tracking-tight text-stone-600 hover:text-amber-900 transition-colors" href="#">Catálogo</a>
+<a class="font-serif italic tracking-tight text-stone-600 hover:text-amber-900 transition-colors" href="#">Servicios</a>
+<a class="font-serif italic tracking-tight text-stone-600 hover:text-amber-900 transition-colors" href="#">Contacto</a>
+</div>
+<div class="flex items-center space-x-5">
+<button class="p-2 hover:bg-amber-100/30 rounded-md transition-all">
+<span class="material-symbols-outlined text-amber-900" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="p-2 hover:bg-amber-100/30 rounded-md transition-all">
+<span class="material-symbols-outlined text-amber-900" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-28 pb-20 max-w-7xl mx-auto px-6 lg:px-8">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex mb-8 text-sm font-label text-outline">
+<ol class="flex items-center space-x-2">
+<li><a class="hover:text-primary transition-colors" href="#">Inicio</a></li>
+<li><span class="material-symbols-outlined text-xs">chevron_right</span></li>
+<li><a class="hover:text-primary transition-colors" href="#">Masa Madre</a></li>
+<li><span class="material-symbols-outlined text-xs">chevron_right</span></li>
+<li class="text-on-surface font-medium">Hogaza Corteza de Sol</li>
+</ol>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+<!-- Product Gallery (Asymmetric Layout) -->
+<div class="lg:col-span-7 flex flex-col gap-4">
+<div class="relative aspect-[4/3] overflow-hidden rounded-lg bg-surface-container shadow-sm group">
+<img alt="Hogaza Corteza de Sol de masa madre" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of a golden sourdough loaf with sun-ray scoring pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxaLDRhbxsE6Rdskowwab-Z80GFK61pw5k-becsaLqwm3KZGKLWH_yU2Sl3Ey8iDmyQqhR_kmLE9umTOQQA7xTFWR2FRHQYqMxzmDrFkxyq8vexQG6GSUS9Vr2bcogY4_sd2C7e-sEe5jOx9hMlXT16VM0Am8TpoTdWWm-0bEzAJUAxIvL5047YgelaGTRWtS3dVNZ8DXjrwpBneJj7hPLINyjcfjVKBA_nSVjriJJUapCyt_uflwyaTtqkz_kr2DJg0_QZkB1kRpN"/>
+<div class="absolute top-4 left-4 bg-primary/90 text-on-primary px-3 py-1 rounded-md text-xs font-label uppercase tracking-widest">Recién Horneado</div>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<button class="aspect-square rounded-lg overflow-hidden border-2 border-primary ring-2 ring-primary-fixed-dim/20">
+<img alt="Detalle de corteza" class="w-full h-full object-cover" data-alt="Macro shot of crispy sourdough crust texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW8awJ_B263g4Pb7BAhk-g7R8c2LjJxoWsECD8AH0JFY9ARvXm1P01Xwu8-im8EvRoovgaYXH-AXENJQCbZGbXBVd7RIaVJWaSG54Dv31DZEUF4y0yvaVRjjLKW3QASMgFCH57qDJeHA0hT_E3u55lXxMhQHzgNsmlJiUGQkbIBrao68ScYjFl4bBGyzO89efXo6dOVocqhGwbZqyxSAhkuBSpNiIqqiZ9BYNCq-LAME7AoQan9fLEFB6BgAEX8pKbxSvhdWj73O6O"/>
+</button>
+<button class="aspect-square rounded-lg overflow-hidden border-2 border-transparent hover:border-outline-variant transition-all">
+<img alt="Migas alveoladas" class="w-full h-full object-cover" data-alt="Interior crumb of sourdough showing large air pockets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs0FK_CNAFeiETHhyMni3G569JDzv92P9G35O9VybFiSnlC5oBcqBV4B29L6SWzLxdNgshwvUah8JGTQ3o6y1aywiSK_--KVWAf3mfqrl4Cj8DmgawNtugzXV1Pz6TNXPLyrydI4kigBN2jLX4br-w3nVOrB6divwNtb9kxgf_-13_ttbMoSO6gB-SE_DXOW39CE-oRM4zDx5noknKX9kMRdtTe3VSpVQi5kJFd_b7pVwKZLkh9YbYolhSff5Y-Et3kBa0uhe0uGtF"/>
+</button>
+<button class="aspect-square rounded-lg overflow-hidden border-2 border-transparent hover:border-outline-variant transition-all">
+<img alt="Proceso de formado" class="w-full h-full object-cover" data-alt="Artisan hands shaping dough on a floured surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVwXo8Gs_28EIiwGTYqG_A9yK9l6ooVZE4V--iJojA9UCvj9J8nPZtpuE6ztzdhG185_MQszA1oaeB5pbLp7RGSzPL_8W2RPGNpV-iZ3WfP54VeDs-rM0jE_8PyjVv89pDT4XBZ5vT-8yrG4EOtfFrmbiU0VucVbU4tIwhrovPk3nwbmp9DCSCpKrJagwQSncCrqvTpsTs0lw7U6kDNZ637hTSu_dYL37h7dY6CSZBbJ0BWHgYe4wv2cvyoz8ZqWf98kZ_iLAsF9qE"/>
+</button>
+<button class="aspect-square rounded-lg overflow-hidden border-2 border-transparent hover:border-outline-variant transition-all relative">
+<img alt="Horno de piedra" class="w-full h-full object-cover brightness-50" data-alt="Sourdough loaf inside a traditional stone deck oven" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwpFjnGop9VlCJJ8QkyBDQcuo4_3MCurkKHIuvZbwoPgGEwfXzHiP6FcPazGk2f7jG_Msvw2debwGt7psAcSbxNt37DFOSp3_awCJ-hOLI8eqEQmHfa8pr1fWqRWKIYCpktTNhQrgWn5pWOHDnmeYllJeRW5fIjQ2NW3srT_FYM6tRyRpgZ_G7RWiRYyS1qM6IeFmQ1K4PxeZWkt7X74zBPw4JEVGbcfuxAH3-ZNLt4lvDK78XQZAviAQZA5y7Bwf70_CjL9JDV7Js"/>
+<span class="absolute inset-0 flex items-center justify-center text-on-primary font-label text-sm">+2</span>
+</button>
+</div>
+</div>
+<!-- Product Details -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="mb-6">
+<h1 class="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tight mb-2">Hogaza Corteza de Sol</h1>
+<div class="flex items-center space-x-1 text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="ml-2 text-sm font-label text-outline">(12 reseñas)</span>
+</div>
+</div>
+<div class="flex items-baseline space-x-3 mb-8">
+<span class="text-3xl font-headline font-bold text-primary">Q45.00</span>
+<span class="text-outline text-sm font-label line-through decoration-1">Q55.00</span>
+</div>
+<!-- Pricing Tiers (Tactile Table) -->
+<div class="bg-surface-container-low rounded-xl p-6 mb-8 border-l-4 border-secondary-fixed">
+<h3 class="text-xs font-label uppercase tracking-widest text-on-secondary-fixed-variant mb-4">Precios por Mayor</h3>
+<div class="grid grid-cols-3 gap-2 text-center">
+<div class="p-3 bg-surface-container-highest rounded-md">
+<p class="text-[10px] font-label text-outline mb-1">1-10 uds</p>
+<p class="font-bold text-on-surface">Q45.00</p>
+</div>
+<div class="p-3 bg-surface-container-highest rounded-md">
+<p class="text-[10px] font-label text-outline mb-1">11-50 uds</p>
+<p class="font-bold text-on-surface">Q40.00</p>
+</div>
+<div class="p-3 bg-secondary-container rounded-md">
+<p class="text-[10px] font-label text-on-secondary-container mb-1">50+ uds</p>
+<p class="font-bold text-on-secondary-fixed">Q35.00</p>
+</div>
+</div>
+</div>
+<p class="text-lg font-body leading-relaxed text-on-surface-variant mb-8">
+                    Pan de masa madre de 72 horas de fermentación lenta, hecho con harinas orgánicas y horneado en piedra. Una corteza crujiente con notas de caramelo y una miga aireada y elástica.
+                </p>
+<!-- Actions -->
+<div class="flex flex-col gap-4 mb-10">
+<div class="flex items-center gap-4">
+<div class="flex items-center bg-surface-container border-b-2 border-outline-variant h-12 px-2">
+<button class="p-2 text-primary hover:bg-surface-container-high rounded-sm transition-colors">
+<span class="material-symbols-outlined text-lg">remove</span>
+</button>
+<input class="w-12 bg-transparent border-none text-center font-bold focus:ring-0 text-on-surface" type="number" value="1"/>
+<button class="p-2 text-primary hover:bg-surface-container-high rounded-sm transition-colors">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+<button class="flex-1 bg-gradient-to-r from-primary to-primary-container text-on-primary h-12 rounded-md font-label font-semibold shadow-sm hover:opacity-90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">shopping_cart</span>
+                            Añadir al Carrito
+                        </button>
+</div>
+<button class="w-full text-center py-2 text-sm font-label text-primary hover:underline decoration-primary-fixed-dim decoration-2 underline-offset-4 transition-all">
+                        Consultar disponibilidad para entrega hoy
+                    </button><div class="mt-4 pt-4 border-t border-outline-variant/20 flex flex-col items-center sm:items-start gap-3">
+<span class="font-headline italic text-amber-900 text-sm">Compartir esta delicia</span>
+<div class="flex items-center gap-4">
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-primary/20 text-primary transition-all shadow-sm group" title="Compartir en Instagram">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">photo_camera</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-primary/20 text-primary transition-all shadow-sm group" title="Compartir en Facebook">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">facebook</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-primary/20 text-primary transition-all shadow-sm group" title="Compartir en TikTok">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">movie_edit</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-primary/20 text-primary transition-all shadow-sm group" title="Compartir en LinkedIn">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">work</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-primary/20 text-primary transition-all shadow-sm group" title="Compartir en WhatsApp">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">chat_bubble</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-primary/20 text-primary transition-all shadow-sm group" title="Copiar enlace">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">link</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Artisan Details -->
+<div class="border-t border-outline-variant/30 pt-8">
+<h3 class="font-headline italic text-xl text-amber-900 mb-4">Detalles del Artesano</h3>
+<dl class="grid grid-cols-2 gap-y-4 gap-x-8 text-sm">
+<div>
+<dt class="text-outline font-label uppercase tracking-tighter text-[10px] mb-1">Hidratación</dt>
+<dd class="text-on-surface font-semibold font-body">85% (Alta Hidratación)</dd>
+</div>
+<div>
+<dt class="text-outline font-label uppercase tracking-tighter text-[10px] mb-1">Fermentación</dt>
+<dd class="text-on-surface font-semibold font-body">72h en frío</dd>
+</div>
+<div>
+<dt class="text-outline font-label uppercase tracking-tighter text-[10px] mb-1">Harinas</dt>
+<dd class="text-on-surface font-semibold font-body">Orgánica T65, Centeno Integral</dd>
+</div>
+<div>
+<dt class="text-outline font-label uppercase tracking-tighter text-[10px] mb-1">Alérgenos</dt>
+<dd class="text-on-surface font-semibold font-body">Gluten, trazas de sésamo</dd>
+</div>
+</dl>
+</div>
+</div>
+</div>
+<!-- Fermentation Tracker (Signature Component) -->
+<section class="mt-24 mb-24">
+<div class="max-w-3xl">
+<h2 class="text-2xl font-headline italic text-on-surface mb-6">El viaje de tu hogaza</h2>
+<p class="text-on-surface-variant mb-8 font-body">Cada pan es un proceso vivo. Desde el refresco de la masa madre hasta el horneado en piedra.</p>
+<div class="relative h-2 w-full bg-secondary-fixed rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full w-[85%] bg-secondary"></div>
+</div>
+<div class="flex justify-between mt-4 text-[11px] font-label uppercase tracking-widest text-outline">
+<span>Mezcla</span>
+<span>Pliegues</span>
+<span class="text-secondary font-bold">Fermentación Larga</span>
+<span>Horneado</span>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="border-t border-outline-variant/20 pt-20">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+<h2 class="text-3xl font-headline font-bold text-on-surface">Lo que dicen en casa</h2>
+<button class="text-primary font-label underline decoration-primary-fixed-dim underline-offset-4">Ver todas las reseñas</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(30,27,19,0.03)] flex flex-col">
+<div class="flex text-amber-500 mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic font-body text-on-surface mb-6 leading-relaxed">"La mejor masa madre que he probado en Guatemala. La corteza tiene ese sabor tostado profundo y la miga es increíblemente suave."</p>
+<div class="mt-auto flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold">ML</div>
+<div>
+<p class="text-sm font-bold text-on-surface">María Luna</p>
+<p class="text-[10px] font-label text-outline uppercase tracking-wider">Cliente Verificado</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(30,27,19,0.03)] flex flex-col">
+<div class="flex text-amber-500 mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<p class="italic font-body text-on-surface mb-6 leading-relaxed">"Se nota la paciencia en el horneado. Ideal para desayunos o simplemente con un poco de aceite de oliva."</p>
+<div class="mt-auto flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold">RG</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Roberto García</p>
+<p class="text-[10px] font-label text-outline uppercase tracking-wider">Cliente Verificado</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full mt-auto border-t border-stone-200 bg-stone-100 dark:bg-stone-950">
+<div class="tonal-shift bg-stone-100 dark:bg-stone-900 px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="col-span-1 lg:col-span-1">
+<div class="font-serif italic text-xl text-amber-900 mb-4">El Hogar Artesanal</div>
+<p class="text-stone-500 text-sm leading-relaxed max-w-xs mb-6">Honrando la tradición del pan lento, un fermento a la vez.</p>
+<div class="flex flex-col gap-3">
+<h4 class="font-label text-xs uppercase tracking-widest text-on-background">Síguenos</h4>
+<div class="flex items-center gap-3">
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-primary/20 text-primary transition-all shadow-sm group" href="#" title="Instagram">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">photo_camera</span>
+</a>
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-primary/20 text-primary transition-all shadow-sm group" href="#" title="Facebook">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">facebook</span>
+</a>
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-primary/20 text-primary transition-all shadow-sm group" href="#" title="TikTok">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">movie_edit</span>
+</a>
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-primary/20 text-primary transition-all shadow-sm group" href="#" title="LinkedIn">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">work</span>
+</a>
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-primary/20 text-primary transition-all shadow-sm group" href="#" title="WhatsApp">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">chat_bubble</span>
+</a>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-label text-xs uppercase tracking-widest text-on-background mb-6">Enlaces</h4>
+<ul class="space-y-4">
+<li><a class="text-sm font-sans tracking-wide text-stone-500 hover:text-amber-800 transition-all hover:translate-x-1 block" href="#">Contacto</a></li>
+<li><a class="text-sm font-sans tracking-wide text-stone-500 hover:text-amber-800 transition-all hover:translate-x-1 block" href="#">Envíos</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label text-xs uppercase tracking-widest text-on-background mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-sm font-sans tracking-wide text-stone-500 hover:text-amber-800 transition-all hover:translate-x-1 block" href="#">Aviso Legal</a></li>
+<li><a class="text-sm font-sans tracking-wide text-stone-500 hover:text-amber-800 transition-all hover:translate-x-1 block" href="#">Privacidad</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label text-xs uppercase tracking-widest text-on-background mb-6">Suscripción</h4>
+<p class="text-sm text-stone-500 mb-4">Recibe notas sobre nuevas horneadas.</p>
+<div class="flex border-b border-outline-variant pb-1">
+<input class="bg-transparent border-none text-sm focus:ring-0 w-full placeholder:text-stone-400" placeholder="Tu correo" type="email"/>
+<button class="text-primary"><span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-stone-200/50">
+<p class="text-stone-500 text-sm tracking-wide text-center">© 2024 El Hogar Artesanal. Hecho con paciencia y masa madre.</p>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gestión de Ventas - The Artisanal Hearth</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#b8c8da",
+              "primary-fixed": "#ffdbcd",
+              "inverse-primary": "#ffb596",
+              "primary-fixed-dim": "#ffb596",
+              "on-background": "#1e1b13",
+              "background": "#fff8ef",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#fff8ef",
+              "primary": "#823b18",
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "surface-dim": "#e1d9cb",
+              "surface-variant": "#e9e2d3",
+              "outline-variant": "#dac1b8",
+              "inverse-on-surface": "#f8f0e1",
+              "secondary-fixed": "#d7e9c1",
+              "on-tertiary-fixed": "#0d1d2a",
+              "tertiary-container": "#596979",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#76320f",
+              "on-primary": "#ffffff",
+              "surface": "#fff8ef",
+              "tertiary": "#415160",
+              "secondary": "#546344",
+              "primary-container": "#a0522d",
+              "on-tertiary-container": "#d8e9fb",
+              "surface-container-high": "#efe7d9",
+              "on-surface-variant": "#54433c",
+              "on-tertiary-fixed-variant": "#394857",
+              "on-primary-fixed": "#360f00",
+              "on-primary-container": "#ffe1d6",
+              "inverse-surface": "#343026",
+              "surface-container-low": "#fbf3e4",
+              "secondary-container": "#d7e9c1",
+              "surface-container-highest": "#e9e2d3",
+              "on-surface": "#1e1b13",
+              "outline": "#87736b",
+              "surface-tint": "#944925",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed": "#121f06",
+              "secondary-fixed-dim": "#bbcca6",
+              "tertiary-fixed": "#d4e4f6",
+              "surface-container": "#f5edde",
+              "on-secondary-container": "#5a6949",
+              "on-error": "#ffffff",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Noto Serif', serif;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(30, 27, 19, 0.06);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #dac1b8;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Sidebar Navigation -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-6 bg-[#fbf3e4] dark:bg-stone-900 h-screen w-64 border-r border-[#dac1b8]/20 z-50">
+<div class="px-6 mb-10">
+<h1 class="font-serif text-xl font-black text-[#823b18]">Artisan Panel</h1>
+<p class="text-xs text-stone-500 font-label tracking-wide uppercase">Master Baker &amp; Architect</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-6 py-3 text-stone-500 hover:translate-x-1 transition-transform duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined mr-3">shutter_speed</span>
+<span class="font-serif text-sm">Gestión de Masa Madre</span>
+</a>
+<a class="flex items-center px-6 py-3 text-stone-500 hover:translate-x-1 transition-transform duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined mr-3">architecture</span>
+<span class="font-serif text-sm">Mercado de Diseños</span>
+</a>
+<!-- Active State -->
+<a class="flex items-center px-6 py-3 text-[#823b18] font-bold border-r-4 border-[#823b18] bg-[#fff8ef] dark:bg-stone-800/50" href="#">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-serif text-sm">Gestión de Ventas</span>
+</a>
+<a class="flex items-center px-6 py-3 text-stone-500 hover:translate-x-1 transition-transform duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined mr-3">local_shipping</span>
+<span class="font-serif text-sm">Rutas de Entrega</span>
+</a>
+<a class="flex items-center px-6 py-3 text-stone-500 hover:translate-x-1 transition-transform duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined mr-3">settings</span>
+<span class="font-serif text-sm">Configuración</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<div class="flex items-center p-3 bg-surface-container-high rounded-lg">
+<img alt="Avatar" class="w-10 h-10 rounded-full border-2 border-primary/20" data-alt="Baker profile portrait closeup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ5qmFud8K_3TZbXuxgVQLYtyPsBxn6uGqrBPx8Y6_poPWBuTJ-fGkNAIITEJvQMVioTIetkFJtk8iUuPpaCUeth8Jl6S9H4D5LavxZilYMsIhEQxDrTzwOyM-b9wrZiPXR1uiKIkWEa5YyoehRx-Ym5J6-y__WyGG-Mj4DgLfjH6iXmzhpMVHRPjH-_Z4orbtp92WYd2efg1q8xoYSZlbW2aynPWliVX8-1Etpe68UkFtD016sEiDPuIfg7cwMlP5e-_lcOusBFIR"/>
+<div class="ml-3 overflow-hidden">
+<p class="text-sm font-bold truncate">Hearth Master</p>
+<p class="text-xs text-on-surface-variant">Admin Nivel 4</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen p-8 lg:p-12">
+<!-- Top Bar Content -->
+<header class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-4xl font-black tracking-tight mb-2 text-on-surface">Gestión de Ventas</h2>
+<p class="text-on-surface-variant font-label max-w-md">Supervise su mercado artesanal y controle las reglas de auto-publicación para sus creaciones digitales y físicas.</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-md font-label font-medium flex items-center gap-2 editorial-shadow hover:opacity-90 transition-all active:scale-95">
+<span class="material-symbols-outlined">add_circle</span>
+                Nueva Publicación
+            </button>
+</header>
+<!-- Bento Metrics Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<!-- Metric 1: Total Sales -->
+<div class="bg-surface-container-highest p-8 rounded-lg relative overflow-hidden flex flex-col justify-between h-48">
+<span class="material-symbols-outlined text-primary/10 absolute -right-4 -top-4 text-9xl">monetization_on</span>
+<p class="text-sm font-label uppercase tracking-widest text-on-surface-variant">Ventas Totales</p>
+<div>
+<h3 class="text-5xl font-black text-primary leading-none">Q 14,820</h3>
+<p class="text-xs text-secondary mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+                        +12% desde el mes pasado
+                    </p>
+</div>
+</div>
+<!-- Metric 2: Active Products -->
+<div class="bg-surface-container-low p-8 rounded-lg border border-outline-variant/10 flex flex-col justify-between h-48">
+<p class="text-sm font-label uppercase tracking-widest text-on-surface-variant">Productos Activos</p>
+<div class="flex items-end justify-between">
+<h3 class="text-5xl font-black text-on-surface leading-none">24</h3>
+<div class="h-12 w-24 bg-secondary-fixed rounded-sm overflow-hidden flex items-end p-1 gap-1">
+<div class="bg-secondary w-full h-1/2 rounded-t-[1px]"></div>
+<div class="bg-secondary w-full h-3/4 rounded-t-[1px]"></div>
+<div class="bg-secondary w-full h-full rounded-t-[1px]"></div>
+<div class="bg-secondary w-full h-2/3 rounded-t-[1px]"></div>
+</div>
+</div>
+</div>
+<!-- Metric 3: Pending Republication -->
+<div class="bg-surface-container-high p-8 rounded-lg flex flex-col justify-between h-48">
+<p class="text-sm font-label uppercase tracking-widest text-on-surface-variant">Pendientes de Re-publicación</p>
+<div>
+<h3 class="text-5xl font-black text-tertiary leading-none">07</h3>
+<p class="text-xs text-on-surface-variant mt-2 italic">Ciclo de 15 días activo</p>
+</div>
+</div>
+</section>
+<!-- Auto-Publish Control Strip -->
+<section class="mb-12 bg-primary/5 p-6 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-primary">
+<div class="flex items-center gap-4">
+<div class="bg-primary-fixed p-3 rounded-full">
+<span class="material-symbols-outlined text-primary">published_with_changes</span>
+</div>
+<div>
+<h4 class="font-serif font-bold text-lg leading-tight">Funcionalidad de Auto-Publicación</h4>
+<p class="text-sm text-on-surface-variant">Si un artículo no se vende en 15 días, el sistema lo republicará automáticamente para ganar visibilidad.</p>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-background px-4 py-2 rounded-full border border-outline-variant/20 shadow-sm">
+<span class="text-sm font-medium">Estado: Activo</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-dim peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</section>
+<!-- Product Listing Table (Artisanal Style) -->
+<section>
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-2xl font-serif font-bold">Listado de Artículos</h3>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-surface-container rounded-md"><span class="material-symbols-outlined text-on-surface-variant">filter_list</span></button>
+<button class="p-2 hover:bg-surface-container rounded-md"><span class="material-symbols-outlined text-on-surface-variant">search</span></button>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="bg-white dark:bg-stone-800 p-5 rounded-lg editorial-shadow flex flex-col lg:flex-row items-start lg:items-center gap-6 group hover:translate-y-[-2px] transition-transform">
+<div class="w-20 h-20 bg-surface-container rounded overflow-hidden flex-shrink-0">
+<img alt="Hogaza" class="w-full h-full object-cover" data-alt="Artisan sourdough loaf with golden crust" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCincIvjnbejIZcL4oYimvAmZP0qJZXGpN1u8mR7pnvfuuZdnPhNI2s2vkV9wAlGC3YlReKvBtkzu5bLrGt0yC7snzL5EZ4KYXusHKF_9jQ7u_CEZmhEJRFHhWyQZNq4XU388KZNQOfazvxbXAll4sB2eACBUVYlf3GeJejpgOeTibiwnqEQxJG7qD0rrNn2-SbDq6kNjv39Yx2PuYg0Ex_-eZncb7ZJ6MQFuvnEp1FEejiTSWBvxJyAAMpZmj9lBlZmpuSXQjN2HTl"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-xs font-label uppercase tracking-widest text-primary font-bold">Físico</span>
+<span class="text-on-surface-variant">•</span>
+<span class="text-xs text-on-surface-variant">ID: HR-001</span>
+</div>
+<h4 class="text-xl font-serif font-bold text-on-surface">Hogaza "Corteza de Sol"</h4>
+<p class="text-sm text-on-surface-variant">750g de masa madre de centeno.</p>
+</div>
+<div class="lg:text-right">
+<p class="text-lg font-bold text-on-surface">Q 45.00</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-secondary-fixed text-on-secondary-container">Vendido (24)</span>
+</div>
+<div class="w-full lg:w-48 bg-surface-container-low p-3 rounded border border-outline-variant/10">
+<div class="flex justify-between items-center mb-1">
+<span class="text-[10px] uppercase font-bold text-on-surface-variant">Auto-Republicación</span>
+<span class="text-[10px] text-primary font-bold">EN 4 DÍAS</span>
+</div>
+<div class="w-full h-1.5 bg-surface-dim rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[73%]" style="width: 73%;"></div>
+</div>
+<p class="text-[10px] mt-1 text-on-surface-variant">Prox: 14 Oct, 2023</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+<button class="p-2 text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-white dark:bg-stone-800 p-5 rounded-lg editorial-shadow flex flex-col lg:flex-row items-start lg:items-center gap-6 group hover:translate-y-[-2px] transition-transform">
+<div class="w-20 h-20 bg-surface-container rounded overflow-hidden flex-shrink-0">
+<img alt="Planos" class="w-full h-full object-cover" data-alt="Technical architectural drawings of a micro-bakery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbcSodM0j_c73_S6bSx79eAPEOSGICzoCN8a3H3hEWchnjqB0ByeytfH9WdMZg_sKAMBmVBDN0XGCdfHlDAY07_4gOUYJF4u5oIpYMJlgqG5SQTTFKGekzvkl6hSHtg3JWPBUpm6zOnLr9fxL7s2sNDPm1xXtV913r-kyIJzt_Js9xZhwcyhChW4Oterx2U88V31lVpDbOToqn-ejtm-Rm41GJNnWWaLJSdzVxm2Od73neFyc3f-ic030otGfEgAGJSCWi0YKmN0zm"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-xs font-label uppercase tracking-widest text-tertiary font-bold">Digital</span>
+<span class="text-on-surface-variant">•</span>
+<span class="text-xs text-on-surface-variant">ID: DP-442</span>
+</div>
+<h4 class="text-xl font-serif font-bold text-on-surface">Planos de Micro-Panadería</h4>
+<p class="text-sm text-on-surface-variant">Diseño optimizado para 15m².</p>
+</div>
+<div class="lg:text-right">
+<p class="text-lg font-bold text-on-surface">Q 850.00</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-surface-container-high text-on-surface-variant">Pausado</span>
+</div>
+<div class="w-full lg:w-48 bg-surface-container-low p-3 rounded border border-outline-variant/10 opacity-50">
+<div class="flex justify-between items-center mb-1">
+<span class="text-[10px] uppercase font-bold text-on-surface-variant text-center w-full">REGLA DESACTIVADA</span>
+</div>
+<div class="w-full h-1.5 bg-surface-dim rounded-full overflow-hidden">
+<div class="bg-stone-400 h-full w-0"></div>
+</div>
+<p class="text-[10px] mt-1 text-on-surface-variant text-center">Sin programación</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">play_arrow</span></button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-white dark:bg-stone-800 p-5 rounded-lg editorial-shadow flex flex-col lg:flex-row items-start lg:items-center gap-6 group hover:translate-y-[-2px] transition-transform">
+<div class="w-20 h-20 bg-surface-container rounded overflow-hidden flex-shrink-0">
+<img alt="App" class="w-full h-full object-cover" data-alt="Bread fermentation tracking mobile app interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfMzTcEnoYbHIlOsUYKjImaQIqR6oYYv-iM3s27MNcOfp9yGUKgfEpoREg9D4kzyxL-6zY7Bzt000geA_jhsf7xUl5HoV1l1tMKizAtjc7KwRwZIyEgF_h8NqZEY1JqyZq4BxOL2vTeVS5setgwahXXru1TKgXwSyYSSH6P3ByQy7xoaEHa4TcWxRdnjS7yPoJOn8KREa-MdFcEypfRLRN8NHOxcVM_aFNYyANyEmtlGx2_q1wLX0BA9I6tTYxoDE6oEdPAQIbID1a"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-xs font-label uppercase tracking-widest text-secondary font-bold">Software</span>
+<span class="text-on-surface-variant">•</span>
+<span class="text-xs text-on-surface-variant">ID: SW-900</span>
+</div>
+<h4 class="text-xl font-serif font-bold text-on-surface">App CrumbMaster Pro</h4>
+<p class="text-sm text-on-surface-variant">Licencia vitalicia / Tracker de fermentación.</p>
+</div>
+<div class="lg:text-right">
+<p class="text-lg font-bold text-on-surface">Q 125.00</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-secondary-fixed text-on-secondary-container">Activo</span>
+</div>
+<div class="w-full lg:w-48 bg-surface-container-low p-3 rounded border border-outline-variant/10">
+<div class="flex justify-between items-center mb-1">
+<span class="text-[10px] uppercase font-bold text-on-surface-variant">Auto-Republicación</span>
+<span class="text-[10px] text-primary font-bold">MAÑANA</span>
+</div>
+<div class="w-full h-1.5 bg-surface-dim rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[94%]" style="width: 94%;"></div>
+</div>
+<p class="text-[10px] mt-1 text-on-surface-variant">Prox: 11 Oct, 2023</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+<button class="p-2 text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Fermentation Tracker Component (Stylized Context) -->
+<section class="mt-16 bg-surface-container rounded-lg p-10 relative overflow-hidden">
+<div class="max-w-xl relative z-10">
+<h3 class="text-2xl font-serif font-bold mb-4">Estado del Servidor de Mercado</h3>
+<p class="text-sm text-on-surface-variant mb-6 font-body">El proceso de republicación automática se está "leudando". Siguiente ciclo global en 4 horas.</p>
+<div class="w-full h-3 bg-secondary-fixed rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-2/3"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-[10px] font-bold text-secondary uppercase">Mezcla</span>
+<span class="text-[10px] font-bold text-secondary uppercase">Leudado</span>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase">Horneado</span>
+</div>
+</div>
+<span class="material-symbols-outlined absolute right-[-20px] bottom-[-20px] text-[15rem] text-primary/5 rotate-12">local_fire_department</span>
+</section>
+</main>
+</body></html>

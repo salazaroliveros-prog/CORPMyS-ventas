@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Confirmación de Pago | ARCHITECTURAL PRECISION</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#c6c5d5",
+              "inverse-surface": "#223240",
+              "on-tertiary": "#ffffff",
+              "surface-container-low": "#ecf4ff",
+              "surface-container-highest": "#d4e4f6",
+              "tertiary-fixed-dim": "#b8c8da",
+              "on-surface": "#0d1d2a",
+              "on-background": "#0d1d2a",
+              "on-secondary": "#ffffff",
+              "surface-dim": "#cbdcee",
+              "on-secondary-fixed": "#271900",
+              "outline": "#767684",
+              "surface-container-high": "#d9eafc",
+              "surface": "#f7f9ff",
+              "primary-fixed-dim": "#bfc2ff",
+              "on-tertiary-fixed-variant": "#394857",
+              "tertiary": "#000c18",
+              "on-tertiary-fixed": "#0d1d2a",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#132330",
+              "secondary-container": "#fdc34d",
+              "primary-fixed": "#e0e0ff",
+              "on-primary-fixed-variant": "#3239a3",
+              "inverse-primary": "#bfc2ff",
+              "on-tertiary-container": "#7b8b9b",
+              "primary-container": "#000080",
+              "on-primary-container": "#777eea",
+              "surface-variant": "#d4e4f6",
+              "on-primary-fixed": "#00006e",
+              "tertiary-fixed": "#d4e4f6",
+              "on-secondary-fixed-variant": "#5d4200",
+              "on-error": "#ffffff",
+              "on-secondary-container": "#715000",
+              "on-primary": "#ffffff",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#ffdea6",
+              "surface-container": "#e2efff",
+              "secondary": "#7b5800",
+              "error": "#ba1a1a",
+              "surface-bright": "#f7f9ff",
+              "secondary-fixed-dim": "#f7bd48",
+              "primary": "#00003c",
+              "inverse-on-surface": "#e7f2ff",
+              "on-surface-variant": "#464653",
+              "background": "#f7f9ff",
+              "surface-tint": "#4b53bc"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f7f9ff;
+      }
+      .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Shell Layout: SideNavBar suppressed for Transactional Success Screen. Header used for Identity -->
+<header class="w-full top-0 bg-slate-50 dark:bg-slate-950 flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+<div class="text-xl font-bold tracking-tighter text-blue-900 dark:text-blue-100 font-headline uppercase">
+            Constructora WM/M&amp;S
+        </div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="min-h-[819px] flex flex-col items-center justify-center px-6 py-12">
+<div class="max-w-4xl w-full grid grid-cols-1 md:grid-cols-12 gap-0 bg-surface-container-lowest">
+<!-- Structural Left Column: Branding & Status -->
+<div class="md:col-span-5 bg-primary p-10 flex flex-col justify-between min-h-[400px]">
+<div>
+<div class="mb-8">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-6xl" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h1 class="font-headline font-extrabold text-4xl text-on-primary leading-tight tracking-tighter mb-4 uppercase">
+                        Transacción<br/>Exitosa
+                    </h1>
+<p class="text-on-primary-container font-body text-sm leading-relaxed max-w-[280px]">
+                        La documentación técnica ha sido liberada. El rigor estructural define nuestro compromiso.
+                    </p>
+</div>
+<div class="pt-8 border-t border-primary-container">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-primary-container mb-1">Orden No.</p>
+<p class="font-headline font-bold text-xl text-on-primary">#WM-MS-2024-8892</p>
+</div>
+</div>
+<!-- Content Right Column: Data & Action -->
+<div class="md:col-span-7 p-10 md:p-16 flex flex-col justify-center">
+<div class="mb-12">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-6">Resumen de Adquisición</p>
+<div class="space-y-8">
+<!-- Data Pylon Component -->
+<div class="flex flex-col">
+<h2 class="font-headline font-bold text-2xl text-primary uppercase mb-1">Plan Maestro</h2>
+<p class="text-outline text-sm">Paquete de Ingeniería Civil &amp; Arquitectura</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-1">Monto Total</p>
+<p class="font-headline font-extrabold text-3xl text-secondary uppercase">Q 45,500.00</p>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-1">Fecha</p>
+<p class="font-headline font-bold text-lg text-primary">24 OCT 2024</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Module -->
+<div class="space-y-4">
+<button class="w-full bg-primary text-on-primary px-8 py-5 font-headline font-bold text-sm tracking-widest uppercase flex items-center justify-between group transition-all duration-300 hover:bg-tertiary">
+<span>Descargar Planos (PDF/DWG)</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-2" data-icon="download">download</span>
+</button>
+<button class="w-full border border-outline-variant text-primary px-8 py-5 font-headline font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:bg-surface-container-low">
+                        Ver Comprobante Fiscal
+                    </button>
+</div>
+<div class="mt-12 flex items-start gap-4 p-4 bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="info">info</span>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                        Los archivos DWG requieren software compatible con CAD. El enlace de descarga expirará en 72 horas por protocolos de seguridad estructural.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Component: Consistent with Architectural Precision Brand -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center bg-slate-100 dark:bg-slate-950">
+<div class="mb-6 md:mb-0">
+<p class="font-headline font-bold text-blue-900 dark:text-blue-100 uppercase tracking-tighter">Constructora WM/M&amp;S</p>
+<p class="font-body text-xs text-slate-500 mt-2">© 2024 Architectural Precision. All rights reserved. Built for Structural Integrity.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 dark:text-slate-400 font-body text-xs hover:text-blue-700 transition-opacity opacity-80 hover:opacity-100 uppercase tracking-widest" href="#">Soporte Técnico</a>
+<a class="text-slate-500 dark:text-slate-400 font-body text-xs hover:text-blue-700 transition-opacity opacity-80 hover:opacity-100 uppercase tracking-widest" href="#">Privacidad</a>
+</div>
+</footer>
+<!-- Image for Context (Structural Blueprint Aesthetic) -->
+<div class="fixed bottom-0 right-0 -z-10 opacity-5 pointer-events-none overflow-hidden">
+<img alt="Plano arquitectónico técnico de alta precisión" class="w-[800px] grayscale rotate-12" data-alt="Technical architectural blueprint high precision details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtQ-VjP04QzdfcwwgTZjS1S509-xPWO5T3eq_ajNe5OLgTrKG4MVc-KNtwxuK3sGNDQcfp9Wo6TPSk2go47ARr7DaJ8hU4Jsi0ookDTW_Ilh8Xw4TAdg85xAoKci0SAxlWZhl3szhekeXApsp6qKADlKFz1j3dH4jTQlQvf3Vo8TQ0F0ZcuQYJcanSIueML98WFJDr_B8kmxeKRFWrmxH2Zos-gaT0LmjJ8x8Ra7AsgHwgpmeiDRo_oAvX1FwzWcl3EM-ySpNQkWav"/>
+</div>
+</body></html>

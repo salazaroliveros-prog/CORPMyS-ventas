@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Panel de Gestión - Constructora WM/M&amp;S</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#000080", // Navy Blue
+              "secondary": "#B8860B", // Dark Yellow
+              "neutral": "#708090", // Slate Gray
+              "surface": "#f8fafc",
+              "outline": "#e2e8f0"
+            },
+            fontFamily: {
+              "sans": ["Inter", "sans-serif"],
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f1f5f9;
+        color: #0f172a;
+      }
+      .font-precision {
+        font-family: 'Inter', sans-serif;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-900">
+<!-- SideNavBar (Authority: COMPONENTS_70) -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-slate-100 dark:bg-slate-950 flex flex-col border-r border-slate-200 dark:border-slate-800 z-50">
+<div class="p-8">
+<h1 class="font-['Manrope'] font-bold text-blue-950 dark:text-white text-xl leading-tight">Constructora WM/M&amp;S</h1>
+<p class="font-['Inter'] text-[10px] tracking-[0.2em] uppercase text-slate-500 mt-2">Guatemala S.A.</p>
+</div>
+<div class="px-4 mb-6">
+<div class="flex items-center gap-3 p-3 bg-white border border-slate-200">
+<div class="w-8 h-8 bg-primary flex items-center justify-center text-white text-xs font-bold">WM</div>
+<div>
+<p class="text-[11px] font-bold text-slate-900 uppercase tracking-wider">Gestión</p>
+<p class="text-[10px] text-slate-500">Constructora WM</p>
+</div>
+</div>
+</div>
+<nav class="flex-grow space-y-1 px-4">
+<a class="flex items-center gap-3 py-3 px-4 bg-primary text-white font-bold font-['Inter'] text-sm tracking-wide uppercase group transition-transform active:translate-x-1" href="./code.html">
+<span class="material-symbols-outlined text-xl" data-icon="dashboard">dashboard</span>
+<span>Panel Principal</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 text-slate-600 dark:text-slate-400 font-['Inter'] text-sm tracking-wide uppercase hover:bg-slate-200 dark:hover:bg-slate-800 transition-all active:translate-x-1" href="../cronograma_de_proyectos_wm_m_s_1/code.html">
+<span class="material-symbols-outlined text-xl" data-icon="architecture">architecture</span>
+<span>Proyectos (Admin)</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 text-slate-600 dark:text-slate-400 font-['Inter'] text-sm tracking-wide uppercase hover:bg-slate-200 dark:hover:bg-slate-800 transition-all active:translate-x-1" href="../portal_de_gestion_de_proyectos/code.html">
+<span class="material-symbols-outlined text-xl" data-icon="layers">layers</span>
+<span>Planos (Admin)</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 text-slate-600 dark:text-slate-400 font-['Inter'] text-sm tracking-wide uppercase hover:bg-slate-200 dark:hover:bg-slate-800 transition-all active:translate-x-1" href="../panel_de_administracion_y_control_de_fondos/code.html">
+<span class="material-symbols-outlined text-xl" data-icon="inventory_2">inventory_2</span>
+<span>Inventario (Admin)</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 text-slate-600 dark:text-slate-400 font-['Inter'] text-sm tracking-wide uppercase hover:bg-slate-200 dark:hover:bg-slate-800 transition-all active:translate-x-1" href="../configuraci_n_de_seguridad_2fa/code.html">
+<span class="material-symbols-outlined text-xl" data-icon="settings">settings</span>
+<span>Configuración</span>
+</a>
+</nav>
+<div class="p-6 border-t border-slate-200 dark:border-slate-800">
+<button class="w-full bg-secondary text-white py-3 font-['Inter'] text-xs font-bold tracking-widest uppercase hover:opacity-90 transition-all">
+            Crear Proyecto (Admin)
+        </button>
+</div>
+</aside>
+<!-- TopNavBar (Authority: COMPONENTS_70) -->
+<header class="fixed top-0 w-full z-40 pl-64 bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-xl border-b border-blue-900/10 dark:border-white/5 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-12 py-6 max-w-full mx-auto">
+<div class="flex items-center gap-8">
+<h2 class="text-blue-900 dark:text-blue-400 font-['Manrope'] font-semibold tracking-tight">Panel Administrativo | Control Total</h2>
+<nav class="hidden xl:flex items-center gap-6">
+<a class="text-blue-900 dark:text-blue-400 border-b-2 border-amber-600 text-sm font-semibold hover:text-amber-600 transition-colors duration-300" href="#">Resumen</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm font-semibold hover:text-amber-600 transition-colors duration-300" href="#">Proyectos</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm font-semibold hover:text-amber-600 transition-colors duration-300" href="#">Servicios</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm font-semibold hover:text-amber-600 transition-colors duration-300" href="#">Ventas</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">notifications</button>
+<span class="h-4 w-px bg-slate-200"></span>
+<div class="flex items-center gap-3">
+<span class="text-xs font-bold text-slate-700 uppercase tracking-tighter">Admin Guatemala</span>
+<span class="material-symbols-outlined text-primary text-3xl">account_circle</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="ml-64 pt-24 p-12 min-h-screen">
+<!-- Header Summary Section -->
+<div class="mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+<div>
+<h3 class="text-[10px] font-bold tracking-[0.3em] text-neutral uppercase mb-2">Estado de Utilidades</h3>
+<div class="flex items-baseline gap-4">
+<span class="text-5xl font-['Manrope'] font-extrabold text-primary tracking-tighter">Q 48,250.00</span>
+<span class="px-2 py-1 bg-green-50 text-green-700 text-[10px] font-bold border border-green-200 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">trending_up</span> +12.5%
+                </span>
+</div>
+<p class="text-slate-500 text-sm mt-4 font-light max-w-xl border-l-2 border-secondary pl-4">Consolidado de ventas por servicios de construcción, planos arquitectónicos y multiservicios técnicos.</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-primary text-white px-8 py-4 text-xs font-bold tracking-widest uppercase hover:bg-blue-900 transition-all active:scale-95">
+                Retiro Bancario
+            </button>
+<button class="border border-slate-300 bg-white text-slate-700 px-8 py-4 text-xs font-bold tracking-widest uppercase hover:bg-slate-50 transition-all active:scale-95">
+                Transferir PayPal
+            </button>
+</div>
+</div>
+<!-- Bento Grid for Metrics -->
+<div class="grid grid-cols-12 gap-6 mb-12">
+<!-- Sales Chart (Mockup with High Precision Style) -->
+<div class="col-span-12 lg:col-span-8 bg-white border border-slate-200 p-8">
+<div class="flex justify-between items-center mb-10">
+<h4 class="text-xs font-bold tracking-widest uppercase text-slate-900">Rendimiento Trimestral de Ventas</h4>
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 bg-primary"></span>
+<span class="text-[10px] font-bold text-slate-500 uppercase">Proyectos 2023</span>
+</div>
+</div>
+<div class="h-64 flex items-end justify-between gap-4 px-4 border-b border-slate-100">
+<div class="flex-1 bg-slate-100 h-[30%] relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-mono text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity">Q12k</div>
+</div>
+<div class="flex-1 bg-slate-100 h-[45%]"></div>
+<div class="flex-1 bg-slate-200 h-[60%]"></div>
+<div class="flex-1 bg-secondary/40 h-[80%]"></div>
+<div class="flex-1 bg-secondary/60 h-[75%]"></div>
+<div class="flex-1 bg-primary h-[100%]"></div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] font-bold text-slate-400 tracking-tighter uppercase">
+<span>Abril</span>
+<span>Mayo</span>
+<span>Junio</span>
+<span>Julio</span>
+<span>Agosto</span>
+<span class="text-primary">Septiembre</span>
+</div>
+</div>
+<!-- Meta Progress Tracker -->
+<div class="col-span-12 lg:col-span-4 bg-slate-900 text-white p-8 flex flex-col justify-between">
+<div>
+<h4 class="text-[10px] font-bold tracking-[0.2em] text-secondary uppercase mb-6">Objetivo Mensual</h4>
+<div class="flex justify-between items-end mb-3">
+<span class="text-4xl font-['Manrope'] font-bold">85%</span>
+<span class="text-[10px] text-slate-400 font-mono tracking-widest">Q 50,000.00 Meta</span>
+</div>
+<div class="w-full h-1.5 bg-slate-800">
+<div class="h-full bg-secondary w-[85%]"></div>
+</div>
+<p class="text-[11px] text-slate-400 mt-6 leading-relaxed italic">"Precisión en cada detalle, eficiencia en cada proceso constructivo."</p>
+</div>
+<div class="mt-8 pt-6 border-t border-slate-800">
+<div class="flex justify-between items-center text-[10px] font-bold uppercase tracking-widest">
+<span class="text-slate-500">Próximo Cierre</span>
+<span class="text-secondary">30 SEP 2023</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Security & Admins -->
+<div class="grid grid-cols-12 gap-6 mb-12">
+<div class="col-span-12 lg:col-span-12 bg-white border border-slate-200 p-8">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<h4 class="text-xs font-bold tracking-widest uppercase text-slate-900">Control de Accesos Administrativos</h4>
+</div>
+<button class="text-primary text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
+<span class="material-symbols-outlined text-sm">person_add</span> Gestionar Usuarios
+                </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="p-4 border border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-slate-50 flex items-center justify-center text-primary font-bold text-xs border border-slate-200">MA</div>
+<div>
+<p class="text-xs font-bold text-slate-900 uppercase">Mario Asturias</p>
+<p class="text-[9px] text-slate-400 uppercase tracking-widest">Administrador General</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 text-lg">edit</span>
+</div>
+<div class="p-4 border border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-slate-50 flex items-center justify-center text-primary font-bold text-xs border border-slate-200">LC</div>
+<div>
+<p class="text-xs font-bold text-slate-900 uppercase">Lucía Castillo</p>
+<p class="text-[9px] text-slate-400 uppercase tracking-widest">Gestión de Proyectos</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 text-lg">lock</span>
+</div>
+<div class="p-4 border border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-slate-50 flex items-center justify-center text-primary font-bold text-xs border border-slate-200">RG</div>
+<div>
+<p class="text-xs font-bold text-slate-900 uppercase">Roberto Gómez</p>
+<p class="text-[9px] text-slate-400 uppercase tracking-widest">Finanzas y Auditoría</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 text-lg">lock</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Transactions Table -->
+<div class="bg-white border border-slate-200 overflow-hidden">
+<div class="p-8 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+<div>
+<h4 class="text-xs font-bold tracking-[0.2em] uppercase text-slate-900">Historial de Transacciones</h4>
+<p class="text-[10px] text-slate-500 uppercase mt-1">Venta de servicios técnicos y licencias arquitectónicas</p>
+</div>
+<button class="text-[10px] font-bold text-primary uppercase border-b-2 border-primary pb-1">Ver Todo el Registro</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-white text-[10px] font-bold uppercase text-slate-400 tracking-widest border-b border-slate-100">
+<th class="px-8 py-5">Cliente / Entidad</th>
+<th class="px-8 py-5">Descripción del Servicio</th>
+<th class="px-8 py-5">Fecha de Operación</th>
+<th class="px-8 py-5">Estado</th>
+<th class="px-8 py-5 text-right">Monto Neto</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-50">
+<tr class="hover:bg-slate-50 transition-colors group">
+<td class="px-8 py-6">
+<p class="text-xs font-bold text-slate-900 uppercase">Carlos Mendoza</p>
+<p class="text-[10px] text-slate-400 font-mono">ID: WM-9821-GT</p>
+</td>
+<td class="px-8 py-6">
+<p class="text-xs text-slate-600">Plano Arquitectónico: Residencia Bóveda</p>
+</td>
+<td class="px-8 py-6 text-xs text-slate-500 font-mono">18 SEP 2023</td>
+<td class="px-8 py-6">
+<span class="inline-block px-2 py-1 bg-green-100 text-green-700 text-[9px] font-bold uppercase tracking-tighter">Completado</span>
+</td>
+<td class="px-8 py-6 text-right">
+<p class="text-sm font-bold text-primary font-mono tracking-tighter">Q 1,450.00</p>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors group">
+<td class="px-8 py-6">
+<p class="text-xs font-bold text-slate-900 uppercase">Ana Sofía Rivas</p>
+<p class="text-[10px] text-slate-400 font-mono">ID: WM-9755-GT</p>
+</td>
+<td class="px-8 py-6">
+<p class="text-xs text-slate-600">Supervisión Técnica: Optimización Estructural</p>
+</td>
+<td class="px-8 py-6 text-xs text-slate-500 font-mono">17 SEP 2023</td>
+<td class="px-8 py-6">
+<span class="inline-block px-2 py-1 bg-green-100 text-green-700 text-[9px] font-bold uppercase tracking-tighter">Completado</span>
+</td>
+<td class="px-8 py-6 text-right">
+<p class="text-sm font-bold text-primary font-mono tracking-tighter">Q 3,200.00</p>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors group">
+<td class="px-8 py-6">
+<p class="text-xs font-bold text-slate-900 uppercase">Juan Pablo Duarte</p>
+<p class="text-[10px] text-slate-400 font-mono">ID: WM-9630-GT</p>
+</td>
+<td class="px-8 py-6">
+<p class="text-xs text-slate-600">Diseño: Instalaciones Mecánicas Industriales</p>
+</td>
+<td class="px-8 py-6 text-xs text-slate-500 font-mono">15 SEP 2023</td>
+<td class="px-8 py-6">
+<span class="inline-block px-2 py-1 bg-amber-100 text-amber-700 text-[9px] font-bold uppercase tracking-tighter">En Proceso</span>
+</td>
+<td class="px-8 py-6 text-right">
+<p class="text-sm font-bold text-primary font-mono tracking-tighter">Q 2,100.00</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+<!-- Footer (Authority: COMPONENTS_70) -->
+<footer class="relative w-full bottom-0 bg-slate-900 dark:bg-black border-t border-white/10 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-12 py-16 w-full max-w-full mx-auto">
+<div class="space-y-4">
+<h5 class="text-lg font-bold text-white font-['Manrope']">Constructora WM/M&amp;S</h5>
+<p class="text-slate-400 text-xs leading-relaxed tracking-widest uppercase font-['Inter']">MULTISERVICIOS DE GUATEMALA S.A.</p>
+<div class="pt-4">
+<span class="text-amber-500 dark:text-amber-400 text-[10px] font-bold border border-amber-500/30 px-3 py-1 uppercase tracking-widest">Security &amp; Trust Badge</span>
+</div>
+</div>
+<div class="space-y-6">
+<h6 class="text-white text-xs font-bold tracking-[0.2em] uppercase">Vínculos de Interés</h6>
+<nav class="flex flex-col gap-3">
+<a class="text-slate-400 hover:text-white transition-colors text-xs uppercase tracking-widest font-['Inter']" href="#">Proyectos</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs uppercase tracking-widest font-['Inter']" href="#">Servicios</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs uppercase tracking-widest font-['Inter']" href="#">Dirección: Ciudad de Guatemala</a>
+</nav>
+</div>
+<div class="space-y-6">
+<h6 class="text-white text-xs font-bold tracking-[0.2em] uppercase">Redes Sociales</h6>
+<nav class="flex flex-wrap gap-4">
+<a class="text-slate-400 hover:text-amber-500 transition-colors text-xs uppercase tracking-widest font-['Inter']" href="#">Facebook</a>
+<a class="text-slate-400 hover:text-amber-500 transition-colors text-xs uppercase tracking-widest font-['Inter']" href="#">Instagram</a>
+<a class="text-slate-400 hover:text-amber-500 transition-colors text-xs uppercase tracking-widest font-['Inter']" href="#">TikTok</a>
+<a class="text-slate-400 hover:text-amber-500 transition-colors text-xs uppercase tracking-widest font-['Inter']" href="#">WhatsApp</a>
+</nav>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-white/5 text-center">
+<p class="text-slate-500 text-[10px] leading-relaxed tracking-widest uppercase font-['Inter']">
+            © 2024 Constructora WM/M&amp;S - MULTISERVICIOS de Guatemala S.A. Todos los derechos reservados.
+        </p>
+</div>
+</footer>
+<!-- Contextual Floating Indicator -->
+<div class="fixed bottom-8 right-8 bg-white border-l-4 border-primary p-5 shadow-2xl flex items-center gap-4 group">
+<div class="h-2 w-2 bg-secondary animate-pulse"></div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-900">Sincronización Bancaria: OK</p>
+</div>
+</body></html>

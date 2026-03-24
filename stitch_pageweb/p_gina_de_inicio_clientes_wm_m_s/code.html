@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#e0e0ff",
+              "on-secondary-fixed": "#271900",
+              "inverse-on-surface": "#e7f2ff",
+              "secondary-container": "#fdc34d",
+              "on-background": "#0d1d2a",
+              "on-primary": "#ffffff",
+              "tertiary": "#000c18",
+              "on-secondary-fixed-variant": "#5d4200",
+              "surface-bright": "#f7f9ff",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#4b53bc",
+              "on-tertiary-fixed": "#0d1d2a",
+              "secondary-fixed": "#ffdea6",
+              "error": "#ba1a1a",
+              "surface-container-low": "#ecf4ff",
+              "surface-dim": "#cbdcee",
+              "tertiary-container": "#132330",
+              "on-surface-variant": "#464653",
+              "on-primary-container": "#777eea",
+              "primary-fixed-dim": "#bfc2ff",
+              "on-tertiary": "#ffffff",
+              "inverse-surface": "#223240",
+              "secondary": "#7b5800",
+              "outline-variant": "#c6c5d5",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed-variant": "#394857",
+              "on-secondary-container": "#715000",
+              "primary-container": "#000080",
+              "primary": "#00003c",
+              "inverse-primary": "#bfc2ff",
+              "surface-container": "#e2efff",
+              "surface-variant": "#d4e4f6",
+              "on-surface": "#0d1d2a",
+              "tertiary-fixed": "#d4e4f6",
+              "surface-container-highest": "#d4e4f6",
+              "on-tertiary-container": "#7b8b9b",
+              "surface": "#f7f9ff",
+              "on-primary-fixed": "#00006e",
+              "tertiary-fixed-dim": "#b8c8da",
+              "on-primary-fixed-variant": "#3239a3",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#d9eafc",
+              "background": "#f7f9ff",
+              "secondary-fixed-dim": "#f7bd48",
+              "outline": "#767684",
+              "on-error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        .blueprint-gradient {
+            background: linear-gradient(135deg, #00003c 0%, #000080 100%);
+        }
+    </style>
+  <title>p gina de inicio clientes wm m s</title>
+</head>
+<body class="bg-surface text-on-background antialiased">
+<!-- TopNavBar -->
+<nav class="bg-[#f7f9ff] dark:bg-[#000c18] w-full top-0 left-0 z-50 sticky border-b border-outline-variant/15">
+<div class="flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#00003c] dark:text-white uppercase font-headline">
+                Constructora WM/M&amp;S
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-xs text-[#7b5800] border-b-2 border-[#7b5800] pb-1 hover:text-[#000080] transition-colors duration-200" href="#">Services</a>
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-xs text-[#767684] hover:text-[#000080] transition-colors duration-200" href="#">Products</a>
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-xs text-[#767684] hover:text-[#000080] transition-colors duration-200" href="#">Financials</a>
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-xs text-[#767684] hover:text-[#000080] transition-colors duration-200" href="#">Technical Tools</a>
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-xs text-[#767684] hover:text-[#000080] transition-colors duration-200" href="#">Dashboard</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#00003c] dark:text-[#f7f9ff]">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-[#00003c] dark:text-[#f7f9ff]">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section: The Tectonic Blueprint -->
+<section class="relative h-[870px] flex items-center overflow-hidden bg-primary">
+<div class="absolute inset-0 z-0">
+<img alt="Modern Architectural Building" class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-1000" data-alt="Luxurious modern residential building with clean lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcubHuCufrSz1OCXM3ywiT5-x6Pp_vidQxh1Gq8tLoU-8cnKJ50iBnh0VREPl6KuiyLjbOFUI3wsvqKBSBNON7diuJ1DIccUnVKE8Fx7IsClg57kgRGhPP7J0suI2eJalqZt_VR4brmGZ0_NpS9RSdmFsRcsnnrmbXdC5SHViaUWXy20WwErNOV0akqd6wyk5MQNwWYixLg7oLRYJrD0SsnXEOU5LeYHTPT8Vwv6rBvysaVcFLymHADfA1m4JMBy9-FT7eqyZekgeK"/>
+</div>
+<div class="absolute inset-0 blueprint-gradient opacity-40"></div>
+<div class="relative z-10 px-8 md:px-20 w-full">
+<div class="max-w-4xl">
+<span class="inline-block bg-secondary px-4 py-1 text-on-secondary text-[10px] uppercase tracking-[0.2em] font-bold mb-6">
+                        Excelencia Estructural
+                    </span>
+<h1 class="text-white text-5xl md:text-8xl font-extrabold font-headline leading-none tracking-[-0.04em] mb-8">
+                        CONSTRUYENDO EL <br/>FUTURO DE GUATEMALA
+                    </h1>
+<p class="text-surface-variant text-lg md:text-xl font-body max-w-xl leading-relaxed mb-10">
+                        Arquitectura de precisión y servicios técnicos de ingeniería avanzada para proyectos residenciales y comerciales de alto impacto.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-secondary text-white px-10 py-5 font-bold uppercase tracking-widest text-xs hover:bg-on-secondary-container transition-all">
+                            Ver Proyectos
+                        </button>
+<button class="border border-white/30 text-white px-10 py-5 font-bold uppercase tracking-widest text-xs hover:bg-white/10 backdrop-blur-sm transition-all">
+                            Contactar
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Data Pylons Section -->
+<section class="bg-surface py-20 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="flex flex-col">
+<span class="text-secondary text-5xl font-headline font-extrabold">120+</span>
+<span class="text-outline text-[10px] uppercase tracking-widest font-bold mt-2">Proyectos Entregados</span>
+</div>
+<div class="flex flex-col">
+<span class="text-secondary text-5xl font-headline font-extrabold">15</span>
+<span class="text-outline text-[10px] uppercase tracking-widest font-bold mt-2">Años de Trayectoria</span>
+</div>
+<div class="flex flex-col">
+<span class="text-secondary text-5xl font-headline font-extrabold">Q45M</span>
+<span class="text-outline text-[10px] uppercase tracking-widest font-bold mt-2">Inversión Gestionada</span>
+</div>
+<div class="flex flex-col">
+<span class="text-secondary text-5xl font-headline font-extrabold">100%</span>
+<span class="text-outline text-[10px] uppercase tracking-widest font-bold mt-2">Cumplimiento Técnico</span>
+</div>
+</div>
+</section>
+<!-- Catálogo de Planos: Bento Grid -->
+<section class="bg-surface-container-low py-24 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<span class="text-secondary font-bold text-xs uppercase tracking-[0.2em]">Diseño &amp; Estructura</span>
+<h2 class="text-primary text-4xl md:text-5xl font-headline font-bold mt-2">Catálogo de Planos</h2>
+</div>
+<a class="text-primary font-bold border-b border-primary pb-1 text-sm hover:text-secondary hover:border-secondary transition-all" href="#">Explorar todo el catálogo</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+<!-- Large Card -->
+<div class="md:col-span-8 bg-surface-container-lowest relative group overflow-hidden">
+<img alt="Luxury Villa Plan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Modern luxury house blueprint and exterior view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzCSYsEmPi2tembIA55PrYXxKM-9iUP11YTry8TKIXWW6ceFxVuqtyw5FvyZPmnx7v-vSM38fgc8kKIXdC707YmaHJuFOlNthn69SRHqbWv5MVLEB3ss7u0Mz6lUhetvjFLnxgn3QlknLRW3CLetzorY0uvadj5aTnaWZ3XFdtBUviPIbUu3x6oQkvhTwuSTEQwJYA45_U0o2P3pXHjNpCJdywsXTQVS907jOsgLzkcNfG_0MDrVMWUO1QPhgHoZTiIj_lrv0WKTeT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<span class="text-secondary-fixed-dim text-xs font-bold uppercase tracking-widest">Residencial Premium</span>
+<h3 class="text-white text-3xl font-headline font-bold mt-2">Modelo Aurora - Fase II</h3>
+<p class="text-surface-variant mt-4 max-w-md">Diseño minimalista con integración de luz natural y eficiencia energética Clase A.</p>
+<div class="text-white font-headline font-bold text-2xl mt-4">Desde Q185,000</div>
+</div>
+</div>
+<!-- Small Cards -->
+<div class="md:col-span-4 grid grid-rows-2 gap-6">
+<div class="bg-primary p-8 flex flex-col justify-between">
+<div>
+<h3 class="text-white text-xl font-headline font-bold">Comercial Modular</h3>
+<p class="text-outline-variant text-sm mt-2">Optimizados para rápida ejecución.</p>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-secondary-fixed-dim font-bold">Q95,000</span>
+<span class="material-symbols-outlined text-white">arrow_forward</span>
+</div>
+</div>
+<div class="bg-surface-container-highest p-8 flex flex-col justify-between relative overflow-hidden">
+<div class="z-10">
+<h3 class="text-primary text-xl font-headline font-bold">Planos de Urbanización</h3>
+<p class="text-on-surface-variant text-sm mt-2">Cumplimiento con normativas municipales.</p>
+</div>
+<div class="z-10 flex justify-between items-end">
+<span class="text-secondary font-bold">Consultar Precio</span>
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-9xl opacity-5">architecture</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Servicios Técnicos: Tonal Layering -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
+<div class="w-full lg:w-1/2">
+<img alt="Topography Service" class="w-full h-[500px] object-cover" data-alt="Professional engineer using surveying equipment on site" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDDOu9QTCkXatXm5TfwLk1uzq_dtLuCogwsvxYb7TlrL0AO79pgr7Lg3jJQ81XivWpdZ9BvMnt-qp1mgsLM84o7DyuEhEJS1zewAcn06C2ePezQnp8HuoGsG3ElbSAxW3fVGS9jCZmLJ7o0ejJ5eXRTMLGthvSO1LtX-EJKar83u10gE4rGlYYv3v0raNfP6wdWYoognGUN2jNtCmHylT3uplzYsW81lfa05jAE0yoMXMQnCWD1bmfWh5KDNi30MZhAZCcfDa819QZ"/>
+</div>
+<div class="w-full lg:w-1/2 space-y-12">
+<div>
+<span class="text-secondary font-bold text-xs uppercase tracking-[0.2em]">Ingeniería de Campo</span>
+<h2 class="text-primary text-4xl md:text-5xl font-headline font-bold mt-2">Servicios Técnicos Especializados</h2>
+</div>
+<div class="space-y-8">
+<div class="bg-surface-container p-8 flex gap-6 group hover:bg-primary transition-colors duration-300">
+<div class="bg-white p-4 h-fit group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">terrain</span>
+</div>
+<div>
+<h4 class="text-primary font-headline font-bold text-xl group-hover:text-white">Topografía de Precisión</h4>
+<p class="text-outline group-hover:text-surface-variant mt-2">Levantamientos planimétricos y altimétricos con tecnología GPS de grado milimétrico.</p>
+</div>
+</div>
+<div class="bg-surface-container p-8 flex gap-6 group hover:bg-primary transition-colors duration-300">
+<div class="bg-white p-4 h-fit group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">assignment</span>
+</div>
+<div>
+<h4 class="text-primary font-headline font-bold text-xl group-hover:text-white">Avalúos Certificados</h4>
+<p class="text-outline group-hover:text-surface-variant mt-2">Valuación comercial y fiscal bajo estándares internacionales para banca y particulares.</p>
+</div>
+</div>
+<div class="bg-surface-container p-8 flex gap-6 group hover:bg-primary transition-colors duration-300">
+<div class="bg-white p-4 h-fit group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">construction</span>
+</div>
+<div>
+<h4 class="text-primary font-headline font-bold text-xl group-hover:text-white">Supervisión de Obra</h4>
+<p class="text-outline group-hover:text-surface-variant mt-2">Control de calidad y cronograma para asegurar la integridad de su inversión.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Software de Construcción: Glassmorphism -->
+<section class="py-24 px-8 blueprint-gradient relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10">
+<span class="material-symbols-outlined text-[400px]">developer_board</span>
+</div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="text-center mb-16">
+<span class="text-secondary-fixed-dim font-bold text-xs uppercase tracking-[0.2em]">Innovación Digital</span>
+<h2 class="text-white text-4xl md:text-5xl font-headline font-bold mt-2">Software WM Enterprise</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white/10 backdrop-blur-xl p-10 border border-white/5 hover:bg-white/20 transition-all">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-4xl mb-6">analytics</span>
+<h3 class="text-white font-headline font-bold text-xl mb-4">Gestión de Costos</h3>
+<p class="text-surface-variant text-sm leading-relaxed">Software propietario para el control exacto de presupuestos y variaciones de materiales en tiempo real.</p>
+<button class="text-white font-bold text-xs uppercase mt-8 flex items-center gap-2">Saber más <span class="material-symbols-outlined text-sm">open_in_new</span></button>
+</div>
+<div class="bg-white/10 backdrop-blur-xl p-10 border border-white/5 hover:bg-white/20 transition-all">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-4xl mb-6">view_in_ar</span>
+<h3 class="text-white font-headline font-bold text-xl mb-4">Visor BIM 3D</h3>
+<p class="text-surface-variant text-sm leading-relaxed">Visualice el avance de su obra en modelos tridimensionales interactivos desde cualquier dispositivo.</p>
+<button class="text-white font-bold text-xs uppercase mt-8 flex items-center gap-2">Saber más <span class="material-symbols-outlined text-sm">open_in_new</span></button>
+</div>
+<div class="bg-white/10 backdrop-blur-xl p-10 border border-white/5 hover:bg-white/20 transition-all">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-4xl mb-6">inventory</span>
+<h3 class="text-white font-headline font-bold text-xl mb-4">Portal de Inventarios</h3>
+<p class="text-surface-variant text-sm leading-relaxed">Conexión directa con proveedores para la gestión eficiente de suministros en el sitio de construcción.</p>
+<button class="text-white font-bold text-xs uppercase mt-8 flex items-center gap-2">Saber más <span class="material-symbols-outlined text-sm">open_in_new</span></button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f7f9ff] dark:bg-[#000c18] w-full py-12 px-8 mt-20 border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="space-y-4">
+<div class="text-primary font-headline font-extrabold text-2xl tracking-tighter">
+                    WM/M&amp;S
+                </div>
+<p class="text-outline text-xs max-w-xs font-medium">
+                    Líderes en desarrollo arquitectónico y consultoría técnica de alta precisión en la región centroamericana.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-3">
+<span class="text-primary font-bold text-[10px] uppercase tracking-widest">Servicios</span>
+<a class="text-outline text-xs hover:text-primary transition-colors" href="#">Diseño de Planos</a>
+<a class="text-outline text-xs hover:text-primary transition-colors" href="#">Topografía</a>
+<a class="text-outline text-xs hover:text-primary transition-colors" href="#">Avalúos</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-primary font-bold text-[10px] uppercase tracking-widest">Compañía</span>
+<a class="text-outline text-xs hover:text-primary transition-colors" href="#">Portafolio</a>
+<a class="text-outline text-xs hover:text-primary transition-colors" href="#">Nosotros</a>
+<a class="text-outline text-xs hover:text-primary transition-colors" href="#">Contacto</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-primary font-bold text-[10px] uppercase tracking-widest">Soporte</span>
+<a class="text-outline text-xs hover:text-primary transition-colors" href="#">Internal Portal</a>
+<a class="text-outline text-xs hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-outline text-xs hover:text-primary transition-colors" href="#">Terms</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-outline-variant/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.1em] text-[#767684]">
+                © 2024 Constructora WM/M&amp;S. Architectural Precision.
+            </span>
+<div class="flex gap-6">
+<a class="text-outline hover:text-secondary" href="#"><span class="material-symbols-outlined text-xl">language</span></a>
+<a class="text-outline hover:text-secondary" href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+</div>
+</div>
+</footer>
+</body></html>

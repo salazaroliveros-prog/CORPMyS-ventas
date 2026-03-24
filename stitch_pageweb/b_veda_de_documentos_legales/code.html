@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f7f9ff",
+              "inverse-primary": "#bfc2ff",
+              "tertiary": "#000c18",
+              "on-tertiary-container": "#7b8b9b",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-error-container": "#93000a",
+              "tertiary-container": "#132330",
+              "on-surface-variant": "#464653",
+              "on-secondary-fixed": "#271900",
+              "surface-tint": "#4b53bc",
+              "outline-variant": "#c6c5d5",
+              "on-tertiary-fixed-variant": "#394857",
+              "on-primary-fixed-variant": "#3239a3",
+              "surface-container-highest": "#d4e4f6",
+              "error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#b8c8da",
+              "surface-container-high": "#d9eafc",
+              "surface-container": "#e2efff",
+              "error": "#ba1a1a",
+              "on-secondary-container": "#715000",
+              "inverse-surface": "#223240",
+              "secondary-container": "#fdc34d",
+              "on-tertiary": "#ffffff",
+              "secondary": "#7b5800",
+              "primary-fixed": "#e0e0ff",
+              "on-surface": "#0d1d2a",
+              "surface-container-low": "#ecf4ff",
+              "surface-bright": "#f7f9ff",
+              "primary-fixed-dim": "#bfc2ff",
+              "surface-variant": "#d4e4f6",
+              "on-primary": "#ffffff",
+              "on-background": "#0d1d2a",
+              "outline": "#767684",
+              "on-primary-fixed": "#00006e",
+              "on-primary-container": "#777eea",
+              "surface-dim": "#cbdcee",
+              "surface-container-lowest": "#ffffff",
+              "inverse-on-surface": "#e7f2ff",
+              "background": "#f7f9ff",
+              "primary-container": "#000080",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed": "#d4e4f6",
+              "primary": "#00003c",
+              "on-secondary-fixed-variant": "#5d4200",
+              "secondary-fixed-dim": "#f7bd48",
+              "secondary-fixed": "#ffdea6"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"none": "0px", "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+  <title>b veda de documentos legales</title>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="bg-[#f7f9ff] dark:bg-[#000c18] fixed top-0 z-50 w-full">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-[1440px] mx-auto">
+<div class="font-['Manrope'] font-black text-xl tracking-tighter text-[#00003c] dark:text-white">
+                Constructora WM/M&amp;S
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-sm text-[#00003c] dark:text-[#c6c5d5] pb-1 hover:text-[#7b5800] transition-colors duration-300" href="#">Projects</a>
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-sm text-[#00003c] dark:text-[#c6c5d5] pb-1 hover:text-[#7b5800] transition-colors duration-300" href="#">Services</a>
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-sm text-[#00003c] dark:text-[#c6c5d5] pb-1 hover:text-[#7b5800] transition-colors duration-300" href="#">About</a>
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-sm text-[#00003c] dark:text-[#c6c5d5] pb-1 hover:text-[#7b5800] transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 font-headline font-semibold uppercase text-xs tracking-widest active:opacity-80 active:scale-[0.99] transition-all">
+                Request Quote
+            </button>
+</div>
+</nav>
+<main class="pt-24 min-h-screen flex">
+<!-- SideNavBar (Hidden on small mobile) -->
+<aside class="hidden lg:flex flex-col h-full w-64 fixed left-0 top-0 pt-24 bg-[#ffffff] dark:bg-[#000c18] shadow-[20px_0_40px_rgba(13,29,42,0.06)] border-r border-[#c6c5d5]/15 z-40">
+<div class="px-6 py-8">
+<p class="font-headline font-bold text-primary dark:text-white text-lg">Project Lead</p>
+<p class="text-xs text-outline font-label uppercase tracking-wider">WM/M&amp;S Enterprise</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-4 px-6 py-4 text-[#767684] dark:text-[#c6c5d5] hover:bg-[#f7f9ff] dark:hover:bg-[#001d3d] hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#767684] dark:text-[#c6c5d5] hover:bg-[#f7f9ff] dark:hover:bg-[#001d3d] hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">architecture</span>
+<span class="text-sm font-medium">Active Sites</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 bg-[#e2efff] dark:bg-[#000080] text-[#00003c] dark:text-white border-l-4 border-[#7b5800]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="text-sm font-medium">Resources</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#767684] dark:text-[#c6c5d5] hover:bg-[#f7f9ff] dark:hover:bg-[#001d3d] hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="text-sm font-medium">Blueprints</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#767684] dark:text-[#c6c5d5] hover:bg-[#f7f9ff] dark:hover:bg-[#001d3d] hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="p-6">
+<button class="w-full bg-secondary text-white py-3 font-headline font-bold uppercase text-xs tracking-widest active:scale-[0.98] transition-transform">
+                    New Project
+                </button>
+</div>
+</aside>
+<!-- Content Canvas -->
+<section class="flex-1 lg:ml-64 p-8 md:p-12 lg:p-16 max-w-7xl mx-auto w-full">
+<!-- Header Section -->
+<div class="mb-20">
+<h1 class="text-4xl md:text-6xl font-headline font-extrabold tracking-tighter text-primary mb-4">
+                    Bóveda de Documentos Segura
+                </h1>
+<div class="w-24 h-1 bg-secondary mb-8"></div>
+<p class="text-outline max-w-2xl text-lg leading-relaxed">
+                    Gestión centralizada de activos legales y arquitectónicos. Acceso restringido con encriptación de grado militar para la integridad técnica de WM/M&amp;S.
+                </p>
+</div>
+<!-- Dashboard Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+<!-- Action Card: Upload -->
+<div class="md:col-span-1 bg-primary text-white p-10 flex flex-col justify-between aspect-square group cursor-pointer hover:bg-primary-container transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed-dim">cloud_upload</span>
+<div>
+<h3 class="text-2xl font-headline font-bold mb-2">Subir Documento</h3>
+<p class="text-sm opacity-70 mb-6">PDF, DWG o archivos de alta resolución.</p>
+<div class="flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+<span class="text-xs font-label uppercase tracking-widest">Iniciar Carga</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Stats: Security Level (Data Pylon) -->
+<div class="md:col-span-1 bg-surface-container p-10 flex flex-col justify-center border-l-4 border-secondary">
+<span class="text-6xl font-headline font-black text-secondary leading-none">99.9%</span>
+<p class="font-label text-xs uppercase tracking-[0.2em] mt-4 text-primary font-bold">Integridad de Datos</p>
+<p class="mt-8 text-sm text-on-surface-variant italic">Protocolos SHA-256 activos.</p>
+</div>
+<!-- Featured: Recent Activity -->
+<div class="md:col-span-1 bg-surface-container-low p-10 flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex justify-between items-end border-b border-outline-variant/30 pb-2">
+<span class="text-xs font-label uppercase text-outline">Última Revisión</span>
+<span class="text-sm font-bold text-primary">Hoy, 14:30</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/30 pb-2">
+<span class="text-xs font-label uppercase text-outline">Usuarios Activos</span>
+<span class="text-sm font-bold text-primary">04 Arq.</span>
+</div>
+</div>
+<div class="bg-white p-6 shadow-sm">
+<p class="text-xs font-label text-secondary font-bold uppercase mb-2">Alerta de Seguridad</p>
+<p class="text-xs text-on-surface-variant">Sin intentos de acceso no autorizados detectados en las últimas 72 horas.</p>
+</div>
+</div>
+</div>
+<!-- Categories Section -->
+<div class="space-y-24">
+<!-- Category 01 -->
+<div class="group">
+<div class="flex items-baseline gap-4 mb-10">
+<span class="text-xs font-label text-outline tracking-widest">01</span>
+<h2 class="text-3xl font-headline font-bold text-primary">Certificados de Registro</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+<!-- Doc Card -->
+<div class="bg-surface-container-lowest p-8 border-r border-b border-outline-variant/20 hover:bg-surface-bright transition-colors">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<span class="text-[10px] font-label bg-secondary/10 text-secondary px-2 py-1 uppercase font-bold tracking-tighter">Oficial</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1">Registro Mercantil A-24</h4>
+<p class="text-xs text-outline font-label uppercase tracking-widest mb-6">Expira: 12 DIC 2025</p>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 text-primary hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-lg">download</span>
+<span class="text-xs font-bold uppercase">Descargar</span>
+</button>
+<button class="flex items-center gap-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+</div>
+<!-- Doc Card -->
+<div class="bg-surface-container-lowest p-8 border-r border-b border-outline-variant/20 hover:bg-surface-bright transition-colors">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-primary">corporate_fare</span>
+<span class="text-[10px] font-label bg-secondary/10 text-secondary px-2 py-1 uppercase font-bold tracking-tighter">Oficial</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1">Acta Constitutiva WM/M&amp;S</h4>
+<p class="text-xs text-outline font-label uppercase tracking-widest mb-6">Original Escaneado</p>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 text-primary hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-lg">download</span>
+<span class="text-xs font-bold uppercase">Descargar</span>
+</button>
+<button class="flex items-center gap-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Category 02 -->
+<div class="group">
+<div class="flex items-baseline gap-4 mb-10">
+<span class="text-xs font-label text-outline tracking-widest">02</span>
+<h2 class="text-3xl font-headline font-bold text-primary">Avalúos de Propiedad</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+<!-- Doc Card -->
+<div class="bg-surface-container-lowest p-8 border-r border-b border-outline-variant/20 hover:bg-surface-bright transition-colors">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-primary">location_city</span>
+<span class="text-[10px] font-label bg-primary/10 text-primary px-2 py-1 uppercase font-bold tracking-tighter">Avalúo</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1">Complejo Industrial Norte</h4>
+<p class="text-xs text-outline font-label uppercase tracking-widest mb-6">Tasación: Q3,400,000</p>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 text-primary hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-lg">download</span>
+<span class="text-xs font-bold uppercase">Descargar</span>
+</button>
+</div>
+</div>
+<!-- Doc Card (Asymmetric Empty State) -->
+<div class="bg-surface-container-low p-8 border-r border-b border-outline-variant/20 flex flex-col items-center justify-center text-center opacity-60">
+<span class="material-symbols-outlined text-outline mb-4">add_circle</span>
+<p class="text-xs font-label uppercase tracking-widest text-outline">Nuevo Avalúo</p>
+</div>
+</div>
+</div>
+<!-- Category 03 -->
+<div class="group">
+<div class="flex items-baseline gap-4 mb-10">
+<span class="text-xs font-label text-outline tracking-widest">03</span>
+<h2 class="text-3xl font-headline font-bold text-primary">Solvencias Fiscales</h2>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high border-b border-primary/10">
+<th class="px-8 py-4 font-label text-xs uppercase tracking-widest text-primary font-bold">Documento</th>
+<th class="px-8 py-4 font-label text-xs uppercase tracking-widest text-primary font-bold">Estado</th>
+<th class="px-8 py-4 font-label text-xs uppercase tracking-widest text-primary font-bold">Periodo</th>
+<th class="px-8 py-4 font-label text-xs uppercase tracking-widest text-primary font-bold">Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="hover:bg-white transition-colors group/row">
+<td class="px-8 py-6 font-headline font-bold text-primary">Solvencia SAT 2024-Q1</td>
+<td class="px-8 py-6">
+<span class="flex items-center gap-2 text-xs font-bold uppercase text-secondary">
+<span class="w-2 h-2 bg-secondary"></span> Vigente
+                                        </span>
+</td>
+<td class="px-8 py-6 text-sm text-outline">Enero - Marzo 2024</td>
+<td class="px-8 py-6">
+<button class="material-symbols-outlined text-primary group-hover/row:scale-110 transition-transform">download</button>
+</td>
+</tr>
+<tr class="hover:bg-white transition-colors group/row">
+<td class="px-8 py-6 font-headline font-bold text-primary">Impuesto Territorial - Sector 12</td>
+<td class="px-8 py-6">
+<span class="flex items-center gap-2 text-xs font-bold uppercase text-secondary">
+<span class="w-2 h-2 bg-secondary"></span> Vigente
+                                        </span>
+</td>
+<td class="px-8 py-6 text-sm text-outline">Anual 2024</td>
+<td class="px-8 py-6">
+<button class="material-symbols-outlined text-primary group-hover/row:scale-110 transition-transform">download</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#000c18] dark:bg-[#000000] w-full py-12 px-8 mt-20">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-12">
+<div class="font-['Manrope'] font-bold text-white mb-6 md:mb-0">
+                Constructora WM/M&amp;S
+            </div>
+<div class="flex flex-wrap justify-center gap-8 mb-6 md:mb-0">
+<a class="font-['Inter'] text-xs tracking-widest uppercase opacity-70 text-[#767684] hover:text-[#f7bd48] transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase opacity-70 text-[#767684] hover:text-[#f7bd48] transition-colors" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase opacity-70 text-[#767684] hover:text-[#f7bd48] transition-colors" href="#">Safety Protocols</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase opacity-70 text-[#767684] hover:text-[#f7bd48] transition-colors" href="#">Certifications</a>
+</div>
+<div class="font-['Inter'] text-[10px] tracking-[0.2em] uppercase text-[#f7bd48] opacity-50">
+                © 2024 Constructora WM/M&amp;S. Architectural Precision Guaranteed.
+            </div>
+</div>
+</footer>
+</body></html>

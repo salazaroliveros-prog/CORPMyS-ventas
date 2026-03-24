@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f7f9ff",
+              "inverse-primary": "#bfc2ff",
+              "tertiary": "#000c18",
+              "on-tertiary-container": "#7b8b9b",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-error-container": "#93000a",
+              "tertiary-container": "#132330",
+              "on-surface-variant": "#464653",
+              "on-secondary-fixed": "#271900",
+              "surface-tint": "#4b53bc",
+              "outline-variant": "#c6c5d5",
+              "on-tertiary-fixed-variant": "#394857",
+              "on-primary-fixed-variant": "#3239a3",
+              "surface-container-highest": "#d4e4f6",
+              "error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#b8c8da",
+              "surface-container-high": "#d9eafc",
+              "surface-container": "#e2efff",
+              "error": "#ba1a1a",
+              "on-secondary-container": "#715000",
+              "inverse-surface": "#223240",
+              "secondary-container": "#fdc34d",
+              "on-tertiary": "#ffffff",
+              "secondary": "#7b5800",
+              "primary-fixed": "#e0e0ff",
+              "on-surface": "#0d1d2a",
+              "surface-container-low": "#ecf4ff",
+              "surface-bright": "#f7f9ff",
+              "primary-fixed-dim": "#bfc2ff",
+              "surface-variant": "#d4e4f6",
+              "on-primary": "#ffffff",
+              "on-background": "#0d1d2a",
+              "outline": "#767684",
+              "on-primary-fixed": "#00006e",
+              "on-primary-container": "#777eea",
+              "surface-dim": "#cbdcee",
+              "surface-container-lowest": "#ffffff",
+              "inverse-on-surface": "#e7f2ff",
+              "background": "#f7f9ff",
+              "primary-container": "#000080",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed": "#d4e4f6",
+              "primary": "#00003c",
+              "on-secondary-fixed-variant": "#5d4200",
+              "secondary-fixed-dim": "#f7bd48",
+              "secondary-fixed": "#ffdea6"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .blueprint-bg {
+            background-image: linear-gradient(135deg, #00003c 0%, #000080 100%);
+        }
+    </style>
+  <title>cronograma de proyectos wm m s 2</title>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- Sidebar Navigation -->
+<nav class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest dark:bg-tertiary flex flex-col border-r border-outline-variant/15 z-50">
+<div class="font-['Manrope'] font-bold text-primary dark:text-white px-6 py-8 text-lg">
+            Constructora WM/M&amp;S
+        </div>
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3 mb-1">
+<div class="w-10 h-10 bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<div>
+<p class="font-bold text-sm text-primary dark:text-white leading-none">Project Lead</p>
+<p class="text-xs text-outline">WM/M&amp;S Enterprise</p>
+</div>
+</div>
+</div>
+<div class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-outline hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-surface-container dark:bg-primary-container text-primary dark:text-white border-l-4 border-secondary translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">architecture</span>
+<span class="text-sm font-medium">Active Sites</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-outline hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="text-sm font-medium">Blueprints</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-outline hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="text-sm font-medium">Resources</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-outline hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</div>
+<div class="p-4">
+<button class="w-full bg-primary text-white py-4 font-bold text-sm tracking-wider uppercase flex items-center justify-center gap-2 hover:opacity-90 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+                New Project
+            </button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="ml-64 min-h-screen">
+<!-- Top Navigation -->
+<header class="bg-surface-bright dark:bg-tertiary flex justify-between items-center w-full px-8 py-6 sticky top-0 z-40">
+<div class="flex flex-col">
+<span class="text-xs font-bold tracking-[0.1em] text-secondary uppercase">Cronograma de Obra</span>
+<h1 class="text-2xl font-black tracking-tighter text-primary dark:text-white">Residencial Los Olivos - Fase I</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8">
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-sm text-primary dark:text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Projects</a>
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-sm text-secondary border-b-2 border-secondary pb-1" href="#">Timeline</a>
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-sm text-primary dark:text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Resources</a>
+</div>
+<button class="bg-primary text-white px-6 py-2 font-['Manrope'] font-semibold text-sm uppercase tracking-tight hover:opacity-90 transition-all">
+                    Request Quote
+                </button>
+</div>
+</header>
+<section class="p-8 space-y-8 max-w-[1400px] mx-auto">
+<!-- Project Overview Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-0">
+<div class="bg-surface-container-lowest p-8 border-r border-outline-variant/10">
+<p class="font-['Inter'] text-xs tracking-widest uppercase text-outline mb-1">Presupuesto Total</p>
+<p class="text-3xl font-bold text-primary">Q 4.25M</p>
+</div>
+<div class="bg-surface-container-lowest p-8 border-r border-outline-variant/10">
+<p class="font-['Inter'] text-xs tracking-widest uppercase text-outline mb-1">Progreso General</p>
+<p class="text-3xl font-bold text-secondary">64%</p>
+</div>
+<div class="bg-surface-container-lowest p-8 border-r border-outline-variant/10">
+<p class="font-['Inter'] text-xs tracking-widest uppercase text-outline mb-1">Días Restantes</p>
+<p class="text-3xl font-bold text-primary">115</p>
+</div>
+<div class="bg-surface-container-lowest p-8">
+<p class="font-['Inter'] text-xs tracking-widest uppercase text-outline mb-1">Estado Legal</p>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-green-500 rounded-full"></span>
+<p class="text-3xl font-bold text-primary">Al Día</p>
+</div>
+</div>
+</div>
+<!-- Gantt Chart Module -->
+<div class="bg-surface-container-lowest shadow-[0_20px_40px_rgba(13,29,42,0.06)] overflow-hidden">
+<div class="p-6 bg-surface-container-low flex justify-between items-center border-b border-outline-variant/10">
+<h3 class="text-lg font-bold text-primary uppercase tracking-tight">Diagrama de Gantt - Q3 2024</h3>
+<div class="flex gap-2">
+<button class="p-2 border border-outline-variant hover:bg-white transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2 border border-outline-variant hover:bg-white transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<div class="min-w-[1000px]">
+<!-- Gantt Header -->
+<div class="grid grid-cols-[300px_repeat(12,1fr)] bg-surface-container-low border-b border-outline-variant/20">
+<div class="p-4 font-bold text-xs uppercase text-outline tracking-wider">Actividad / Tarea</div>
+<div class="p-4 text-center text-[10px] font-bold text-outline">JUL 01</div>
+<div class="p-4 text-center text-[10px] font-bold text-outline">JUL 15</div>
+<div class="p-4 text-center text-[10px] font-bold text-outline">AGO 01</div>
+<div class="p-4 text-center text-[10px] font-bold text-outline">AGO 15</div>
+<div class="p-4 text-center text-[10px] font-bold text-outline">SEP 01</div>
+<div class="p-4 text-center text-[10px] font-bold text-outline">SEP 15</div>
+<div class="p-4 text-center text-[10px] font-bold text-outline">OCT 01</div>
+<div class="p-4 text-center text-[10px] font-bold text-outline">OCT 15</div>
+<div class="p-4 text-center text-[10px] font-bold text-outline">NOV 01</div>
+<div class="p-4 text-center text-[10px] font-bold text-outline">NOV 15</div>
+<div class="p-4 text-center text-[10px] font-bold text-outline">DIC 01</div>
+<div class="p-4 text-center text-[10px] font-bold text-outline">DIC 15</div>
+</div>
+<!-- Gantt Row: Architectural -->
+<div class="grid grid-cols-[300px_repeat(12,1fr)] border-b border-outline-variant/5 group hover:bg-surface-container-low/50">
+<div class="p-4 flex flex-col justify-center">
+<span class="text-sm font-bold text-primary">Planos Arquitectónicos Finales</span>
+<span class="text-[10px] text-outline uppercase tracking-tighter">Fase de Diseño</span>
+</div>
+<div class="col-span-12 p-4 relative flex items-center">
+<div class="absolute left-0 w-[25%] h-8 blueprint-bg flex items-center px-3 justify-between">
+<span class="text-[10px] text-white font-bold">100%</span>
+<span class="material-symbols-outlined text-white text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Gantt Row: Legal -->
+<div class="grid grid-cols-[300px_repeat(12,1fr)] border-b border-outline-variant/5 group hover:bg-surface-container-low/50">
+<div class="p-4 flex flex-col justify-center">
+<span class="text-sm font-bold text-primary">Permisos de Construcción (Muni)</span>
+<span class="text-[10px] text-outline uppercase tracking-tighter">Trámites Legales</span>
+</div>
+<div class="col-span-12 p-4 relative flex items-center">
+<div class="absolute left-[15%] w-[40%] h-8 bg-secondary-fixed-dim flex items-center px-3 justify-between" style="width: 45%; left: 15%;">
+<span class="text-[10px] text-on-secondary-fixed font-bold">85%</span>
+<span class="material-symbols-outlined text-on-secondary-fixed text-sm">hourglass_empty</span>
+</div>
+</div>
+</div>
+<!-- Gantt Row: Structural -->
+<div class="grid grid-cols-[300px_repeat(12,1fr)] border-b border-outline-variant/5 group hover:bg-surface-container-low/50">
+<div class="p-4 flex flex-col justify-center">
+<span class="text-sm font-bold text-primary">Cimentación y Estructura</span>
+<span class="text-[10px] text-outline uppercase tracking-tighter">Obra Gris</span>
+</div>
+<div class="col-span-12 p-4 relative flex items-center">
+<div class="absolute left-[33.33%] w-[20%] h-8 bg-primary/80 flex items-center px-3 justify-between">
+<span class="text-[10px] text-white font-bold">20%</span>
+<span class="material-symbols-outlined text-white text-sm">hourglass_empty</span>
+</div>
+</div>
+</div>
+<!-- Gantt Row: MEP -->
+<div class="grid grid-cols-[300px_repeat(12,1fr)] border-b border-outline-variant/5 group hover:bg-surface-container-low/50">
+<div class="p-4 flex flex-col justify-center">
+<span class="text-sm font-bold text-primary">Instalaciones Eléctricas</span>
+<span class="text-[10px] text-outline uppercase tracking-tighter">Sistemas Internos</span>
+</div>
+<div class="col-span-12 p-4 relative flex items-center">
+<div class="absolute left-[70%] w-[20%] h-8 bg-surface-container-high border border-dashed border-outline-variant flex items-center px-3">
+<span class="text-[10px] text-outline font-bold">Pendiente</span>
+</div>
+</div>
+</div>
+<!-- Gantt Row: Finishes -->
+<div class="grid grid-cols-[300px_repeat(12,1fr)] border-b border-outline-variant/5 group hover:bg-surface-container-low/50">
+<div class="p-4 flex flex-col justify-center">
+<span class="text-sm font-bold text-primary">Acabados Finales</span>
+<span class="text-[10px] text-outline uppercase tracking-tighter">Fase de Cierre</span>
+</div>
+<div class="col-span-12 p-4 relative flex items-center">
+<div class="absolute left-[83.33%] w-[16.67%] h-8 bg-surface-container-high border border-dashed border-outline-variant flex items-center px-3">
+<span class="text-[10px] text-outline font-bold">Pendiente</span>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+<!-- Two Column Technical Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Real-time Activity Pylon -->
+<div class="lg:col-span-1 space-y-6">
+<div class="bg-primary p-8 text-white relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-[10px] tracking-[0.2em] uppercase opacity-70 mb-4">Métrica de Rendimiento</p>
+<div class="flex flex-col gap-1">
+<span class="text-5xl font-black text-secondary-fixed-dim">Q 15.4k</span>
+<span class="text-xs uppercase tracking-widest opacity-80">Gasto Promedio Diario</span>
+</div>
+</div>
+<div class="absolute right-[-20px] bottom-[-20px] opacity-10">
+<span class="material-symbols-outlined text-[120px]">payments</span>
+</div>
+</div>
+<div class="bg-surface-container p-8 space-y-6">
+<h4 class="font-bold text-primary uppercase tracking-tight border-b border-primary/10 pb-4">Actividad en Tiempo Real</h4>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="w-1 bg-secondary"></div>
+<div>
+<p class="text-sm font-bold text-primary">Licencia de Impacto Ambiental</p>
+<p class="text-[10px] text-outline">Aprobada por MARN • Hace 2h</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-1 bg-outline-variant"></div>
+<div>
+<p class="text-sm font-bold text-primary">Revisión de Planos Hidráulicos</p>
+<p class="text-[10px] text-outline">Enviado a corrección • Hace 5h</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-1 bg-secondary"></div>
+<div>
+<p class="text-sm font-bold text-primary">Entrega de Hierro Estructural</p>
+<p class="text-[10px] text-outline">Confirmado en sitio • Ayer</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Architectural Detail Cards -->
+<div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-lowest p-0 flex flex-col">
+<div class="h-48 overflow-hidden relative">
+<img alt="Architectural blueprint and tools" class="w-full h-full object-cover" data-alt="Technical architectural blueprints spread on a desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAds3fqnPCVzjMOozU-UTJOF-fYdopHVCJvkF2yH5rP_kyISAn9KceBTx1oIL6mpfJB_hdSZOh3QZ9rUCwn19stMfiUvse2fMVFoSGNy8JSs-2HpAl1a-YaAlt7kxj4FqX_avqwSRrYdwDOUCltPQOhPSodQnUNfCmsCSh4YbxPYNiBa2Vbqammz7rvd_FStrc8UJlV4bYQg6VKwdEGa614umNfXp49HUSHxj7IC2hw5ylDeYhogKDkPCKkpM1n-UQ4iBPe52VFz7a3"/>
+<div class="absolute inset-0 bg-primary/20"></div>
+<div class="absolute top-4 left-4 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary">Plano A-102</div>
+</div>
+<div class="p-6 pb-12">
+<h4 class="text-lg font-bold text-primary mb-2">Diseño de Fachada Norte</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-4">Aprobación final recibida. Iniciando detalles de mampostería reforzada según especificaciones técnicas V-2024.</p>
+<div class="flex gap-4">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-secondary">Estatus</span>
+<span class="text-[10px] uppercase text-outline">Validado</span>
+</div>
+<div class="flex flex-col border-l border-outline-variant/30 pl-4">
+<span class="text-xs font-bold text-primary">Revisor</span>
+<span class="text-[10px] uppercase text-outline">Arq. Mendez</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-0 flex flex-col">
+<div class="h-48 overflow-hidden relative">
+<img alt="Construction site with permits" class="w-full h-full object-cover" data-alt="Official government legal documents and construction permits" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5FGhZ2PWQsL2lO1fZ9zZH1swQak1NZDf_UMzlg7a1o2nk-7j1FZLS0f-ymKwm6d_Depdjj7S8vfQE3YPGM6EeUL4L68jznoiyXV7XSUNOuCUyTmwLgiFXYtoB7hlZXvkp5hwvAz6ouR4U2gLHrQ0w4SeJOtxdxy_h643leyqy9ImQXgaWC4v-Eb368NPR3rxn9_56yJ7QmpuuLcYDhMziZHPdWvWC3v2E9MEbspBBz43T8p62aduQ-Id1U6GXGw2LczEGExlQvDmA"/>
+<div class="absolute inset-0 bg-primary/20"></div>
+<div class="absolute top-4 left-4 bg-secondary-container px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-on-secondary-container">Legal</div>
+</div>
+<div class="p-6 pb-12">
+<h4 class="text-lg font-bold text-primary mb-2">Permisos Municipales</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-4">Trámite No. 8829-GUA. Pago de tasas municipales procesado por valor de Q 45,000.00.</p>
+<div class="flex gap-4">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-secondary">Expediente</span>
+<span class="text-[10px] uppercase text-outline">Activo</span>
+</div>
+<div class="flex flex-col border-l border-outline-variant/30 pl-4">
+<span class="text-xs font-bold text-primary">Vence</span>
+<span class="text-[10px] uppercase text-outline">30 DIC 2024</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-tertiary w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center border-t border-white/5 mt-20">
+<div class="flex flex-col gap-2 mb-6 md:mb-0">
+<span class="font-['Manrope'] font-bold text-white text-lg">Constructora WM/M&amp;S</span>
+<p class="font-['Inter'] text-[10px] tracking-widest uppercase text-outline">© 2024 Architectural Precision Guaranteed.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-outline hover:text-secondary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-outline hover:text-secondary-fixed-dim transition-colors" href="#">Safety Protocols</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-outline hover:text-secondary-fixed-dim transition-colors" href="#">Certifications</a>
+</div>
+</footer>
+</main>
+</body></html>

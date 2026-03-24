@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#132330",
+              "on-surface": "#0d1d2a",
+              "surface-variant": "#d4e4f6",
+              "on-surface-variant": "#464653",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#e2efff",
+              "primary-fixed": "#e0e0ff",
+              "on-primary-fixed": "#00006e",
+              "surface-tint": "#4b53bc",
+              "surface-container-low": "#ecf4ff",
+              "outline-variant": "#c6c5d5",
+              "on-secondary-fixed": "#271900",
+              "tertiary-fixed": "#d4e4f6",
+              "surface-dim": "#cbdcee",
+              "on-tertiary-fixed": "#0d1d2a",
+              "inverse-surface": "#223240",
+              "on-secondary-container": "#715000",
+              "on-tertiary": "#ffffff",
+              "surface-container-highest": "#d4e4f6",
+              "primary": "#00003c",
+              "on-secondary-fixed-variant": "#5d4200",
+              "on-tertiary-fixed-variant": "#394857",
+              "on-background": "#0d1d2a",
+              "surface-bright": "#f7f9ff",
+              "secondary-fixed-dim": "#f7bd48",
+              "tertiary-fixed-dim": "#b8c8da",
+              "secondary-fixed": "#ffdea6",
+              "on-tertiary-container": "#7b8b9b",
+              "secondary": "#7b5800",
+              "on-error": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#3239a3",
+              "error-container": "#ffdad6",
+              "tertiary": "#000c18",
+              "secondary-container": "#fdc34d",
+              "on-primary": "#ffffff",
+              "primary-container": "#000080",
+              "on-primary-container": "#777eea",
+              "error": "#ba1a1a",
+              "surface": "#f7f9ff",
+              "primary-fixed-dim": "#bfc2ff",
+              "inverse-primary": "#bfc2ff",
+              "outline": "#767684",
+              "on-error-container": "#93000a",
+              "inverse-on-surface": "#e7f2ff",
+              "background": "#f7f9ff",
+              "surface-container-high": "#d9eafc"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+    <title>confirmaci n de pago m vil 1</title>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 bg-[#f7f9ff] flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer">arrow_back</span>
+<span class="text-lg font-bold tracking-[-0.02em] text-[#00003c]">CONSTRUCTORA WM/M&amp;S</span>
+</div>
+<span class="material-symbols-outlined text-primary">account_circle</span>
+</header>
+<main class="mt-16 mb-20 flex-grow px-6 py-8">
+<!-- Progress Indicator -->
+<div class="mb-12">
+<div class="flex justify-between items-end mb-4">
+<span class="font-label text-[10px] uppercase tracking-[0.1em] font-medium text-outline">Paso 3 de 3</span>
+<span class="font-label text-[10px] uppercase tracking-[0.1em] font-medium text-secondary">Finalizado</span>
+</div>
+<div class="h-[2px] w-full bg-surface-container flex">
+<div class="h-full w-full bg-secondary"></div>
+</div>
+</div>
+<!-- Success Message Header -->
+<section class="mb-12">
+<div class="mb-6 inline-flex items-center justify-center w-16 h-16 bg-secondary text-on-secondary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h1 class="text-4xl font-extrabold text-primary tracking-tight leading-none mb-4">¡Compra Exitosa!</h1>
+<p class="text-on-surface-variant leading-relaxed max-w-[280px]">Su transacción ha sido procesada con precisión técnica y seguridad estructural.</p>
+</section>
+<!-- Transaction Details: Data Pylon Grid -->
+<section class="grid grid-cols-2 gap-x-4 gap-y-12 mb-16">
+<div class="flex flex-col">
+<span class="font-headline text-3xl font-bold text-secondary">#WM-8429</span>
+<span class="font-label text-[10px] uppercase tracking-[0.1em] font-medium text-outline mt-1">Número de Orden</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline text-3xl font-bold text-secondary">Q12,500.00</span>
+<span class="font-label text-[10px] uppercase tracking-[0.1em] font-medium text-outline mt-1">Total Pagado</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline text-xl font-bold text-primary">VISA **** 4291</span>
+<span class="font-label text-[10px] uppercase tracking-[0.1em] font-medium text-outline mt-1">Método de Pago</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline text-xl font-bold text-primary">24 OCT 2023</span>
+<span class="font-label text-[10px] uppercase tracking-[0.1em] font-medium text-outline mt-1">Fecha Emisión</span>
+</div>
+</section>
+<!-- Action Modules -->
+<div class="space-y-4">
+<button class="w-full bg-primary text-on-primary py-5 px-6 flex justify-between items-center transition-all active:scale-[0.98]">
+<span class="font-headline font-bold tracking-tight">Descargar Planos</span>
+<span class="material-symbols-outlined">architecture</span>
+</button>
+<button class="w-full bg-surface-container-low text-primary py-5 px-6 flex justify-between items-center transition-all active:scale-[0.98]">
+<span class="font-headline font-bold tracking-tight">Ver Factura FEL</span>
+<span class="material-symbols-outlined">receipt_long</span>
+</button>
+</div>
+<!-- Security Badge -->
+<div class="mt-16 pt-8 border-t border-outline-variant/15 flex items-center gap-4">
+<div class="w-10 h-10 bg-gradient-to-br from-[#00003c] to-[#000080] flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase tracking-[0.1em] font-bold text-primary">IA Gemini Protection</p>
+<p class="text-[10px] text-on-surface-variant leading-tight">Transacción monitoreada y cifrada con protocolos de seguridad avanzada.</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Component -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-safe px-4 bg-[#ffffff] shadow-[0_-20px_40px_rgba(13,29,42,0.06)] z-50">
+<div class="flex flex-col items-center justify-center text-[#767684] pt-2">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.1em] font-medium">PROJECTS</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#767684] pt-2">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.1em] font-medium">PLANS</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7b5800] border-t-2 border-[#7b5800] pt-2">
+<span class="material-symbols-outlined" data-icon="payments" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.1em] font-medium">PAYMENTS</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#767684] pt-2">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.1em] font-medium">PROFILE</span>
+</div>
+</nav>
+</body></html>

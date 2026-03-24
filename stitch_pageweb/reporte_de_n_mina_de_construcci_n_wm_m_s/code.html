@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;family=Noto+Serif:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#b8c8da",
+              "secondary-fixed-dim": "#f7bd48",
+              "on-surface": "#0d1d2a",
+              "secondary-container": "#fdc34d",
+              "inverse-on-surface": "#e7f2ff",
+              "tertiary-container": "#132330",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-primary-fixed": "#00006e",
+              "surface-container-highest": "#d4e4f6",
+              "surface": "#f7f9ff",
+              "on-tertiary": "#ffffff",
+              "inverse-surface": "#223240",
+              "on-primary-container": "#777eea",
+              "tertiary": "#000c18",
+              "surface-container-high": "#d9eafc",
+              "primary-fixed-dim": "#bfc2ff",
+              "surface-container": "#e2efff",
+              "outline": "#767684",
+              "on-secondary-fixed": "#271900",
+              "on-error-container": "#93000a",
+              "on-background": "#0d1d2a",
+              "primary": "#00003c",
+              "on-tertiary-fixed": "#0d1d2a",
+              "secondary": "#7b5800",
+              "outline-variant": "#c6c5d5",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "surface-dim": "#cbdcee",
+              "on-secondary-container": "#715000",
+              "on-tertiary-fixed-variant": "#394857",
+              "tertiary-fixed": "#d4e4f6",
+              "background": "#f7f9ff",
+              "surface-tint": "#4b53bc",
+              "on-primary-fixed-variant": "#3239a3",
+              "surface-container-low": "#ecf4ff",
+              "primary-container": "#000080",
+              "on-surface-variant": "#464653",
+              "on-tertiary-container": "#7b8b9b",
+              "primary-fixed": "#e0e0ff",
+              "surface-variant": "#d4e4f6",
+              "inverse-primary": "#bfc2ff",
+              "surface-bright": "#f7f9ff",
+              "error": "#ba1a1a",
+              "on-secondary-fixed-variant": "#5d4200",
+              "secondary-fixed": "#ffdea6"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f7f9ff;
+            color: #0d1d2a;
+            font-family: 'Inter', sans-serif;
+        }
+        .architectural-grid {
+            background-image: radial-gradient(#c6c5d5 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+    </style>
+  <title>reporte de n mina de construcci n wm m s</title>
+</head>
+<body class="flex min-h-screen">
+<!-- SideNavBar (Authority Source: JSON) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-blue-950 flex flex-col py-6 shadow-[20px_0_40px_rgba(13,29,42,0.06)] z-50">
+<div class="px-6 mb-10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="architecture">architecture</span>
+</div>
+<div>
+<h1 class="text-lg font-black text-white tracking-tighter leading-none">Tectonic Build</h1>
+<p class="text-[10px] text-slate-400 uppercase tracking-widest mt-1">Payroll Division</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<div class="text-slate-400 pl-5 py-3 hover:bg-blue-900 hover:text-white transition-all flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="dashboard">dashboard</span>
+<span class="font-inter text-sm tracking-normal">Dashboard</span>
+</div>
+<div class="text-yellow-500 font-bold border-l-4 border-yellow-500 pl-4 py-3 bg-blue-900/50 flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="pending_actions">pending_actions</span>
+<span class="font-inter text-sm tracking-normal">Timecards</span>
+</div>
+<div class="text-slate-400 pl-5 py-3 hover:bg-blue-900 hover:text-white transition-all flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="payments">payments</span>
+<span class="font-inter text-sm tracking-normal">Labor Costs</span>
+</div>
+<div class="text-slate-400 pl-5 py-3 hover:bg-blue-900 hover:text-white transition-all flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span>
+<span class="font-inter text-sm tracking-normal">Compliance</span>
+</div>
+<div class="text-slate-400 pl-5 py-3 hover:bg-blue-900 hover:text-white transition-all flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="inventory_2">inventory_2</span>
+<span class="font-inter text-sm tracking-normal">Archives</span>
+</div>
+</nav>
+<div class="px-6 mb-8">
+<button class="w-full bg-secondary text-white py-3 font-bold text-xs uppercase tracking-widest hover:bg-opacity-90 transition-all">
+                New Report
+            </button>
+</div>
+<div class="mt-auto border-t border-blue-900/50 pt-4">
+<div class="text-slate-400 pl-5 py-3 hover:bg-blue-900 hover:text-white transition-all flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="help">help</span>
+<span class="font-inter text-sm tracking-normal">Support</span>
+</div>
+<div class="text-slate-400 pl-5 py-3 hover:bg-blue-900 hover:text-white transition-all flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="logout">logout</span>
+<span class="font-inter text-sm tracking-normal">Sign Out</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-64 architectural-grid min-h-screen">
+<!-- TopNavBar (Authority Source: JSON) -->
+<header class="bg-slate-50 flex justify-between items-center px-8 h-16 w-full sticky top-0 z-40">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold uppercase tracking-widest text-blue-900">Architectural Payroll</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-slate-500 font-manrope font-semibold tracking-tight hover:text-yellow-600 transition-colors duration-200" href="#">Projects</a>
+<a class="text-slate-500 font-manrope font-semibold tracking-tight hover:text-yellow-600 transition-colors duration-200" href="#">Personnel</a>
+<a class="text-blue-900 border-b-2 border-yellow-600 pb-1 font-manrope font-semibold tracking-tight" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative">
+<span class="material-symbols-outlined text-blue-900" data-icon="notifications">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-secondary"></span>
+</div>
+<span class="material-symbols-outlined text-blue-900" data-icon="settings">settings</span>
+<div class="h-8 w-8 bg-surface-container-highest flex items-center justify-center">
+<img alt="User profile avatar" class="h-full w-full object-cover" data-alt="Corporate headshot of a male architect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgyhpp6kwi-hc-8Ur_pgHXfl4uE85MBwXJrjtGJWhWV6y2xEkzeqZSTsQ3sL-Ko6qs5iBGNA3EjB1jH8Q9tt6TALe-eksEHLnRLuyZMupuJsj8NSc9v331bY4dnmw7o01v15xEjR-aagVDeBeFCkJUDQSPQxaiVomwq7ekAqL8mV92rJkFAue86D7k-itQ1887IJdFrtgaYV5_Ztyjlmm83CO-CXqe_sHqBiAseo4RlmtsAzCkbjzwDU5DCBBztgh8TQB4afl4yAoC"/>
+</div>
+</div>
+</header>
+<div class="p-12 max-w-7xl mx-auto">
+<!-- Hero Header Section -->
+<section class="mb-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="text-secondary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Reporte de Nómina Operativa</span>
+<h2 class="font-headline text-5xl font-extrabold text-primary tracking-tighter leading-none mb-4" style="font-family: 'Noto Serif', serif;">
+                            Residencial <br/> Los Olivos
+                        </h2>
+<div class="flex items-center gap-4 text-outline font-medium">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span> Semana 42: 15-21 Oct, 2023</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> Ciudad de Guatemala</span>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="bg-primary text-white px-8 py-4 text-xs font-bold uppercase tracking-widest flex items-center gap-3 hover:translate-y-[-2px] transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+                            Approve Payroll
+                        </button>
+<button class="border border-outline text-primary px-6 py-4 text-xs font-bold uppercase tracking-widest hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Data Pylons (Metrics) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-0 mb-20 bg-surface-container-low">
+<div class="p-10 bg-white border-r border-surface-container">
+<p class="font-label text-xs font-bold uppercase tracking-[0.15em] text-outline mb-4">Total Nómina Semanal</p>
+<div class="flex items-baseline gap-2">
+<span class="text-secondary text-lg font-bold">Q</span>
+<h3 class="font-headline text-4xl font-extrabold text-primary tracking-tighter">142,580.00</h3>
+</div>
+<div class="mt-4 flex items-center gap-2 text-green-700 text-xs font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+<span>4.2% vs semana anterior</span>
+</div>
+</div>
+<div class="p-10 bg-white border-r border-surface-container">
+<p class="font-label text-xs font-bold uppercase tracking-[0.15em] text-outline mb-4">Total Deducciones (IGSS/ISR)</p>
+<div class="flex items-baseline gap-2">
+<span class="text-secondary text-lg font-bold">Q</span>
+<h3 class="font-headline text-4xl font-extrabold text-primary tracking-tighter">18,450.50</h3>
+</div>
+<p class="mt-4 text-outline text-xs">Cálculo basado en base legal vigente</p>
+</div>
+<div class="p-10 bg-primary text-white">
+<p class="font-label text-xs font-bold uppercase tracking-[0.15em] text-blue-300 mb-4">Neto a Pagar</p>
+<div class="flex items-baseline gap-2">
+<span class="text-secondary-fixed-dim text-lg font-bold">Q</span>
+<h3 class="font-headline text-4xl font-extrabold text-white tracking-tighter">124,129.50</h3>
+</div>
+<div class="mt-4 flex items-center gap-2 text-blue-200 text-xs">
+<span class="material-symbols-outlined text-sm" data-icon="account_balance">account_balance</span>
+<span>List para transferencia masiva</span>
+</div>
+</div>
+</section>
+<!-- Asymmetric Grid: Charts & Table -->
+<div class="grid grid-cols-12 gap-10">
+<!-- Distribution Chart (Left Column) -->
+<div class="col-span-12 lg:col-span-4 space-y-10">
+<div class="bg-white p-8">
+<h4 class="font-headline text-lg font-bold text-primary mb-8 border-l-4 border-secondary pl-4">Labor Cost Distribution</h4>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-xs font-bold uppercase tracking-widest mb-2">
+<span>Albañiles</span>
+<span>45%</span>
+</div>
+<div class="w-full h-2 bg-surface-container">
+<div class="h-full bg-primary" style="width: 45%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-bold uppercase tracking-widest mb-2">
+<span>Maestros de Obra</span>
+<span>30%</span>
+</div>
+<div class="w-full h-2 bg-surface-container">
+<div class="h-full bg-secondary" style="width: 30%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-bold uppercase tracking-widest mb-2">
+<span>Técnicos Especializados</span>
+<span>25%</span>
+</div>
+<div class="w-full h-2 bg-surface-container">
+<div class="h-full bg-blue-400" style="width: 25%"></div>
+</div>
+</div>
+</div>
+<div class="mt-12 p-6 bg-surface-container-low">
+<p class="text-[11px] text-outline uppercase font-bold tracking-widest mb-2">Resumen de Personal</p>
+<p class="text-2xl font-black text-primary">54 <span class="text-sm font-normal text-slate-500">Colaboradores Activos</span></p>
+</div>
+</div>
+<div class="bg-primary text-white p-8 flex flex-col justify-between aspect-square">
+<h4 class="font-headline text-xl font-bold">Digital FEL Integration</h4>
+<p class="text-blue-200 text-sm leading-relaxed">Generación automática de recibos electrónicos con validez SAT para cada colaborador.</p>
+<button class="bg-secondary text-white py-4 font-bold text-xs uppercase tracking-widest w-full">
+                            Generate FEL Paystubs
+                        </button>
+</div>
+</div>
+<!-- Detailed Table (Right Column) -->
+<div class="col-span-12 lg:col-span-8">
+<div class="bg-white shadow-[0_20px_40px_rgba(13,29,42,0.06)] overflow-hidden">
+<div class="p-8 flex justify-between items-center bg-surface-container-lowest">
+<h4 class="font-headline text-lg font-bold text-primary">Detalle de Colaboradores</h4>
+<div class="flex gap-2">
+<button class="p-2 bg-surface-container text-primary hover:bg-secondary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+</button>
+<button class="px-4 py-2 bg-surface-container text-primary text-xs font-bold uppercase tracking-widest hover:bg-outline-variant transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="picture_as_pdf">picture_as_pdf</span>
+                                    Export to PDF
+                                </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface text-[10px] font-bold uppercase tracking-[0.2em] text-outline">
+<tr>
+<th class="px-8 py-4">Name &amp; Role</th>
+<th class="px-4 py-4">Days</th>
+<th class="px-4 py-4">Rate (Q)</th>
+<th class="px-4 py-4">Gross Pay</th>
+<th class="px-4 py-4">Deductions</th>
+<th class="px-4 py-4">Net Pay</th>
+<th class="px-8 py-4">Status</th>
+</tr>
+</thead>
+<tbody class="text-sm font-body">
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-8 py-6">
+<div class="flex flex-col">
+<span class="font-bold text-primary">Carlos Mendez</span>
+<span class="text-[10px] text-outline uppercase tracking-wider">Maestro de Obra</span>
+</div>
+</td>
+<td class="px-4 py-6 font-medium">6</td>
+<td class="px-4 py-6 text-outline">Q 350.00</td>
+<td class="px-4 py-6 font-bold">Q 2,100.00</td>
+<td class="px-4 py-6 text-error">Q 210.00</td>
+<td class="px-4 py-6 font-bold text-primary">Q 1,890.00</td>
+<td class="px-8 py-6">
+<span class="bg-green-100 text-green-800 text-[10px] font-black uppercase px-3 py-1 tracking-widest">Paid</span>
+</td>
+</tr>
+<tr class="bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-6 border-t border-surface-container">
+<div class="flex flex-col">
+<span class="font-bold text-primary">Juan Pérez García</span>
+<span class="text-[10px] text-outline uppercase tracking-wider">Albañil</span>
+</div>
+</td>
+<td class="px-4 py-6 border-t border-surface-container font-medium">6</td>
+<td class="px-4 py-6 border-t border-surface-container text-outline">Q 180.00</td>
+<td class="px-4 py-6 border-t border-surface-container font-bold">Q 1,080.00</td>
+<td class="px-4 py-6 border-t border-surface-container text-error">Q 108.00</td>
+<td class="px-4 py-6 border-t border-surface-container font-bold text-primary">Q 972.00</td>
+<td class="px-8 py-6 border-t border-surface-container">
+<span class="bg-yellow-100 text-yellow-800 text-[10px] font-black uppercase px-3 py-1 tracking-widest">Pending</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-6 border-t border-surface-container">
+<div class="flex flex-col">
+<span class="font-bold text-primary">Luis Rodas</span>
+<span class="text-[10px] text-outline uppercase tracking-wider">Técnico Electricista</span>
+</div>
+</td>
+<td class="px-4 py-6 border-t border-surface-container font-medium">5</td>
+<td class="px-4 py-6 border-t border-surface-container text-outline">Q 250.00</td>
+<td class="px-4 py-6 border-t border-surface-container font-bold">Q 1,250.00</td>
+<td class="px-4 py-6 border-t border-surface-container text-error">Q 125.00</td>
+<td class="px-4 py-6 border-t border-surface-container font-bold text-primary">Q 1,125.00</td>
+<td class="px-8 py-6 border-t border-surface-container">
+<span class="bg-green-100 text-green-800 text-[10px] font-black uppercase px-3 py-1 tracking-widest">Paid</span>
+</td>
+</tr>
+<tr class="bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-6 border-t border-surface-container">
+<div class="flex flex-col">
+<span class="font-bold text-primary">Roberto Chajón</span>
+<span class="text-[10px] text-outline uppercase tracking-wider">Ayudante General</span>
+</div>
+</td>
+<td class="px-4 py-6 border-t border-surface-container font-medium">6</td>
+<td class="px-4 py-6 border-t border-surface-container text-outline">Q 125.00</td>
+<td class="px-4 py-6 border-t border-surface-container font-bold">Q 750.00</td>
+<td class="px-4 py-6 border-t border-surface-container text-error">Q 75.00</td>
+<td class="px-4 py-6 border-t border-surface-container font-bold text-primary">Q 675.00</td>
+<td class="px-8 py-6 border-t border-surface-container">
+<span class="bg-yellow-100 text-yellow-800 text-[10px] font-black uppercase px-3 py-1 tracking-widest">Pending</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-8 bg-surface-container-low flex justify-between items-center">
+<span class="text-xs text-outline">Mostrando 4 de 54 colaboradores</span>
+<div class="flex gap-4">
+<button class="text-primary font-bold text-xs uppercase tracking-widest disabled:opacity-30">Anterior</button>
+<button class="text-primary font-bold text-xs uppercase tracking-widest">Siguiente</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Contextual Footer / Branding -->
+<footer class="mt-24 pt-12 border-t border-surface-container flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-4">
+<span class="text-primary font-black tracking-tighter text-2xl">Constructora WM/M&amp;S</span>
+<span class="w-px h-8 bg-surface-container"></span>
+<p class="text-[10px] text-outline uppercase tracking-[0.2em]">High-Precision Engineering &amp; Construction</p>
+</div>
+<div class="flex gap-8">
+<a class="text-[10px] font-bold uppercase tracking-widest text-outline hover:text-secondary transition-colors" href="#">Legal Compliance</a>
+<a class="text-[10px] font-bold uppercase tracking-widest text-outline hover:text-secondary transition-colors" href="#">System Status</a>
+<a class="text-[10px] font-bold uppercase tracking-widest text-outline hover:text-secondary transition-colors" href="#">v2.4.0</a>
+</div>
+</footer>
+</div>
+</main>
+<!-- Floating Action Button for High Context Screen -->
+<button class="fixed bottom-12 right-12 bg-secondary text-white w-16 h-16 flex items-center justify-center shadow-[0_20px_40px_rgba(123,88,0,0.3)] hover:scale-110 transition-transform z-50">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</body></html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bread Recipe Builder - The Artisanal Hearth</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#d7e9c1",
+              "on-surface": "#1e1b13",
+              "inverse-on-surface": "#f8f0e1",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#b8c8da",
+              "outline-variant": "#dac1b8",
+              "on-tertiary": "#ffffff",
+              "on-surface-variant": "#54433c",
+              "primary-container": "#a0522d",
+              "outline": "#87736b",
+              "primary-fixed-dim": "#ffb596",
+              "on-primary-fixed-variant": "#76320f",
+              "on-error-container": "#93000a",
+              "on-background": "#1e1b13",
+              "tertiary": "#415160",
+              "on-primary-fixed": "#360f00",
+              "surface-dim": "#e1d9cb",
+              "secondary-fixed-dim": "#bbcca6",
+              "on-secondary-fixed": "#121f06",
+              "secondary-container": "#d7e9c1",
+              "on-error": "#ffffff",
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "surface-tint": "#944925",
+              "background": "#fff8ef",
+              "surface-bright": "#fff8ef",
+              "on-tertiary-fixed": "#0d1d2a",
+              "secondary": "#546344",
+              "on-secondary-container": "#5a6949",
+              "error-container": "#ffdad6",
+              "primary-fixed": "#ffdbcd",
+              "surface-container-low": "#fbf3e4",
+              "on-tertiary-fixed-variant": "#394857",
+              "surface-container": "#f5edde",
+              "primary": "#823b18",
+              "inverse-surface": "#343026",
+              "inverse-primary": "#ffb596",
+              "tertiary-fixed": "#d4e4f6",
+              "surface-container-highest": "#e9e2d3",
+              "tertiary-container": "#596979",
+              "surface-variant": "#e9e2d3",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#d8e9fb",
+              "on-primary-container": "#ffe1d6",
+              "surface-container-high": "#efe7d9",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#ffffff",
+              "surface": "#fff8ef"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .linen-input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #dac1b8;
+            transition: border-color 0.3s ease;
+        }
+        .linen-input:focus {
+            outline: none;
+            border-bottom: 2px solid #823b18;
+            ring: 0;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background min-h-screen flex">
+<!-- SideNavBar Shell -->
+<aside class="h-screen w-64 border-r border-[#dac1b8]/20 bg-[#fff8ef] dark:bg-stone-950 flex flex-col py-6 gap-2 sticky top-0">
+<div class="px-6 mb-8">
+<h1 class="font-['Noto_Serif'] text-xl italic text-[#823b18] dark:text-[#a0522d]">The Artisanal Hearth</h1>
+</div>
+<div class="px-4 mb-6">
+<div class="flex items-center gap-3 p-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest overflow-hidden">
+<img alt="Baker Profile" data-alt="Baker in a rustic flour-dusted apron" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa3ugchNkOMDYate0Q7IJn0g2eC7Tc0lIPsPL4At4o_3M5HdrE8-E_zdjxmYx3nBiodaQTcoUN-27-up8-TXdIzbl3Z4XVyj-ywP_K9YRnF2vs_nWpFfgYZIaGDNerS0l9VH433M6xVvYpZAiwUMLLTOxc7fOAWKzWyiEvc-NvdP_7InbzSGs7u8hBvTl81e93vw8DvSYtm8EP4PNcMEUd8QjeeBpNWo7Rj2JnmlPEfZr_MTNUEyQ6Llhj5p1FxpjTi8l17ed-91TK"/>
+</div>
+<div>
+<p class="font-semibold text-sm">Master Baker</p>
+<p class="text-xs opacity-60">Active Sourdough Subscription</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<div class="text-[#1e1b13]/70 dark:text-[#fff8ef]/70 mx-2 px-4 py-3 hover:bg-[#fbf3e4]/50 cursor-pointer select-none transition-transform duration-200 hover:translate-x-1 flex items-center gap-3">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium text-sm">Home</span>
+</div>
+<!-- ACTIVE TAB: My Recipes / Recipe Builder -->
+<div class="bg-[#fbf3e4] dark:bg-stone-800 text-[#823b18] dark:text-[#a0522d] rounded-md mx-2 px-4 py-3 cursor-pointer select-none transition-transform duration-200 hover:translate-x-1 flex items-center gap-3">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-medium text-sm">My Recipes</span>
+</div>
+<div class="text-[#1e1b13]/70 dark:text-[#fff8ef]/70 mx-2 px-4 py-3 hover:bg-[#fbf3e4]/50 cursor-pointer select-none transition-transform duration-200 hover:translate-x-1 flex items-center gap-3">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-medium text-sm">Bread Shop</span>
+</div>
+<div class="text-[#1e1b13]/70 dark:text-[#fff8ef]/70 mx-2 px-4 py-3 hover:bg-[#fbf3e4]/50 cursor-pointer select-none transition-transform duration-200 hover:translate-x-1 flex items-center gap-3">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-medium text-sm">Transactions</span>
+</div>
+<div class="text-[#1e1b13]/70 dark:text-[#fff8ef]/70 mx-2 px-4 py-3 hover:bg-[#fbf3e4]/50 cursor-pointer select-none transition-transform duration-200 hover:translate-x-1 flex items-center gap-3">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medium text-sm">Settings</span>
+</div>
+</nav>
+<div class="px-4 mt-auto">
+<button class="w-full py-3 px-4 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-md font-medium text-sm shadow-sm hover:opacity-90 transition-opacity">
+                New Recipe
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto px-12 py-10 bg-surface">
+<!-- Recipe Header Section -->
+<header class="mb-12 max-w-4xl">
+<div class="flex justify-between items-end gap-8">
+<div class="flex-1">
+<input class="block w-full font-headline text-5xl font-bold tracking-tight text-on-surface linen-input mb-4 focus:border-primary" placeholder="Enter Recipe Title..." type="text" value="Heritage Roasted Rye Sourdough"/>
+<textarea class="block w-full text-lg italic text-on-surface-variant linen-input resize-none" placeholder="Add a story about this bread... maybe the hydration notes or the heritage of the grains." rows="2"></textarea>
+</div>
+<div class="flex gap-3 pb-2">
+<button class="p-3 text-primary hover:bg-surface-container-low rounded-md transition-colors" title="Print">
+<span class="material-symbols-outlined">print</span>
+</button>
+<button class="p-3 text-primary hover:bg-surface-container-low rounded-md transition-colors" title="Export PDF">
+<span class="material-symbols-outlined">ios_share</span>
+</button>
+<button class="px-6 py-2 bg-primary text-on-primary rounded-md font-semibold tracking-wide hover:bg-primary-container transition-colors shadow-lg shadow-primary/10">
+                        Save Recipe
+                    </button>
+</div>
+</div>
+</header>
+<!-- Bento Grid Layout for Builder Tools -->
+<div class="grid grid-cols-12 gap-8 max-w-6xl">
+<!-- Left Column: Ingredients Table (Spans 8) -->
+<section class="col-span-8 space-y-8">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(30,27,19,0.04)]">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline text-2xl text-primary flex items-center gap-2">
+<span class="material-symbols-outlined">scale</span>
+                            Baker's Formula
+                        </h3>
+<div class="text-right">
+<p class="text-xs uppercase tracking-widest text-on-surface-variant opacity-60">Calculated Hydration</p>
+<p class="text-4xl font-bold font-headline text-secondary">78.5%</p>
+</div>
+</div>
+<div class="space-y-6">
+<!-- Ingredient Row Group: Flours -->
+<div class="grid grid-cols-12 border-b border-outline-variant/30 pb-2 text-xs font-semibold uppercase tracking-widest text-on-surface-variant">
+<div class="col-span-6">Ingredient Name</div>
+<div class="col-span-3 text-right">Amount (g)</div>
+<div class="col-span-3 text-right">Percentage (%)</div>
+</div>
+<div class="space-y-4">
+<!-- Flour Item -->
+<div class="grid grid-cols-12 items-center">
+<div class="col-span-6 flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-medium">Organic Bread Flour</span>
+</div>
+<div class="col-span-3 text-right px-4">
+<input class="linen-input w-full text-right focus:border-primary py-1" type="number" value="800"/>
+</div>
+<div class="col-span-3 text-right font-mono text-sm text-on-surface-variant">80%</div>
+</div>
+<!-- Rye Item -->
+<div class="grid grid-cols-12 items-center">
+<div class="col-span-6 flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-medium">Dark Rye Flour</span>
+</div>
+<div class="col-span-3 text-right px-4">
+<input class="linen-input w-full text-right focus:border-primary py-1" type="number" value="150"/>
+</div>
+<div class="col-span-3 text-right font-mono text-sm text-on-surface-variant">15%</div>
+</div>
+<!-- Whole Wheat -->
+<div class="grid grid-cols-12 items-center">
+<div class="col-span-6 flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-medium">Whole Wheat Flour</span>
+</div>
+<div class="col-span-3 text-right px-4">
+<input class="linen-input w-full text-right focus:border-primary py-1" type="number" value="50"/>
+</div>
+<div class="col-span-3 text-right font-mono text-sm text-on-surface-variant">5%</div>
+</div>
+<!-- Water -->
+<div class="grid grid-cols-12 items-center py-4 bg-surface-container-low/50 -mx-4 px-4 rounded-lg">
+<div class="col-span-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">water_drop</span>
+<span class="font-semibold text-tertiary">Filtered Water</span>
+</div>
+<div class="col-span-3 text-right px-4">
+<input class="linen-input w-full text-right focus:border-tertiary py-1 font-bold" type="number" value="785"/>
+</div>
+<div class="col-span-3 text-right font-mono text-sm text-tertiary">78.5%</div>
+</div>
+<!-- Starter -->
+<div class="grid grid-cols-12 items-center">
+<div class="col-span-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">bubble_chart</span>
+<span class="font-medium">Mature Starter (100% hyd.)</span>
+</div>
+<div class="col-span-3 text-right px-4">
+<input class="linen-input w-full text-right focus:border-secondary py-1" type="number" value="200"/>
+</div>
+<div class="col-span-3 text-right font-mono text-sm text-on-surface-variant">20%</div>
+</div>
+<!-- Salt -->
+<div class="grid grid-cols-12 items-center">
+<div class="col-span-6 flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-medium">Fine Sea Salt</span>
+</div>
+<div class="col-span-3 text-right px-4">
+<input class="linen-input w-full text-right focus:border-primary py-1" type="number" value="20"/>
+</div>
+<div class="col-span-3 text-right font-mono text-sm text-on-surface-variant">2%</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Baker's Notes -->
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/10">
+<h3 class="font-headline text-xl text-on-surface mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined">edit_note</span>
+                        Baker's Observations
+                    </h3>
+<textarea class="w-full bg-white/40 border-none rounded-lg p-4 font-body text-sm min-h-[160px] focus:ring-1 focus:ring-primary shadow-inner" placeholder="Notes on crumb structure, scoring patterns, or oven spring..."></textarea>
+</div>
+</section>
+<!-- Right Column: Fermentation Schedule (Spans 4) -->
+<aside class="col-span-4 space-y-8">
+<div class="bg-surface-container-highest p-6 rounded-xl border border-outline-variant/20">
+<h3 class="font-headline text-xl text-primary mb-6">Process Timeline</h3>
+<div class="relative space-y-10 before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant/40">
+<!-- Autolyse -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-xs">timer</span>
+</div>
+<label class="block text-xs font-semibold uppercase tracking-wider text-on-surface-variant mb-1">Autolyse</label>
+<div class="flex items-center gap-2">
+<input class="linen-input w-16 text-center focus:border-primary" type="number" value="60"/>
+<span class="text-sm font-medium">Minutes</span>
+</div>
+</div>
+<!-- Bulk Fermentation -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-on-primary shadow-lg shadow-secondary/20">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+</div>
+<label class="block text-xs font-semibold uppercase tracking-wider text-on-surface-variant mb-1">Bulk Fermentation</label>
+<div class="flex items-center gap-2">
+<input class="linen-input w-16 text-center focus:border-secondary" type="number" value="5"/>
+<span class="text-sm font-medium">Hours</span>
+</div>
+<p class="text-[10px] text-secondary mt-2 italic">Suggested: 4-6 folds every 30m</p>
+</div>
+<!-- Cold Proof -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-tertiary flex items-center justify-center text-on-primary shadow-lg shadow-tertiary/20">
+<span class="material-symbols-outlined text-xs">ac_unit</span>
+</div>
+<label class="block text-xs font-semibold uppercase tracking-wider text-on-surface-variant mb-1">Cold Proof</label>
+<div class="flex items-center gap-2">
+<input class="linen-input w-16 text-center focus:border-tertiary" type="number" value="14"/>
+<span class="text-sm font-medium">Hours</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Fermentation Tracker (Signature Component) -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/30">
+<div class="flex justify-between items-center mb-4">
+<span class="text-xs font-bold uppercase tracking-widest">Growth Forecast</span>
+<span class="text-secondary font-bold">1.5x Rise</span>
+</div>
+<!-- Signature Tracker Bar -->
+<div class="w-full h-12 bg-secondary-fixed rounded-lg relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 bg-secondary w-[65%] flex items-center justify-end pr-4">
+<span class="text-[10px] text-on-secondary font-bold uppercase tracking-tighter">Current Phase</span>
+</div>
+</div>
+<p class="text-xs mt-4 text-on-surface-variant/70 leading-relaxed italic">
+                        "The dough is at peak activity. Structure is airy and elastic."
+                    </p>
+</div>
+<!-- Bread Inspiration Widget -->
+<div class="relative h-48 rounded-xl overflow-hidden group">
+<img alt="Crust Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Macro photo of a dark, blistered sourdough crust with a prominent ear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1r1q8N3LRjPivdsDiOqRwFA7lOOtuM-8t8J3kVfTc6lLpzTDcZZliKn3qjghtVuGOxtud0OFTDZU41-kenTrAJttDilAQrIEdBbnU_arvRnq8wA8phMaFaAoJNl0CBhuCRoQaiRmPFqIQRN7_K_A0CAlL-6UzPoTTZ0G9K1WunSkwrIXJqFKh0KkMlhcWgbrsvQ--AixzKR2oegNT6t8LcVaKmQe4gyjGfG9SVFjE31aHzHLLJoRvOm7awZhyhtC-MIFfNuJ5BQd-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent flex items-end p-4">
+<div class="text-on-primary">
+<p class="text-[10px] uppercase tracking-widest mb-1 opacity-70">Goal Texture</p>
+<p class="font-headline font-bold italic">Deeply Caramelized Ear</p>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- Footer Actions -->
+<footer class="mt-16 pt-8 border-t border-outline-variant/20 flex justify-between items-center">
+<div class="flex gap-8 text-on-surface-variant/60 text-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">history</span>
+<span>Last edited 4 minutes ago</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">cloud_done</span>
+<span>All changes saved to vault</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-sm font-medium hover:text-primary transition-colors">Duplicate Recipe</button>
+<div class="h-4 w-[1px] bg-outline-variant/30"></div>
+<button class="text-sm font-medium text-error hover:opacity-80 transition-opacity">Archive</button>
+</div>
+</footer>
+</main>
+</body></html>

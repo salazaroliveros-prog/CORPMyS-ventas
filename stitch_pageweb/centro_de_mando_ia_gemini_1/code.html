@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gemini ArchOS - Panel Central</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#ffdbcd",
+              "secondary-fixed-dim": "#bbcca6",
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#efe7d9",
+              "secondary-fixed": "#d7e9c1",
+              "on-primary-container": "#ffe1d6",
+              "primary": "#823b18",
+              "primary-fixed-dim": "#ffb596",
+              "on-tertiary-container": "#d8e9fb",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#d7e9c1",
+              "on-surface-variant": "#54433c",
+              "on-secondary-fixed": "#121f06",
+              "on-error": "#ffffff",
+              "tertiary-fixed-dim": "#b8c8da",
+              "on-tertiary-fixed-variant": "#394857",
+              "surface-container-low": "#fbf3e4",
+              "surface-container": "#f5edde",
+              "tertiary-fixed": "#d4e4f6",
+              "on-tertiary-fixed": "#0d1d2a",
+              "tertiary": "#415160",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "primary-container": "#a0522d",
+              "surface-bright": "#fff8ef",
+              "background": "#fff8ef",
+              "inverse-surface": "#343026",
+              "outline-variant": "#dac1b8",
+              "inverse-primary": "#ffb596",
+              "surface-container-highest": "#e9e2d3",
+              "surface": "#fff8ef",
+              "on-background": "#1e1b13",
+              "inverse-on-surface": "#f8f0e1",
+              "surface-variant": "#e9e2d3",
+              "surface-tint": "#944925",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-primary-fixed": "#360f00",
+              "secondary": "#546344",
+              "surface-dim": "#e1d9cb",
+              "on-primary-fixed-variant": "#76320f",
+              "outline": "#87736b",
+              "on-surface": "#1e1b13",
+              "error": "#ba1a1a",
+              "tertiary-container": "#596979",
+              "on-secondary-container": "#5a6949"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .scrolling-content {
+            mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fff8ef]/80 dark:bg-stone-950/80 backdrop-blur-md border-b border-[#dac1b8]/20 dark:border-stone-800 shadow-[0_20px_40px_rgba(30,27,19,0.06)] flex justify-between items-center px-8 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-black text-[#823b18] dark:text-[#a0522d] italic font-headline">Gemini ArchOS</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-headline font-bold tracking-tight">
+<a class="text-[#823b18] border-b-2 border-[#823b18]" href="#">Dashboard</a>
+<a class="text-stone-500 hover:text-[#823b18] transition-colors duration-300" href="#">Proyectos</a>
+<a class="text-stone-500 hover:text-[#823b18] transition-colors duration-300" href="#">Mercado</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-[#fbf3e4] dark:hover:bg-stone-900 transition-colors duration-300 rounded-full">
+<span class="material-symbols-outlined text-[#823b18]">notifications_active</span>
+</button>
+<button class="p-2 hover:bg-[#fbf3e4] dark:hover:bg-stone-900 transition-colors duration-300 rounded-full">
+<span class="material-symbols-outlined text-[#823b18]">account_circle</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col h-screen w-72 fixed left-0 top-0 pt-20 bg-[#fbf3e4] dark:bg-stone-900 py-6 px-4 z-40">
+<div class="mb-10 px-4">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center border border-outline-variant/30 overflow-hidden">
+<img class="object-cover" data-alt="Perfil de Arquitecto Senior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJRdOVflRSZBCG42Vvg8Nes6VSbc_Bb61OF8k3NKUP6AkqCLUPIWjQ6Hlx91jNkNgctJUn4IUnLG4BqiA13Wy468473IBNIumAn1XvKYiJyPHToUF-KejGopxvS100hfmweLuJ_2QDFH1EgBkge9lKogYQ6kGhYTMk0jPOdZcMh_RuNmSWIlSo4yCq76hPsGor1X37r5vFejnVEddt8SsH99l6dWkt3La3sgyEHfONskkfTPXq_pUJutEOYt4cMNaEyFyC7YZzaLpf"/>
+</div>
+<div>
+<h3 class="font-headline font-bold text-[#823b18] text-sm">Estudio Artisanal</h3>
+<p class="text-[10px] text-stone-500 font-medium uppercase tracking-wider">IA Gemini Activa</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 bg-[#fff8ef] dark:bg-stone-800 text-[#823b18] font-bold border-r-4 border-[#823b18] transition-all duration-200 uppercase tracking-wider text-xs" href="#">
+<span class="material-symbols-outlined">security</span>
+<span>IA Seguridad</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 hover:bg-[#f5ead7] dark:hover:bg-stone-800/50 transition-all duration-200 uppercase tracking-wider text-xs" href="#">
+<span class="material-symbols-outlined">trending_up</span>
+<span>IA Ventas</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 hover:bg-[#f5ead7] dark:hover:bg-stone-800/50 transition-all duration-200 uppercase tracking-wider text-xs" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span>Estado Sistema</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 hover:bg-[#f5ead7] dark:hover:bg-stone-800/50 transition-all duration-200 uppercase tracking-wider text-xs" href="#">
+<span class="material-symbols-outlined">architecture</span>
+<span>Biblioteca Planos</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-outline-variant/20 space-y-2">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3 rounded-md font-bold text-xs uppercase tracking-widest mb-6 shadow-lg shadow-primary/20">
+                Nueva Consulta IA
+            </button>
+<a class="flex items-center gap-3 px-4 py-2 text-stone-500 hover:text-stone-800 text-xs uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Configuración</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-stone-500 hover:text-stone-800 text-xs uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined">help_center</span>
+<span>Soporte</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="lg:pl-72 pt-24 pb-12 px-8">
+<div class="max-w-7xl mx-auto space-y-10">
+<!-- Header Editorial -->
+<section class="mb-12">
+<h1 class="font-headline text-5xl font-black text-on-surface tracking-tighter mb-2">Resumen de <span class="text-primary italic">Operaciones</span></h1>
+<p class="font-body text-stone-500 max-w-2xl">Gestión artesanal asistida por inteligencia artificial. Monitoreo en tiempo real de seguridad, ventas y el núcleo de Gemini ArchOS.</p>
+</section>
+<!-- Bento Grid Content -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
+<!-- Section 1: IA Gemini Console (Asymmetric Wide) -->
+<div class="md:col-span-7 bg-surface-container-highest rounded-xl p-8 flex flex-col relative overflow-hidden group border border-white/40">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[120px] text-primary" style="font-variation-settings: 'FILL' 1;">fluid</span>
+</div>
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-xl">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">temp_preferences_custom</span>
+</div>
+<div>
+<h2 class="font-headline text-2xl font-bold text-on-surface">Consola Gemini ArchOS</h2>
+<span class="flex items-center gap-1 text-[10px] uppercase font-bold text-secondary tracking-widest">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span> Sistema Optimizado
+                            </span>
+</div>
+</div>
+<div class="flex-1 space-y-6 scrolling-content overflow-y-auto pr-4">
+<div class="bg-surface-container-lowest/60 p-5 rounded-lg border-l-4 border-primary shadow-sm">
+<p class="font-headline italic text-lg text-primary-container mb-1">"He bloqueado 3 intentos de intrusión desde el extranjero."</p>
+<p class="text-xs text-stone-500 font-medium">Hace 14 minutos • Protocolo de Seguridad Activo</p>
+</div>
+<div class="bg-surface-container-lowest/60 p-5 rounded-lg border-l-4 border-secondary shadow-sm">
+<p class="font-headline italic text-lg text-on-secondary-container mb-1">"Las ventas de planos de registro han subido un 15% esta semana."</p>
+<p class="text-xs text-stone-500 font-medium">Hace 2 horas • Análisis de Tendencias de Mercado</p>
+</div>
+<div class="bg-surface-container-lowest/60 p-5 rounded-lg border-l-4 border-tertiary shadow-sm opacity-60">
+<p class="font-headline italic text-lg text-tertiary mb-1">"La integridad de los archivos de arquitectura ha sido verificada al 100%."</p>
+<p class="text-xs text-stone-500 font-medium">Ayer a las 18:45 • Mantenimiento de Biblioteca</p>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/30 flex items-center gap-4">
+<div class="flex-1 bg-surface-container-lowest rounded-md px-4 py-3 border-b-2 border-outline-variant flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">mic</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full font-body" placeholder="Consultar a Gemini..." type="text"/>
+</div>
+<button class="bg-primary-container p-3 rounded-md text-on-primary-container hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+<!-- Section 2: Seguridad Inteligente (Square) -->
+<div class="md:col-span-5 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between border border-outline-variant/10 shadow-inner">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-headline text-xl font-bold">Seguridad Inteligente</h3>
+<p class="text-xs font-medium text-stone-500 uppercase tracking-widest mt-1">Escaneo en tiempo real</p>
+</div>
+<div class="p-2 bg-error-container text-on-error-container rounded-md">
+<span class="material-symbols-outlined">shield_lock</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center py-8">
+<div class="relative">
+<!-- Visual Shield effect -->
+<div class="absolute inset-0 bg-primary/10 rounded-full blur-2xl animate-pulse"></div>
+<div class="relative w-40 h-40 rounded-full border-4 border-primary/20 flex items-center justify-center bg-white/40 shadow-2xl overflow-hidden">
+<span class="material-symbols-outlined text-[80px] text-primary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<!-- Scanning Line -->
+<div class="absolute top-0 left-0 w-full h-1 bg-primary/60 shadow-[0_0_15px_rgba(130,59,24,0.5)] animate-[bounce_3s_infinite]"></div>
+</div>
+</div>
+<div class="mt-8 text-center">
+<p class="font-bold text-lg text-on-surface">Muro de Fuego Activo</p>
+<p class="text-sm text-stone-500">12,402 paquetes analizados hoy</p>
+</div>
+</div>
+<button class="w-full mb-4 flex items-center justify-center gap-3 py-3 px-6 bg-primary-container text-on-primary-container font-headline font-bold text-sm rounded-md shadow-md hover:bg-primary transition-all duration-300 group">
+<span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">picture_as_pdf</span>
+<span>Generar Reporte PDF Semanal</span>
+</button><div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-surface-container-highest rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error">dangerous</span>
+<span class="text-xs font-bold">IP 185.234.xx.xx Bloqueada</span>
+</div>
+<span class="text-[10px] text-stone-400">Rusia</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface-container-highest rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-xs font-bold">Escaneo de Malware</span>
+</div>
+<span class="text-[10px] text-secondary font-bold">LIMPIO</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Control de Ventas IA (Full Width Bottom) -->
+<div class="md:col-span-12 bg-white rounded-xl p-8 border border-outline-variant/30 shadow-lg flex flex-col md:flex-row gap-8">
+<div class="md:w-1/3 flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-3xl font-black text-primary-container leading-none mb-4">Control de Ventas IA</h3>
+<p class="text-stone-500 text-sm mb-6">Gemini predice una alta demanda de planos comerciales para el próximo trimestre fiscal.</p>
+<div class="space-y-4">
+<div class="p-4 bg-secondary-fixed rounded-lg border border-secondary-fixed-dim/50">
+<p class="text-xs font-bold text-on-secondary-fixed-variant uppercase tracking-tighter mb-1">Recomendación IA</p>
+<p class="text-sm font-medium text-on-secondary-fixed">Re-publicar "Plano Residencial v2" con descuento del 5% para maximizar conversión.</p>
+</div>
+<div class="flex items-end gap-2">
+<span class="text-4xl font-headline font-black text-on-surface">Q 48,250.00</span>
+<span class="text-secondary font-bold text-sm mb-1">+15% vs mes ant.</span>
+</div>
+</div>
+</div>
+<button class="mt-8 flex items-center justify-center gap-2 py-4 border border-outline-variant text-on-surface font-bold text-sm rounded-md hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+                            Ejecutar Estrategia de Precios
+                        </button>
+</div>
+<div class="md:w-2/3 bg-surface-container-low rounded-xl p-6 relative">
+<div class="flex justify-between items-center mb-10">
+<span class="font-headline font-bold text-stone-800">Tendencias Predichas</span>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-[10px] font-bold uppercase text-stone-500">Real</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="text-[10px] font-bold uppercase text-stone-500">Predicción</span>
+</div>
+</div>
+</div>
+<!-- Mock Graph Visual -->
+<div class="h-48 w-full flex items-end justify-between gap-1 border-b border-outline-variant/50 relative">
+<!-- Graph Bars -->
+<div class="w-full h-24 bg-primary/20 rounded-t-sm relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">Q12k</div>
+</div>
+<div class="w-full h-32 bg-primary/20 rounded-t-sm"></div>
+<div class="w-full h-28 bg-primary/20 rounded-t-sm"></div>
+<div class="w-full h-40 bg-primary/20 rounded-t-sm"></div>
+<div class="w-full h-36 bg-primary/20 rounded-t-sm"></div>
+<div class="w-full h-44 bg-primary rounded-t-sm relative">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-[10px] px-2 py-1 rounded-full whitespace-nowrap">HOY: Q48k</div>
+</div>
+<!-- Prediction Area (Dashed) -->
+<div class="w-full h-48 bg-secondary/30 rounded-t-sm border-2 border-dashed border-secondary/50"></div>
+<div class="w-full h-56 bg-secondary/30 rounded-t-sm border-2 border-dashed border-secondary/50"></div>
+<div class="w-full h-64 bg-secondary/40 rounded-t-sm border-2 border-dashed border-secondary"></div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] font-bold text-stone-400 uppercase tracking-widest px-2">
+<span>Ene</span>
+<span>Feb</span>
+<span>Mar</span>
+<span>Abr</span>
+<span>May</span>
+<span>Jun</span>
+<span class="text-primary">Jul</span>
+<span>Ago</span>
+<span>Sep</span>
+<span>Oct</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Signature Component: The Fermentation Tracker (System Integrity) -->
+<section class="bg-surface-container-high rounded-xl p-10 border-l-[12px] border-secondary">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
+<div class="max-w-md">
+<h3 class="font-headline text-2xl font-black text-on-surface mb-2">Integridad del Ecosistema</h3>
+<p class="text-stone-500 text-sm">Monitoreo de latencia y procesamiento de modelos IA en el nodo local de Guatemala.</p>
+</div>
+<div class="flex-1 w-full max-w-2xl">
+<div class="flex justify-between text-xs font-bold uppercase tracking-widest text-secondary mb-2">
+<span>Procesando</span>
+<span>98.4% Salud</span>
+</div>
+<div class="h-6 w-full bg-secondary-fixed rounded-full overflow-hidden border border-secondary-fixed-dim">
+<div class="h-full w-[98.4%] bg-secondary shadow-[0_0_20px_rgba(84,99,68,0.4)]"></div>
+</div>
+<div class="flex justify-between mt-2 text-[10px] text-stone-400">
+<span>Latencia: 14ms</span>
+<span>Uptime: 99.99%</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- FAB (Suppressed on Dashboard as per rules, but included if contextual intent aligns - here we keep navigation focused) -->
+<!-- Footer Decoration -->
+<footer class="lg:pl-72 py-12 px-8 bg-surface-container-low border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 opacity-60">
+<span class="font-headline font-black text-primary italic">Gemini ArchOS v4.2.0</span>
+<div class="flex gap-8 text-[10px] font-bold uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Seguridad de Datos</a>
+<a class="hover:text-primary transition-colors" href="#">Términos del Gremio</a>
+<a class="hover:text-primary transition-colors" href="#">Infraestructura</a>
+</div>
+<p class="text-[10px] text-stone-500">© 2024 Estudio Artisanal Digital. Todos los derechos reservados.</p>
+</div>
+</footer>
+</body></html>

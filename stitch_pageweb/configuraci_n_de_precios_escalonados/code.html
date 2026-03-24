@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              "primary-fixed": "#ffdbcd",
+              "surface-container-low": "#fbf3e4",
+              "on-tertiary-fixed-variant": "#394857",
+              "surface-container": "#f5edde",
+              "primary": "#823b18",
+              "inverse-surface": "#343026",
+              "inverse-primary": "#ffb596",
+              "tertiary-container": "#596979",
+              "surface-variant": "#e9e2d3",
+              "tertiary-fixed": "#d4e4f6",
+              "surface-container-highest": "#e9e2d3",
+              "on-tertiary-container": "#d8e9fb",
+              "on-primary-container": "#ffe1d6",
+              "error": "#ba1a1a",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#efe7d9",
+              "surface": "#fff8ef",
+              "on-secondary": "#ffffff",
+              "secondary-container": "#d7e9c1",
+              "on-error": "#ffffff",
+              "surface-tint": "#944925",
+              "background": "#fff8ef",
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "surface-bright": "#fff8ef",
+              "secondary": "#546344",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-secondary-container": "#5a6949",
+              "primary-fixed-dim": "#ffb596",
+              "on-primary-fixed-variant": "#76320f",
+              "on-error-container": "#93000a",
+              "tertiary": "#415160",
+              "on-background": "#1e1b13",
+              "on-primary-fixed": "#360f00",
+              "on-secondary-fixed": "#121f06",
+              "surface-dim": "#e1d9cb",
+              "secondary-fixed-dim": "#bbcca6",
+              "on-surface": "#1e1b13",
+              "secondary-fixed": "#d7e9c1",
+              "inverse-on-surface": "#f8f0e1",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#b8c8da",
+              "outline-variant": "#dac1b8",
+              "on-tertiary": "#ffffff",
+              "on-surface-variant": "#54433c",
+              "primary-container": "#a0522d",
+              "outline": "#87736b"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fff8ef;
+            color: #1e1b13;
+        }
+    </style>
+  <title>configuraci n de precios escalonados</title>
+</head>
+<body class="font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar Component -->
+<header class="fixed top-0 w-full z-50 bg-orange-50/80 backdrop-blur-md border-b border-orange-200/20 shadow-sm">
+<div class="flex justify-between items-center px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif italic text-orange-900 tracking-tight">
+                La Hogaza Artesanal
+            </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-stone-500 font-medium hover:text-orange-700 transition-colors duration-200" href="#">Inventario</a>
+<a class="text-orange-900 font-bold hover:text-orange-700 transition-colors duration-200" href="#">Precios Escalonados</a>
+<a class="text-stone-500 font-medium hover:text-orange-700 transition-colors duration-200" href="#">Pedidos</a>
+<div class="flex items-center gap-4 ml-4">
+<button class="text-orange-900 active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="text-orange-900 active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+</div>
+</header>
+<!-- SideNavBar Component (Desktop Only) -->
+<aside class="hidden md:block h-screen w-64 fixed left-0 top-0 overflow-y-auto bg-stone-50 font-serif pt-24 z-40">
+<div class="px-6 mb-8">
+<h2 class="text-xl font-bold tracking-tighter text-orange-800">Panel de Artesano</h2>
+<p class="text-xs text-stone-500 mt-1 uppercase tracking-widest">Gestión de Precios (GTQ)</p>
+</div>
+<nav class="flex flex-col gap-2 p-4">
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 hover:bg-stone-100 hover:translate-x-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span>Inventario</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-orange-100 text-orange-900 border-r-4 border-orange-800 translate-x-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="rebase_edit">rebase_edit</span>
+<span>Precios Escalonados</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 hover:bg-stone-100 hover:translate-x-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span>Pedidos</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 hover:bg-stone-100 hover:translate-x-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Clientes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 hover:bg-stone-100 hover:translate-x-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+<span>Ajustes</span>
+</a>
+</nav>
+<div class="mt-auto p-4">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3 rounded-md flex items-center justify-center gap-2 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span class="font-medium">Nuevo Rango</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 pt-24 pb-20 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-12">
+<h1 class="font-headline text-4xl md:text-5xl text-on-surface mb-4 tracking-tight leading-tight">Configuración de Precios Escalonados</h1>
+<p class="text-lg text-on-surface-variant max-w-2xl font-light leading-relaxed">
+                Optimice sus márgenes de ganancia mediante la implementación de tarifas por volumen. Defina rangos de unidades para incentivar pedidos mayores y gestionar sus relaciones comerciales con precisión artesanal.
+            </p>
+</section>
+<!-- Pricing Tiers Bento Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+<!-- Tier 1 -->
+<div class="lg:col-span-1 p-8 bg-surface-container-highest rounded-lg flex flex-col justify-between border-b-4 border-outline-variant/20 hover:border-primary transition-all duration-300 group">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="storefront">storefront</span>
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-400">Rango 01</span>
+</div>
+<h3 class="font-headline text-2xl mb-2 text-on-surface">Artesano Minorista</h3>
+<p class="text-sm text-on-surface-variant mb-6 font-body">Ideal para entregas directas al consumidor y tiendas locales de pequeña escala.</p>
+</div>
+<div class="mt-4 pt-6 border-t border-outline-variant/10">
+<div class="flex items-baseline gap-2 mb-1">
+<span class="text-4xl font-headline font-bold text-primary">Q45.00</span>
+<span class="text-stone-500 text-sm">/ unidad</span>
+</div>
+<p class="text-sm font-medium text-secondary">Rango: 1 - 10 unidades</p>
+</div>
+</div>
+<!-- Tier 2 -->
+<div class="lg:col-span-1 p-8 bg-surface-container-high rounded-lg flex flex-col justify-between border-b-4 border-primary transition-all duration-300 relative overflow-hidden shadow-sm">
+<div class="absolute top-0 right-0 bg-primary text-on-primary text-[10px] uppercase tracking-widest px-4 py-1 font-bold">Popular</div>
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="local_shipping">local_shipping</span>
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-400">Rango 02</span>
+</div>
+<h3 class="font-headline text-2xl mb-2 text-on-surface">Distribuidor Local</h3>
+<p class="text-sm text-on-surface-variant mb-6 font-body">Tarifa preferencial para panaderías asociadas y mercados regionales regulares.</p>
+</div>
+<div class="mt-4 pt-6 border-t border-outline-variant/10">
+<div class="flex items-baseline gap-2 mb-1">
+<span class="text-4xl font-headline font-bold text-primary">Q40.00</span>
+<span class="text-stone-500 text-sm">/ unidad</span>
+</div>
+<p class="text-sm font-medium text-secondary">Rango: 11 - 50 unidades</p>
+</div>
+</div>
+<!-- Tier 3 -->
+<div class="lg:col-span-1 p-8 bg-surface-container-highest rounded-lg flex flex-col justify-between border-b-4 border-outline-variant/20 hover:border-primary transition-all duration-300">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="hub">hub</span>
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-400">Rango 03</span>
+</div>
+<h3 class="font-headline text-2xl mb-2 text-on-surface">Venta al por Mayor</h3>
+<p class="text-sm text-on-surface-variant mb-6 font-body">Configuración para grandes superficies y contratos de distribución nacional.</p>
+</div>
+<div class="mt-4 pt-6 border-t border-outline-variant/10">
+<div class="flex items-baseline gap-2 mb-1">
+<span class="text-4xl font-headline font-bold text-primary">Q35.00</span>
+<span class="text-stone-500 text-sm">/ unidad</span>
+</div>
+<p class="text-sm font-medium text-secondary">Rango: 50+ unidades</p>
+</div>
+</div>
+</section>
+<!-- Configuration Panel -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+<!-- Table List (Modern Minimalist) -->
+<section class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(30,27,19,0.06)]">
+<div class="flex justify-between items-center mb-8">
+<h2 class="font-headline text-2xl">Productos Aplicados</h2>
+<button class="text-primary text-sm font-semibold flex items-center gap-1 hover:underline decoration-primary-fixed-dim underline-offset-4">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+                        Gestionar
+                    </button>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-variant rounded flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Golden artisanal sourdough bread loaf crust" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoQ_IFxpVc4LSnrz0bGLbGuexRs32lTfrzsmxYe9dJvPm3ZtmY0vQFvt2XwFnYTYoimp6IfradeeXqsyazvv_d17XOMPxEJRK90yAdh8UtqWQA01TPEN0VIqTouwdQjlJOkPXnjNWTlZ6DAXiMw4Ys8egfXFjMop4JF1J_i9V113C1sAEU7TvsiTHUe3V3WG0NgWs20WzTkNTT4UH3PRJ9y2-EiwuZHh6oWirzm_z54AwH8RUp0mE2nRJMKWVlJs0xhoTlfMYAgX9w"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Hogaza Corteza de Sol</p>
+<p class="text-xs text-stone-500">Masa madre 72h fermentación</p>
+</div>
+</div>
+<span class="text-xs font-bold px-2 py-1 bg-secondary-container text-on-secondary-container rounded">ACTIVO</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-variant rounded flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Technical blueprint of a micro bakery layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmIza6BL4NI2soHahbzl4gXLwiFLgxaLQLMWatekmbsVjfU-IMRJd1Hg_9wseWYljQvGDaoA3L8IyunJ7csZy4XORseQjmCEPxW8rrJuUShfYmEfW5xsU1CjTPAJ8sKN2icLcXQZvUHdnARaAQWJtAOMsEEofH-gYLII80WXZ3A47QYH1Oow1ZhB3YBwjHMZsfvTRlri7d9jjYOvL5ayl2uyqx-Nhoe5tLrFWDjl16ZrDq7-KAjszlWt0Io9jEzEYHZDg_if5xZGa2"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Planos de Micro-Panadería</p>
+<p class="text-xs text-stone-500">Consultoría técnica digital</p>
+</div>
+</div>
+<span class="text-xs font-bold px-2 py-1 bg-stone-200 text-stone-600 rounded">PAUSADO</span>
+</div>
+</div>
+<button class="w-full mt-8 py-4 border border-dashed border-outline-variant hover:border-primary transition-colors text-stone-500 hover:text-primary rounded-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-medium">Añadir Nuevo Rango</span>
+</button>
+</section>
+<!-- Advanced Rules Toggle -->
+<section class="space-y-6">
+<div class="bg-surface-container p-8 rounded-xl">
+<h2 class="font-headline text-2xl mb-8">Reglas Avanzadas</h2>
+<div class="space-y-6">
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex-1">
+<p class="font-bold text-on-surface">Aplicar automáticamente a suscripciones</p>
+<p class="text-sm text-stone-500">Actualiza las facturas recurrentes según el volumen de cada mes.</p>
+</div>
+<div class="w-12 h-6 bg-primary rounded-full relative transition-colors duration-300">
+<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex-1">
+<p class="font-bold text-on-surface">Vencimiento de oferta</p>
+<p class="text-sm text-stone-500">Establecer una fecha límite para estos niveles de precios.</p>
+</div>
+<div class="w-12 h-6 bg-stone-300 rounded-full relative transition-colors duration-300">
+<div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-sm"></div>
+</div>
+</div>
+<div class="pt-6 mt-6 border-t border-outline-variant/30">
+<p class="text-xs uppercase tracking-widest text-stone-400 font-bold mb-4">Progreso de Carga de Inventario</p>
+<div class="w-full h-3 bg-secondary-fixed rounded-full overflow-hidden">
+<div class="w-[68%] h-full bg-secondary"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-[10px] font-bold text-secondary">68% Capacidad de Producción</span>
+<span class="text-[10px] font-bold text-stone-400">Objetivo: 1,500 Unidades</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Subtle Data Alert -->
+<div class="bg-tertiary-container/10 p-6 rounded-lg flex gap-4 border-l-4 border-tertiary">
+<span class="material-symbols-outlined text-tertiary" data-icon="info">info</span>
+<div>
+<p class="text-sm font-bold text-on-tertiary-fixed-variant">Aviso de Rentabilidad</p>
+<p class="text-xs text-tertiary mt-1 leading-relaxed">Sus precios de "Venta al por Mayor" están operando con un margen del 12% basado en los costos actuales de harina orgánica.</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar Component (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-orange-50/90 backdrop-blur-xl border-t border-orange-100 flex justify-around items-center px-4 pb-4 pt-2 z-50 rounded-t-xl shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-stone-500 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-serif text-[10px] uppercase tracking-widest mt-1">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-orange-200/50 text-orange-900 rounded-xl px-4 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-serif text-[10px] uppercase tracking-widest mt-1 font-bold">Precios</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-serif text-[10px] uppercase tracking-widest mt-1">Ventas</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-serif text-[10px] uppercase tracking-widest mt-1">Perfil</span>
+</a>
+</nav>
+<!-- Floating Action Button Contextual (Suppressing on this detailed screen as per UX guidelines, but showing the CTA button in sidebar/content) -->
+</body></html>

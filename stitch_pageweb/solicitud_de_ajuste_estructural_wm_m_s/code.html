@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#394857",
+              "on-primary-fixed": "#00006e",
+              "tertiary-container": "#132330",
+              "secondary-container": "#fdc34d",
+              "background": "#f7f9ff",
+              "tertiary": "#000c18",
+              "on-error-container": "#93000a",
+              "surface-container-high": "#d9eafc",
+              "on-primary-container": "#777eea",
+              "on-background": "#0d1d2a",
+              "error": "#ba1a1a",
+              "on-tertiary": "#ffffff",
+              "inverse-surface": "#223240",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-container-highest": "#d4e4f6",
+              "tertiary-fixed-dim": "#b8c8da",
+              "surface-container": "#e2efff",
+              "on-secondary-container": "#715000",
+              "surface": "#f7f9ff",
+              "on-surface": "#0d1d2a",
+              "on-surface-variant": "#464653",
+              "surface-dim": "#cbdcee",
+              "primary-fixed-dim": "#bfc2ff",
+              "on-secondary": "#ffffff",
+              "surface-variant": "#d4e4f6",
+              "outline-variant": "#c6c5d5",
+              "on-secondary-fixed-variant": "#5d4200",
+              "inverse-on-surface": "#e7f2ff",
+              "surface-bright": "#f7f9ff",
+              "on-tertiary-fixed": "#0d1d2a",
+              "secondary-fixed": "#ffdea6",
+              "on-primary-fixed-variant": "#3239a3",
+              "surface-tint": "#4b53bc",
+              "secondary-fixed-dim": "#f7bd48",
+              "inverse-primary": "#bfc2ff",
+              "outline": "#767684",
+              "primary": "#00003c",
+              "secondary": "#7b5800"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .blueprint-bg {
+            background-image: linear-gradient(135deg, #00003c 0%, #000080 100%);
+        }
+    </style>
+  <title>solicitud de ajuste estructural wm m s</title>
+</head>
+<body class="bg-background text-on-background antialiased">
+<!-- TopNavBar -->
+<nav class="bg-[#00003c] dark:bg-[#000c18] docked full-width top-0 z-50 no-border">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-white">Constructora WM/M&amp;S</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-manrope uppercase tracking-[0.1em] text-[12px] font-semibold text-slate-300 hover:text-white transition-colors" href="#">Projects</a>
+<a class="font-manrope uppercase tracking-[0.1em] text-[12px] font-semibold text-slate-300 hover:text-white transition-colors" href="#">Catalog</a>
+<a class="font-manrope uppercase tracking-[0.1em] text-[12px] font-semibold text-slate-300 hover:text-white transition-colors" href="#">Profile</a>
+<button class="bg-secondary-fixed-dim text-primary px-6 py-2 font-manrope uppercase tracking-[0.1em] text-[12px] font-bold hover:opacity-80 transition-opacity">Contact Us</button>
+</div>
+</div>
+</nav>
+<main class="max-w-screen-2xl mx-auto px-8 py-20 min-h-screen">
+<!-- Header Section -->
+<div class="mb-20">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-secondary font-bold">SOLICITUD TÉCNICA</span>
+<h1 class="text-5xl md:text-6xl font-extrabold text-primary mt-4 mb-6 leading-tight max-w-3xl">Ajuste Estructural y Gestión de Cambios</h1>
+<div class="w-24 h-1 bg-secondary-fixed-dim"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Form Section -->
+<div class="lg:col-span-8 space-y-12">
+<section class="bg-surface-container-lowest p-10 shadow-2xl shadow-on-background/5">
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project Selection -->
+<div class="flex flex-col space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-outline font-bold">Proyecto Seleccionado</label>
+<div class="relative">
+<input class="w-full border-b border-outline-variant bg-transparent py-4 focus:outline-none focus:border-secondary transition-all font-body font-medium text-primary cursor-default" readonly="" type="text" value="Casa Amatitlán"/>
+<span class="absolute right-0 bottom-4 material-symbols-outlined text-outline" data-icon="lock">lock</span>
+</div>
+</div>
+<!-- Adjustment Type -->
+<div class="flex flex-col space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-outline font-bold">Tipo de Ajuste</label>
+<select class="w-full border-b border-outline-variant bg-transparent py-4 focus:outline-none focus:border-secondary transition-all font-body appearance-none">
+<option>Cimentación</option>
+<option>Muros</option>
+<option>Estructura de Techo</option>
+<option>Instalaciones Hidráulicas</option>
+<option>Otros</option>
+</select>
+</div>
+</div>
+<!-- Description -->
+<div class="flex flex-col space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-outline font-bold">Descripción detallada del cambio solicitado</label>
+<textarea class="w-full border-b border-outline-variant bg-transparent py-4 focus:outline-none focus:border-secondary transition-all font-body resize-none" placeholder="Indique las especificaciones técnicas del requerimiento..." rows="4"></textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Revision Date -->
+<div class="flex flex-col space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-outline font-bold">Fecha preferida de revisión</label>
+<input class="w-full border-b border-outline-variant bg-transparent py-4 focus:outline-none focus:border-secondary transition-all font-body" type="date"/>
+</div>
+<!-- File Upload Placeholder -->
+<div class="flex flex-col space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-outline font-bold">Carga de archivos técnicos (DWG/PDF)</label>
+<div class="border-2 border-dashed border-outline-variant p-4 flex items-center justify-between hover:border-secondary transition-colors cursor-pointer group">
+<span class="text-sm text-outline font-body group-hover:text-secondary">Adjuntar planos o especificaciones</span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary" data-icon="upload_file">upload_file</span>
+</div>
+</div>
+</div>
+<!-- CTA -->
+<div class="pt-8">
+<button class="w-full md:w-auto bg-secondary-fixed-dim text-primary px-12 py-5 font-headline font-extrabold tracking-widest text-sm hover:bg-secondary-container transition-all flex items-center justify-center space-x-4" type="submit">
+<span>SOLICITAR REVISIÓN TÉCNICA</span>
+<span class="material-symbols-outlined" data-icon="engineering">engineering</span>
+</button>
+</div>
+</form>
+</section>
+</div>
+<!-- Sidebar Info -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- Technical Contact -->
+<div class="bg-primary text-white p-10 space-y-6 shadow-xl">
+<h3 class="text-xl font-bold border-b border-white/10 pb-4">Información Técnica</h3>
+<div class="space-y-4">
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="support_agent">support_agent</span>
+<div>
+<p class="font-label text-[10px] uppercase tracking-tighter opacity-60">Asesor de Ingeniería</p>
+<p class="font-body text-sm font-semibold">Ing. Roberto Morales</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="mail">mail</span>
+<div>
+<p class="font-label text-[10px] uppercase tracking-tighter opacity-60">Consultas</p>
+<p class="font-body text-sm font-semibold">soporte.tecnico@wmms.com.gt</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Honorarios -->
+<div class="bg-surface-container-high p-10 space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="text-xl font-bold text-primary">Aviso Legal</h3>
+<span class="material-symbols-outlined text-secondary" data-icon="payments">payments</span>
+</div>
+<div class="space-y-4">
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">
+                            Toda solicitud de ajuste estructural que implique un rediseño del plano original incurre en honorarios profesionales adicionales.
+                        </p>
+<div class="bg-white/50 p-6">
+<p class="font-label text-[10px] uppercase tracking-widest text-outline">Base de Honorarios</p>
+<div class="flex items-baseline space-x-2 mt-1">
+<span class="text-3xl font-black text-secondary">Q 2,500.00</span>
+<span class="text-xs font-bold text-outline">/ m² aprox.</span>
+</div>
+</div>
+<p class="text-[10px] font-label text-outline italic">
+                            *Sujeto a evaluación técnica previa aprobación presupuestaria.
+                        </p>
+</div>
+</div>
+<!-- Blueprint Concept Card -->
+<div class="relative h-64 overflow-hidden group">
+<img alt="Architectural blueprint detail" class="object-cover w-full h-full filter grayscale contrast-125 opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="Technical blueprint of a modern house structure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6IhLKDqlDrpcTzRlobax4IeQJkYOPMrWnniuQjV0uWiPLHThwxrfjzVmxTnhymfRNpC3OewWhyLlHgq9LALZ7VNZDij3eYlWS9n3tdgSE0c0iEeSt1-gnEroWaUWvKd12TCm6uVxQL1w_M5eCfcd67nusT9NxUHJWSU0Ya9_sjZflK2PBuLkMByCsMtvzFvtYszDMqLfqZfJ50rmZ679GillzfWCH6Vg4OLQVEd4BEsPpULcljRTd1Kpwr5uJBBNqoclSM_T79QjX"/>
+<div class="absolute inset-0 bg-primary/80 mix-blend-multiply"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<p class="text-white font-headline font-bold text-lg leading-tight">Precisión estructural en cada detalle.</p>
+</div>
+</div>
+</aside>
+</div>
+<!-- Metric Pylons -->
+<div class="mt-32 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col border-l-4 border-secondary pl-6 py-2">
+<span class="text-4xl font-black text-primary font-headline">48h</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-outline mt-2">Tiempo de Respuesta</span>
+</div>
+<div class="flex flex-col border-l-4 border-secondary pl-6 py-2">
+<span class="text-4xl font-black text-primary font-headline">100%</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-outline mt-2">Garantía Estructural</span>
+</div>
+<div class="flex flex-col border-l-4 border-secondary pl-6 py-2">
+<span class="text-4xl font-black text-primary font-headline">+15</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-outline mt-2">Ingenieros Senior</span>
+</div>
+<div class="flex flex-col border-l-4 border-secondary pl-6 py-2">
+<span class="text-4xl font-black text-primary font-headline">ISO</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-outline mt-2">Normas de Calidad</span>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#e2efff] dark:bg-[#000c18] full-width py-20 tonal-shift">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-8 max-w-screen-2xl mx-auto">
+<div class="space-y-6">
+<div class="text-lg font-black text-[#00003c] dark:text-white uppercase tracking-tighter">Constructora WM/M&amp;S</div>
+<p class="font-inter text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                    Líderes en desarrollo arquitectónico y estructural de alta precisión. Innovación y solidez en cada proyecto.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="font-headline font-bold text-primary text-xs uppercase tracking-widest">Servicios</h4>
+<ul class="space-y-2">
+<li><a class="font-inter text-sm text-slate-600 dark:text-slate-400 hover:text-[#00003c] dark:hover:text-white underline decoration-[#f7bd48] decoration-2 underline-offset-4 transition-all" href="#">Architecture</a></li>
+<li><a class="font-inter text-sm text-slate-600 dark:text-slate-400 hover:text-[#00003c] dark:hover:text-white underline decoration-[#f7bd48] decoration-2 underline-offset-4 transition-all" href="#">Engineering</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline font-bold text-primary text-xs uppercase tracking-widest">Legal</h4>
+<ul class="space-y-2">
+<li><a class="font-inter text-sm text-slate-600 dark:text-slate-400 hover:text-[#00003c] dark:hover:text-white underline decoration-[#f7bd48] decoration-2 underline-offset-4 transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-inter text-sm text-slate-600 dark:text-slate-400 hover:text-[#00003c] dark:hover:text-white underline decoration-[#f7bd48] decoration-2 underline-offset-4 transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline font-bold text-primary text-xs uppercase tracking-widest">Redes</h4>
+<div class="flex space-x-6">
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#00003c] transition-all" href="#">LinkedIn</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#00003c] transition-all" href="#">Instagram</a>
+</div>
+<p class="font-inter text-sm leading-relaxed text-slate-600 dark:text-slate-400 pt-4">
+                    © 2024 Constructora WM/M&amp;S. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

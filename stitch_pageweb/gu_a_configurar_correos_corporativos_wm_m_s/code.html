@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guía de Correos Corporativos - WM/M&amp;S</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#d4e4f6",
+              "inverse-on-surface": "#e7f2ff",
+              "on-secondary-fixed": "#271900",
+              "secondary-fixed": "#ffdea6",
+              "primary": "#00003c",
+              "surface-bright": "#f7f9ff",
+              "outline": "#767684",
+              "inverse-surface": "#223240",
+              "secondary-fixed-dim": "#f7bd48",
+              "secondary": "#7b5800",
+              "surface-tint": "#4b53bc",
+              "on-background": "#0d1d2a",
+              "on-surface-variant": "#464653",
+              "on-surface": "#0d1d2a",
+              "on-primary-fixed": "#00006e",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              "on-primary-container": "#777eea",
+              "surface-container-highest": "#d4e4f6",
+              "primary-container": "#000080",
+              "on-primary-fixed-variant": "#3239a3",
+              "primary-fixed": "#e0e0ff",
+              "background": "#f7f9ff",
+              "surface-dim": "#cbdcee",
+              "on-secondary-container": "#715000",
+              "on-tertiary-container": "#7b8b9b",
+              "tertiary-fixed": "#d4e4f6",
+              "outline-variant": "#c6c5d5",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#ecf4ff",
+              "on-tertiary-fixed": "#0d1d2a",
+              "tertiary-container": "#132330",
+              "tertiary": "#000c18",
+              "on-tertiary-fixed-variant": "#394857",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#e2efff",
+              "on-secondary-fixed-variant": "#5d4200",
+              "error": "#ba1a1a",
+              "tertiary-fixed-dim": "#b8c8da",
+              "secondary-container": "#fdc34d",
+              "error-container": "#ffdad6",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#bfc2ff",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#d9eafc",
+              "surface": "#f7f9ff",
+              "primary-fixed-dim": "#bfc2ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f7f9ff;
+        color: #0d1d2a;
+      }
+      .blueprint-gradient {
+        background: linear-gradient(135deg, #00003c 0%, #000080 100%);
+      }
+      .glass-nav {
+        background: rgba(212, 228, 246, 0.7);
+        backdrop-filter: blur(24px);
+      }
+    </style>
+</head>
+<body class="bg-surface">
+<!-- TopNavBar -->
+<nav class="bg-[#00003c] fixed top-0 w-full z-50 flex justify-between items-center px-8 h-16 w-full max-w-none border-b border-[#c6c5d5]/15 shadow-[0_20px_40px_rgba(13,29,42,0.06)]">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold tracking-tighter text-white">ARCHI_MAIL</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-xs text-[#e2efff]/80 hover:text-white transition-colors duration-300" href="#">Workspace</a>
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-xs text-[#e2efff]/80 hover:text-white transition-colors duration-300" href="#">Zoho</a>
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-xs text-[#f7bd48] border-b-2 border-[#f7bd48] pb-1 transition-colors duration-300" href="#">DNS Setup</a>
+<a class="font-['Manrope'] font-semibold tracking-[-0.02em] uppercase text-xs text-[#e2efff]/80 hover:text-white transition-colors duration-300" href="#">Security</a>
+</div>
+<button class="bg-secondary px-6 py-2 text-white font-['Manrope'] font-bold text-xs uppercase tracking-widest hover:bg-secondary-container transition-all">Contact Tech</button>
+</nav>
+<!-- Sidebar (Large Screens Only) -->
+<aside class="h-screen w-64 fixed left-0 top-0 hidden lg:flex flex-col border-r border-[#c6c5d5]/15 bg-[#f7f9ff] pt-20">
+<div class="px-6 mb-8">
+<h2 class="text-lg font-black text-[#00003c] uppercase tracking-tighter">Technical Guide</h2>
+<p class="text-[10px] text-outline uppercase tracking-widest">V1.0 - Digital Infrastructure</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-6 py-3 space-x-3 text-[#767684] hover:bg-[#e2efff] hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">architecture</span>
+<span class="text-sm font-medium">Overview</span>
+</a>
+<a class="flex items-center px-6 py-3 space-x-3 text-[#767684] hover:bg-[#e2efff] hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">mail</span>
+<span class="text-sm font-medium">Google Workspace</span>
+</a>
+<a class="flex items-center px-6 py-3 space-x-3 text-[#767684] hover:bg-[#e2efff] hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">business_center</span>
+<span class="text-sm font-medium">Zoho Mail</span>
+</a>
+<a class="flex items-center px-6 py-3 space-x-3 bg-[#00003c] text-white font-bold transition-all" href="#">
+<span class="material-symbols-outlined text-xl">settings_ethernet</span>
+<span class="text-sm">DNS Configuration</span>
+</a>
+<a class="flex items-center px-6 py-3 space-x-3 text-[#767684] hover:bg-[#e2efff] hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">build</span>
+<span class="text-sm font-medium">Troubleshooting</span>
+</a>
+</nav>
+<div class="p-6 border-t border-[#c6c5d5]/15">
+<button class="w-full bg-primary text-white py-3 text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-all">Download PDF Guide</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-64 pt-16 min-h-screen">
+<!-- Hero Section -->
+<header class="blueprint-gradient px-8 py-20 text-white relative overflow-hidden">
+<div class="max-w-4xl relative z-10">
+<p class="font-['Inter'] text-[10px] uppercase tracking-[0.2em] text-secondary-fixed-dim mb-4">Arquitectura Digital / Comunicaciones</p>
+<h1 class="font-['Manrope'] text-5xl md:text-6xl font-extrabold tracking-[-0.03em] mb-6 leading-[0.95]">
+                    Guía de Correos <br/> Corporativos <span class="text-secondary-fixed-dim">—</span> WM/M&amp;S.
+                </h1>
+<p class="text-surface-variant max-w-xl text-sm leading-relaxed font-light">
+                    Protocolo estructural para la implementación de identidades digitales de alta precisión. Configure su infraestructura de comunicación con estándares arquitectónicos internacionales.
+                </p>
+</div>
+<!-- Decorative Element -->
+<div class="absolute right-0 bottom-0 opacity-10 pointer-events-none translate-x-1/4 translate-y-1/4">
+<span class="material-symbols-outlined text-[400px]" style="font-variation-settings: 'wght' 100;">architecture</span>
+</div>
+</header>
+<!-- Comparison Section -->
+<section class="p-8 md:p-12 bg-surface">
+<div class="mb-12">
+<span class="text-secondary font-bold text-xs uppercase tracking-widest">Fase 01</span>
+<h2 class="font-['Manrope'] text-3xl font-bold text-primary mt-2">Comparativa de Plataformas</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20">
+<!-- Google Workspace Card -->
+<div class="bg-surface-container-lowest p-10 hover:bg-surface-container-low transition-colors group">
+<div class="flex justify-between items-start mb-8">
+<div class="bg-primary p-3">
+<span class="material-symbols-outlined text-white text-3xl">mail</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline">Recomendado Escalabilidad</span>
+</div>
+<h3 class="font-['Manrope'] text-2xl font-bold text-primary mb-2">Google Workspace</h3>
+<p class="text-sm text-outline mb-8 leading-relaxed">Integración total con ecosistema BIM y Drive. Ideal para firmas con alto flujo de archivos técnicos.</p>
+<div class="flex items-baseline gap-2 mb-8">
+<span class="text-4xl font-black text-secondary">$6.00</span>
+<span class="text-xs uppercase tracking-widest text-outline">/ mes por usuario</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-secondary text-lg">check_circle</span> 30GB Cloud Storage
+                        </li>
+<li class="flex items-center gap-3 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Meet 100 participantes
+                        </li>
+</ul>
+<button class="w-full border border-primary py-4 text-xs font-bold uppercase tracking-widest group-hover:bg-primary group-hover:text-white transition-all">Seleccionar Google</button>
+</div>
+<!-- Zoho Mail Card -->
+<div class="bg-surface-container-lowest p-10 hover:bg-surface-container-low transition-colors group">
+<div class="flex justify-between items-start mb-8">
+<div class="bg-secondary p-3">
+<span class="material-symbols-outlined text-white text-3xl">business_center</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary">Costo Eficiente</span>
+</div>
+<h3 class="font-['Manrope'] text-2xl font-bold text-primary mb-2">Zoho Mail</h3>
+<p class="text-sm text-outline mb-8 leading-relaxed">Privacidad extrema y minimalismo técnico. Perfecto para equipos que priorizan la gestión de correo pura.</p>
+<div class="flex items-baseline gap-2 mb-8">
+<span class="text-4xl font-black text-secondary">Q10.00</span>
+<span class="text-xs uppercase tracking-widest text-outline">/ mes por usuario</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-secondary text-lg">check_circle</span> 5GB Storage (Lite)
+                        </li>
+<li class="flex items-center gap-3 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Sin Publicidad, Privado
+                        </li>
+</ul>
+<button class="w-full border border-primary py-4 text-xs font-bold uppercase tracking-widest group-hover:bg-primary group-hover:text-white transition-all">Seleccionar Zoho</button>
+</div>
+</div>
+</section>
+<!-- DNS Configuration Section -->
+<section class="p-8 md:p-12 bg-surface-container-low">
+<div class="flex flex-col md:flex-row gap-12">
+<div class="md:w-1/3">
+<span class="text-secondary font-bold text-xs uppercase tracking-widest">Fase 02</span>
+<h2 class="font-['Manrope'] text-3xl font-bold text-primary mt-2 mb-6">Configuración DNS</h2>
+<p class="text-sm text-outline leading-relaxed mb-6">El cimiento de su correo corporativo. Inyecte estos registros en su panel de Vercel o Cloudflare para validar la propiedad del dominio.</p>
+<!-- Data Pylon Component -->
+<div class="space-y-8 mt-12">
+<div class="flex flex-col">
+<span class="text-5xl font-['Manrope'] font-extrabold text-secondary leading-none">99.9%</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary mt-2">Uptime Garantizado</span>
+</div>
+<div class="flex flex-col">
+<span class="text-5xl font-['Manrope'] font-extrabold text-secondary leading-none">&lt; 5m</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary mt-2">Tiempo de Propagación</span>
+</div>
+</div>
+</div>
+<div class="md:w-2/3 bg-surface-container-lowest p-8 border border-outline-variant/15 shadow-sm">
+<div class="space-y-6">
+<div class="border-l-4 border-primary pl-6 py-2">
+<div class="flex justify-between items-center mb-2">
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest">Registro TXT (Verificación)</span>
+<span class="material-symbols-outlined text-outline text-lg">content_copy</span>
+</div>
+<code class="block bg-surface p-4 text-xs font-mono text-primary break-all">
+                                v=spf1 include:_spf.google.com ~all
+                            </code>
+</div>
+<div class="border-l-4 border-secondary pl-6 py-2">
+<div class="flex justify-between items-center mb-2">
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest">Registro MX (Prioridad 10)</span>
+<span class="material-symbols-outlined text-outline text-lg">content_copy</span>
+</div>
+<code class="block bg-surface p-4 text-xs font-mono text-primary break-all">
+                                ASPMX.L.GOOGLE.COM
+                            </code>
+</div>
+<div class="border-l-4 border-outline pl-6 py-2">
+<div class="flex justify-between items-center mb-2">
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest">Registro MX (Prioridad 20)</span>
+<span class="material-symbols-outlined text-outline text-lg">content_copy</span>
+</div>
+<code class="block bg-surface p-4 text-xs font-mono text-primary break-all">
+                                ALT1.ASPMX.L.GOOGLE.COM
+                            </code>
+</div>
+</div>
+<div class="mt-12 bg-primary p-6 text-white flex items-center justify-between">
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest opacity-70">Estado del Dominio</p>
+<p class="text-sm font-semibold">constructora-wm.com</p>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse"></div>
+<span class="text-[10px] font-bold uppercase tracking-widest">Pendiente de Propagación</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mailbox Config Panel -->
+<section class="p-8 md:p-12 bg-surface">
+<div class="mb-12 text-center md:text-left">
+<span class="text-secondary font-bold text-xs uppercase tracking-widest">Fase 03</span>
+<h2 class="font-['Manrope'] text-3xl font-bold text-primary mt-2">Configuración de Buzones</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Mailbox Input Card -->
+<div class="md:col-span-1 bg-surface-container-lowest p-8 border border-outline-variant/15">
+<h3 class="font-['Manrope'] text-lg font-bold text-primary mb-6">Crear Nuevo Alias</h3>
+<form class="space-y-6">
+<div>
+<label class="block text-[10px] font-bold uppercase tracking-widest text-outline mb-1">Nombre de Usuario</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-secondary px-0 py-2 text-sm" placeholder="ej. info" type="text"/>
+</div>
+<div>
+<label class="block text-[10px] font-bold uppercase tracking-widest text-outline mb-1">Dominio</label>
+<select class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-secondary px-0 py-2 text-sm">
+<option>@constructora-wm.com</option>
+<option>@ms-projects.com</option>
+</select>
+</div>
+<button class="w-full bg-primary text-white py-4 text-xs font-bold uppercase tracking-widest hover:opacity-95 transition-all mt-4" type="button">Generar Acceso</button>
+</form>
+</div>
+<!-- Active Mailboxes List -->
+<div class="md:col-span-2 space-y-4">
+<div class="flex items-center justify-between p-6 bg-surface-container-lowest border-l-4 border-secondary shadow-sm hover:translate-x-1 transition-transform">
+<div class="flex items-center gap-6">
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-primary">gerencia@constructora-wm.com</h4>
+<p class="text-[10px] text-outline uppercase tracking-widest">Nivel de Acceso: Administrador</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors">settings</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-error transition-colors">delete</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-6 bg-surface-container-lowest border-l-4 border-outline-variant shadow-sm hover:translate-x-1 transition-transform">
+<div class="flex items-center gap-6">
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">group</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-primary">proyectos@constructora-wm.com</h4>
+<p class="text-[10px] text-outline uppercase tracking-widest">Nivel de Acceso: Colaborador</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors">settings</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-error transition-colors">delete</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-6 bg-surface-container-lowest border-l-4 border-outline-variant shadow-sm hover:translate-x-1 transition-transform">
+<div class="flex items-center gap-6">
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-primary">info@constructora-wm.com</h4>
+<p class="text-[10px] text-outline uppercase tracking-widest">Nivel de Acceso: Alias Público</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors">settings</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-error transition-colors">delete</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits Section (Bento Style) -->
+<section class="p-8 md:p-12 bg-tertiary text-white">
+<div class="mb-12">
+<span class="text-secondary-fixed-dim font-bold text-xs uppercase tracking-widest">Beneficios Estructurales</span>
+<h2 class="font-['Manrope'] text-3xl font-bold mt-2">Seguridad y Brand Integrity</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="md:col-span-2 bg-[#00003c] p-8 min-h-[300px] flex flex-col justify-end border border-white/5 relative overflow-hidden group">
+<span class="material-symbols-outlined absolute top-8 left-8 text-6xl text-secondary-fixed-dim/20 group-hover:scale-110 transition-transform">verified_user</span>
+<h3 class="text-2xl font-bold mb-4 relative z-10">Branding Profesional</h3>
+<p class="text-sm text-surface-variant/70 leading-relaxed relative z-10">Elimine dominios genéricos. Refuerce la autoridad de su firma arquitectónica en cada comunicación enviada a proveedores y clientes.</p>
+</div>
+<div class="md:col-span-2 bg-secondary p-8 min-h-[300px] flex flex-col justify-end relative group">
+<span class="material-symbols-outlined absolute top-8 left-8 text-6xl text-white/20 group-hover:scale-110 transition-transform">lock_person</span>
+<h3 class="text-2xl font-bold mb-4 relative z-10">Seguridad Encriptada</h3>
+<p class="text-sm text-white/80 leading-relaxed relative z-10">Protocolos TLS/SSL de grado industrial. Proteja planos técnicos y presupuestos confidenciales contra interceptaciones externas.</p>
+</div>
+<div class="md:col-span-1 bg-surface-container-highest/10 p-8 min-h-[200px] flex flex-col justify-between border border-white/5">
+<span class="material-symbols-outlined text-secondary-fixed-dim">sync</span>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-widest mb-1">Sincronización</h4>
+<p class="text-[10px] text-surface-variant/50">Móvil, Tablet y Desktop.</p>
+</div>
+</div>
+<div class="md:col-span-1 bg-surface-container-highest/10 p-8 min-h-[200px] flex flex-col justify-between border border-white/5">
+<span class="material-symbols-outlined text-secondary-fixed-dim">cloud</span>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-widest mb-1">Almacenamiento</h4>
+<p class="text-[10px] text-surface-variant/50">Hasta 30GB de archivos.</p>
+</div>
+</div>
+<div class="md:col-span-2 bg-[#00003c] p-8 min-h-[200px] flex items-center gap-6 border border-white/5">
+<div class="flex flex-col">
+<span class="text-3xl font-['Manrope'] font-extrabold text-secondary-fixed-dim">2FA</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Auth Obligatorio</span>
+</div>
+<div class="h-12 w-px bg-white/10"></div>
+<p class="text-xs text-surface-variant/60 leading-relaxed">Cada cuenta es protegida con doble factor de autenticación para garantizar que solo el personal autorizado acceda a la data.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-8 mt-20 flex flex-col md:flex-row justify-between items-center px-12 border-t border-[#c6c5d5]/15 bg-[#e2efff]">
+<p class="font-['Inter'] text-[10px] uppercase tracking-widest text-[#767684]">© 2024 Architectural Precision Systems. All rights reserved.</p>
+<div class="flex gap-8 mt-4 md:mt-0">
+<a class="font-['Inter'] text-[10px] uppercase tracking-widest text-[#767684] hover:text-[#00003c] transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-[10px] uppercase tracking-widest text-[#767684] hover:text-[#00003c] transition-colors" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-[10px] uppercase tracking-widest text-[#767684] hover:text-[#00003c] transition-colors" href="#">API Documentation</a>
+</div>
+</footer>
+</main>
+<!-- Floating Action Button (Contextual) -->
+<button class="fixed bottom-8 right-8 bg-secondary text-white w-14 h-14 flex items-center justify-center shadow-2xl hover:bg-primary transition-all group z-50">
+<span class="material-symbols-outlined group-hover:rotate-90 transition-transform">support_agent</span>
+</button>
+</body></html>

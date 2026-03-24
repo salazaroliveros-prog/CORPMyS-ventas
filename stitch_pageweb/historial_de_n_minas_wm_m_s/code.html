@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Historial de Nóminas - StrucX Payroll</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#4b53bc",
+              "on-secondary-fixed": "#271900",
+              "outline-variant": "#c6c5d5",
+              "on-primary-fixed-variant": "#3239a3",
+              "on-tertiary-fixed-variant": "#394857",
+              "tertiary-fixed-dim": "#b8c8da",
+              "surface-container-high": "#d9eafc",
+              "surface-container": "#e2efff",
+              "error": "#ba1a1a",
+              "surface-container-highest": "#d4e4f6",
+              "error-container": "#ffdad6",
+              "secondary-container": "#fdc34d",
+              "on-secondary-container": "#715000",
+              "inverse-surface": "#223240",
+              "on-tertiary": "#ffffff",
+              "surface": "#f7f9ff",
+              "inverse-primary": "#bfc2ff",
+              "tertiary": "#000c18",
+              "on-tertiary-container": "#7b8b9b",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              "on-surface-variant": "#464653",
+              "tertiary-container": "#132330",
+              "surface-container-lowest": "#ffffff",
+              "background": "#f7f9ff",
+              "inverse-on-surface": "#e7f2ff",
+              "primary-container": "#000080",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed": "#d4e4f6",
+              "on-secondary-fixed-variant": "#5d4200",
+              "primary": "#00003c",
+              "secondary-fixed-dim": "#f7bd48",
+              "secondary-fixed": "#ffdea6",
+              "primary-fixed": "#e0e0ff",
+              "on-surface": "#0d1d2a",
+              "secondary": "#7b5800",
+              "surface-container-low": "#ecf4ff",
+              "surface-bright": "#f7f9ff",
+              "primary-fixed-dim": "#bfc2ff",
+              "on-primary": "#ffffff",
+              "surface-variant": "#d4e4f6",
+              "on-background": "#0d1d2a",
+              "outline": "#767684",
+              "on-primary-fixed": "#00006e",
+              "on-primary-container": "#777eea",
+              "surface-dim": "#cbdcee"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex min-h-screen">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-6 bg-[#e2efff] dark:bg-[#00003c] text-[#00003c] dark:text-[#f7f9ff] font-['Inter'] text-sm tracking-normal h-screen w-64 rounded-none z-50">
+<div class="px-6 mb-10">
+<h2 class="font-['Manrope'] font-black text-[#00003c] dark:text-[#f7f9ff] text-xl">Constructora Elite</h2>
+<p class="text-[10px] uppercase tracking-widest opacity-70">Gestión de Nómina</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-6 py-3 text-[#767684] dark:text-[#c6c5d5] hover:bg-[#f7f9ff]/50 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined mr-3">dashboard</span>
+                Resumen
+            </a>
+<a class="flex items-center px-6 py-3 bg-[#ffffff] dark:bg-[#000c18] text-[#7b5800] font-bold border-r-4 border-[#7b5800] transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 1;">payments</span>
+                Nóminas
+            </a>
+<a class="flex items-center px-6 py-3 text-[#767684] dark:text-[#c6c5d5] hover:bg-[#f7f9ff]/50 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined mr-3">construction</span>
+                Costos Obra
+            </a>
+<a class="flex items-center px-6 py-3 text-[#767684] dark:text-[#c6c5d5] hover:bg-[#f7f9ff]/50 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined mr-3">description</span>
+                Documentos
+            </a>
+<a class="flex items-center px-6 py-3 text-[#767684] dark:text-[#c6c5d5] hover:bg-[#f7f9ff]/50 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined mr-3">analytics</span>
+                Reportes
+            </a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full bg-primary text-on-primary py-3 font-bold text-xs uppercase tracking-widest transition-transform duration-150 active:scale-95">
+                Nueva Nómina
+            </button>
+<div class="mt-6 border-t border-outline-variant/20 pt-4">
+<a class="flex items-center text-[#767684] dark:text-[#c6c5d5] hover:text-primary py-2 transition-colors" href="#">
+<span class="material-symbols-outlined mr-3">help_outline</span>
+                    Soporte
+                </a>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 flex-1 flex flex-col min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<header class="flex justify-between items-center px-8 py-4 max-w-full bg-[#f7f9ff] dark:bg-[#000c18] border-none">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-[#00003c] dark:text-[#f7f9ff]">StrucX Payroll</span>
+<nav class="hidden md:flex gap-6">
+<a class="font-['Manrope'] font-semibold tracking-tight uppercase text-xs text-[#767684] dark:text-[#c6c5d5] hover:text-[#000080] dark:hover:text-[#ffffff] transition-colors duration-200" href="#">Dashboard</a>
+<a class="font-['Manrope'] font-semibold tracking-tight uppercase text-xs text-[#767684] dark:text-[#c6c5d5] hover:text-[#000080] dark:hover:text-[#ffffff] transition-colors duration-200" href="#">Proyectos</a>
+<a class="font-['Manrope'] font-semibold tracking-tight uppercase text-xs text-[#7b5800] dark:text-[#f7bd48] border-b-2 border-[#7b5800] pb-1" href="#">Historial</a>
+<a class="font-['Manrope'] font-semibold tracking-tight uppercase text-xs text-[#767684] dark:text-[#c6c5d5] hover:text-[#000080] dark:hover:text-[#ffffff] transition-colors duration-200" href="#">Personal</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-8 h-8 bg-surface-container rounded-full overflow-hidden border border-outline-variant/30">
+<img alt="Avatar del administrador" class="w-full h-full object-cover" data-alt="Professional avatar of a construction project administrator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxzPTH-Q5SBZjHLCnO_ZC-m5pLQEP6rvN88ajbl8yaCZtKpR1M_NA6HOE_xajxt9FchTIkFI12ME34_ZQjNxdFAd2AmI2GHbv1uT0zC9I5EuLSwtkP_Jd151gXBsAUE1CBq35vrCPS6cj9pP73A2uknPUD8_p9oUlJWATMR0LD5j8O2Px1APbiTDF2aWk4xAJw8-_uFRWddo3ABXWSaYtE0wFF7GBSQfj7E80lyuR0sB-o1CwsESs_ITfwDx7ABduAibf7O3dC4lrT"/>
+</div>
+</div>
+</header>
+<!-- Content Body -->
+<div class="flex-1 p-10 max-w-7xl mx-auto w-full">
+<!-- Page Header -->
+<div class="mb-12">
+<h1 class="text-4xl font-extrabold tracking-tight text-primary mb-2">Historial de Nóminas</h1>
+<p class="text-outline font-label uppercase text-[10px] tracking-[0.2em]">Constructora WM/M&amp;S • Gestión Administrativa</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+<!-- Filters Section (Left Col) -->
+<section class="lg:col-span-1 space-y-8">
+<div class="bg-surface-container-low p-6 border-l-4 border-secondary">
+<h3 class="font-headline font-bold text-xs uppercase tracking-widest text-primary mb-6">Parámetros de Búsqueda</h3>
+<div class="space-y-6">
+<div>
+<label class="block font-label text-[10px] uppercase font-bold text-outline mb-2">Año Fiscal</label>
+<select class="w-full bg-transparent border-b border-outline focus:border-secondary focus:ring-0 text-sm py-2 px-0 appearance-none rounded-none cursor-pointer">
+<option>2024</option>
+<option>2023</option>
+</select>
+</div>
+<div>
+<label class="block font-label text-[10px] uppercase font-bold text-outline mb-2">Periodo (Mes)</label>
+<select class="w-full bg-transparent border-b border-outline focus:border-secondary focus:ring-0 text-sm py-2 px-0 appearance-none rounded-none cursor-pointer">
+<option>Todos los meses</option>
+<option>Enero</option>
+<option>Febrero</option>
+<option>Marzo</option>
+<option>Abril</option>
+<option>Mayo</option>
+<option>Junio</option>
+<option>Julio</option>
+<option>Agosto</option>
+<option>Septiembre</option>
+<option>Octubre</option>
+</select>
+</div>
+<div>
+<label class="block font-label text-[10px] uppercase font-bold text-outline mb-2">Proyecto Activo</label>
+<select class="w-full bg-transparent border-b border-outline focus:border-secondary focus:ring-0 text-sm py-2 px-0 appearance-none rounded-none cursor-pointer">
+<option>Todos los proyectos</option>
+<option>Residencial Los Olivos - Fase I</option>
+<option>Centro Comercial Zona 10</option>
+<option>Torre Empresarial M&amp;S</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Summary Widget (Data Pylon) -->
+<div class="bg-primary p-8 text-on-primary relative overflow-hidden">
+<div class="relative z-10">
+<span class="block font-label text-[10px] uppercase tracking-[0.1em] opacity-70 mb-2">Total Pagado 2024</span>
+<div class="flex items-baseline gap-2">
+<span class="text-secondary-fixed-dim font-headline text-4xl font-black">Q 491,180</span>
+<span class="text-sm opacity-60">.00</span>
+</div>
+<p class="mt-4 text-[10px] leading-relaxed opacity-50 font-medium">Acumulado total de nóminas ejecutadas y validadas durante el periodo fiscal vigente.</p>
+</div>
+<!-- Blueprint Texture Decoration -->
+<div class="absolute -bottom-4 -right-4 opacity-10">
+<span class="material-symbols-outlined text-9xl">architecture</span>
+</div>
+</div>
+</section>
+<!-- Results Table Section (Right Col) -->
+<section class="lg:col-span-3">
+<div class="bg-surface-container-lowest">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-primary">
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-widest font-bold">Fecha</th>
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-widest font-bold">Proyecto / Fase</th>
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-widest font-bold">Monto Total</th>
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-widest font-bold">Estado</th>
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-widest font-bold text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-6 text-sm font-semibold text-primary">15/10/2024</td>
+<td class="px-6 py-6">
+<p class="text-sm font-bold text-primary">Residencial Los Olivos</p>
+<p class="text-[10px] text-outline uppercase font-medium">Fase I</p>
+</td>
+<td class="px-6 py-6 text-sm font-bold text-primary">Q 142,580.00</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-2 text-emerald-700 bg-emerald-50 w-fit px-2 py-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Pagado</span>
+</div>
+</td>
+<td class="px-6 py-6 text-right">
+<div class="flex justify-end gap-3">
+<button class="p-2 text-outline hover:text-secondary transition-colors" title="Ver Detalle">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-2 text-outline hover:text-primary transition-colors" title="Descargar PDF">
+<span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-6 text-sm font-semibold text-primary">30/09/2024</td>
+<td class="px-6 py-6">
+<p class="text-sm font-bold text-primary">Centro Comercial Zona 10</p>
+<p class="text-[10px] text-outline uppercase font-medium">Infraestructura Base</p>
+</td>
+<td class="px-6 py-6 text-sm font-bold text-primary">Q 210,400.00</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-2 text-emerald-700 bg-emerald-50 w-fit px-2 py-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Pagado</span>
+</div>
+</td>
+<td class="px-6 py-6 text-right">
+<div class="flex justify-end gap-3">
+<button class="p-2 text-outline hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-6 text-sm font-semibold text-primary">15/09/2024</td>
+<td class="px-6 py-6">
+<p class="text-sm font-bold text-primary">Residencial Los Olivos</p>
+<p class="text-[10px] text-outline uppercase font-medium">Fase I</p>
+</td>
+<td class="px-6 py-6 text-sm font-bold text-primary">Q 138,200.00</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-2 text-emerald-700 bg-emerald-50 w-fit px-2 py-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Pagado</span>
+</div>
+</td>
+<td class="px-6 py-6 text-right">
+<div class="flex justify-end gap-3">
+<button class="p-2 text-outline hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="p-6 bg-surface-container-low flex justify-between items-center">
+<span class="text-[10px] font-bold uppercase text-outline">Mostrando 3 de 48 registros</span>
+<div class="flex gap-2">
+<button class="w-8 h-8 flex items-center justify-center border border-outline-variant text-outline hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center bg-primary text-on-primary">
+<span class="text-[10px] font-bold">1</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center border border-outline-variant text-outline hover:bg-white transition-colors">
+<span class="text-[10px] font-bold">2</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center border border-outline-variant text-outline hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Footer (Shared Component) -->
+<footer class="w-full px-8 py-4 flex justify-between items-center bg-[#f7f9ff] dark:bg-[#000c18] text-[#767684] font-['Inter'] text-[10px] uppercase tracking-[0.1em] border-t border-[#c6c5d5]/15 mt-auto">
+<div class="flex gap-6">
+<a class="hover:text-[#7b5800] transition-opacity opacity-80 hover:opacity-100" href="#">Privacidad</a>
+<a class="hover:text-[#7b5800] transition-opacity opacity-80 hover:opacity-100" href="#">Términos</a>
+<a class="hover:text-[#7b5800] transition-opacity opacity-80 hover:opacity-100" href="#">Auditoría</a>
+</div>
+<span>© 2024 StrucX Architectural Solutions. Todos los derechos reservados.</span>
+</footer>
+</main>
+</body></html>

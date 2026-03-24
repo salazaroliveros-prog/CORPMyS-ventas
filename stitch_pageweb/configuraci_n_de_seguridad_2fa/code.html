@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Seguridad - Autenticación de Dos Factores</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,900&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6",
+              "surface": "#fff8ef",
+              "on-tertiary": "#ffffff",
+              "tertiary": "#415160",
+              "surface-container-lowest": "#ffffff",
+              "outline": "#87736b",
+              "surface-container": "#f5edde",
+              "secondary": "#546344",
+              "surface-tint": "#944925",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-error": "#ffffff",
+              "tertiary-container": "#596979",
+              "surface-container-low": "#fbf3e4",
+              "primary": "#823b18",
+              "tertiary-fixed": "#d4e4f6",
+              "surface-container-highest": "#e9e2d3",
+              "on-primary-fixed-variant": "#76320f",
+              "on-secondary-fixed": "#121f06",
+              "error": "#ba1a1a",
+              "background": "#fff8ef",
+              "inverse-primary": "#ffb596",
+              "surface-bright": "#fff8ef",
+              "on-primary-container": "#ffe1d6",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#efe7d9",
+              "secondary-fixed": "#d7e9c1",
+              "on-primary-fixed": "#360f00",
+              "primary-fixed-dim": "#ffb596",
+              "outline-variant": "#dac1b8",
+              "on-secondary-container": "#5a6949",
+              "on-background": "#1e1b13",
+              "inverse-surface": "#343026",
+              "on-surface-variant": "#54433c",
+              "tertiary-fixed-dim": "#b8c8da",
+              "on-tertiary-container": "#d8e9fb",
+              "on-surface": "#1e1b13",
+              "on-secondary": "#ffffff",
+              "surface-dim": "#e1d9cb",
+              "secondary-fixed-dim": "#bbcca6",
+              "primary-fixed": "#ffdbcd",
+              "surface-variant": "#e9e2d3",
+              "on-tertiary-fixed-variant": "#394857",
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "inverse-on-surface": "#f8f0e1",
+              "secondary-container": "#d7e9c1",
+              "primary-container": "#a0522d"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .fermentation-bg {
+        background: linear-gradient(135deg, #fff8ef 0%, #f5edde 100%);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex">
+<!-- SideNavBar Component -->
+<aside class="hidden md:flex flex-col h-screen w-64 bg-[#fbf3e4] dark:bg-stone-800 py-8 shadow-[20px_0_40px_rgba(30,27,19,0.03)] sticky top-0">
+<div class="px-8 mb-12">
+<h1 class="font-noto-serif text-xl font-bold text-[#1e1b13] dark:text-[#fbf3e4] leading-tight">Hearth Admin</h1>
+<p class="font-work-sans text-[10px] font-medium uppercase tracking-[0.2em] text-tertiary opacity-70">Arquitectura y Construcción</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 text-[#415160] dark:text-stone-400 py-3 px-6 hover:bg-[#fff8ef]/50 dark:hover:bg-stone-700/50 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+<span class="font-work-sans text-sm font-medium uppercase tracking-widest">Proyectos</span>
+</a>
+<a class="flex items-center gap-3 text-[#415160] dark:text-stone-400 py-3 px-6 hover:bg-[#fff8ef]/50 dark:hover:bg-stone-700/50 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-work-sans text-sm font-medium uppercase tracking-widest">Planos</span>
+</a>
+<!-- Active Navigation State for Security -->
+<a class="flex items-center gap-3 text-[#823b18] dark:text-[#a0522d] font-bold py-3 px-6 bg-[#fff8ef] dark:bg-stone-900 rounded-l-lg translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="security" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="font-work-sans text-sm font-medium uppercase tracking-widest">Seguridad</span>
+</a>
+<a class="flex items-center gap-3 text-[#415160] dark:text-stone-400 py-3 px-6 hover:bg-[#fff8ef]/50 dark:hover:bg-stone-700/50 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="group_work">group_work</span>
+<span class="font-work-sans text-sm font-medium uppercase tracking-widest">Equipo</span>
+</a>
+<a class="flex items-center gap-3 text-[#415160] dark:text-stone-400 py-3 px-6 hover:bg-[#fff8ef]/50 dark:hover:bg-stone-700/50 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-work-sans text-sm font-medium uppercase tracking-widest">Archivo</span>
+</a>
+</nav>
+<div class="px-6 mt-auto border-t border-outline-variant/20 pt-6">
+<a class="flex items-center gap-3 text-[#415160] dark:text-stone-400 py-3 px-6 hover:bg-[#fff8ef]/50 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-work-sans text-sm font-medium uppercase tracking-widest">Ayuda</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col min-w-0 bg-surface">
+<!-- TopNavBar Component -->
+<header class="flex justify-between items-center px-8 py-4 w-full bg-[#fff8ef] dark:bg-stone-900">
+<div class="flex items-center gap-4">
+<span class="font-noto-serif font-black italic text-[#1e1b13] dark:text-[#fbf3e4] text-xl">The Artisanal Hearth</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-95 transition-transform" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-95 transition-transform" data-icon="settings">settings</span>
+</div>
+<div class="h-10 w-10 bg-surface-container-highest rounded-full flex items-center justify-center border border-outline-variant/30 overflow-hidden">
+<img alt="Admin profile avatar" class="h-full w-full object-cover" data-alt="Close up portrait of a professional male administrator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCvQDBsZxpvqc2cMZDHUumn8sIfdUizwyyr2LRmdJAYgp6L4qRxU9f0gJDAcV02jNckV8bYm_iRfENsNuVPMaSVx9BV4NqebnBnwQyF6u1S5ZBkvViuMylEXsb-zRMlu3mdLpck1mgcomBh8mNL81_CiSy0xLoFpyX2wN1gf6a9nkmXM7S7BrT9n3ZtOcfN5_U7xkqprJBz062cio_vMLYa1U0cnVAp0FNn2b_Pta8SfuSr8B1wQ335yI24jDw8BgzOVdMwKQVnEal"/>
+</div>
+</div>
+</header>
+<section class="p-8 md:p-12 max-w-6xl mx-auto w-full">
+<!-- Header Section -->
+<div class="mb-12">
+<h2 class="font-headline text-5xl font-bold text-on-surface tracking-tighter mb-4">Autenticación de Dos Factores</h2>
+<p class="font-body text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                    Proteja su cuenta de administrador con una capa adicional de seguridad. Al activar el 2FA, se requerirá un código único además de su contraseña.
+                </p>
+</div>
+<!-- Dashboard Layout: Asymmetric Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Main Configuration Area -->
+<div class="lg:col-span-8 space-y-8">
+<!-- 1. Current Status Card -->
+<div class="bg-surface-container-low rounded-xl p-8 border-l-4 border-primary">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-5">
+<div class="bg-primary/10 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold">Estado del Sistema</h3>
+<p class="font-body text-sm text-on-surface-variant">El 2FA se encuentra actualmente <span class="text-error font-semibold">desactivado</span></p>
+</div>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-error-container text-on-error-container rounded-md text-xs font-bold uppercase tracking-widest">
+<span class="h-2 w-2 bg-error rounded-full animate-pulse"></span>
+                                No Seguro
+                            </div>
+</div>
+</div>
+<!-- 2. Configuration Options (The Science) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Authenticator App -->
+<div class="bg-surface-container-highest rounded-xl p-6 flex flex-col justify-between hover:translate-y-[-4px] transition-transform duration-300">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="install_mobile">install_mobile</span>
+<h4 class="font-headline font-bold text-lg">App de Autenticación</h4>
+</div>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Use Google Authenticator o Authy para generar códigos de seguridad instantáneos.</p>
+</div>
+<button class="w-full flex items-center justify-center gap-2 py-3 px-5 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-md font-medium text-sm transition-all hover:shadow-lg">
+<span class="material-symbols-outlined text-sm" data-icon="qr_code_scanner">qr_code_scanner</span>
+                                Escanear código QR
+                            </button>
+</div>
+<!-- SMS Method -->
+<div class="bg-surface-container-highest rounded-xl p-6 flex flex-col justify-between hover:translate-y-[-4px] transition-transform duration-300">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="sms">sms</span>
+<h4 class="font-headline font-bold text-lg">Mensaje de Texto (SMS)</h4>
+</div>
+<div class="space-y-4 mb-6">
+<p class="text-sm text-on-surface-variant leading-relaxed">Reciba un código vía SMS en su teléfono móvil cada vez que inicie sesión.</p>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-on-surface-variant/60 font-medium">
+                                            +502
+                                        </div>
+<input class="w-full pl-14 pr-4 py-2.5 bg-surface-container-lowest border-0 border-b-2 border-outline-variant/40 focus:border-primary focus:ring-0 text-sm font-medium transition-all transition-all duration-300" placeholder="0000 0000" type="tel"/>
+</div>
+</div>
+</div>
+<button class="w-full py-3 px-5 border border-outline-variant/40 text-on-surface rounded-md font-medium text-sm hover:bg-surface-container-high transition-colors">
+                                Validar número
+                            </button>
+</div>
+</div>
+<!-- Backup Codes Section -->
+<div class="bg-white rounded-xl p-8 border border-outline-variant/10 shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="key_visualizer">key_visualizer</span>
+<div>
+<h4 class="font-headline font-bold text-xl">Códigos de Respaldo</h4>
+<p class="text-sm text-on-surface-variant">Genere códigos únicos para acceder si pierde su dispositivo móvil.</p>
+</div>
+</div>
+<button class="flex items-center justify-center gap-2 text-primary font-bold text-sm group">
+<span class="material-symbols-outlined group-hover:rotate-180 transition-transform duration-500" data-icon="autorenew">autorenew</span>
+<span class="underline underline-offset-4 decoration-primary-fixed-dim decoration-2">Generar nuevos códigos</span>
+</button>
+</div>
+<div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 opacity-40 select-none">
+<div class="bg-surface-container-low p-3 rounded text-center font-mono text-xs tracking-widest text-tertiary border border-dashed border-outline-variant">XXXX-XXXX</div>
+<div class="bg-surface-container-low p-3 rounded text-center font-mono text-xs tracking-widest text-tertiary border border-dashed border-outline-variant">XXXX-XXXX</div>
+<div class="bg-surface-container-low p-3 rounded text-center font-mono text-xs tracking-widest text-tertiary border border-dashed border-outline-variant">XXXX-XXXX</div>
+<div class="bg-surface-container-low p-3 rounded text-center font-mono text-xs tracking-widest text-tertiary border border-dashed border-outline-variant">XXXX-XXXX</div>
+</div>
+</div>
+</div>
+<!-- Sidebar: Security Tips -->
+<aside class="lg:col-span-4 space-y-6">
+<div class="bg-[#d7e9c1]/30 rounded-xl p-8 border border-[#d7e9c1]">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary" data-icon="lightbulb" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<h4 class="font-headline font-bold text-xl text-on-secondary-container">Consejos de Seguridad</h4>
+</div>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="text-secondary font-bold text-lg leading-none">01</span>
+<p class="text-sm text-on-secondary-container/80 leading-relaxed italic">Nunca comparta su código de autenticación con nadie, ni siquiera con el soporte técnico.</p>
+</li>
+<li class="flex gap-4">
+<span class="text-secondary font-bold text-lg leading-none">02</span>
+<p class="text-sm text-on-secondary-container/80 leading-relaxed italic">Mantenga sus códigos de respaldo impresos en un lugar físico seguro fuera de su oficina.</p>
+</li>
+<li class="flex gap-4">
+<span class="text-secondary font-bold text-lg leading-none">03</span>
+<p class="text-sm text-on-secondary-container/80 leading-relaxed italic">Utilice aplicaciones que permitan copias de seguridad encriptadas en la nube como Authy.</p>
+</li>
+</ul>
+<div class="mt-8 pt-8 border-t border-secondary/20">
+<p class="text-[10px] font-bold uppercase tracking-widest text-secondary mb-2">Estado de Protección</p>
+<div class="w-full h-2 bg-secondary-fixed rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-1/3"></div>
+</div>
+<p class="text-[10px] text-on-secondary-container mt-2 opacity-60">Su cuenta está protegida al 33%</p>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-xl p-6 text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-3" data-icon="contact_support">contact_support</span>
+<h5 class="font-headline font-bold mb-2">¿Necesita Ayuda?</h5>
+<p class="text-xs text-on-surface-variant mb-4">Si tiene problemas para configurar su seguridad, contacte al equipo técnico de Hearth.</p>
+<a class="text-sm font-bold text-primary underline decoration-primary-fixed-dim" href="mailto:soporte@hearth.gt">soporte@hearth.gt</a>
+</div>
+</aside>
+</div>
+<!-- Global Action Bar -->
+<div class="mt-16 flex flex-col md:flex-row items-center justify-between gap-8 border-t border-outline-variant/30 pt-10">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary" data-icon="info">info</span>
+<p class="text-sm text-on-surface-variant italic">Al activar esta opción, se cerrarán todas las sesiones activas en otros dispositivos.</p>
+</div>
+<div class="flex gap-4 w-full md:w-auto">
+<button class="flex-1 md:flex-none py-4 px-10 border border-outline text-on-surface rounded-md font-bold tracking-wide hover:bg-surface-container transition-colors uppercase text-xs">
+                        Cancelar
+                    </button>
+<button class="flex-1 md:flex-none py-4 px-12 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-md font-bold tracking-widest shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all uppercase text-xs">
+                        Activar 2FA
+                    </button>
+</div>
+</div>
+</section>
+<!-- Footer Decoration -->
+<footer class="mt-auto py-12 px-8 flex justify-between items-end opacity-20 pointer-events-none">
+<div class="font-headline text-8xl font-black italic select-none">Hearth</div>
+<div class="text-right">
+<p class="font-mono text-xs uppercase tracking-tighter">Secure Administration Shell v4.0.1</p>
+<p class="font-mono text-xs uppercase tracking-tighter">Guatemala City, 2024</p>
+</div>
+</footer>
+</main>
+</body></html>

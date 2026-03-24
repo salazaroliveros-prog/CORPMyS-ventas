@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#93000a",
+              "background": "#f7f9ff",
+              "on-surface-variant": "#464653",
+              "secondary-fixed-dim": "#f7bd48",
+              "on-surface": "#0d1d2a",
+              "surface-bright": "#f7f9ff",
+              "on-tertiary-container": "#7b8b9b",
+              "error-container": "#ffdad6",
+              "primary-fixed": "#e0e0ff",
+              "on-secondary-fixed": "#271900",
+              "surface-container-low": "#ecf4ff",
+              "on-tertiary-fixed-variant": "#394857",
+              "primary-fixed-dim": "#bfc2ff",
+              "primary-container": "#000080",
+              "surface-dim": "#cbdcee",
+              "inverse-primary": "#bfc2ff",
+              "surface-tint": "#4b53bc",
+              "on-background": "#0d1d2a",
+              "primary": "#00003c",
+              "tertiary-fixed-dim": "#b8c8da",
+              "inverse-on-surface": "#e7f2ff",
+              "tertiary": "#000c18",
+              "surface-container-high": "#d9eafc",
+              "tertiary-container": "#132330",
+              "surface-container": "#e2efff",
+              "outline": "#767684",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#5d4200",
+              "surface": "#f7f9ff",
+              "on-primary-fixed-variant": "#3239a3",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-primary": "#ffffff",
+              "inverse-surface": "#223240",
+              "secondary-fixed": "#ffdea6",
+              "tertiary-fixed": "#d4e4f6",
+              "error": "#ba1a1a",
+              "on-primary-fixed": "#00006e",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#715000",
+              "secondary-container": "#fdc34d",
+              "surface-container-highest": "#d4e4f6",
+              "on-primary-container": "#777eea",
+              "surface-variant": "#d4e4f6",
+              "outline-variant": "#c6c5d5",
+              "on-error": "#ffffff",
+              "secondary": "#7b5800",
+              "on-secondary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+  <title>reporte de seguridad pdf wm m s 1</title>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<nav class="flex justify-between items-center px-12 py-6 w-full top-0 border-none bg-[#f7f9ff] dark:bg-[#000c18]">
+<div class="text-xl font-bold tracking-tighter text-[#00003c] dark:text-[#f7f9ff] uppercase">
+            Architectural Security Portal
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Manrope'] font-semibold tracking-tight text-sm text-[#767684] dark:text-[#c6c5d5] hover:text-[#7b5800] transition-colors duration-200" href="#">Dashboard</a>
+<a class="font-['Manrope'] font-semibold tracking-tight text-sm text-[#00003c] dark:text-[#f7bd48] border-b-2 border-[#7b5800] pb-1" href="#">Reports</a>
+<a class="font-['Manrope'] font-semibold tracking-tight text-sm text-[#767684] dark:text-[#c6c5d5] hover:text-[#7b5800] transition-colors duration-200" href="#">Threat Intelligence</a>
+<a class="font-['Manrope'] font-semibold tracking-tight text-sm text-[#767684] dark:text-[#c6c5d5] hover:text-[#7b5800] transition-colors duration-200" href="#">System Health</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-outline">notifications</span>
+<span class="material-symbols-outlined text-outline">settings</span>
+<div class="w-8 h-8 bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">person</span>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-12 py-16">
+<!-- Report Header Section -->
+<header class="mb-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
+<div>
+<span class="font-label text-xs tracking-widest uppercase text-secondary mb-4 block">Documento de Análisis Estructural</span>
+<h1 class="text-5xl font-extrabold text-primary tracking-tighter leading-none mb-6">
+                    Reporte de Seguridad Semanal<br/>
+<span class="text-outline-variant font-medium">IA Gemini</span>
+</h1>
+<div class="flex items-center gap-4">
+<div class="h-[1px] w-12 bg-secondary"></div>
+<p class="font-label text-sm uppercase tracking-wider text-outline">Constructora WM/M&amp;S</p>
+</div>
+</div>
+<div class="text-right flex flex-col items-end">
+<div class="bg-primary text-on-primary px-6 py-4 inline-block mb-4">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] mb-1 opacity-70">Periodo de Análisis</p>
+<p class="font-headline font-bold text-lg">17 Oct - 24 Oct 2024</p>
+</div>
+<p class="text-outline text-xs uppercase tracking-widest">ID Reporte: #SEC-WM-2024-10-24</p>
+</div>
+</header>
+<!-- Main Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Section 1: Estado de Salud (Data Pylon Style) -->
+<div class="col-span-12 md:col-span-4 bg-surface-container-lowest p-10 flex flex-col justify-between shadow-[20px_0_40px_rgba(13,29,42,0.06)] relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-surface-container opacity-50 -mr-12 -mt-12 rotate-45"></div>
+<div>
+<h2 class="font-label text-xs uppercase tracking-widest text-outline mb-12">Estado de Salud del Ecosistema</h2>
+<div class="mb-4 flex items-baseline gap-2">
+<span class="text-7xl font-headline font-extrabold text-secondary leading-none">99.8</span>
+<span class="text-2xl font-headline font-bold text-secondary">%</span>
+</div>
+<p class="text-outline text-sm leading-relaxed max-w-[200px]">
+                        Integridad estructural del firewall mantenida por encima de los parámetros críticos.
+                    </p>
+</div>
+<div class="mt-12 h-1 bg-surface-container relative">
+<div class="absolute left-0 top-0 h-full bg-secondary w-[99.8%]"></div>
+</div>
+</div>
+<!-- Section 2: Amenazas Neutralizadas -->
+<div class="col-span-12 md:col-span-8 bg-surface-container p-10">
+<div class="flex justify-between items-center mb-8">
+<h2 class="font-label text-xs uppercase tracking-widest text-primary font-bold">Amenazas Neutralizadas</h2>
+<div class="flex gap-2">
+<span class="w-2 h-2 bg-secondary"></span>
+<span class="w-2 h-2 bg-outline-variant"></span>
+<span class="w-2 h-2 bg-outline-variant"></span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body text-sm">
+<thead>
+<tr class="text-outline border-b border-outline-variant/20">
+<th class="py-4 font-medium uppercase tracking-tighter text-[10px]">Fecha</th>
+<th class="py-4 font-medium uppercase tracking-tighter text-[10px]">Tipo de Amenaza</th>
+<th class="py-4 font-medium uppercase tracking-tighter text-[10px]">Origen (IP/Ciudad)</th>
+<th class="py-4 font-medium uppercase tracking-tighter text-[10px]">Estado</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr>
+<td class="py-4 text-primary font-semibold">22 Oct 2024</td>
+<td class="py-4">SQL Injection</td>
+<td class="py-4">192.168.1.45 / Moscow</td>
+<td class="py-4"><span class="bg-secondary text-on-secondary px-2 py-0.5 text-[10px] font-bold uppercase tracking-tighter">Blocked</span></td>
+</tr>
+<tr>
+<td class="py-4 text-primary font-semibold">20 Oct 2024</td>
+<td class="py-4">Brute Force</td>
+<td class="py-4">45.23.11.102 / Shenzhen</td>
+<td class="py-4"><span class="bg-secondary text-on-secondary px-2 py-0.5 text-[10px] font-bold uppercase tracking-tighter">Blocked</span></td>
+</tr>
+<tr>
+<td class="py-4 text-primary font-semibold">18 Oct 2024</td>
+<td class="py-4">XSS Attack</td>
+<td class="py-4">89.122.3.4 / Berlin</td>
+<td class="py-4"><span class="bg-secondary text-on-secondary px-2 py-0.5 text-[10px] font-bold uppercase tracking-tighter">Blocked</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Section 3: Análisis de Malware -->
+<div class="col-span-12 md:col-span-5 bg-[#000c18] p-10 text-on-primary relative">
+<h2 class="font-label text-xs uppercase tracking-widest text-secondary-fixed-dim mb-10">Análisis de Malware</h2>
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 border border-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-3xl">verified_user</span>
+</div>
+<div>
+<p class="text-2xl font-headline font-bold mb-1">Cero Amenazas</p>
+<p class="text-outline text-xs uppercase tracking-widest">No se encontraron archivos maliciosos</p>
+</div>
+</div>
+<!-- Abstract blueprint decoration -->
+<div class="absolute bottom-4 right-4 opacity-10">
+<svg fill="none" height="100" viewbox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0H100V100H0V0Z" stroke="white" stroke-width="0.5"></path>
+<path d="M0 0L100 100" stroke="white" stroke-width="0.5"></path>
+<path d="M100 0L0 100" stroke="white" stroke-width="0.5"></path>
+</svg>
+</div>
+</div>
+<!-- Section 4: Recomendaciones de la IA -->
+<div class="col-span-12 md:col-span-7 border-l-4 border-secondary bg-surface-container-low p-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-weight="fill">psychology</span>
+<h2 class="font-label text-xs uppercase tracking-widest text-primary font-extrabold">Recomendaciones de la IA</h2>
+</div>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="text-secondary font-headline font-black text-xl">01</span>
+<p class="text-sm text-on-surface leading-relaxed">Implementar autenticación multifactor (MFA) obligatoria para todos los endpoints de gestión de obra en sitio.</p>
+</div>
+<div class="flex gap-4">
+<span class="text-secondary font-headline font-black text-xl">02</span>
+<p class="text-sm text-on-surface leading-relaxed">Actualizar protocolos de encriptación TLS a v1.3 en los servidores de planos arquitectónicos.</p>
+</div>
+<div class="flex gap-4">
+<span class="text-secondary font-headline font-black text-xl">03</span>
+<p class="text-sm text-on-surface leading-relaxed">Realizar un barrido preventivo de logs en el nodo regional de M&amp;S antes del cierre mensual.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Content Area / Map Concept -->
+<div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2 relative h-[300px] bg-surface-container overflow-hidden">
+<img alt="Abstract Blue City Grid" class="w-full h-full object-cover grayscale opacity-40 mix-blend-multiply" data-alt="Abstract digital blueprint map of a city in navy blue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcq5qUm89Z_N6E-JP7WVPitOcJqSfayrn1lVgrMQW74609eq1zeq-o6whxgZXyEsPs8MZ3w9V6cZJfCDc2-qq7jBJJYNRc3KIc3A9Rq2EFj-VZ1QiTnPqjMjBWjnRxHjnP-lJ1ZqbxxeZQ9TyUVnBNSj6oY9_R9r6PNSCFQ4eGXpNeTxpweErnihnK7bfr9Yl3gMOY1V1UTYX8BYuFghs-02U0fg1nrvL-9745kQZl3ug3yrlC-3Oa5-d6FBP8lmyTLUY__-X-hfMO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent p-10 flex flex-col justify-end">
+<h3 class="text-on-primary font-headline font-bold text-xl uppercase tracking-widest mb-2">Monitoreo de Nodos Globales</h3>
+<p class="text-on-primary/60 text-xs uppercase tracking-[0.2em]">Localización: Ciudad de México, HQ WM/M&amp;S</p>
+</div>
+<div class="absolute top-10 right-10 flex flex-col gap-2">
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-1">
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+<span class="text-[10px] font-label font-bold uppercase tracking-tighter">Live Feed</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high p-10 flex flex-col justify-center">
+<p class="font-label text-[10px] uppercase tracking-widest text-outline mb-4">Certificación de Integridad</p>
+<div class="border-t border-outline-variant py-4">
+<p class="text-xs italic text-on-surface-variant mb-6">"La arquitectura de seguridad digital debe ser tan sólida como los cimientos de nuestras estructuras físicas."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-lg">shield</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-tighter">Security Ops</p>
+<p class="text-[10px] text-outline uppercase tracking-widest">Protocolo WM-Alpha</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="flex justify-between items-center px-12 py-8 w-full mt-20 bg-[#e2efff] dark:bg-[#000c18] border-none">
+<div class="font-['Inter'] text-[10px] tracking-widest uppercase text-[#767684]">
+            Certificado por Gemini AI v4.2 - Constructora WM/M&amp;S
+        </div>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-[10px] tracking-widest uppercase text-[#767684] hover:underline decoration-[#7b5800] transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Protocol</a>
+<a class="font-['Inter'] text-[10px] tracking-widest uppercase text-[#767684] hover:underline decoration-[#7b5800] transition-opacity opacity-80 hover:opacity-100" href="#">System Status</a>
+<a class="font-['Inter'] text-[10px] tracking-widest uppercase text-[#767684] hover:underline decoration-[#7b5800] transition-opacity opacity-80 hover:opacity-100" href="#">Terms of Access</a>
+</div>
+<div class="font-['Inter'] text-[10px] tracking-widest uppercase text-[#767684]">
+            © 2024 Architectural Precision Security.
+        </div>
+</footer>
+</body></html>

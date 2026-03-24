@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "inverse-primary": "#ffb596",
+              "on-secondary-fixed-variant": "#3d4b2e",
+              "surface-container-high": "#efe7d9",
+              "primary": "#823b18",
+              "on-tertiary-fixed-variant": "#394857",
+              "surface-variant": "#e9e2d3",
+              "on-secondary-container": "#5a6949",
+              "on-primary-fixed-variant": "#76320f",
+              "surface": "#fff8ef",
+              "on-surface": "#1e1b13",
+              "tertiary-container": "#596979",
+              "secondary-container": "#d7e9c1",
+              "on-error-container": "#93000a",
+              "on-primary-container": "#ffe1d6",
+              "on-tertiary": "#ffffff",
+              "on-surface-variant": "#54433c",
+              "error": "#ba1a1a",
+              "secondary-fixed-dim": "#bbcca6",
+              "surface-container": "#f5edde",
+              "primary-fixed-dim": "#ffb596",
+              "primary-container": "#a0522d",
+              "primary-fixed": "#ffdbcd",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#fbf3e4",
+              "inverse-surface": "#343026",
+              "surface-bright": "#fff8ef",
+              "surface-tint": "#944925",
+              "surface-dim": "#e1d9cb",
+              "tertiary-fixed": "#d4e4f6",
+              "outline": "#87736b",
+              "secondary": "#546344",
+              "tertiary": "#415160",
+              "on-secondary-fixed": "#121f06",
+              "background": "#fff8ef",
+              "on-background": "#1e1b13",
+              "on-error": "#ffffff",
+              "outline-variant": "#dac1b8",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-primary-fixed": "#360f00",
+              "surface-container-highest": "#e9e2d3",
+              "secondary-fixed": "#d7e9c1",
+              "tertiary-fixed-dim": "#b8c8da",
+              "inverse-on-surface": "#f8f0e1",
+              "error-container": "#ffdad6",
+              "on-tertiary-container": "#d8e9fb",
+              "on-primary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Work Sans', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Noto Serif', serif; }
+    </style>
+  <title>historial de accesos sospechosos</title>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-[#fff8ef] dark:bg-stone-950 flex justify-between items-center px-8 py-4 w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold font-['Noto_Serif'] text-[#823b18] dark:text-[#a0522d]">The Artisanal Hearth</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#a0522d] transition-colors duration-200 cursor-pointer active:opacity-70" href="#">Dashboard</a>
+<a class="text-[#823b18] dark:text-[#a0522d] border-b-2 border-[#823b18] font-medium hover:text-[#a0522d] transition-colors duration-200 cursor-pointer active:opacity-70" href="#">Security Logs</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#a0522d] transition-colors duration-200 cursor-pointer active:opacity-70" href="#">Alerts</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant cursor-pointer">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant cursor-pointer">account_circle</button>
+</div>
+</header>
+<div class="flex min-h-[calc(100vh-72px)]">
+<!-- SideNavBar (Hearth Security) -->
+<aside class="hidden md:flex flex-col h-screen w-64 left-0 sticky border-r border-[#dac1b8]/20 bg-[#fbf3e4] dark:bg-stone-900 p-6">
+<div class="mb-10">
+<h2 class="font-['Noto_Serif'] text-xl text-[#823b18]">Hearth Security</h2>
+<p class="text-xs uppercase tracking-widest text-stone-500 font-medium mt-1">Vigilance &amp; Craft</p>
+</div>
+<nav class="flex-grow space-y-2">
+<div class="flex items-center gap-3 p-3 font-['Work_Sans'] text-sm font-medium uppercase tracking-wider text-stone-500 hover:bg-[#fff8ef] dark:hover:bg-stone-800 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</div>
+<div class="flex items-center gap-3 p-3 font-['Work_Sans'] text-sm font-bold uppercase tracking-wider text-[#823b18] dark:text-[#a0522d] bg-[#fff8ef]/50 dark:bg-stone-800/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+<span>Security Logs</span>
+</div>
+<div class="flex items-center gap-3 p-3 font-['Work_Sans'] text-sm font-medium uppercase tracking-wider text-stone-500 hover:bg-[#fff8ef] dark:hover:bg-stone-800 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="warning">warning</span>
+<span>Alerts</span>
+</div>
+<div class="flex items-center gap-3 p-3 font-['Work_Sans'] text-sm font-medium uppercase tracking-wider text-stone-500 hover:bg-[#fff8ef] dark:hover:bg-stone-800 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="domain">domain</span>
+<span>Firm Access</span>
+</div>
+<div class="flex items-center gap-3 p-3 font-['Work_Sans'] text-sm font-medium uppercase tracking-wider text-stone-500 hover:bg-[#fff8ef] dark:hover:bg-stone-800 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</div>
+</nav>
+<div class="mt-auto pt-6 border-t border-outline-variant/20">
+<button class="w-full mb-6 bg-gradient-to-r from-primary to-primary-container text-on-primary py-2.5 px-5 rounded-md text-sm font-medium transition-opacity active:opacity-80">
+                    New Security Audit
+                </button>
+<div class="flex items-center gap-3 p-3 font-['Work_Sans'] text-sm font-medium uppercase tracking-wider text-stone-500 hover:bg-[#fff8ef] transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-grow p-8 lg:p-12 max-w-7xl mx-auto">
+<header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tight mb-2">Historial de Accesos Sospechosos</h1>
+<p class="text-tertiary font-body">Registro detallado de seguridad para Heirloom Crust — Ciudad de Guatemala</p>
+</div>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 border border-outline/40 text-on-surface px-5 py-2.5 rounded-md font-label text-sm hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-lg">download</span>
+                        Descargar Reporte PDF
+                    </button>
+<button class="flex items-center gap-2 text-primary px-5 py-2.5 rounded-md font-label text-sm transition-colors hover:underline decoration-primary-fixed-dim underline-offset-4">
+<span class="material-symbols-outlined text-lg">mop</span>
+                        Limpiar Lista de Confianza
+                    </button>
+</div>
+</header>
+<!-- Overview Cards (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="bg-surface-container-highest p-8 rounded-xl flex flex-col justify-between min-h-[160px]">
+<span class="text-label-md font-medium text-on-surface-variant uppercase tracking-widest text-xs">Intentos Bloqueados (24h)</span>
+<div class="mt-4">
+<span class="text-5xl font-headline font-bold text-primary">142</span>
+<p class="text-secondary text-sm mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+                            +12% desde ayer
+                        </p>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between min-h-[160px]">
+<span class="text-label-md font-medium text-on-surface-variant uppercase tracking-widest text-xs">IPs en Lista Negra</span>
+<div class="mt-4">
+<span class="text-5xl font-headline font-bold text-on-surface">18</span>
+<p class="text-tertiary text-sm mt-1">Activas globalmente</p>
+</div>
+</div>
+<div class="bg-secondary-container p-8 rounded-xl flex flex-col justify-between min-h-[160px]">
+<span class="text-label-md font-medium text-on-secondary-container uppercase tracking-widest text-xs">Nivel de Amenaza Actual</span>
+<div class="mt-4">
+<span class="text-3xl font-headline font-bold text-on-secondary-container">MODERADO</span>
+<div class="w-full bg-on-secondary-container/20 h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-secondary h-full w-[45%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Security Log Table -->
+<section class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+<div class="p-6 border-b border-outline-variant/10 flex items-center justify-between">
+<h3 class="font-headline font-bold text-xl">Actividad Reciente</h3>
+<div class="flex gap-2">
+<span class="bg-surface px-3 py-1 rounded text-xs font-medium text-tertiary border border-outline-variant/20">Filtro: Todo el tiempo</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label text-xs uppercase tracking-widest">
+<th class="px-8 py-4 font-semibold">Evento de Seguridad</th>
+<th class="px-6 py-4 font-semibold">Dirección IP</th>
+<th class="px-6 py-4 font-semibold">Ubicación</th>
+<th class="px-6 py-4 font-semibold">Fecha y Hora</th>
+<th class="px-6 py-4 font-semibold">Estado</th>
+<th class="px-8 py-4 text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10 text-on-surface">
+<tr class="hover:bg-surface-container-highest/50 transition-colors">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-error"></div>
+<span class="font-medium">Intento de Inyección SQL</span>
+</div>
+</td>
+<td class="px-6 py-5 font-mono text-sm">190.111.45.22</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-tertiary">location_on</span>
+<span>Mixco, Guatemala</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">24 Oct, 2023 • 14:22:10</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-error-container text-on-error-container">
+                                        Bloqueado
+                                    </span>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="material-symbols-outlined text-primary hover:bg-primary-container/10 p-1 rounded transition-colors">more_vert</button>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest/30 hover:bg-surface-container-highest/50 transition-colors">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-outline"></div>
+<span class="font-medium">Fuerza Bruta (Login)</span>
+</div>
+</td>
+<td class="px-6 py-5 font-mono text-sm">45.232.1.198</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-tertiary">location_on</span>
+<span>Kiev, Ucrania</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">24 Oct, 2023 • 13:05:45</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-surface-container-highest text-on-surface-variant">
+                                        Fallido
+                                    </span>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="material-symbols-outlined text-primary hover:bg-primary-container/10 p-1 rounded transition-colors">more_vert</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-highest/50 transition-colors">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary-container"></div>
+<span class="font-medium">Sesión Iniciada</span>
+</div>
+</td>
+<td class="px-6 py-5 font-mono text-sm">186.151.22.9</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-tertiary">location_on</span>
+<span>Panajachel, Sololá</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">24 Oct, 2023 • 12:50:02</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-secondary-container text-on-secondary-container">
+                                        Exitoso - Inusual
+                                    </span>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="material-symbols-outlined text-primary hover:bg-primary-container/10 p-1 rounded transition-colors">more_vert</button>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest/30 hover:bg-surface-container-highest/50 transition-colors">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-error"></div>
+<span class="font-medium">Acceso API Denegado</span>
+</div>
+</td>
+<td class="px-6 py-5 font-mono text-sm">104.28.1.10</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-tertiary">location_on</span>
+<span>Guatemala, Guatemala</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">24 Oct, 2023 • 11:15:30</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-error-container text-on-error-container">
+                                        Bloqueado
+                                    </span>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="material-symbols-outlined text-primary hover:bg-primary-container/10 p-1 rounded transition-colors">more_vert</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-6 bg-surface-container-low border-t border-outline-variant/10 flex justify-between items-center">
+<span class="text-sm text-tertiary font-body">Mostrando 4 de 142 eventos sospechosos</span>
+<div class="flex gap-2">
+<button class="p-2 border border-outline-variant/40 rounded-md hover:bg-surface-container transition-colors disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined text-lg leading-none">chevron_left</span>
+</button>
+<button class="p-2 border border-outline-variant/40 rounded-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-lg leading-none">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Location Analysis (Asymmetric Layout Element) -->
+<section class="mt-12 grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+<div class="lg:col-span-3 bg-surface-container-low p-8 rounded-xl border-l-4 border-primary">
+<h3 class="font-headline font-bold text-xl mb-4">Análisis de Geofencing</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                        Se han detectado múltiples intentos de acceso desde ubicaciones no autorizadas fuera de la región centroamericana. El firewall de Heirloom Crust está priorizando el tráfico local de Guatemala para proteger las transacciones de nuestra masa madre.
+                    </p>
+<div class="relative w-full h-48 bg-surface-container rounded-lg overflow-hidden">
+<img alt="Mapa abstracto de seguridad regional" class="w-full h-full object-cover mix-blend-multiply opacity-20" data-alt="Mapa abstracto con puntos de calor de seguridad" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArkNemfWIbK0ST9MZRM0aQuS9UIy0OFcZRmq6aMDOuWbXPlOrEgbUpQjK1CzeAO9ajwdzKWZLsBcrCodoaHE3LYrgNOZVDV3Jufo2D2WJzr0A2GEOqtXZ0zpI6fA2eyux1J4uTiuSBW15qFWjB8r9IMcln7up_oZDZCyuB87V7lQNT-1adc_ZpHVxDSKCfJLQnuuToI1Yxrk7HEOwd8aUFYSRcBBmon3kaPL90_8uNM0mId9-52_-TtcES_xu4j4j--cH-dlOrVvHZ"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="flex items-center gap-2 bg-background/90 px-4 py-2 rounded-full shadow-lg border border-outline-variant/20">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="text-xs font-bold uppercase tracking-widest">Actividad Crítica en GT-Central</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2 space-y-6">
+<div class="bg-[#fff8ef] border border-outline-variant/20 p-6 rounded-xl">
+<h4 class="font-headline font-bold text-lg mb-2">Consejo del Maestro</h4>
+<p class="text-on-surface-variant text-sm italic">"Al igual que el fermento necesita la temperatura justa, su seguridad digital requiere equilibrio. Mantenga su Lista de Confianza limpia para evitar contaminaciones externas."</p>
+</div>
+<div class="bg-primary text-on-primary p-6 rounded-xl shadow-lg">
+<h4 class="font-headline font-bold text-lg mb-2 text-primary-fixed">Actualización Requerida</h4>
+<p class="text-sm opacity-90 mb-4">Los protocolos de cifrado de la bóveda de recetas expiran en 48 horas.</p>
+<button class="w-full bg-primary-fixed text-on-primary-fixed py-2 rounded font-label font-bold text-sm uppercase tracking-wider">
+                            Actualizar Llaves
+                        </button>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Mobile Navigation Shell -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface/95 backdrop-blur-md border-t border-outline-variant/20 flex justify-around p-4 z-50">
+<button class="flex flex-col items-center gap-1 text-stone-600">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-medium uppercase">Panel</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#823b18]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="text-[10px] font-bold uppercase">Seguridad</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-stone-600">
+<span class="material-symbols-outlined">warning</span>
+<span class="text-[10px] font-medium uppercase">Alertas</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-stone-600">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium uppercase">Ajustes</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Confirmación de Solicitud | WM/M&amp;S</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Manrope & Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#f7bd48",
+              "surface-container": "#e2efff",
+              "primary-fixed-dim": "#bfc2ff",
+              "primary-container": "#000080",
+              "primary-fixed": "#e0e0ff",
+              "on-secondary": "#ffffff",
+              "secondary-container": "#fdc34d",
+              "on-error-container": "#93000a",
+              "on-primary-container": "#777eea",
+              "on-tertiary": "#ffffff",
+              "on-surface-variant": "#464653",
+              "error": "#ba1a1a",
+              "on-secondary-container": "#715000",
+              "on-primary-fixed-variant": "#3239a3",
+              "surface": "#f7f9ff",
+              "on-surface": "#0d1d2a",
+              "tertiary-container": "#132330",
+              "surface-container-lowest": "#ffffff",
+              "inverse-primary": "#bfc2ff",
+              "on-secondary-fixed-variant": "#5d4200",
+              "surface-container-high": "#d9eafc",
+              "primary": "#00003c",
+              "on-tertiary-fixed-variant": "#394857",
+              "surface-variant": "#d4e4f6",
+              "tertiary-fixed-dim": "#b8c8da",
+              "inverse-on-surface": "#e7f2ff",
+              "error-container": "#ffdad6",
+              "on-tertiary-container": "#7b8b9b",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#0d1d2a",
+              "on-primary-fixed": "#00006e",
+              "surface-container-highest": "#d4e4f6",
+              "secondary-fixed": "#ffdea6",
+              "tertiary-fixed": "#d4e4f6",
+              "outline": "#767684",
+              "secondary": "#7b5800",
+              "tertiary": "#000c18",
+              "on-secondary-fixed": "#271900",
+              "background": "#f7f9ff",
+              "on-background": "#0d1d2a",
+              "on-error": "#ffffff",
+              "outline-variant": "#c6c5d5",
+              "surface-container-low": "#ecf4ff",
+              "inverse-surface": "#223240",
+              "surface-bright": "#f7f9ff",
+              "surface-tint": "#4b53bc",
+              "surface-dim": "#cbdcee"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .blueprint-bg {
+        background-image: radial-gradient(#c6c5d5 0.5px, transparent 0.5px);
+        background-size: 24px 24px;
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 rounded-none bg-slate-50/70 dark:bg-slate-950/70 backdrop-blur-xl flex justify-between items-center px-8 h-20 max-w-full mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#00003c] dark:text-white">
+            WM/M&amp;S
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Manrope'] font-semibold tracking-tight uppercase text-xs text-[#767684] dark:text-slate-400 hover:text-[#00003c] transition-colors duration-300" href="#">Proyectos</a>
+<a class="font-['Manrope'] font-semibold tracking-tight uppercase text-xs text-[#767684] dark:text-slate-400 hover:text-[#00003c] transition-colors duration-300" href="#">Servicios</a>
+<a class="font-['Manrope'] font-semibold tracking-tight uppercase text-xs text-[#767684] dark:text-slate-400 hover:text-[#00003c] transition-colors duration-300" href="#">Nosotros</a>
+<a class="font-['Manrope'] font-semibold tracking-tight uppercase text-xs text-[#767684] dark:text-slate-400 hover:text-[#00003c] transition-colors duration-300" href="#">Contacto</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 font-['Manrope'] font-semibold tracking-tight uppercase text-xs hover:bg-primary/90 transition-all active:scale-[0.98]">
+            Solicitar Ajuste
+        </button>
+<div class="bg-[#e2efff] dark:bg-[#000c18] h-[1px] w-full absolute bottom-0 left-0"></div>
+</nav>
+<main class="min-h-screen pt-32 pb-20 px-6 blueprint-bg">
+<div class="max-w-4xl mx-auto">
+<!-- Success Hero Section -->
+<section class="bg-surface-container-lowest p-12 md:p-20 relative overflow-hidden mb-12">
+<!-- Decorative Architectural Lines -->
+<div class="absolute top-0 right-0 w-32 h-32 border-r border-t border-outline-variant/30 opacity-50"></div>
+<div class="absolute bottom-0 left-0 w-32 h-32 border-l border-b border-outline-variant/30 opacity-50"></div>
+<div class="flex flex-col items-start md:items-center text-left md:text-center space-y-8 relative z-10">
+<!-- Technical Verification Icon -->
+<div class="w-20 h-20 bg-secondary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-4xl" data-icon="architecture" style="font-variation-settings: 'FILL' 0;">architecture</span>
+</div>
+<div class="space-y-4">
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight text-primary leading-tight">
+                            Solicitud Recibida Correctamente
+                        </h1>
+<p class="text-secondary font-headline font-bold text-xl tracking-wide uppercase">
+                            Número de Caso: #AJ-2024-8842
+                        </p>
+</div>
+<!-- CTA Group -->
+<div class="flex flex-col md:flex-row gap-4 w-full md:w-auto pt-4">
+<button class="bg-secondary text-white px-10 py-5 font-headline font-bold uppercase tracking-widest text-sm hover:brightness-110 transition-all shadow-lg shadow-secondary/20">
+                            Ir a Mis Proyectos
+                        </button>
+<button class="bg-transparent border border-outline text-primary px-10 py-5 font-headline font-bold uppercase tracking-widest text-sm hover:bg-surface-container-low transition-all">
+                            Ver Detalles de la Solicitud
+                        </button>
+</div>
+</div>
+</section>
+<!-- Asymmetric Next Steps Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Data Pylons -->
+<div class="md:col-span-4 space-y-8">
+<div class="bg-primary p-8 text-white">
+<div class="space-y-1">
+<span class="text-secondary-fixed-dim font-headline text-4xl font-black">48h</span>
+<p class="font-label text-xs uppercase tracking-[0.2em] opacity-80">Tiempo Estimado</p>
+</div>
+</div>
+<div class="bg-surface-container p-8 border-l-4 border-secondary">
+<div class="space-y-1">
+<span class="text-primary font-headline text-4xl font-black">99.8%</span>
+<p class="font-label text-xs uppercase tracking-[0.2em] text-outline">Precisión Estructural</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Process Timeline -->
+<div class="md:col-span-8 bg-surface-container-lowest p-10 md:p-12">
+<h3 class="font-headline text-xs font-bold uppercase tracking-[0.3em] text-outline mb-10 block">Próximos Pasos en el Proceso</h3>
+<div class="space-y-12 relative">
+<!-- Vertical connecting line -->
+<div class="absolute left-4 top-2 bottom-2 w-[1px] bg-outline-variant/30"></div>
+<!-- Step 1 -->
+<div class="relative pl-12 flex gap-6 items-start group">
+<div class="absolute left-0 w-8 h-8 bg-surface-container-high border border-outline-variant flex items-center justify-center z-10 group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="engineering">engineering</span>
+</div>
+<div class="space-y-2">
+<h4 class="font-headline font-bold text-lg text-primary">Revisión por Ingeniería Estructural</h4>
+<p class="text-outline text-sm leading-relaxed max-w-md">Nuestro equipo técnico validará los parámetros de carga y resistencia sísmica solicitados.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative pl-12 flex gap-6 items-start group">
+<div class="absolute left-0 w-8 h-8 bg-surface-container-high border border-outline-variant flex items-center justify-center z-10 group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="memory">memory</span>
+</div>
+<div class="space-y-2">
+<h4 class="font-headline font-bold text-lg text-primary">Validación IA Gemini ArchOS</h4>
+<p class="text-outline text-sm leading-relaxed max-w-md">Simulación digital de alta precisión para optimización de materiales y reducción de costos operativos.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative pl-12 flex gap-6 items-start group">
+<div class="absolute left-0 w-8 h-8 bg-surface-container-high border border-outline-variant flex items-center justify-center z-10 group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="notifications_active">notifications_active</span>
+</div>
+<div class="space-y-2">
+<h4 class="font-headline font-bold text-lg text-primary">Notificación en 48 horas</h4>
+<p class="text-outline text-sm leading-relaxed max-w-md">Recibirá el dictamen técnico final y el presupuesto ajustado directamente en su panel de control.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Additional Context Section -->
+<div class="mt-12 bg-surface-dim p-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="verified_user">verified_user</span>
+<div>
+<p class="font-headline font-bold text-primary text-sm uppercase tracking-wide">Protocolo de Seguridad Activo</p>
+<p class="text-outline text-xs">Certificación ISO 9001:2015 en Gestión Estructural</p>
+</div>
+</div>
+<div class="h-[1px] w-full md:w-px md:h-8 bg-outline-variant/30"></div>
+<p class="text-outline text-xs text-center md:text-left">
+                    Para consultas urgentes, contacte a su Ingeniero de Enlace asignado citando el #AJ-2024-8842.
+                </p>
+</div>
+</div>
+</main>
+<!-- Footer Section -->
+<footer class="bg-[#000c18] dark:bg-black w-full rounded-none border-t border-[#767684]/15">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 w-full">
+<div class="text-lg font-black text-white uppercase tracking-widest">
+                WM/M&amp;S
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-[0.875rem] leading-relaxed tracking-wide text-slate-400 hover:text-white transition-all duration-200" href="#">Privacidad</a>
+<a class="font-['Inter'] text-[0.875rem] leading-relaxed tracking-wide text-slate-400 hover:text-white transition-all duration-200" href="#">Términos</a>
+<a class="font-['Inter'] text-[0.875rem] leading-relaxed tracking-wide text-slate-400 hover:text-white transition-all duration-200" href="#">Soporte Técnico</a>
+<a class="font-['Inter'] text-[0.875rem] leading-relaxed tracking-wide text-slate-400 hover:text-white transition-all duration-200" href="#">Portal de Socios</a>
+</div>
+<p class="font-['Inter'] text-[0.875rem] leading-relaxed tracking-wide text-[#f7bd48] text-center md:text-right">
+                © 2024 Constructora WM/M&amp;S. Excelencia en Precisión Estructural.
+            </p>
+</div>
+</footer>
+</body></html>

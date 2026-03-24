@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Manrope', sans-serif;
+        }
+        .blueprint-gradient {
+            background: linear-gradient(135deg, #00003c 0%, #000080 100%);
+        }
+        .glass-panel {
+            background: rgba(212, 228, 246, 0.7);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed": "#e0e0ff",
+                        "on-secondary-fixed": "#271900",
+                        "on-surface-variant": "#464653",
+                        "surface": "#f7f9ff",
+                        "secondary-fixed-dim": "#f7bd48",
+                        "secondary-fixed": "#ffdea6",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c6c5d5",
+                        "surface-container-highest": "#d4e4f6",
+                        "on-secondary-fixed-variant": "#5d4200",
+                        "on-error-container": "#93000a",
+                        "secondary": "#7b5800",
+                        "primary-container": "#000080",
+                        "on-primary-fixed-variant": "#3239a3",
+                        "primary": "#00003c",
+                        "on-tertiary-fixed-variant": "#394857",
+                        "on-background": "#0d1d2a",
+                        "outline": "#767684",
+                        "tertiary-fixed-dim": "#b8c8da",
+                        "tertiary-container": "#132330",
+                        "on-surface": "#0d1d2a",
+                        "tertiary": "#000c18",
+                        "surface-container": "#e2efff",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#cbdcee",
+                        "inverse-on-surface": "#e7f2ff",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f7f9ff",
+                        "surface-container-high": "#d9eafc",
+                        "tertiary-fixed": "#d4e4f6",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#bfc2ff",
+                        "on-tertiary-fixed": "#0d1d2a",
+                        "primary-fixed-dim": "#bfc2ff",
+                        "on-tertiary-container": "#7b8b9b",
+                        "on-secondary-container": "#715000",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "background": "#f7f9ff",
+                        "secondary-container": "#fdc34d",
+                        "on-primary-container": "#777eea",
+                        "surface-container-low": "#ecf4ff",
+                        "inverse-surface": "#223240",
+                        "on-primary-fixed": "#00006e",
+                        "surface-tint": "#4b53bc",
+                        "surface-variant": "#d4e4f6"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+  <title>confirmaci n de pago enviado wm m s</title>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<nav class="bg-[#00003c] dark:bg-[#000c18] text-[#f7bd48] flex justify-between items-center w-full px-8 py-4 docked full-width top-0 z-50">
+<div class="text-xl font-bold tracking-tighter text-white font-manrope">ConstructaPay</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-manrope uppercase tracking-[0.1em] text-xs font-semibold text-slate-300 hover:text-white transition-colors duration-200" href="#">Dashboard</a>
+<a class="font-manrope uppercase tracking-[0.1em] text-xs font-semibold text-[#f7bd48] border-b-2 border-[#f7bd48] pb-1" href="#">Nómina</a>
+<a class="font-manrope uppercase tracking-[0.1em] text-xs font-semibold text-slate-300 hover:text-white transition-colors duration-200" href="#">Proyectos</a>
+<a class="font-manrope uppercase tracking-[0.1em] text-xs font-semibold text-slate-300 hover:text-white transition-colors duration-200" href="#">Historial</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#f7bd48] cursor-pointer">notifications</span>
+<span class="material-symbols-outlined text-[#f7bd48] cursor-pointer">settings</span>
+<div class="w-8 h-8 bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="Avatar de administrador" class="w-full h-full object-cover" data-alt="Professional male corporate executive avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsmP6E8hceJlGs6blP4zAbQM7dgvIDIkLe1u0xUY38JxMcUBQm5Zoawzvdwq-6tpqY6XvCzlrJGRmTCtRu5lK38De_EgvYEXVNahGLK1cyyvc3BxJfe6oI32cP2lonn4p5VzfBO1arghMTj1oBg-xmEsHIVcOr2lRZpN39czjUq-TWG_8uL-tsUb8q_bNVtf4-M5jKbGa2K4G51J6fJosQoKXYbIbDP__1Q17ro9p7q_HuNh9r7CDqOp5b0BOu_zfpjWmQnhlBEt0S"/>
+</div>
+</div>
+</nav>
+<main class="flex-grow flex flex-col items-center justify-center px-4 py-20 bg-surface">
+<div class="max-w-4xl w-full flex flex-col items-center">
+<div class="mb-8 flex flex-col items-center text-center">
+<div class="mb-6">
+<span class="material-symbols-outlined text-[84px] text-secondary-fixed-dim" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h1 class="text-5xl md:text-6xl font-extrabold text-primary tracking-tighter mb-4 uppercase">¡Transferencia Exitosa!</h1>
+<p class="text-lg text-outline font-medium max-w-lg">Los fondos han sido dispersados a las cuentas de los 48 colaboradores.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20 w-full mb-12 shadow-2xl shadow-primary/5">
+<div class="bg-surface-container-lowest p-10 flex flex-col justify-between">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-outline mb-4 block">Resumen de Operación</span>
+<div class="mb-8">
+<span class="text-xs text-outline uppercase tracking-widest font-semibold block mb-1">Monto Total Dispersado</span>
+<div class="text-4xl font-black text-primary font-headline tracking-tight">Q 142,580.00</div>
+</div>
+<div class="space-y-6">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline">Proyecto</span>
+<span class="text-primary font-bold">Residencial Los Olivos</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline">Constructora Responsable</span>
+<span class="text-primary font-bold">WM/M&amp;S</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-10 flex flex-col justify-between">
+<div class="space-y-8">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline mb-4 block">Detalles Técnicos</span>
+<div class="grid grid-cols-1 gap-6">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline block">Referencia Bancaria</span>
+<span class="text-primary font-mono font-medium">TXN-99283-WM-024</span>
+</div>
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline block">Fecha y Hora de Ejecución</span>
+<span class="text-primary font-medium">24 de Octubre, 2024 — 14:32:11 CST</span>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant/30">
+<div class="flex items-start gap-4 p-4 bg-primary text-white">
+<span class="material-symbols-outlined text-secondary-fixed-dim" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary-fixed-dim block">Seguridad Gemini IA</span>
+<p class="text-xs text-slate-300 leading-relaxed mt-1">Operación validada y auditada por inteligencia artificial. No se detectaron anomalías ni duplicados en la dispersión masiva.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+<button class="bg-primary text-white font-manrope font-bold uppercase tracking-widest text-xs px-10 py-5 hover:bg-primary-container transition-colors flex items-center justify-center gap-3 group">
+<span class="material-symbols-outlined text-sm">download</span>
+                    Descargar Comprobante PDF
+                </button>
+<button class="bg-white text-primary border border-outline-variant/50 font-manrope font-bold uppercase tracking-widest text-xs px-10 py-5 hover:bg-surface-container-low transition-colors flex items-center justify-center gap-3">
+                    Ver Historial de Nóminas
+                </button>
+<button class="text-secondary font-manrope font-bold uppercase tracking-widest text-xs px-10 py-5 hover:underline transition-all flex items-center justify-center gap-3">
+                    Volver al Dashboard
+                </button>
+</div>
+</div>
+</main>
+<footer class="bg-slate-100 dark:bg-[#000c18] text-slate-600 w-full py-6 mt-auto flex flex-col items-center justify-center gap-2">
+<div class="flex gap-8 mb-2">
+<a class="font-inter text-[10px] tracking-widest uppercase text-slate-400 hover:text-[#00003c] transition-colors" href="#">Privacidad</a>
+<a class="font-inter text-[10px] tracking-widest uppercase text-slate-400 hover:text-[#00003c] transition-colors" href="#">Términos de Servicio</a>
+<a class="font-inter text-[10px] tracking-widest uppercase text-slate-400 hover:text-[#00003c] transition-colors" href="#">Soporte Técnico</a>
+</div>
+<p class="font-inter text-[10px] tracking-widest uppercase text-slate-400">© 2024 ConstructaPay. Verificado por Gemini IA Security.</p>
+</footer>
+</body></html>
